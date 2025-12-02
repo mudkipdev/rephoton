@@ -4,7 +4,7 @@
   import { LemmyClient } from '$lib/api/lemmy/adapter'
   import { t } from '$lib/app/i18n'
   import { searchParam } from '$lib/app/util.svelte'
-  import { Option, Select } from 'mono-svelte'
+  import { MenuButton, Option, Select } from 'mono-svelte'
   import { type SelectProps } from 'mono-svelte/forms/select/Select.svelte'
   import {
     ArrowTrendingDown,
@@ -15,9 +15,9 @@
     ChatBubbleLeftRight,
     ChatBubbleOvalLeft,
     Clock,
+    EllipsisHorizontal,
     Fire,
     Icon,
-    PlusCircle,
     Scale,
     Star,
     Sun,
@@ -103,17 +103,8 @@
           {$t('filter.sort.top.time.label')}
         </span>
       {/snippet}
-      <Option value="TopAll" icon={PlusCircle}>
+      <Option value="TopAll" icon={Trophy}>
         {$t('filter.sort.top.time.all')}
-      </Option>
-      <Option value="TopNineMonths" icon={Calendar}>
-        {$t('filter.sort.top.time.9months')}
-      </Option>
-      <Option value="TopSixMonths" icon={Calendar}>
-        {$t('filter.sort.top.time.6months')}
-      </Option>
-      <Option value="TopThreeMonths" icon={Calendar}>
-        {$t('filter.sort.top.time.3months')}
       </Option>
       <Option value="TopMonth" icon={CalendarDays}>
         {$t('filter.sort.top.time.month')}
@@ -124,15 +115,39 @@
       <Option value="TopDay" icon={Sun}>
         {$t('filter.sort.top.time.day')}
       </Option>
-      <Option value="TopTwelveHour" icon={Clock}>
-        {$t('filter.sort.top.time.12hours')}
-      </Option>
-      <Option value="TopSixHour" icon={Clock}>
-        {$t('filter.sort.top.time.6hours')}
-      </Option>
-      <Option value="TopHour" icon={Clock}>
-        {$t('filter.sort.top.time.hour')}
-      </Option>
+      <Select
+        bind:value={selected}
+        size="sm"
+        placement="right-start"
+        onchange={() => {
+          sort = 'TopAll'
+          if (navigate) searchParam(page.url, 'sort', selected, 'page', 'cursor')
+        }}
+      >
+        {#snippet target(attachment)}
+          <MenuButton {@attach attachment} icon={EllipsisHorizontal} nest>
+            {$t('filter.sort.top.time.more')}
+          </MenuButton>
+          <Option value="TopNineMonths" class="hidden" icon={Calendar}>
+            {$t('filter.sort.top.time.9months')}
+          </Option>
+          <Option value="TopSixMonths" class="hidden" icon={Calendar}>
+            {$t('filter.sort.top.time.6months')}
+          </Option>
+          <Option value="TopThreeMonths" class="hidden" icon={Calendar}>
+            {$t('filter.sort.top.time.3months')}
+          </Option>
+          <Option value="TopTwelveHour" class="hidden" icon={Clock}>
+            {$t('filter.sort.top.time.12hours')}
+          </Option>
+          <Option value="TopSixHour" class="hidden" icon={Clock}>
+            {$t('filter.sort.top.time.6hours')}
+          </Option>
+          <Option value="TopHour" class="hidden" icon={Clock}>
+            {$t('filter.sort.top.time.hour')}
+          </Option>
+        {/snippet}
+      </Select>
     </Select>
   {/if}
 </div>
