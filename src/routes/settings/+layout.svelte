@@ -54,7 +54,7 @@
 </svelte:head>
 
 <Tabs
-  class="hidden md:block"
+  class="!hidden md:!block"
   routes={[
     {
       href: '/settings/app',
