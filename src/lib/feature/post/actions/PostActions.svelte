@@ -56,8 +56,8 @@
     onedit,
     onhide,
   }: Props = $props()
-  let buttonHeight = $derived(view == 'compact' ? 'h-11 md:h-7.5' : 'h-11 md:h-8')
-  let buttonSquare = $derived(view == 'compact' ? 'w-12 h-11 md:w-7.5 md:h-7.5' : 'w-12 h-11 md:w-8 md:h-8')
+  let buttonHeight = $derived(view == 'compact' ? 'h-9 md:h-7.5' : 'h-9 md:h-8')
+  let buttonSquare = $derived(view == 'compact' ? 'w-12 h-9 md:w-7.5 md:h-7.5' : 'w-12 h-9 md:w-8 md:h-8')
 
   function share(global: boolean = true, url?: string) {
     const link =
