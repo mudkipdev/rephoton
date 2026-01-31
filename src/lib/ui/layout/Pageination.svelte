@@ -47,7 +47,7 @@
     aria-label={$t('aria.pagination.nav')}
     class={[
       'flex flex-row gap-2 items-center justify-center bg-white dark:bg-zinc-950',
-      'border border-slate-200 dark:border-zinc-800 rounded-full overflow-hidden w-max mx-auto p-0.5',
+      'border border-slate-200 dark:border-zinc-800 rounded-full overflow-hidden w-max mx-auto p-1 md:p-0.5',
       'shadow-md',
     ]}
   >
@@ -65,12 +65,12 @@
         title={$t('common.back')}
         rounding="pill"
         size="custom"
-        class="text-inherit dark:text-inherit p-1"
+        class="text-inherit dark:text-inherit p-2 md:p-1"
         disabled={(cursor?.back == undefined && cursor?.next != undefined) ||
           page <= 1}
       >
         {#snippet suffix()}
-          <Icon src={ChevronLeft} size="24" mini />
+          <Icon src={ChevronLeft} size="28" class="md:!w-6 md:!h-6" mini />
         {/snippet}
       </Button>
     {/if}
@@ -81,7 +81,7 @@
           <div
             in:fly={{ y: 8, easing: backOut, duration: 400, delay: 100 }}
             out:fly={{ y: 8, easing: backOut, duration: 400 }}
-            class="text-lg font-medium"
+            class="text-xl md:text-lg font-medium px-2 md:px-0"
             style="grid-column: 1; grid-row: 1;"
           >
             {page}
@@ -97,11 +97,11 @@
       title={$t('common.next')}
       size="custom"
       rounding="pill"
-      class="text-inherit dark:text-inherit p-1"
+      class="text-inherit dark:text-inherit p-2 md:p-1"
       disabled={!hasMore}
     >
       {#snippet suffix()}
-        <Icon src={ChevronRight} size="24" mini />
+        <Icon src={ChevronRight} size="28" class="md:!w-6 md:!h-6" mini />
       {/snippet}
     </Button>
   </nav>

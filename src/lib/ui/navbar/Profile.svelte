@@ -25,6 +25,7 @@
     Cog6Tooth,
     CommandLine,
     ComputerDesktop,
+    GlobeAlt,
     Icon,
     Identification,
     Inbox,
@@ -39,6 +40,7 @@
   import { chords } from './commands/CommandsHost.svelte'
 </script>
 
+<div class="profile-menu">
 {#snippet siteSnippet()}
   {#if site.data}
     <InstanceCard
@@ -64,7 +66,7 @@
 
 {#if profile.current?.jwt}
   {@const notifications = profile.inbox.notifications}
-  <MenuButton href="/inbox" icon={Inbox}>
+  <MenuButton href="/inbox" icon={Inbox} class="max-md:hidden">
     {$t('profile.inbox')}
     {#if notifications.inbox > 0}
       <Badge color="red-subtle" class="text-xs ml-auto font-bold py-0.5!">
@@ -107,6 +109,9 @@
   {$t('account.accounts')}
 </MenuButton>
 <MenuDivider>{$t('nav.menu.app')}</MenuDivider>
+<MenuButton href="/explore/communities" icon={GlobeAlt} class="md:hidden">
+  {$t('routes.explore.title')}
+</MenuButton>
 <MenuButton href="/settings" icon={Cog6Tooth}>
   {$t('nav.menu.settings')}
 </MenuButton>
@@ -197,3 +202,4 @@
     {/if}
   </div>
 </li>
+</div>

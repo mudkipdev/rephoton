@@ -44,10 +44,10 @@
 </script>
 
 <div {...rest} class={['z-10 text-sm w-full space-y-4 @container', clazz]}>
-  <Material padding="xl" rounding="3xl" class="flex flex-col gap-2 @lg:gap-4">
+  <Material padding="xl" rounding="3xl" class="flex flex-col gap-2 @lg:gap-4 md:!rounded-3xl !rounded-none overflow-hidden">
     {#if banner !== null}
       <div
-        class="relative overflow-hidden rounded-t-[inherit] -m-6 mask-b-from-0 h-32 @lg:h-48"
+        class="relative overflow-hidden rounded-t-[inherit] -mx-6 -mt-[17rem] md:-m-6 mask-b-from-0 h-64 md:h-32 @lg:h-48 md:pt-0 pt-[14rem]"
       >
         {#if banner}
           <img

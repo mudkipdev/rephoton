@@ -9,6 +9,7 @@
     GlobeAlt,
     Home,
     Icon,
+    Inbox,
     MagnifyingGlass,
     PencilSquare,
     ServerStack,
@@ -94,13 +95,13 @@
     label={$t('routes.explore.title')}
     icon={GlobeAlt}
     isSelectedFilter={(path) => path.startsWith('/explore')}
-    class="order-1"
+    class="!hidden md:!block order-1"
   />
   <NavButton
     href="/search"
     label={$t('nav.search')}
     icon={MagnifyingGlass}
-    class="order-3 md:order-2"
+    class="order-1 md:order-2"
   />
   <NavButton
     label={$t('nav.create.label')}
@@ -109,12 +110,29 @@
     icon={PencilSquare}
     class="order-2 md:order-3 nav-btn-sm-primary"
   />
+  <div class="max-md:order-3 md:hidden w-full h-full relative">
+    <NavButton
+      href={profile.current?.jwt ? "/inbox" : undefined}
+      label={$t('profile.inbox')}
+      icon={Inbox}
+      class={[
+        'w-full h-full',
+        !profile.current?.jwt && 'opacity-40 cursor-not-allowed pointer-events-none'
+      ]}
+      disabled={!profile.current?.jwt}
+    />
+    {#if profile.current?.user && Math.max(...Object.values(profile.inbox.notifications)) > 0}
+      <div
+        class="w-2 h-2 absolute top-2 right-2 bg-red-500 rounded-full pointer-events-none"
+      ></div>
+    {/if}
+  </div>
   <Menu placement="bottom">
     {#snippet target(attachment)}
       <button
         {@attach attachment}
         class={[
-          'w-10 h-10 rounded-full',
+          'w-full md:w-10 h-10 rounded-full',
           'transition-all relative grid place-items-center',
           ' group cursor-pointer order-4',
         ]}
@@ -173,11 +191,14 @@
     box-sizing: border-box;
 
     @variant max-md {
-      padding-left: calc(var(--spacing) * 8);
-      padding-right: calc(var(--spacing) * 8);
+      padding-left: calc(var(--spacing) * 2);
+      padding-right: calc(var(--spacing) * 2);
+      height: calc(var(--spacing) * 14);
+      gap: calc(var(--spacing) * 1.5);
 
       & > :global(*) {
         flex: 1;
+        height: 100%;
       }
     }
 

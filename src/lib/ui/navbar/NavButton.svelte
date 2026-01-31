@@ -72,19 +72,20 @@
   :global {
     .prefix {
       @variant max-md {
-        height: 90%;
+        height: 100%;
+        width: 100%;
         display: grid;
         place-items: center;
-        aspect-ratio: 1 / 1;
         border-radius: var(--radius-xl);
       }
     }
 
     .nav-btn {
       border-radius: var(--radius-xl);
-      width: calc(var(--spacing) * 10);
-      height: calc(var(--spacing) * 10);
+      width: 100%;
+      height: 100%;
       @variant md {
+        width: calc(var(--spacing) * 10);
         height: calc(var(--spacing) * 8);
       }
       transition: 125ms cubic-bezier(0.075, 0.82, 0.165, 1);

@@ -1,12 +1,7 @@
 <script lang="ts">
   import { settings } from '$lib/app/settings.svelte'
   import type { Snippet } from 'svelte'
-  import type {
-    ClassValue,
-    HTMLAttributes,
-    UIEventHandler,
-  } from 'svelte/elements'
-  import { scrollY } from 'svelte/reactivity/window'
+  import type { ClassValue, HTMLAttributes } from 'svelte/elements'
   import InvertedCorner from './InvertedCorner.svelte'
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
@@ -18,37 +13,11 @@
   }
 
   let { children, navbar, sidebar, main, suffix }: Props = $props()
-
-  let previousTop = 0
-  const onscroll: UIEventHandler<Window> = () => {
-    if (!settings.dock.autoHide) {
-      dockVisible = true
-      return
-    }
-
-    dockVisible = (scrollY?.current ?? 0) <= previousTop
-    previousTop = scrollY?.current ?? 0
-  }
-
-  let dockVisible = $state(true)
 </script>
-
-<svelte:window {onscroll} />
 
 {@render children?.()}
 <div class="min-h-screen flex flex-col">
-  <div
-    class={['shell-navbar-holder', !dockVisible && 'max-md:-bottom-24!']}
-    aria-hidden="true"
-  >
-    <div class="md:hidden flex justify-between" dir="ltr">
-      <InvertedCorner
-        class="w-8 h-8 text-slate-50 dark:text-zinc-950 rotate-270"
-      />
-      <InvertedCorner
-        class="w-8 h-8 text-slate-50 dark:text-zinc-950 rotate-180"
-      />
-    </div>
+  <div class="shell-navbar-holder" aria-hidden="true">
     {@render navbar?.({
       class: ['shell-navbar'],
     })}

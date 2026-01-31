@@ -39,22 +39,24 @@
 </svelte:head>
 
 <Header pageHeader>
-  {$t('routes.frontpage.title')}
+  <span class="hidden md:inline">{$t('routes.frontpage.title')}</span>
   {#snippet extended()}
     <form class="contents" method="get" action={page.url.pathname}>
-      <div class="flex flex-row gap-2 max-w-full">
+      <div class="flex flex-row flex-wrap gap-2 max-w-full">
         <Location
+          class="w-full md:w-auto"
           name="type"
           navigate
           bind:selected={data.filters.value.type_!}
         />
         <Sort
+          class="w-full md:w-auto"
           placement="bottom"
           name="sort"
           navigate
           bind:selected={data.filters.value.sort!}
         />
-        <ViewSelect placement="bottom" />
+        <ViewSelect class="w-full md:w-auto" placement="bottom" />
 
         <noscript>
           <Button class="self-end h-[34px] aspect-square" size="custom" submit>

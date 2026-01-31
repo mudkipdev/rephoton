@@ -132,3 +132,36 @@ button:focus-visible {
   outline: none;
   @apply ring-2 ring-offset-1 ring-primary-900 dark:ring-primary-100;
 }
+
+/* Mobile dropdown/select improvements */
+@media (max-width: 768px) {
+  /* Make dropdown buttons/selects bigger on mobile */
+  select,
+  button[role="combobox"],
+  [role="listbox"] {
+    min-height: 44px !important;
+  }
+
+  /* Make dropdown menu items bigger on mobile */
+  [role="option"],
+  [role="menuitem"] {
+    min-height: 44px !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Make dropdown menus wider/easier to tap */
+  [role="listbox"],
+  [role="menu"] {
+    font-size: 1rem !important;
+  }
+
+  /* Reduce spacing in hamburger menu specifically */
+  .profile-menu [role="menuitem"] {
+    min-height: 44px !important;
+    padding-top: 0.25rem !important;
+    padding-bottom: 0.25rem !important;
+  }
+}
