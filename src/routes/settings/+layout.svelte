@@ -53,32 +53,31 @@
   <title>{$t('settings.title')}</title>
 </svelte:head>
 
-<div class="hidden md:block">
-  <Tabs
-    routes={[
-      {
-        href: '/settings/app',
-        name: $t('settings.app.title'),
-      },
-      {
-        href: '/settings/lemmy',
-        name: $t('settings.lemmy.title'),
-      },
-      {
-        href: '/settings/embeds',
-        name: $t('settings.embeds.title'),
-      },
-      {
-        href: '/settings/moderation',
-        name: $t('settings.moderation.title'),
-      },
-      {
-        href: '/settings/other',
-        name: $t('settings.other.title'),
-      },
-    ]}
-  />
-</div>
+<Tabs
+  class="hidden md:block"
+  routes={[
+    {
+      href: '/settings/app',
+      name: $t('settings.app.title'),
+    },
+    {
+      href: '/settings/lemmy',
+      name: $t('settings.lemmy.title'),
+    },
+    {
+      href: '/settings/embeds',
+      name: $t('settings.embeds.title'),
+    },
+    {
+      href: '/settings/moderation',
+      name: $t('settings.moderation.title'),
+    },
+    {
+      href: '/settings/other',
+      name: $t('settings.other.title'),
+    },
+  ]}
+/>
 
 <Header pageHeader class="text-3xl font-bold flex justify-between">
   {#if isSubpage}

@@ -95,7 +95,7 @@
     label={$t('routes.explore.title')}
     icon={GlobeAlt}
     isSelectedFilter={(path) => path.startsWith('/explore')}
-    class="!hidden md:!block order-1"
+    class="!hidden md:!inline-flex order-1"
   />
   <NavButton
     href="/search"
