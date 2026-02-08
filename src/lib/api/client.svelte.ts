@@ -3,6 +3,7 @@ import { DEFAULT_INSTANCE_URL } from '$lib/app/instance.svelte'
 import { instanceToURL } from '$lib/app/util.svelte'
 import { error } from '@sveltejs/kit'
 import { BaseClient, DEFAULT_CLIENT_TYPE, type ClientType } from './base'
+import { BlueskyClient } from './bluesky/adapter'
 import { LemmyClient } from './lemmy/adapter'
 import { PiefedClient } from './piefed/adapter'
 import type { GetSiteResponse } from './types'
@@ -79,6 +80,13 @@ export function client({
 
   // but not here, so that if jwt == '', it doesnt put a bearer
   const headers = jwt ? { authorization: `Bearer ${jwt}` } : {}
+
+  if (clientType.name === 'bluesky') {
+    return new BlueskyClient(instanceToURL(instanceURL), {
+      fetchFunction: (input, init) => customFetch(func, input, init, jwt),
+      headers: headers,
+    })
+  }
 
   return new (clientType.name == 'piefed' ? PiefedClient : LemmyClient)(
     instanceToURL(instanceURL),

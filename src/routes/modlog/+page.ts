@@ -19,6 +19,8 @@ import type {
   Person,
 } from '$lib/api/types'
 import { publishedToDate } from '$lib/ui/util/date'
+import { profile } from '$lib/app/auth.svelte'
+import { redirect } from '@sveltejs/kit'
 
 export type ActionName =
   | 'ban'
@@ -210,6 +212,11 @@ export const _toModLog = (item: ModAction): ModLog => {
 }
 
 export async function load({ url, fetch }) {
+  // Bluesky doesn't have moderation logs
+  if (profile.current.client === 'bluesky') {
+    redirect(303, '/')
+  }
+
   const community = Number(url.searchParams.get('community')) || undefined
   const user = Number(url.searchParams.get('user')) || undefined
   const modId = Number(url.searchParams.get('mod_id')) || undefined

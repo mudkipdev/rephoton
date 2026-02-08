@@ -190,8 +190,14 @@ export const isVideo = (url: string | undefined) => {
 export const communityLink = (community: Community, prefix: string = '') =>
   `${prefix}/c/${fullCommunityName(community.name, community.actor_id)}`
 
-export const userLink = (person: Person, prefix: string = '') =>
-  `${prefix}/u/${person.name}@${new SvelteURL(person.actor_id).hostname}`
+export const userLink = (person: Person, prefix: string = '') => {
+  // For Bluesky, the handle is already the full identifier
+  if (person.actor_id.includes('bsky.app')) {
+    return `${prefix}/u/${person.name}`
+  }
+  // For Lemmy/PieFed, append @instance
+  return `${prefix}/u/${person.name}@${new SvelteURL(person.actor_id).hostname}`
+}
 
 /**
  * Basic types only, don't use for anything more than basic equality

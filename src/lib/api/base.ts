@@ -4,6 +4,7 @@ import * as types from './types'
 export type ClientType =
   | { name: 'lemmy'; baseUrl: '/api/v3' }
   | { name: 'piefed'; baseUrl: '/api/alpha' }
+  | { name: 'bluesky'; baseUrl: 'https://bsky.social' }
 
 export const DEFAULT_CLIENT_TYPE: ClientType =
   env.PUBLIC_INSTANCE_TYPE == 'piefedalpha'
@@ -48,6 +49,12 @@ export abstract class BaseClient {
         case 'piefed': {
           return {
             type: { baseUrl: '/api/alpha', name: 'piefed' },
+            version: software.version,
+          }
+        }
+        case 'bluesky': {
+          return {
+            type: { baseUrl: 'https://bsky.social', name: 'bluesky' },
             version: software.version,
           }
         }

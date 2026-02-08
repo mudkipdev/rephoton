@@ -3,8 +3,14 @@ import type { SortType } from '$lib/api/types'
 import { settings } from '$lib/app/settings.svelte'
 import CommunityCard from '$lib/feature/community/CommunityCard.svelte'
 import { feed } from '$lib/feature/feeds/feed.svelte'
+import { profile } from '$lib/app/auth.svelte'
+import { error, redirect } from '@sveltejs/kit'
 
 export async function load({ params, fetch, url, route }) {
+  // Bluesky doesn't have communities - redirect to home
+  if (profile.current.client === 'bluesky') {
+    redirect(303, '/')
+  }
   const cursor: string | undefined = url.searchParams.get('cursor') as
     | string
     | undefined

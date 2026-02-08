@@ -16,6 +16,7 @@
 </script>
 
 <script lang="ts">
+  import { BlueskyClient } from '$lib/api/bluesky/adapter'
   import { site } from '$lib/api/client.svelte'
   import type { Post } from '$lib/api/types'
   import { profile } from '$lib/app/auth.svelte'
@@ -24,10 +25,12 @@
   import { settings } from '$lib/app/settings.svelte'
   import FormattedNumber from '$lib/ui/util/FormattedNumber.svelte'
   import { buttonColor, toast } from 'mono-svelte'
-  import { ChevronDown, ChevronUp, Icon } from 'svelte-hero-icons/dist'
+  import { ChevronDown, ChevronUp, Heart, Icon } from 'svelte-hero-icons/dist'
   import { backOut } from 'svelte/easing'
   import { fly } from 'svelte/transition'
   import { vote as voteItem } from '../legacy/contentview'
+
+  const isBluesky = $derived(profile.client instanceof BlueskyClient)
 
   interface Props {
     post: Post
@@ -95,7 +98,7 @@
     class={[
       'flex items-center gap-0.5 transition-colors relative cursor-pointer h-full p-2',
       'first:rounded-l-[inherit] last:rounded-r-[inherit]',
-      'last:flex-row-reverse',
+      target == 'downvote' && 'flex-row-reverse',
       vote == targetNum
         ? shouldShowVoteColor(
             vote,
@@ -110,7 +113,7 @@
         : 'post.actions.vote.downvote',
     )}
   >
-    <Icon src={target == 'upvote' ? ChevronUp : ChevronDown} size="20" micro />
+    <Icon src={target == 'upvote' ? (isBluesky ? Heart : ChevronUp) : ChevronDown} size={isBluesky && target == 'upvote' ? '16' : '20'} micro={!isBluesky} solid={isBluesky} />
     {#if showCounts}
       <div class="grid text-sm z-20">
         {#key votes}
@@ -139,16 +142,16 @@
     class={[
       buttonColor.secondary,
       'rounded-xl h-full font-medium flex relative hover:bg-transparent! shadow-xs',
-      voteRatio < 85 && settings.voteRatioBar && 'vote-ratio',
+      voteRatio < 85 && settings.voteRatioBar && !isBluesky && 'vote-ratio',
     ]}
     aria-label={$t('aria.vote.group')}
     style="--vote-ratio: {voteRatio}%;"
   >
     {@render voteButton(upvotes, 'upvote', vote)}
-    <div
-      class="h-full p-0! border-l border-slate-200 dark:border-zinc-800"
-    ></div>
     {#if site.data?.site_view.local_site.enable_downvotes ?? true}
+      <div
+        class="h-full p-0! border-l border-slate-200 dark:border-zinc-800"
+      ></div>
       {@render voteButton(downvotes, 'downvote', vote)}
     {/if}
   </div>

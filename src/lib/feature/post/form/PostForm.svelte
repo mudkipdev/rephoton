@@ -1,5 +1,6 @@
 <script lang="ts">
   import { client, site } from '$lib/api/client.svelte'
+  import { BlueskyClient } from '$lib/api/bluesky/adapter'
   import { PiefedClient } from '$lib/api/piefed/adapter'
   import type { PostView } from '$lib/api/types'
   import { profile } from '$lib/app/auth.svelte'
@@ -47,7 +48,7 @@
     Trash,
     XMark,
   } from 'svelte-hero-icons/dist'
-  import { autofillPost, PostFormState } from './postform.svelte'
+  import { autofillPost, PostFormState } from './postform.svelte.ts'
 
   interface Props {
     editPost?: number
@@ -74,6 +75,9 @@
   let loading = $state<boolean>(false)
   let uploadImage = $state(false)
   let customThumbnail = $state(false)
+
+  // Check if this is Bluesky
+  let isBluesky = $derived(profile.client instanceof BlueskyClient)
 
   async function autofill(
     data: URL | { title?: string; body?: string },
@@ -236,7 +240,7 @@
     </Header>
   {/if}
   <ErrorContainer scope="post-form" />
-  {#if !editPost}
+  {#if !editPost && !isBluesky}
     {#if !form.community}
       <ObjectAutocomplete
         listing_type="All"
@@ -274,21 +278,24 @@
     {/if}
   {/if}
 
-  <FreeTextInput
-    required
-    bind:value={form.title}
-    placeholder={placeholders.get('post')}
-    label={$t('form.post.title')}
-    class="font-display font-medium text-2xl"
-  />
+  {#if !isBluesky}
+    <FreeTextInput
+      required
+      bind:value={form.title}
+      placeholder={placeholders.get('post')}
+      label={$t('form.post.title')}
+      class="font-display font-medium text-2xl"
+    />
+  {/if}
   <MarkdownEditor
-    label={$t('form.post.body')}
+    label={isBluesky ? 'Post' : $t('form.post.body')}
     bind:value={form.body}
-    placeholder={placeholders.get('body')}
+    placeholder={isBluesky ? "What's happening?" : placeholders.get('body')}
     previewButton
+    required={isBluesky}
   />
 
-  {#if form.type == 'normal'}
+  {#if form.type == 'normal' && !isBluesky}
     <TextInput
       label={$t('form.post.url')}
       bind:value={form.url}
@@ -489,7 +496,9 @@
     {/if}
   {/if}
 
-  <Switch bind:checked={form.nsfw}>{$t('form.post.nsfw')}</Switch>
+  {#if !isBluesky}
+    <Switch bind:checked={form.nsfw}>{$t('form.post.nsfw')}</Switch>
+  {/if}
 
   <Button submit color="primary" {loading} size="lg" class="mt-auto">
     {$t('form.submit')}

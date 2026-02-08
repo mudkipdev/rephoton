@@ -8,12 +8,17 @@ import {
   generalizePrivateMessageReport,
   type ReportView,
 } from '$lib/feature/moderation/report'
-import { error } from '@sveltejs/kit'
+import { error, redirect } from '@sveltejs/kit'
 
 type ReportListType = 'unread' | 'all'
 
 export async function load({ url, fetch }) {
   if (!profile.current.jwt) error(401)
+
+  // Bluesky doesn't have moderation features
+  if (profile.current.client === 'bluesky') {
+    redirect(303, '/')
+  }
 
   const page = Number(url.searchParams.get('page')) || 1
   const type: ReportListType =

@@ -1,4 +1,5 @@
 import { client } from '$lib/api/client.svelte'
+import { BlueskyClient } from '$lib/api/bluesky/adapter'
 import { PiefedClient } from '$lib/api/piefed/adapter'
 import type {
   Community,
@@ -73,7 +74,12 @@ export class PostFormState {
   }
 
   validate(mode: 'edit' | 'create'): boolean {
-    if (mode == 'create' && !this.community) return false
+    const api = client()
+    const isBluesky = api instanceof BlueskyClient
+
+    // Bluesky doesn't need community, just body text
+    if (mode == 'create' && !isBluesky && !this.community) return false
+    if (isBluesky && !this.body) return false
     if (this.url && !URL.canParse(this.url)) return false
 
     return true
@@ -84,6 +90,7 @@ export class PostFormState {
       throw new Error('failed validation')
 
     const api = client()
+    const isBluesky = api instanceof BlueskyClient
 
     let res: PostView
     if (postId) {
@@ -102,10 +109,15 @@ export class PostFormState {
         })
       ).post_view
     } else {
+      // For Bluesky, use body as the post text and generate a title from it
+      const postTitle = isBluesky
+        ? (this.body?.substring(0, 100) || 'Untitled')
+        : this.title
+
       res = (
         await api.createPost({
-          community_id: this.community!.id,
-          name: this.title,
+          community_id: isBluesky ? 0 : this.community!.id,
+          name: postTitle,
           body: this.body,
           url: this.url,
           alt_text: this.altText,
