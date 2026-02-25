@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { BlueskyClient } from '$lib/api/bluesky/adapter'
   import { PiefedClient } from '$lib/api/piefed/adapter'
   import type { PostView } from '$lib/api/types'
   import { profile } from '$lib/app/auth.svelte'
@@ -17,7 +16,7 @@
     Trash,
     XMark,
   } from 'svelte-hero-icons/dist'
-  import { type PostFormInit } from '../form/postform.svelte.ts'
+  import { type PostFormInit } from '../form/postform.svelte'
   import { hidePost } from '../helpers'
 
   interface Props {
@@ -44,7 +43,7 @@
   }
 </script>
 
-{#if profile.current?.user && profile.current?.jwt && profile.current.user.local_user_view.person.id == post.creator.id && !(profile.client instanceof BlueskyClient)}
+{#if profile.current?.user && profile.current?.jwt && profile.current.user.local_user_view.person.id == post.creator.id}
   <MenuButton onclick={() => (editing = true)} icon={PencilSquare}>
     {$t('post.actions.more.edit')}
   </MenuButton>

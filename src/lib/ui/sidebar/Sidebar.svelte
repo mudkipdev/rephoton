@@ -1,6 +1,5 @@
 <script lang="ts">
   import { env } from '$env/dynamic/public'
-  import { BlueskyClient } from '$lib/api/bluesky/adapter'
   import { profile } from '$lib/app/auth.svelte'
   import { t } from '$lib/app/i18n'
   import { LINKED_INSTANCE_URL } from '$lib/app/instance.svelte'
@@ -36,8 +35,6 @@
   }
 
   let { style = '', class: clazz = '' }: Props = $props()
-
-  let isBluesky = $derived(profile.client instanceof BlueskyClient)
 </script>
 
 <nav
@@ -121,7 +118,7 @@
     {/snippet}
   </Select>
   <SidebarButton href="/theme" label={$t('nav.menu.theme')} icon={Swatch} />
-  {#if profile.current?.user && !isBluesky}
+  {#if profile.current?.user}
     <EndPlaceholder margin="sm" size="xs">
       {$t('content.communities')}
     </EndPlaceholder>

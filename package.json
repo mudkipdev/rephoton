@@ -56,8 +56,5 @@
     "format:specific": "prettier --write",
     "lint": "eslint ."
   },
-  "type": "module",
-  "dependencies": {
-    "@atproto/api": "^0.18.20"
-  }
+  "type": "module"
 }

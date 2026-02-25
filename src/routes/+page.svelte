@@ -1,9 +1,7 @@
 <script lang="ts">
   import { browser } from '$app/environment'
   import { page } from '$app/state'
-  import { BlueskyClient } from '$lib/api/bluesky/adapter'
   import { site } from '$lib/api/client.svelte'
-  import { profile } from '$lib/app/auth.svelte'
   import { t } from '$lib/app/i18n'
   import { settings, SSR_ENABLED } from '$lib/app/settings.svelte'
   import Location from '$lib/feature/filter/Location.svelte'
@@ -30,8 +28,6 @@
       ? VirtualFeed
       : PostFeed,
   )
-
-  let isBluesky = $derived(profile.client instanceof BlueskyClient)
 </script>
 
 <svelte:head>
@@ -47,19 +43,17 @@
   {#snippet extended()}
     <form class="contents" method="get" action={page.url.pathname}>
       <div class="flex flex-row gap-2 max-w-full flex-wrap">
-        {#if !isBluesky}
-          <Location
-            name="type"
-            navigate
-            bind:selected={data.filters.value.type_!}
-          />
-          <Sort
-            placement="bottom"
-            name="sort"
-            navigate
-            bind:selected={data.filters.value.sort!}
-          />
-        {/if}
+        <Location
+          name="type"
+          navigate
+          bind:selected={data.filters.value.type_!}
+        />
+        <Sort
+          placement="bottom"
+          name="sort"
+          navigate
+          bind:selected={data.filters.value.sort!}
+        />
         <ViewSelect placement="bottom" />
 
         <noscript>

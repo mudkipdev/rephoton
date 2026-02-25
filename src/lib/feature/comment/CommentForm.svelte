@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { BlueskyClient } from '$lib/api/bluesky/adapter'
   import { client, site } from '$lib/api/client.svelte'
   import type { CommentResponse } from '$lib/api/types'
   import { profile } from '$lib/app/auth.svelte'

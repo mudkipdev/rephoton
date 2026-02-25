@@ -91,9 +91,7 @@
 
 <a
   class="items-center inline-flex flex-row gap-1 hover:underline max-w-full min-w-0 {clazz}"
-  href={user.actor_id.includes('bsky.app')
-    ? `/u/${user.name}`
-    : `/u/${user.name}@${new URL(user.actor_id).hostname}`}
+  href="/u/{user.name}@{new URL(user.actor_id).hostname}"
   data-sveltekit-preload-data="tap"
 >
   {@render children?.()}
@@ -115,7 +113,7 @@
     >
       {displayName ? user.display_name || user.name : user.name}
     </span>
-    {#if showInstance && !user.actor_id.includes('bsky.app')}
+    {#if showInstance}
       <span
         class="text-slate-500 dark:text-zinc-500 font-normal instance-text shrink {instanceClass ??
           ''}"

@@ -49,10 +49,6 @@
     onhide,
   }: Props = $props()
 
-  // Check if this is a Bluesky post
-  let isBlueskyPost = $derived(post.community.name === 'bluesky' ||
-    post.creator.actor_id.includes('bsky.app'))
-
   let tags = $derived.by<{ title?: string; tags: Tag[] }>(() => {
     const parsed = parseTags(post.post.name)
 
@@ -109,7 +105,7 @@
 >
   <PostMeta
     community={post.community}
-    showCommunity={!hideCommunity && !isBlueskyPost}
+    showCommunity={!hideCommunity}
     user={post.creator}
     published={publishedToDate(post.post.published)}
     {badges}
@@ -150,7 +146,7 @@
       />
     {/if}
   {/key}
-  {#if post.post.body && !post.post.nsfw && (view != 'compact' || isBlueskyPost)}
+  {#if post.post.body && !post.post.nsfw && view != 'compact'}
     <PostBody
       element="section"
       body={post.post.body}

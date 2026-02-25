@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { BlueskyClient } from '$lib/api/bluesky/adapter'
   import { site } from '$lib/api/client.svelte'
   import { profile } from '$lib/app/auth.svelte'
   import { t } from '$lib/app/i18n'
@@ -27,8 +26,6 @@
   }
 
   let { style = '', class: clazz = '' }: Props = $props()
-
-  let isBluesky = $derived(profile.client instanceof BlueskyClient)
 </script>
 
 <CommandsWrapper />
@@ -92,15 +89,13 @@
       />
     {/if}
   </div>
-  {#if !isBluesky}
-    <NavButton
-      href="/explore/communities"
-      label={$t('routes.explore.title')}
-      icon={GlobeAlt}
-      isSelectedFilter={(path) => path.startsWith('/explore')}
-      class="order-1"
-    />
-  {/if}
+  <NavButton
+    href="/explore/communities"
+    label={$t('routes.explore.title')}
+    icon={GlobeAlt}
+    isSelectedFilter={(path) => path.startsWith('/explore')}
+    class="order-1"
+  />
   <NavButton
     href="/search"
     label={$t('nav.search')}

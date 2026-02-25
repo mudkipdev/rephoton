@@ -7,7 +7,6 @@
     DEFAULT_CLIENT_TYPE,
   } from '$lib/api/base'
   import { client } from '$lib/api/client.svelte'
-  import { BlueskyClient } from '$lib/api/bluesky/adapter'
   import { LemmyClient } from '$lib/api/lemmy/adapter'
   import { PiefedClient } from '$lib/api/piefed/adapter'
   import { profile } from '$lib/app/auth.svelte'
@@ -23,13 +22,12 @@
     pushError,
   } from '$lib/ui/info/ErrorContainer.svelte'
   import { Header } from '$lib/ui/layout'
-  import { Button, Menu, MenuButton, Note, Option, Select, Spinner, TextInput, toast } from 'mono-svelte'
+  import { Button, Note, Spinner, TextInput, toast } from 'mono-svelte'
   import { debounce } from 'mono-svelte/util/time'
   import {
     Icon,
     Identification,
     QuestionMarkCircle,
-    ServerStack,
     UserCircle,
   } from 'svelte-hero-icons/dist'
   import { expoOut } from 'svelte/easing'
@@ -62,11 +60,6 @@
   })
 
   async function checkInstance() {
-    if (form.client.name === 'bluesky') {
-      // Bluesky doesn't use nodeinfo, skip instance check
-      form.client = { name: 'bluesky', baseUrl: 'https://bsky.social' }
-      return
-    }
     const type = await BaseClient.fetchInfo(
       new URL(instanceToURL(form.instance)),
     )
@@ -144,12 +137,7 @@
   }, 500)
 
   $effect(() => {
-    if (form.client.name === 'bluesky') {
-      form.instance = 'bsky.social'
-      detectedClient = 'bluesky'
-    } else if (form.instance) {
-      checkDebounce()
-    }
+    if (form.instance) checkDebounce()
   })
 </script>
 
@@ -170,31 +158,9 @@
       <Header>{$t('account.login')}</Header>
       <ErrorContainer class="pt-2" scope={page.route.id} />
     </div>
-    {#if !LINKED_INSTANCE_URL}
-      <Select
-        bind:value={() => form.client.name, (v) => {
-          if (v === 'lemmy') form.client = { name: 'lemmy', baseUrl: '/api/v3' }
-          else if (v === 'piefed') form.client = { name: 'piefed', baseUrl: '/api/alpha' }
-          else if (v === 'bluesky') form.client = { name: 'bluesky', baseUrl: 'https://bsky.social' }
-        }}
-        label="Platform"
-      >
-        <Option value="lemmy">Lemmy</Option>
-        <Option value="piefed">PieFed</Option>
-        <Option value="bluesky">Bluesky</Option>
-      </Select>
-    {/if}
     {#if form.client.name == 'piefed'}
       <Note>
         {$t('account.piefedGate')}
-      </Note>
-    {:else if form.client.name == 'bluesky'}
-      <Note>
-        <strong>Bluesky Login:</strong>
-        <ul class="list-disc list-inside mt-2">
-          <li>Username: Your full handle (e.g., <code>username.bsky.social</code>)</li>
-          <li>Password: Use an <strong>app password</strong> (generate at <a href="https://bsky.app/settings/app-passwords" target="_blank" class="underline">bsky.app/settings/app-passwords</a>)</li>
-        </ul>
       </Note>
     {/if}
     <div class="flex flex-row w-full items-center gap-2">
@@ -205,7 +171,7 @@
         class="flex-1"
         required
       />
-      {#if !LINKED_INSTANCE_URL && form.client.name !== 'bluesky'}
+      {#if !LINKED_INSTANCE_URL}
         <TextInput
           id="instance_url"
           placeholder={DEFAULT_INSTANCE_URL}
@@ -243,14 +209,10 @@
         type="password"
         minlength={form.client.name == 'piefed'
           ? PiefedClient.constants.password.minLength
-          : form.client.name == 'bluesky'
-            ? BlueskyClient.constants.password.minLength
-            : LemmyClient.constants.password.minLength}
+          : LemmyClient.constants.password.minLength}
         maxlength={form.client.name == 'piefed'
           ? PiefedClient.constants.password.maxLength
-          : form.client.name == 'bluesky'
-            ? BlueskyClient.constants.password.maxLength
-            : LemmyClient.constants.password.maxLength}
+          : LemmyClient.constants.password.maxLength}
         required
         class="w-full"
       />
