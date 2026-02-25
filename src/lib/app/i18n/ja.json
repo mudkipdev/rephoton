@@ -1,315 +1,11 @@
 {
-    "settings": {
-        "navigation": {
-            "pins": {
-                "description": "ピンをクリックしてサイドバーの上に貼ります。右クリックでピン付けアイテムを外します。",
-                "title": "ピン付け"
-            },
-            "title": "ナビゲーション",
-            "dockPos": {
-                "adaptive": "自動",
-                "top": "上へ",
-                "bottom": "下へ",
-                "title": "ドック位置",
-                "description": "ドックを画面に置く位置。"
-            },
-            "panel": {
-                "title": "パネルモード",
-                "description": "パネルのように、ドックを画面の左右両道まで拡張する。",
-                "on": "オン",
-                "off": "オフ",
-                "adaptive": "自動"
-            }
-        },
-        "app": {
-            "lang": {
-                "note": "英語とヘブライ語以外はコミュニティが翻訳してあるもので、完璧ではない場合があります。",
-                "useRtl": {
-                    "description": "右横読みレイアウト（RTL)を対応言語で使う。",
-                    "title": "右横読みレイアウトを使う（RTL)"
-                },
-                "title": "言語",
-                "description": "PhotonのUIが使う言語。",
-                "en": "英語",
-                "en-US": "英語（US)",
-                "he": "ヘブライ語",
-                "et": "エストニア語",
-                "fr": "フランス語",
-                "de": "ドイツ語",
-                "fi": "フィンランド語",
-                "pt": "ポルトガル語",
-                "zh": "中国語",
-                "zh-Hans": "中国語（簡体）",
-                "zh-Hant": "中国語（繁体）",
-                "auto": "自動",
-                "credits": "クレジット"
-            },
-            "infiniteScroll": {
-                "title": "無限スクロール",
-                "description": "「次へ」ボタンを押さずに、ずっと新しい投稿が次々と現れる。"
-            },
-            "view": {
-                "compact": "投稿を本文抜きのリストで狭く表示する。",
-                "title": "投稿スタイル",
-                "list": "投稿を本文と縮小したメディアにリストで表示する。",
-                "cozy": "投稿を拡大イメージ、エンベッド文字、長い本文を表示する。",
-                "legacy": "Photonの昔の雰囲気。"
-            },
-            "limitLayoutWidth": {
-                "description": "読みやすいように主要内容の幅を制限する。",
-                "title": "レイアウトの幅を制限する"
-            },
-            "title": "Photon",
-            "theming": {
-                "title": "テーマ設定",
-                "description": "Photonの色合いを変える。",
-                "link": "テーマに行く"
-            },
-            "colorscheme": {
-                "title": "配色",
-                "description": "このアプリが使う配色。"
-            },
-            "sort": {
-                "title": "既定順序",
-                "description": "投稿を通常この順で並べる設定。"
-            },
-            "postsInNewTab": {
-                "title": "投稿を新しいタブで開く",
-                "description": "投稿にクリックするときに、同じタブではなく、新しいタブで開く。"
-            },
-            "displayName": {
-                "title": "呼び名を使う",
-                "description": "ユーザーの正式アカウント名の代わりに呼び名を使う。"
-            },
-            "placeholders": {
-                "title": "ランダムに空白を付ける",
-                "description": "各種の文章に異なるサイズの空白を付ける。"
-            },
-            "expandImages": {
-                "title": "画像を拡張する",
-                "description": "投稿の添付画像をクリックすると、投稿ページの代わりに画像の拡大表示をします。"
-            },
-            "duplicateTitles": {
-                "title": "重複タイトル・本文を非表示",
-                "description": "投稿の題名と本文がエンベッド内容と一致する場合、表示しません。"
-            },
-            "thumbnailSide": {
-                "title": "サムネイル画像の配置",
-                "description": "リスト・コンパクト表示モードでの投稿サムネイルの位置",
-                "left": "左側",
-                "right": "右側"
-            },
-            "font": {
-                "title": "フォント",
-                "description": "PhotonのUIが使用する書体。"
-            },
-            "translation": {
-                "title": "翻訳",
-                "description": "使用するLibretranslate翻訳用のインスタンス。",
-                "instance": "ドメイン指定"
-            },
-            "titleTags": {
-                "title": "投稿題名のタグを自動で読み取る",
-                "description": "題名内の[カッコ欄]をタグに変え、クリックして類似するタグを探すことができます。",
-                "rules": {
-                    "title": "ルール",
-                    "blur-sm": "モザイク",
-                    "hide": "隠す",
-                    "show": "表示"
-                }
-            }
-        },
-        "title": "設定",
-        "beta": "ベータ版",
-        "desktop": "デスクトップ",
-        "tablet": "タブレット",
-        "mobile": "モバイル",
-        "export": "エクスポート",
-        "import": "インポート",
-        "reset": "リセット",
-        "lemmy": {
-            "crosspostMarker": {
-                "description": "クロスポストを作るときに転送元を表示。",
-                "title": "転送投稿を印付ける"
-            },
-            "compactFeatured": {
-                "description": "モデレーターが勧めた投稿を普通の投稿より小さくする",
-                "title": "ピン付投稿をコンパクト表示する"
-            },
-            "nsfwBlur": {
-                "description": "成人向けの投稿の画像にモザイクを付け、本文プレビューを隠します。",
-                "title": "NSFWモザイク"
-            },
-            "title": "Lemmy",
-            "showHiddenPosts": {
-                "title": "非表示した投稿を見せる",
-                "description": "手動で非表示した投稿を表示します。"
-            },
-            "markReadPosts": {
-                "title": "既読投稿を印付ける",
-                "description": "クリックした投稿を既読として記す"
-            },
-            "fadeReadPosts": {
-                "title": "既読投稿を薄れて表示する",
-                "description": "既に読んだ投稿の題名を薄れて表示します"
-            },
-            "hideSubmissions": {
-                "title": "投稿を隠す",
-                "description": "特定の投稿を非表示します。",
-                "deleted": "ユーザーが削除した投稿",
-                "removed": "モデレーターが撤去した投稿"
-            },
-            "instances": {
-                "title": "インスタンスを表示",
-                "description": "コンテンツはどのインスタンスから送信かを表示。"
-            }
-        },
-        "moderation": {
-            "replyPresets": {
-                "description": "投稿撤去時の理由でよく使うプリセット。",
-                "title": "撤去返信のプリセット",
-                "syntax": "構文"
-            },
-            "title": "モデレーション"
-        },
-        "embeds": {
-            "instance": {
-                "piped": "Pipedインスタンス",
-                "description": "YouTube動画を読み込むサイト。",
-                "invidious": "Invidiousインスタンス"
-            },
-            "title": "エンベッド",
-            "clickToView": {
-                "title": "クリックしてから見る",
-                "description": "エンベッドはクリックしてからのみ読み込んで表示します。"
-            },
-            "youtube": {
-                "description": "YouTubeを読み込むサイト。"
-            }
-        },
-        "other": {
-            "virtualizeFeeds": {
-                "description": "仮想化は画面に見える投稿しか読み込まないので、パフォーマンス性能を上げます。もしスクロール時に反応が荒い場合、は無効できます。無限スクロール機能は仮想化が必要です。",
-                "title": "フィードを仮想化しない"
-            },
-            "title": "その他",
-            "debug": {
-                "title": "デバッグ情報",
-                "description": "デバッグ情報を表示する"
-            }
-        }
-    },
-    "moderation": {
-        "unlock": "解錠",
-        "report": "報告",
-        "ban": {
-            "banning": "ユーザー禁止",
-            "unbanning": "ユーザー許可",
-            "deleteData": "データを消す",
-            "expires": "に解除（UTC)",
-            "unbanFromCommunity": "コミュニティに許可",
-            "banFromCommunity": "コミュニティから禁止",
-            "warning": "このユーザーからのコンテンツをインスタンスからすべて削除します。"
-        },
-        "removeSubmission": {
-            "title": "投稿を撤去",
-            "titleRestore": "投稿を復元",
-            "titlePurge": "投稿を消去",
-            "comment": "コメント",
-            "message": "メッセージ",
-            "failMessage": "メッセージの送信が失敗しましたが、撤去をそのまま実行します。",
-            "failEmptyReply": "「理由を返信」を選択した場合、返信は必須です。",
-            "successPurge": "内容を正常に削除しました。",
-            "withReason": "理由を返信",
-            "failReply": "返信できませんでしたが、撤去をそのまま実行します。"
-        },
-        "reportModal": {
-            "title": "報告",
-            "success": "投稿を報告しました。"
-        },
-        "reason": "理由",
-        "lock": "施錠",
-        "remove": "撤去",
-        "restore": "復元",
-        "labelInstanceOnly": "モデレーション（インスタンスのみ）",
-        "feature": "勧める",
-        "unfeature": "お勧めを解除",
-        "label": "モデレーション"
-    },
-    "toast": {
-        "generatedTitle": "URLから題名と本文を作りました。これを前の状態に戻しますか？",
-        "failCSV": "CSVの読み込みが失敗",
-        "failFindUser": "ユーザーが見つかりません。",
-        "loginVoteGate": "投票するにはログインが必要です。",
-        "blockedCommunity": "コミュニティをブロックしました。",
-        "unblockedCommunity": "コミュニティのブロックを解除しました。",
-        "purgedCommunity": "コミュニティを消去しました。",
-        "updatedCommunity": "コミュニティが更新されました。",
-        "sentMessage": "メッセージを送信しました。",
-        "invalidDateBeforeCurrent": "日付が無効です。現在の時間より前です。",
-        "bannedUser": "ユーザーを禁じました。",
-        "unbannedUser": "ユーザーの禁止を取り消しました。",
-        "needCommunity": "コミュニティを選択する必要があります。",
-        "invalidURL": "URLが無効",
-        "failGenerateTitle": "サイトから題名も本文も解析できませんでした。",
-        "copied": "クリップボードにコピーしました。",
-        "approvedApplication": "申し込みを承認しました。",
-        "deniedApplication": "申し込みを拒否しました。",
-        "updatedSite": "サイトを更新しました。",
-        "removeAdminWarning": "本当にこの管理者を役割から外しますか？",
-        "updateMods": "コミュニティのモデレーターを更新しました。",
-        "logIn": "ログインが成功しました。",
-        "addAccount": "アカウントを追加しました。",
-        "resetLink": "パスワードリセットのリンクがeメールで送られました。",
-        "resolveReport": "報告を解決しました。",
-        "unresolveReport": "報告の解決を取り消しました。",
-        "fetchPostOnHome": "自分のインスタンスからこの投稿を受信しようとしています。。。",
-        "loginRefresh": "ログインを更新しました。",
-        "invalidLogin": "暗証が無効",
-        "confirmDelete1": "アカウントを削除しようとしています。よろしいですか？",
-        "confirmDelete2": "本当にアカウントを削除しますか？",
-        "needPassword": "パスワードの入力が必要です。",
-        "deleting": "アカウントの削除が処理中。。。",
-        "deleted": "アカウントは削除されました。",
-        "resetSettings": "設定を初期化します。よろしいですか？",
-        "verifyEmail": "認証リンクはeメールで送られました。eメールの認証を完了してから、ログインしてください。",
-        "failSignup": "新規登録が失敗しました。",
-        "successSignup": "新規登録が成功しました。",
-        "blockUser": "ユーザーをブロックしました。",
-        "unblockUser": "ユーザーのブロックを解除しました。",
-        "purgeUser": "ユーザーとコンテンツを消去しました。",
-        "settingsImport": "設定のインポート成功",
-        "userLoading": "インポートをしようとしています。。。",
-        "restoredFromDraft": "投稿下書きを復元しました。",
-        "addMod": "モデレーターを追加しました。",
-        "noComments": "APIはコメントを返しませんでした。",
-        "blockedInstance": "インスタンスをブロックしました。",
-        "removeAdmin": "管理者を解雇しました。",
-        "waitApplication": "申し込みは未だに検討中です。登録申請の承認をしばらくお待ちしてから、ログインしてください。",
-        "settingsImportWarning": "設定のインポートに誤りがありそうです。インポートを続けますか？",
-        "invalidDateAbsolute": "日付を解析できませんでした。完全な日付を入力してください。",
-        "failInstanceURL": "インスタンスURLとの通信が失敗しました。もしかしてオフライン？",
-        "passwordReset": "パスワードはリセットされました。",
-        "saveSettings": "ユーザー設定を保存しました。もしeメールを変えた場合、認証リンクが送られました。",
-        "confirmDelete3": "もう一度確認します。本当にアカウントを完全的に削除してもよろしいですか？",
-        "failFetchInstances": "通信可能のインスタンスのリストを読み取れませんでした。"
+    "profile": {
+        "profile": "プロフィール",
+        "inbox": "受信箱",
+        "saved": "保存済み",
+        "subscribed": "登録済み"
     },
     "nav": {
-        "commands": {
-            "setColor": "配色を設定",
-            "prompt": "コマンドパレット",
-            "recents": "最近",
-            "content": "コンテンツ",
-            "search": "{{default}}を探す",
-            "main": "主要",
-            "setViewTo": "ビューを {{default}}に設定",
-            "setView": "ビューを設定",
-            "feeds": "フィード",
-            "downloading": "ダウンロード作業",
-            "setTheme": "テーマを設定",
-            "setThemeTo": "テーマを{{default}}に設定",
-            "setColorTo": "配色を{{default}}に設定"
-        },
         "home": "ホーム",
         "admin": "管理者",
         "moderation": "モデレーション",
@@ -336,13 +32,26 @@
             "source": "ソースコード",
             "donate": "寄付する",
             "instance": "インスタンス"
-        }
-    },
-    "profile": {
-        "profile": "プロフィール",
-        "inbox": "受信箱",
-        "saved": "保存済み",
-        "subscribed": "登録済み"
+        },
+        "commands": {
+            "prompt": "コマンドパレット",
+            "recents": "最近",
+            "content": "コンテンツ",
+            "search": "{{default}}を探す",
+            "main": "主要",
+            "setView": "ビューを設定",
+            "setViewTo": "ビューを {{default}}に設定",
+            "setColor": "配色を設定",
+            "setColorTo": "配色を{{default}}に設定",
+            "feeds": "フィード",
+            "downloading": "ダウンロード作業",
+            "setTheme": "テーマを設定",
+            "setThemeTo": "テーマを{{default}}に設定",
+            "contextual": "このページで",
+            "communities": "**{{default}}** を含むコミュニティ",
+            "goto": "**{{default}}** へ移動"
+        },
+        "notifications": "通知"
     },
     "account": {
         "login": "ログイン",
@@ -350,21 +59,21 @@
         "signup": "新規登録",
         "accounts": "アカウント",
         "resetColor": "元の色に戻す",
+        "addGuest": "ゲストを作成",
         "moveUp": "上に動かす",
         "moveDown": "下に動かす",
         "guest": "ゲスト",
-        "addGuest": "ゲストを作成",
-        "changeinstance": "インスタンスを変える",
-        "versionGate": "このPhotonバージョンは{{version}}以上のインスタンスバージョンに対応しています。"
+        "piefedGate": "Piefedのサポートは実験的です。一部の機能はサポートされていません。"
     },
     "filter": {
         "location": {
             "label": "範囲",
             "all": "すべて",
             "local": "ローカル",
+            "subscribed": "購読済み",
             "moderator": "モデレーター",
             "global": "グローバル",
-            "subscribed": "購読済み"
+            "popular": "人気"
         },
         "sort": {
             "label": "並び替え",
@@ -375,6 +84,8 @@
                 "time": {
                     "label": "時間",
                     "all": "すべて",
+                    "year": "過去1年",
+                    "9months": "9ヶ月以内",
                     "6months": "6ヶ月以内",
                     "3months": "3ヶ月以内",
                     "month": "今月",
@@ -382,12 +93,11 @@
                     "day": "今日",
                     "12hours": "12時間以内",
                     "6hours": "6時間以内",
-                    "hour": "1時間以内",
-                    "9months": "9ヶ月以内"
+                    "hour": "1時間以内"
                 }
             },
-            "old": "古い",
             "new": "新しい",
+            "old": "古い",
             "controversial": "論争的",
             "scaled": "比例順序",
             "mostcomments": "コメント",
@@ -410,15 +120,18 @@
         }
     },
     "form": {
+        "username": "ユーザー名",
         "name": "名前",
+        "instance": "インスタンスURL",
         "password": "パスワード",
         "confirmPassword": "パスワード確認",
         "2fa": "2FA認証コード",
         "forgotpassword": "パスワードを忘れた",
+        "submit": "送信",
         "edit": "編集",
         "preview": "プレビュー",
-        "instance": "インスタンスURL",
         "post": {
+            "create": "投稿を作成",
             "edit": "投稿を編集",
             "community": "コミュニティ",
             "title": "題名",
@@ -427,9 +140,21 @@
             "nsfw": "成人向け（NSFW)",
             "generateTitle": "自動で題名を作る",
             "uploadImage": "画像をアップロード",
+            "selectFile": "ファイルを選択",
             "altText": "代替テキスト",
-            "create": "投稿を作成",
-            "selectFile": "ファイルを選択"
+            "addUrl": "リンクを追加",
+            "setLanguage": "言語を設定",
+            "unset": "設定解除",
+            "readMore": "続きを読む",
+            "flair": "フレアを追加",
+            "fetching": "サイトのメタデータを取得中",
+            "types": {
+                "normal": "ディスカッション",
+                "poll": "投票",
+                "event": "イベント"
+            },
+            "autosubmit": "自動的に送信",
+            "customThumbnail": "サムネイルを設定"
         },
         "profile": {
             "displayName": "呼び名",
@@ -441,6 +166,7 @@
             "showNSFW": "成人向け（NSFW)コンテンツを表示",
             "scores": "スコアを表示",
             "bot": "Botアカウント",
+            "showBots": "Botアカウントを表示",
             "showRead": "既読投稿を表示",
             "currentPassword": "現在のパスワード",
             "newPassword": "新しいパスワード",
@@ -448,43 +174,72 @@
             "2fa": {
                 "totp": "TOTP 二段階認証",
                 "2fa": "二段階認証",
-                "paste": "二段階認証用アプリにこれをペーストしてください。"
+                "paste": "二段階認証用アプリにこれをペーストしてください。",
+                "disabled": "2FAは無効です"
             },
             "deleteAccount": {
-                "label": "アカウントを削除",
                 "deleteContent": "コンテンツを削除",
                 "warning": "すべての投稿が削除されます。"
             },
-            "showBots": "Botアカウントを表示"
+            "languages": {
+                "title": "言語",
+                "description": "設定すると、その言語として明示的にタグ付けされたコンテンツのみが表示されます。タグ付けされていないほとんどのコンテンツは「未定」に分類されます。"
+            },
+            "credentials": {
+                "title": "ログイン方法の管理",
+                "description": "ここでは、セキュリティ強化のために2FAを有効にしたり、パスワードを変更したり、ログインしているデバイスを表示したり、アカウントを削除したりできます。"
+            }
         },
         "email": "eメール",
         "setup": "初期設定",
         "signup": {
             "title": "新規登録",
+            "description": "次の中からお気に入りのサーバーを選択するか、インスタンスのURLを入れてください。",
+            "info": "インスタンスとは、自分のアカウントをホストするサーバーです。しかし、他のインスタンスのコンテンツをアクセスと操作が可能です。",
             "chooseInstance": "インスタンスを選択",
             "application": {
+                "label": "申し込み",
                 "info": "このインスタンスに参加するには、以下の申込み書と管理者の承認が必要です。承認の場合はeメールで通知します。",
-                "label": "申し込み"
+                "notice": "サインアップは保留中です。管理者が確認し、承認されるとメールが届きます。その後、ログインできます。"
             },
             "closed": {
                 "title": "新規登録閉鎖",
-                "anotherInstance": "他のインスタンスを探す",
-                "description": "このインスタンスは現在、新規登録を受け付けていません。他のインスタンスを探してください。"
+                "description": "このインスタンスは現在、新規登録を受け付けていません。他のインスタンスを探してください。",
+                "anotherInstance": "他のインスタンスを探す"
             },
-            "info": "インスタンスとは、自分のアカウントをホストするサーバーです。しかし、他のインスタンスのコンテンツをアクセスと操作が可能です。",
-            "description": "次の中からお気に入りのサーバーを選択するか、インスタンスのURLを入れてください。"
+            "verify": {
+                "title": "メールアドレスの確認",
+                "description": "受信トレイで確認リンクを確認してください。クリックしたら、以下のボタンを押してください。",
+                "submit": "メールアドレスを確認しました",
+                "error": "メールアドレスが確認されていません。"
+            }
         },
         "description": "説明",
-        "username": "ユーザー名",
-        "submit": "送信"
+        "time": {
+            "duration": "期間",
+            "minutes": "分",
+            "hours": "時間",
+            "days": "日",
+            "months": "ヶ月",
+            "years": "年",
+            "permanent": "無期限"
+        },
+        "instanceType": "サーバーソフトウェアの種類"
     },
     "routes": {
         "frontpage": {
             "title": "ホームページ",
             "footer": "{{users:number}}アクティブユーザー{{users; 1:user; default:users;}}",
-            "endFeed": "{{community_name; undefined:the feed.; default:{{community_name}}の最後にたどり着きました。}}"
+            "endFeed": "{{community_name; undefined:the feed.; default:{{community_name}}の最後にたどり着きました。}}",
+            "empty": {
+                "title": "投稿なし",
+                "description": "このフィルタに一致する投稿はありません。"
+            }
         },
-        "modlog": "モデレーション記録",
+        "modlog": {
+            "title": "モデレーションログ",
+            "filters": "フィルタ"
+        },
         "instances": "インスタンス",
         "legal": {
             "title": "法的条件",
@@ -493,7 +248,23 @@
         "profile": {
             "user": "ユーザー",
             "settings": "設定",
-            "blocks": "ブロック",
+            "blocks": {
+                "title": "ブロック中",
+                "empty": {
+                    "user": {
+                        "title": "ブロックしているユーザーはいません",
+                        "description": "ユーザーをブロックすると、フィードからそのユーザーの投稿とコメントが非表示になります。"
+                    },
+                    "community": {
+                        "title": "ブロックしているコミュニティはありません",
+                        "description": "コミュニティをブロックすると、フィードからその投稿が非表示になります。"
+                    },
+                    "instance": {
+                        "title": "ブロックしているサーバーはありません",
+                        "description": "サーバーをブロックすると、フィードからそのコミュニティの投稿が非表示になります。"
+                    }
+                }
+            },
             "credentials": "アカウント",
             "moderates": "モデレーター担当",
             "favorites": "お気に入り",
@@ -504,35 +275,51 @@
                 "download": "ダウンロード"
             },
             "logins": "ログイン",
-            "welcome": "ようこそ、{{default}}！",
             "delete": {
                 "title": "アカウントを削除",
                 "warning": "この操作は元に戻せません。よろしいですか？"
-            }
+            },
+            "overview": "概要",
+            "submissions": "投稿",
+            "edit": "編集"
         },
         "translators": "翻訳者",
         "accounts": "アカウント",
-        "communities": "コミュニティ",
+        "accounts.placeholder": {
+            "title": "ログインしていません",
+            "description": "ログインしていません。ここからサインアップまたはログインできます。",
+            "descriptionWithGuest": "ログインしていません。ここからログイン、サインアップ、またはゲストアカウントの追加ができます。"
+        },
+        "explore": {
+            "title": "探索",
+            "feeds": "フィード",
+            "topics": "トピック"
+        },
+        "communities": {
+            "title": "コミュニティ",
+            "trending": "トレンド",
+            "search": {
+                "placeholder": "新しいコミュニティを検索"
+            }
+        },
         "search": {
             "title": "検索",
             "federating": "連合",
             "query": "検索件",
             "noResults": {
                 "title": "結果なし",
-                "alt": "連合ネットワーク全体を検索する",
-                "description": "このフィルターに一致する結果はありません。検索条件を変えて改めてお試しください。"
-            }
+                "description": "このフィルターに一致する結果はありません。検索条件を変えて改めてお試しください。",
+                "alt": "連合ネットワーク全体を検索する"
+            },
+            "top": "トップ結果",
+            "other": "その他の結果"
         },
         "saved": "保存済み",
-        "createPost": "投稿を作成",
-        "createCommunity": "コミュニティを作成",
         "post": {
             "crosspostCount": "転送",
             "commentCount": "コメント",
             "addComment": "コメントを投稿",
             "scrollToTop": "上に戻る",
-            "remoteView": "他のインスタンスから見る",
-            "localView": "自分のインスタンスから見る",
             "thread": {
                 "single": "コメントスレッド一件を見ています。",
                 "allComments": "すべてのコメントを見る",
@@ -543,7 +330,21 @@
                 "title": "コメントなし",
                 "description": "会話を始めよう！"
             },
-            "instanceWarning": "この投稿はよそのサーバーからリクエストされました。操作は限られています。"
+            "commented": "コメントが投稿されました。",
+            "loadComments": "コメントを読み込む"
+        },
+        "postRedirect": {
+            "title": "クロスサーバーコンテンツ",
+            "description": "そのコンテンツは {{homeInstance}} からのものではありません。",
+            "actions": {
+                "back": "戻る",
+                "fetch": "{{homeInstance}} で続ける",
+                "switch": "{{destInstance}} のアカウントに切り替える"
+            },
+            "automatic": {
+                "title": "投稿を検索中",
+                "description": "そのコンテンツはあなたのアカウントのサーバーからのものではありません。"
+            }
         },
         "inbox": {
             "title": "受信箱",
@@ -551,6 +352,19 @@
             "empty": {
                 "title": "新通知なし",
                 "description": "メッセージ、返信、言及はここに現れます。"
+            },
+            "item": {
+                "reply": "{{user}} が {{post}} であなたに返信しました",
+                "mention": "{{user}} が {{post}} であなたについて言及しました",
+                "message": "{{user}} が {{recipient}} にメッセージを送信しました"
+            },
+            "messages": {
+                "conversation": "これは {{user}} との会話の始まりです",
+                "indicator": "メッセージを送信中: {{user}}",
+                "start": "チャットを開始",
+                "empty": {
+                    "title": "メッセージなし"
+                }
             }
         },
         "moderation": {
@@ -563,25 +377,36 @@
             "resolve": "解決",
             "resolved": "解決済み",
             "unresolve": "解決を取消",
-            "resolvedBy": "解決者"
+            "resolvedBy": "解決者",
+            "markAll": "ページを解決済みにする",
+            "markAllComplete": "バッチ処理が完了しました。",
+            "feed": "報告",
+            "manage": {
+                "title": "管理",
+                "modlogs": "最近のモデレーションログ",
+                "ban": "禁止",
+                "unban": "禁止解除"
+            }
         },
         "admin": {
             "title": "管理",
             "config": {
                 "title": "サイト管理設定",
+                "sidebar": "サイドバー",
                 "icon": "アイコン",
                 "banner": "バナー",
                 "downvotesEnabled": "反対投票を有効にする",
                 "nsfwEnabled": "成人向け(NSFW)コンテンツを有効する",
                 "registration": {
+                    "label": "新規登録設定",
                     "open": "自由",
-                    "closed": "閉鎖",
                     "application": "申し込み必須",
-                    "label": "新規登録設定"
+                    "closed": "閉鎖"
                 },
                 "applicationQuestion": "申込み問題文",
                 "adminCommunityOnly": "管理者のみがコミュニティを作れる",
                 "requireVerifyEmail": "eメール認証を必須にする",
+                "emailAdminsOnApplication": "新しい申込みにつき管理者をeメールで通知",
                 "emailAdminsOnReport": "新しい報告につき管理者をeメールで通知",
                 "listingType": {
                     "label": "リストタイプ",
@@ -591,13 +416,11 @@
                 "private": "私有インスタンス",
                 "hideModlogModNames": "モデレーション記録でモデレーターの名前を隠す",
                 "slurFilter": "Slurフィルター正規表現",
+                "federation": "連合を有効",
                 "federationDebug": "連合デバッグモード",
                 "captcha": {
                     "enabled": "CAPTCHAを有効"
-                },
-                "sidebar": "サイドバー",
-                "emailAdminsOnApplication": "新しい申込みにつき管理者をeメールで通知",
-                "federation": "連合を有効"
+                }
             },
             "applications": {
                 "title": "申し込み",
@@ -606,21 +429,21 @@
                     "description": "このインスタンスに参加希望の申し込みはここに現れます。"
                 },
                 "application": "申請",
-                "user": "ユーザー",
                 "approved": "承認済み",
                 "denied": "拒否済み",
+                "user": "ユーザー",
+                "deny": "拒否",
                 "approve": "承認",
                 "reason": "理由",
-                "modalTitle": "申請を拒否",
-                "deny": "拒否"
+                "modalTitle": "申請を拒否"
             },
             "taglines": {
+                "title": "キャッチフレーズ",
                 "add": "キャッチフレーズを付ける",
                 "empty": {
                     "title": "キャッチフレーズなし",
                     "description": "キャッチフレーズがこの中のどれか一つがサイトの訪問者に表示されます。"
-                },
-                "title": "キャッチフレーズ"
+                }
             },
             "team": {
                 "title": "管理者",
@@ -646,6 +469,9 @@
                     "title": "許可インスタンスなし",
                     "description": "許可インスタンスを一つ以上登録したら、他のインスタンスすべてがブロックされます。"
                 }
+            },
+            "media": {
+                "title": "メディア"
             }
         },
         "verifyEmail": {
@@ -663,9 +489,6 @@
         },
         "theme": {
             "title": "テーマ",
-            "import": "インポート",
-            "export": "エクスポート",
-            "reset": "リセット",
             "accent": "カラーアクセント",
             "resetWarning": {
                 "title": "テーマをリセット",
@@ -681,14 +504,20 @@
                 "default": "デフォルト",
                 "classic": "クラシック",
                 "imported": "あなたのテーマ",
-                "new": "新テーマ"
+                "new": "新テーマ",
+                "presets": "プリセット"
             }
         },
         "community": {
             "settings": {
                 "team": "チーム",
-                "settings": "設定"
-            }
+                "settings": "設定",
+                "manage": "管理"
+            },
+            "languageWarning": "このコミュニティのコンテンツは、あなたが選択していない言語です。一部またはすべての投稿が表示されない場合があります。"
+        },
+        "user": {
+            "note": "メモを設定"
         }
     },
     "cards": {
@@ -704,11 +533,10 @@
             "subscribed": "購読済み",
             "modlog": "モデレーション記録",
             "block": "ブロック",
+            "unblock": "ブロック取消",
             "blockInstance": "インスタンスをブロック",
-            "favorite": "お気に入り",
-            "unfavorite": "お気に入りを取消",
             "activeDay": "今日活発",
-            "unblock": "ブロック取消"
+            "flair": "自分のフレアを設定"
         }
     },
     "admin": {
@@ -726,13 +554,15 @@
         "posts": "投稿",
         "comments": "コメント",
         "communities": "コミュニティ",
+        "instances": "インスタンス",
         "message": "メッセージ",
-        "instances": "インスタンス"
+        "url": "URL"
     },
     "post": {
         "actions": {
             "comments": "コメント",
             "save": "保存",
+            "unsave": "保存を解除",
             "more": {
                 "label": "その他の操作",
                 "edit": "編集",
@@ -742,52 +572,114 @@
                 "markUnread": "未読にする",
                 "hide": "非表示",
                 "unhide": "表示",
-                "translate": "翻訳する",
                 "share": "共有",
-                "crosspost": "転送",
+                "share.from": "共有元",
+                "share.global": "元のサーバー",
+                "share.local": "あなたのサーバー",
+                "share.photon": "Photonリンク",
+                "crosspost": "クロスポスト",
                 "delete": "削除",
-                "restore": "復元",
-                "mediaBias": "メディアの偏り"
+                "restore": "復元"
             },
-            "mediaBias": {
-                "description": "説明",
-                "credibility": "信頼度",
-                "reporting": "事実的報道",
-                "noData": {
-                    "title": "データ不足",
-                    "description": "このサイトについての偏りデータはありません。"
-                },
-                "downloading": "データセットダウンロード中",
-                "loading": "コードをロード中"
-            },
-            "link": {
-                "title": "代わりのリンク集",
-                "actions": "リンク操作"
-            },
-            "unsave": "保存を解除"
+            "vote": {
+                "upvote": "高評価",
+                "downvote": "低評価",
+                "score": "スコア"
+            }
         },
         "badges": {
             "nsfw": "成人向け（NSFW)",
+            "locked": "施錠",
             "featured": "オススメ",
-            "saved": "保存済み",
-            "deleted": "削除",
             "removed": "撤去",
-            "locked": "施錠"
+            "deleted": "削除",
+            "saved": "保存済み"
+        },
+        "image": {
+            "zoomIn": "拡大",
+            "zoomOut": "縮小"
+        },
+        "meta": {
+            "lastEdited": "最終編集 {{default}}",
+            "created": "作成 {{default}}"
+        },
+        "poll": {
+            "votes": "{{votes:number}} 票",
+            "results": {
+                "show": "結果を表示",
+                "hide": "結果を非表示",
+                "ends": "終了 {{time}}",
+                "ended": "終了しました {{time}}"
+            },
+            "choices": "選択肢",
+            "single": "単一選択",
+            "multiple": "複数選択",
+            "mode": "モード"
         }
     },
     "comment": {
         "reply": "返信",
-        "more": "更に{{comments:number}}件",
-        "locked": "投稿は施錠されています。",
         "actions": {
             "label": "操作",
             "link": "リンクをコピー"
         },
-        "banned": "このコミュニティから禁止されています。"
+        "locked": "投稿は施錠されています。",
+        "banned": "このコミュニティから禁止されています。",
+        "more": "更に{{comments:number}}件",
+        "collapse": "折りたたむ",
+        "expand": "展開"
+    },
+    "moderation": {
+        "report": "報告",
+        "ban": {
+            "banning": "ユーザー禁止",
+            "unbanning": "ユーザー許可",
+            "deleteData": "データを消す",
+            "warning": "このユーザーからのコンテンツをインスタンスからすべて削除します。",
+            "expires": "に解除（UTC)",
+            "banFromCommunity": "コミュニティから禁止",
+            "unbanFromCommunity": "コミュニティに許可"
+        },
+        "removeSubmission": {
+            "title": "投稿を撤去",
+            "titleRestore": "投稿を復元",
+            "titlePurge": "投稿を消去",
+            "withReason": "理由を返信",
+            "comment": "コメント",
+            "message": "メッセージ",
+            "failReply": "返信できませんでしたが、撤去をそのまま実行します。",
+            "failMessage": "メッセージの送信が失敗しましたが、撤去をそのまま実行します。",
+            "failEmptyReply": "「理由を返信」を選択した場合、返信は必須です。",
+            "successPurge": "内容を正常に削除しました。"
+        },
+        "reportModal": {
+            "title": "報告",
+            "success": "投稿を報告しました。",
+            "presets": {
+                "spam": "スパム/迷惑行為",
+                "rules": "コミュニティルール違反",
+                "rules.content": "この投稿は __ のためルールに違反しています"
+            }
+        },
+        "reason": "理由",
+        "lock": "施錠",
+        "unlock": "解錠",
+        "remove": "撤去",
+        "restore": "復元",
+        "label": "モデレーション",
+        "labelInstanceOnly": "モデレーション（インスタンスのみ）",
+        "feature": "勧める",
+        "unfeature": "お勧めを解除",
+        "votes": "投票",
+        "modlog": {
+            "user": "ユーザーモデレーションログ",
+            "post": "投稿モデレーションログ",
+            "comment": "コメントモデレーションログ"
+        }
     },
     "common": {
-        "next": "次へ",
         "back": "前へ",
+        "next": "次へ",
         "debug": "デバッグ",
         "refresh": "更新",
         "jump": "跳ぶ",
@@ -796,17 +688,279 @@
         "disabled": "無効",
         "enable": "有効にする",
         "disable": "無効にする",
+        "add": "追加",
         "cancel": "取り消す",
         "send": "送信",
         "general": "総合",
-        "add": "追加"
+        "remove": "削除",
+        "download": "ダウンロード",
+        "attach": "ファイルを添付",
+        "info": "情報"
     },
     "message": {
         "success": "成功",
         "error": "エラー",
         "retry": "再試行"
     },
+    "toast": {
+        "noComments": "APIはコメントを返しませんでした。",
+        "loginVoteGate": "投票するにはログインが必要です。",
+        "blockedCommunity": "コミュニティをブロックしました。",
+        "unblockedCommunity": "コミュニティのブロックを解除しました。",
+        "purgedCommunity": "コミュニティを消去しました。",
+        "blockedInstance": "インスタンスをブロックしました。",
+        "updatedCommunity": "コミュニティが更新されました。",
+        "sentMessage": "メッセージを送信しました。",
+        "invalidDateAbsolute": "日付を解析できませんでした。完全な日付を入力してください。",
+        "invalidDateBeforeCurrent": "日付が無効です。現在の時間より前です。",
+        "bannedUser": "ユーザーを禁じました。",
+        "unbannedUser": "ユーザーの禁止を取り消しました。",
+        "needCommunity": "コミュニティを選択する必要があります。",
+        "invalidURL": "URLが無効",
+        "generatedTitle": "URLから題名と本文を作りました。これを前の状態に戻しますか？",
+        "failGenerateTitle": "サイトから題名も本文も解析できませんでした。",
+        "restoredFromDraft": "投稿下書きを復元しました。",
+        "copied": "クリップボードにコピーしました。",
+        "approvedApplication": "申し込みを承認しました。",
+        "deniedApplication": "申し込みを拒否しました。",
+        "updatedSite": "サイトを更新しました。",
+        "failCSV": "CSVの読み込みが失敗",
+        "removeAdminWarning": "本当にこの管理者を役割から外しますか？",
+        "removeAdmin": "管理者を解雇しました。",
+        "failFindUser": "ユーザーが見つかりません。",
+        "addMod": "モデレーターを追加しました。",
+        "updateMods": "コミュニティのモデレーターを更新しました。",
+        "logIn": "ログインが成功しました。",
+        "failInstanceURL": "インスタンスURLとの通信が失敗しました。もしかしてオフライン？",
+        "addAccount": "アカウントを追加しました。",
+        "resetLink": "パスワードリセットのリンクがeメールで送られました。",
+        "resolveReport": "報告を解決しました。",
+        "unresolveReport": "報告の解決を取り消しました。",
+        "passwordReset": "パスワードはリセットされました。",
+        "loginRefresh": "ログインを更新しました。",
+        "invalidLogin": "暗証が無効",
+        "saveSettings": "ユーザー設定を保存しました。もしeメールを変えた場合、認証リンクが送られました。",
+        "confirmDelete1": "アカウントを削除しようとしています。よろしいですか？",
+        "confirmDelete2": "本当にアカウントを削除しますか？",
+        "confirmDelete3": "もう一度確認します。本当にアカウントを完全的に削除してもよろしいですか？",
+        "needPassword": "パスワードの入力が必要です。",
+        "deleting": "アカウントの削除が処理中。。。",
+        "deleted": "アカウントは削除されました。",
+        "resetSettings": "設定を初期化します。よろしいですか？",
+        "failFetchInstances": "通信可能のインスタンスのリストを読み取れませんでした。",
+        "verifyEmail": "認証リンクはeメールで送られました。eメールの認証を完了してから、ログインしてください。",
+        "failSignup": "新規登録が失敗しました。",
+        "successSignup": "新規登録が成功しました。",
+        "waitApplication": "申し込みは未だに検討中です。登録申請の承認をしばらくお待ちしてから、ログインしてください。",
+        "blockUser": "ユーザーをブロックしました。",
+        "unblockUser": "ユーザーのブロックを解除しました。",
+        "purgeUser": "ユーザーとコンテンツを消去しました。",
+        "settingsImport": "設定のインポート成功",
+        "settingsImportWarning": "設定のインポートに誤りがありそうです。インポートを続けますか？",
+        "userLoading": "インポートをしようとしています。。。",
+        "lemmyDonate": "あなたのアカウントのサーバーはLemmyを実行しており、開発者は寄付を求めています。ユーザーの皆様の寛大さのおかげで、追跡や広告のないオープンソースプラットフォームとしてLemmyを開発できています。\n\n毎年、彼らの活動を支援し、Lemmyの維持と改善を継続できるように、寄付を検討するようお願いしています。\n\n[寄付](https://join-lemmy.org/donate)\n\n*注：これはLemmyへの寄付であり、Photonへの寄付ではありません。*"
+    },
+    "settings": {
+        "title": "設定",
+        "beta": "ベータ版",
+        "desktop": "デスクトップ",
+        "tablet": "タブレット",
+        "mobile": "モバイル",
+        "export": "エクスポート",
+        "import": "インポート",
+        "reset": "リセット",
+        "navigation": {
+            "title": "ナビゲーション",
+            "autoHide": {
+                "title": "ドックを自動的に隠す",
+                "description": "モバイルで下にスクロールするとドックを隠し、上にスクロールすると再表示します。"
+            }
+        },
+        "app": {
+            "title": "Photon",
+            "theming": {
+                "title": "テーマ設定",
+                "description": "Photonの色合いを変える。",
+                "link": "テーマに行く"
+            },
+            "lang": {
+                "title": "言語",
+                "description": "PhotonのUIが使う言語。",
+                "auto": "自動",
+                "credits": "クレジット",
+                "useRtl": {
+                    "title": "右横読みレイアウトを使う（RTL)",
+                    "description": "右横読みレイアウト（RTL)を対応言語で使う。"
+                }
+            },
+            "view": {
+                "title": "投稿スタイル",
+                "cozy": "投稿を拡大イメージ、エンベッド文字、長い本文を表示する。",
+                "compact": "投稿を本文抜きのリストで狭く表示する。"
+            },
+            "sort": {
+                "title": "既定順序",
+                "description": "投稿を通常この順で並べる設定。"
+            },
+            "infiniteScroll": {
+                "title": "無限スクロール",
+                "description": "「次へ」ボタンを押さずに、ずっと新しい投稿が次々と現れる。"
+            },
+            "postsInNewTab": {
+                "title": "投稿を新しいタブで開く",
+                "description": "投稿にクリックするときに、同じタブではなく、新しいタブで開く。"
+            },
+            "displayName": {
+                "title": "呼び名を使う",
+                "description": "ユーザーの正式アカウント名の代わりに呼び名を使う。"
+            },
+            "limitLayoutWidth": {
+                "title": "レイアウトの幅を制限する",
+                "description": "読みやすいように主要内容の幅を制限する。"
+            },
+            "placeholders": {
+                "title": "ランダムに空白を付ける",
+                "description": "各種の文章に異なるサイズの空白を付ける。"
+            },
+            "expandImages": {
+                "title": "画像を拡張する",
+                "description": "投稿の添付画像をクリックすると、投稿ページの代わりに画像の拡大表示をします。"
+            },
+            "duplicateTitles": {
+                "title": "重複タイトル・本文を非表示",
+                "description": "投稿の題名と本文がエンベッド内容と一致する場合、表示しません。"
+            },
+            "thumbnailSide": {
+                "title": "サムネイル画像の配置",
+                "description": "リスト・コンパクト表示モードでの投稿サムネイルの位置",
+                "left": "左側",
+                "right": "右側"
+            },
+            "font": {
+                "title": "フォント",
+                "description": "PhotonのUIが使用する書体。"
+            },
+            "titleTags": {
+                "title": "投稿題名のタグを自動で読み取る",
+                "description": "題名内の[カッコ欄]をタグに変え、クリックして類似するタグを探すことができます。"
+            },
+            "reverseActions": {
+                "title": "アクション行を逆にする",
+                "description": "投稿とコメントのアクションの順序を逆にします。"
+            },
+            "absoluteDates": {
+                "title": "絶対タイムスタンプ",
+                "description": "相対タイムスタンプ（3時間前）を絶対タイムスタンプ（15/6/25）に置き換えます。"
+            },
+            "titleOpensUrl": {
+                "title": "タイトルでURLを開く",
+                "description": "タイトルをクリックすると、コメントではなく投稿に添付されたURLが開くようにします。"
+            },
+            "voteRatioBar": {
+                "title": "投票率バー",
+                "description": "投稿の論争性が15％を超えると、感情を視覚化するのに役立つバーが投票ボタンに表示されます。"
+            }
+        },
+        "embeds": {
+            "title": "エンベッド",
+            "clickToView": {
+                "title": "クリックしてから見る",
+                "description": "エンベッドはクリックしてからのみ読み込んで表示します。"
+            },
+            "youtube": {
+                "description": "YouTubeを読み込むサイト。"
+            },
+            "instance": {
+                "invidious": "Invidiousインスタンス",
+                "piped": "Pipedインスタンス",
+                "description": "YouTube動画を読み込むサイト。"
+            }
+        },
+        "lemmy": {
+            "title": "Lemmy",
+            "showHiddenPosts": {
+                "title": "非表示した投稿を見せる",
+                "description": "手動で非表示した投稿を表示します。"
+            },
+            "compactFeatured": {
+                "title": "ピン付投稿をコンパクト表示する",
+                "description": "モデレーターが勧めた投稿を普通の投稿より小さくする"
+            },
+            "markReadPosts": {
+                "title": "既読投稿を印付ける",
+                "description": "クリックした投稿を既読として記す"
+            },
+            "fadeReadPosts": {
+                "title": "既読投稿を薄れて表示する",
+                "description": "既に読んだ投稿の題名を薄れて表示します"
+            },
+            "crosspostMarker": {
+                "title": "転送投稿を印付ける",
+                "description": "クロスポストを作るときに転送元を表示。"
+            },
+            "hideSubmissions": {
+                "title": "投稿を隠す",
+                "description": "特定の投稿を非表示します。",
+                "deleted": "ユーザーが削除した投稿",
+                "removed": "モデレーターが撤去した投稿"
+            },
+            "contentFilter": {
+                "title": "コンテンツフィルタ",
+                "description": "指定された文字列に一致する投稿を非表示または最小化します。正規表現をサポートしています。",
+                "hide": "非表示",
+                "minimize": "最小化",
+                "minimized": "フィルタによって非表示にされたコンテンツ",
+                "disabled": "オフ"
+            },
+            "nsfwBlur": {
+                "title": "NSFWモザイク",
+                "description": "成人向けの投稿の画像にモザイクを付け、本文プレビューを隠します。"
+            },
+            "instances": {
+                "title": "インスタンスを表示",
+                "description": "コンテンツはどのインスタンスから送信かを表示。"
+            }
+        },
+        "moderation": {
+            "title": "モデレーション",
+            "replyPresets": {
+                "title": "撤去返信のプリセット",
+                "description": "投稿撤去時の理由でよく使うプリセット。",
+                "syntax": "構文"
+            }
+        },
+        "other": {
+            "title": "その他",
+            "debug": {
+                "title": "デバッグ情報",
+                "description": "デバッグ情報を表示する"
+            },
+            "virtualizeFeeds": {
+                "title": "フィードを仮想化しない",
+                "description": "仮想化は画面に見える投稿しか読み込まないので、パフォーマンス性能を上げます。もしスクロール時に反応が荒い場合、は無効できます。無限スクロール機能は仮想化が必要です。"
+            }
+        },
+        "account": {
+            "title": "アカウント"
+        },
+        "donate": {
+            "description": "Photonは常に無料かつオープンソースであり、役立つように継続的に開発および設計されています。Photonが気に入って開発を経済的に支援したい場合は、ここで寄付できます。"
+        }
+    },
     "error": {
+        "incorrect_login": "認証情報は正しくありません。もう一度お試しください。",
+        "incorrect_login_2": "認証情報は正しくありません。再度お試しください。",
+        "incorrect_login_3": "認証情報はまたしも正しくありません。よく確認し、またお試しください。",
+        "incorrect_login_4": "認証情報はまだしも正しくありません。もう一度やれば、今度こそはできるでしょうか。",
+        "incorrect_login_5": "なかなかうまくいってないようですね。押してるキーをしっかり見ながらログイン情報を入れましょう。",
+        "incorrect_login_6": "おい。おかしいと思っているか？",
+        "incorrect_login_7": "勘弁してくださいよ。キーボードがものすごく苦手か、わざといじめてるでしょうか。",
+        "incorrect_login_8": "しょうがないや。。。",
+        "incorrect_login_9": "このリクエストはすごい技術を通してサーバーに送信しています。繰り返して不正認証をするのは時間とデータ通信の無駄遣いですよ。",
+        "incorrect_login_10": "ここまで来て、ログインするつもりあるか？可愛そうな管理者を一旦でも考えましょうよ。",
+        "incorrect_login_11": "まったく、話が進まないな。やっぱ無理か、こっちは諦めた。",
+        "incorrect_login_12": "...",
+        "registration_application_is_pending": "アカウント登録の申請は未だに承認されてません。",
         "couldnt_find_post": "この投稿は見つかりませんでした。存在しないか、撤去されたか、このインスタンスには送られてない可能性があります。",
         "cant_block_yourself": "自分のアカウントはブロックできません。だって、君はいい人なんだもん！",
         "email_not_verified": "アカウントのEメールは認証されてません。認証を行ってください。",
@@ -815,21 +969,59 @@
         "downvotes_are_disabled": "このインスタンスは反対票を受け付けていません。",
         "email_already_exists": "お使いのeメールにはすでにアカウントは存在します。",
         "slurs": "このインスタンスが禁止する言葉が投稿に入ってますので、投稿できませんでした。",
-        "captcha_failed": "CAPTCHAの答えは不正解です。",
-        "invalid_vote_value": "不正常な投票を検出しました。詐欺はいけませんよ。",
-        "incorrect_login_3": "認証情報はまたしも正しくありません。よく確認し、またお試しください。",
-        "incorrect_login_4": "認証情報はまだしも正しくありません。もう一度やれば、今度こそはできるでしょうか。",
-        "incorrect_login_5": "なかなかうまくいってないようですね。押してるキーをしっかり見ながらログイン情報を入れましょう。",
-        "registration_application_is_pending": "アカウント登録の申請は未だに承認されてません。",
+        "captcha_incorrect": "CAPTCHAの回答が間違っています。",
         "cant_block_local_instance": "自分のアカウントが住まいのインスタンスはブロックできません。",
-        "incorrect_login": "認証情報は正しくありません。もう一度お試しください。",
-        "incorrect_login_2": "認証情報は正しくありません。再度お試しください。",
-        "incorrect_login_6": "おい。おかしいと思っているか？",
-        "incorrect_login_7": "勘弁してくださいよ。キーボードがものすごく苦手か、わざといじめてるでしょうか。",
-        "incorrect_login_8": "しょうがないや。。。",
-        "incorrect_login_9": "このリクエストはすごい技術を通してサーバーに送信しています。繰り返して不正認証をするのは時間とデータ通信の無駄遣いですよ。",
-        "incorrect_login_10": "ここまで来て、ログインするつもりあるか？可愛そうな管理者を一旦でも考えましょうよ。",
-        "incorrect_login_11": "まったく、話が進まないな。やっぱ無理か、こっちは諦めた。",
-        "incorrect_login_12": "。。。"
+        "invalid_vote_value": "不正常な投票を検出しました。詐欺はいけませんよ。",
+        "language_not_allowed": "その言語はこのコミュニティでは許可されていません。コミュニティのデフォルトを使用するには、設定を解除してください。",
+        "couldnt_find_person": "そのユーザーは存在しません。",
+        "couldnt_find_community": "そのコミュニティは存在しません。",
+        "not_an_admin": "あなたはこのサーバーの管理者ではありません。",
+        "rate_limit_error": "そのアクションの実行が速すぎます。",
+        "unimplemented": "あなたのアカウントのサーバーソフトウェアのその機能は、Photonではまだサポートされていません。",
+        "unsupported": "その機能は、あなたのアカウントのサーバーソフトウェアではサポートされていません。",
+        "not_live_supported": "そのサーバーはサポートされているソフトウェアを実行していないか、オフラインです。",
+        "token_not_found": "そのメール確認リンクは期限切れか、存在しませんでした。",
+        "invalid_password": "パスワードが無効です。"
+    },
+    "aria": {
+        "pagination": {
+            "nav": "Pagination",
+            "current": "Current page"
+        },
+        "vote": {
+            "group": "Post voting controls",
+            "upvotes": "{{default}} upvotes",
+            "downvotes": "{{default}} downvotes",
+            "score": "Score: {{default}}"
+        },
+        "sidebar": {
+            "title": "サイドバー",
+            "accounts": "アカウント選択"
+        },
+        "loading": "読み込み中",
+        "element": {
+            "pageHeader": "ページヘッダー"
+        },
+        "postDecor": {
+            "openImage": "画像を開く: {{default}}",
+            "openLink": "リンクを開く: {{default}}",
+            "openPost": "投稿を開く: {{default}}"
+        },
+        "comments": {
+            "children": "{{childCount}} 件の返信"
+        }
+    },
+    "stats": {
+        "joined": "参加日",
+        "created": "作成日"
+    },
+    "placeholders": {
+        "title": "投稿タイトルを追加",
+        "body": "何か言いたいことはありますか？",
+        "comments": "会話に参加する"
+    },
+    "class": {
+        "moderator": "モデレーター",
+        "admin": "管理者"
     }
 }

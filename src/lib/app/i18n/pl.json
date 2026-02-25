@@ -1,34 +1,132 @@
 {
-    "form": {
-        "forgotpassword": "Zapomniałem hasła",
-        "signup": {
-            "application": {
-                "label": "Aplikuj",
-                "info": "Aby dołączyć do tej instancji, musisz wypełnić aplikację i poczekać na akceptację. Otrzymasz email, jeśli twoja aplikacja zostanie zaakceptowana.",
-                "notice": "Twoja rejestracja jest w toku. Gdy administracja ją rozpatrzy, otrzymasz maila, jeżeli została zaakceptowana. Wtedy możesz się zalogować."
-            },
-            "title": "Zarejestruj się",
-            "description": "Wybierz instancję, która Cię interesuje, lub wprowadź adres URL ręcznie.",
-            "info": "Instancja to serwer, na którym będzie hostowane Twoje konto, ale nadal możesz uzyskiwać dostęp do treści z innych instancji.",
-            "chooseInstance": "Wybierz instancję",
-            "closed": {
-                "title": "Rejestracje zamknięte",
-                "description": "Ta instancja ma zamknięte rejestracje. Znajdź inną instancję.",
-                "anotherInstance": "Znajdź inną instancję"
-            },
-            "verify": {
-                "title": "Zweryfikuj mail",
-                "description": "Sprawdź skrzynkę odbiorczą, czy jest tam link weryfikacyjny. Gdy go klikniesz, wciśnij przycisk poniżej.",
-                "submit": "Mój mail został zweryfikowany",
-                "error": "Twój mail nie został zweryfikowany."
-            }
+    "profile": {
+        "profile": "Profil",
+        "inbox": "Skrzynka odbiorcza",
+        "saved": "Zapisane",
+        "subscribed": "Subskrypcje"
+    },
+    "nav": {
+        "home": "Strona główna",
+        "admin": "Administrator",
+        "moderation": "Moderacja",
+        "communities": "Społeczności",
+        "search": "Szukaj",
+        "create": {
+            "label": "Utwórz",
+            "post": "Post",
+            "community": "Społeczność",
+            "logingate": "Musisz się zalogować, aby tworzyć treści."
         },
+        "menu": {
+            "label": "Profil",
+            "app": "Aplikacja",
+            "settings": "Ustawienia",
+            "colorscheme": {
+                "label": "Schemat kolorów",
+                "system": "System",
+                "dark": "Ciemny",
+                "light": "Jasny"
+            },
+            "theme": "Motyw",
+            "about": "O nas",
+            "source": "Źródło",
+            "donate": "Przekaż darowiznę",
+            "instance": "Instancja"
+        },
+        "commands": {
+            "prompt": "Paleta poleceń",
+            "recents": "Ostatnie",
+            "content": "Treść",
+            "search": "Szukaj {{default}}",
+            "main": "Główne",
+            "setView": "Ustaw widok",
+            "setViewTo": "Ustaw widok na {{default}}",
+            "setColor": "Ustaw schemat kolorów",
+            "setColorTo": "Ustaw schemat kolorów na {{default}}",
+            "feeds": "Kanały",
+            "downloading": "Pobieranie akcji",
+            "setTheme": "Ustaw motyw",
+            "setThemeTo": "Ustaw motyw na {{default}}",
+            "contextual": "Na tej stronie",
+            "communities": "Społeczności z **{{default}}**",
+            "goto": "Idź do **{{default}}**"
+        },
+        "notifications": "Powiadomienia"
+    },
+    "account": {
+        "login": "Zaloguj się",
+        "logout": "Wyloguj się",
+        "signup": "Zarejestruj się",
+        "accounts": "Konta",
+        "resetColor": "Resetuj kolor",
+        "addGuest": "Dodaj gościa",
+        "moveUp": "Przesuń w górę",
+        "moveDown": "Przesuń w dół",
+        "guest": "Gość",
+        "piefedGate": "Piefed support is experimental. Some features are not supported."
+    },
+    "filter": {
+        "location": {
+            "label": "Lokalizacja",
+            "all": "Wszystkie",
+            "local": "Lokalne",
+            "subscribed": "Subskrybowane",
+            "moderator": "Moderowane",
+            "global": "Globalne",
+            "popular": "Popular"
+        },
+        "sort": {
+            "label": "Sortowanie",
+            "active": "Aktywne",
+            "hot": "Popularne",
+            "top": {
+                "label": "Najlepsze",
+                "time": {
+                    "label": "Czas",
+                    "all": "Wszystkie",
+                    "year": "Ostatni rok",
+                    "9months": "9 Miesięcy",
+                    "6months": "6 Miesięcy",
+                    "3months": "3 Miesiące",
+                    "month": "Miesiąc",
+                    "week": "Tydzień",
+                    "day": "Dzień",
+                    "12hours": "12 Godzin",
+                    "6hours": "6 Godzin",
+                    "hour": "Godzina"
+                }
+            },
+            "new": "Nowe",
+            "old": "Stare",
+            "controversial": "Kontrowersyjne",
+            "scaled": "Zeskalowane",
+            "mostcomments": "Najwięcej komentarzy",
+            "newcomments": "Nowe odpowiedzi"
+        },
+        "view": {
+            "label": "Widok",
+            "cozy": "Przytulny",
+            "list": "Lista",
+            "compact": "Kompaktowy",
+            "legacy": "Stara wersja"
+        },
+        "type": "Typ",
+        "filter": "Filtr",
+        "unread": "Nieprzeczytane",
+        "inbox": {
+            "messages": "Wiadomości",
+            "replies": "Odpowiedzi",
+            "mentions": "Wzmianki"
+        }
+    },
+    "form": {
         "username": "Nazwa użytkownika",
         "name": "Imię",
         "instance": "URL instancji",
         "password": "Hasło",
         "confirmPassword": "Potwierdź hasło",
         "2fa": "Kod 2FA",
+        "forgotpassword": "Zapomniałem hasła",
         "submit": "Prześlij",
         "edit": "Edytuj",
         "preview": "Podgląd",
@@ -45,9 +143,18 @@
             "selectFile": "Wybierz plik",
             "altText": "Tekst alternatywny",
             "addUrl": "Dodaj adres URL",
-            "readMore": "Czytaj więcej",
             "setLanguage": "Ustaw język",
-            "unset": "Usuń ustawiony język"
+            "unset": "Usuń ustawiony język",
+            "readMore": "Czytaj więcej",
+            "flair": "Dodaj etykietę",
+            "fetching": "Pobieranie metadanych witryny",
+            "types": {
+                "normal": "Dyskusja",
+                "poll": "Ankieta",
+                "event": "Wydarzenie"
+            },
+            "autosubmit": "Wyślij automatycznie",
+            "customThumbnail": "Ustaw miniaturę"
         },
         "profile": {
             "displayName": "Wyświetlana nazwa",
@@ -67,20 +174,46 @@
             "2fa": {
                 "totp": "TOTP",
                 "2fa": "2FA",
-                "paste": "Wklej to w swojej aplikacji uwierzytelniającej."
+                "paste": "Wklej to w swojej aplikacji uwierzytelniającej.",
+                "disabled": "2FA is disabled"
             },
             "deleteAccount": {
-                "label": "Usuń konto",
                 "deleteContent": "Usuń treść",
                 "warning": "To usunie WSZYSTKIE twoje posty."
             },
             "languages": {
                 "title": "Języki",
                 "description": "Jeżeli dodasz któryś, zobaczysz tylko wpisy z tym językiem ustawionym wprost. Większość treści, bez oznaczenia, podpada pod „Undetermined”"
+            },
+            "credentials": {
+                "title": "Manage how you log in",
+                "description": "You can enable 2FA for greater security, change your password, view logged in devices, or delete your account here."
             }
         },
         "email": "Email",
         "setup": "Konfiguracja",
+        "signup": {
+            "title": "Zarejestruj się",
+            "description": "Wybierz instancję, która Cię interesuje, lub wprowadź adres URL ręcznie.",
+            "info": "Instancja to serwer, na którym będzie hostowane Twoje konto, ale nadal możesz uzyskiwać dostęp do treści z innych instancji.",
+            "chooseInstance": "Wybierz instancję",
+            "application": {
+                "label": "Aplikuj",
+                "info": "Aby dołączyć do tej instancji, musisz wypełnić aplikację i poczekać na akceptację. Otrzymasz email, jeśli twoja aplikacja zostanie zaakceptowana.",
+                "notice": "Twoja rejestracja jest w toku. Gdy administracja ją rozpatrzy, otrzymasz maila, jeżeli została zaakceptowana. Wtedy możesz się zalogować."
+            },
+            "closed": {
+                "title": "Rejestracje zamknięte",
+                "description": "Ta instancja ma zamknięte rejestracje. Znajdź inną instancję.",
+                "anotherInstance": "Znajdź inną instancję"
+            },
+            "verify": {
+                "title": "Zweryfikuj mail",
+                "description": "Sprawdź skrzynkę odbiorczą, czy jest tam link weryfikacyjny. Gdy go klikniesz, wciśnij przycisk poniżej.",
+                "submit": "Mój mail został zweryfikowany",
+                "error": "Twój mail nie został zweryfikowany."
+            }
+        },
         "description": "Opis",
         "time": {
             "duration": "Czas trwania",
@@ -90,41 +223,18 @@
             "months": "Miesiące",
             "years": "Lata",
             "permanent": "Na trwałe"
-        }
+        },
+        "instanceType": "Typ oprogramowania serwera"
     },
     "routes": {
-        "profile": {
-            "moderates": "Moderowane",
-            "user": "Użytkownik",
-            "settings": "Ustawienia",
-            "blocks": {
-                "empty": {
-                    "description": "Gdy coś zablokujesz, przestanie ci się pojawiać w twoich kanałach.",
-                    "title": "Nic nie jest blokowane"
-                },
-                "title": "Blokady"
-            },
-            "credentials": "Dane uwierzytaleniające",
-            "favorites": "Ulubione",
-            "upvoted": "Polubione",
-            "downvoted": "Niepolubione",
-            "media": {
-                "title": "Media",
-                "download": "Pobierz"
-            },
-            "logins": "Logowania",
-            "welcome": "Witamy, {{default}}!",
-            "delete": {
-                "title": "Usuń konto",
-                "warning": "To jest nieodwracalne. Czy na pewno chcesz to zrobić?"
-            },
-            "overview": "Przegląd",
-            "submissions": "Zamieszczone"
-        },
         "frontpage": {
             "title": "Strona główna",
             "footer": "{{users:number}} aktywnych {{users; 1:user; default:users;}}",
-            "endFeed": "Dotarłeś do końca {{community_name; undefined:feedu.; default:{{community_name}}.}}"
+            "endFeed": "Dotarłeś do końca {{community_name; undefined:feedu.; default:{{community_name}}.}}",
+            "empty": {
+                "title": "No posts",
+                "description": "There are no posts that match this filter."
+            }
         },
         "modlog": {
             "title": "Dziennik moderacyjny",
@@ -135,11 +245,59 @@
             "title": "Informacje prawne",
             "noLegal": "Ta instancja nie zawiera żadnych informacji prawnych."
         },
+        "profile": {
+            "user": "Użytkownik",
+            "settings": "Ustawienia",
+            "blocks": {
+                "title": "Blokady",
+                "empty": {
+                    "user": {
+                        "title": "Brak zablokowanych użytkowników",
+                        "description": "Zablokowanie użytkownika ukryje jego posty i komentarze w kanałach."
+                    },
+                    "community": {
+                        "title": "Brak zablokowanych społeczności",
+                        "description": "Zablokowanie społeczności ukryje jej posty w kanałach."
+                    },
+                    "instance": {
+                        "title": "Brak zablokowanych serwerów",
+                        "description": "Zablokowanie serwera ukryje posty z jego społeczności w kanałach."
+                    }
+                }
+            },
+            "credentials": "Dane uwierzytaleniające",
+            "moderates": "Moderowane",
+            "favorites": "Ulubione",
+            "upvoted": "Polubione",
+            "downvoted": "Niepolubione",
+            "media": {
+                "title": "Media",
+                "download": "Pobierz"
+            },
+            "logins": "Logowania",
+            "delete": {
+                "title": "Usuń konto",
+                "warning": "To jest nieodwracalne. Czy na pewno chcesz to zrobić?"
+            },
+            "overview": "Przegląd",
+            "submissions": "Zamieszczone",
+            "edit": "Edit"
+        },
         "translators": "Tłumacze",
         "accounts": "Konta",
+        "accounts.placeholder": {
+            "title": "Nie zalogowano",
+            "description": "Nie jesteś zalogowany. Możesz się tutaj zarejestrować lub zalogować.",
+            "descriptionWithGuest": "Nie jesteś zalogowany. Możesz się zalogować, zarejestrować lub dodać konto gościa tutaj."
+        },
+        "explore": {
+            "title": "Odkrywaj",
+            "feeds": "Kanały",
+            "topics": "Tematy"
+        },
         "communities": {
-            "trending": "Popularne",
             "title": "Społeczności",
+            "trending": "Popularne",
             "search": {
                 "placeholder": "Szukaj nowej społeczności"
             }
@@ -157,16 +315,11 @@
             "other": "Inne wyniki"
         },
         "saved": "Zapisane",
-        "createPost": "Utwórz post",
-        "createCommunity": "Utwórz społeczność",
         "post": {
             "crosspostCount": "repostów",
             "commentCount": "komentarzy",
             "addComment": "Dodaj komentarz",
             "scrollToTop": "Przewiń na górę",
-            "instanceWarning": "Ten post został zażądany z innego serwera niż twój. Wiele działań może nie działać.",
-            "remoteView": "Widok zdalny",
-            "localView": "Widok lokalny",
             "thread": {
                 "single": "Oglądasz pojedynczy wątek.",
                 "allComments": "Wszystkie komentarze",
@@ -179,6 +332,19 @@
             },
             "commented": "Komentarz został dodany.",
             "loadComments": "Załaduj komentarze"
+        },
+        "postRedirect": {
+            "title": "Instancja nie pasuje",
+            "description": "Link kieruje do posta spoza instancji {{homeInstance}}, na której jest twoje konto.",
+            "actions": {
+                "back": "Wróć",
+                "fetch": "Zaciągnij post na {{homeInstance}}",
+                "switch": "Przełącz na konto na {{destInstance}}"
+            },
+            "automatic": {
+                "title": "Lokalizowanie wpisu",
+                "description": "Ta treść nie pochodzi z serwera Twojego konta."
+            }
         },
         "inbox": {
             "title": "Skrzynka odbiorcza",
@@ -195,10 +361,10 @@
             "messages": {
                 "conversation": "Tu zaczyna się twoja rozmowa z {{user}}",
                 "indicator": "Piszesz do {{user}}",
+                "start": "Rozpocznij czat",
                 "empty": {
                     "title": "Nie ma wiadomości"
-                },
-                "start": "Rozpocznij czat"
+                }
             }
         },
         "moderation": {
@@ -213,14 +379,14 @@
             "unresolve": "Otwórz ponownie",
             "resolvedBy": "Rozwiązane przez",
             "markAll": "Oznacz stronę jako rozwiązaną",
+            "markAllComplete": "Działanie wsadowe ukończone.",
+            "feed": "Zgłoszenia",
             "manage": {
-                "modlogs": "Ostatnie dzienniki moderacyjne",
                 "title": "Zarządzaj",
+                "modlogs": "Ostatnie dzienniki moderacyjne",
                 "ban": "Zbanuj",
                 "unban": "Odbanuj"
-            },
-            "markAllComplete": "Działanie wsadowe ukończone.",
-            "feed": "Zgłoszenia"
+            }
         },
         "admin": {
             "title": "Administracja",
@@ -323,9 +489,6 @@
         },
         "theme": {
             "title": "Motyw",
-            "import": "Importuj",
-            "export": "Eksportuj",
-            "reset": "Resetuj",
             "accent": "Akcent",
             "resetWarning": {
                 "title": "Resetuj motyw",
@@ -353,185 +516,8 @@
             },
             "languageWarning": "Treści w tej społeczności są w językach, których nie masz wybranych. Może brakować niektórych (lub wszystkich) postów."
         },
-        "postRedirect": {
-            "title": "Instancja nie pasuje",
-            "description": "Link kieruje do posta spoza instancji {{homeInstance}}, na której jest twoje konto.",
-            "actions": {
-                "back": "Wróć",
-                "fetch": "Zaciągnij post na {{homeInstance}}",
-                "switch": "Przełącz na konto na {{destInstance}}"
-            }
-        }
-    },
-    "nav": {
-        "home": "Strona główna",
-        "admin": "Administrator",
-        "moderation": "Moderacja",
-        "communities": "Społeczności",
-        "search": "Szukaj",
-        "create": {
-            "label": "Utwórz",
-            "post": "Post",
-            "community": "Społeczność",
-            "logingate": "Musisz się zalogować, aby tworzyć treści."
-        },
-        "menu": {
-            "label": "Profil",
-            "app": "Aplikacja",
-            "settings": "Ustawienia",
-            "colorscheme": {
-                "label": "Schemat kolorów",
-                "system": "System",
-                "dark": "Ciemny",
-                "light": "Jasny"
-            },
-            "theme": "Motyw",
-            "about": "O nas",
-            "source": "Źródło",
-            "donate": "Przekaż darowiznę",
-            "instance": "Instancja"
-        },
-        "commands": {
-            "prompt": "Paleta poleceń",
-            "recents": "Ostatnie",
-            "content": "Treść",
-            "search": "Szukaj {{default}}",
-            "main": "Główne",
-            "setView": "Ustaw widok",
-            "setViewTo": "Ustaw widok na {{default}}",
-            "setColor": "Ustaw schemat kolorów",
-            "setColorTo": "Ustaw schemat kolorów na {{default}}",
-            "feeds": "Kanały",
-            "downloading": "Pobieranie akcji",
-            "setTheme": "Ustaw motyw",
-            "setThemeTo": "Ustaw motyw na {{default}}",
-            "contextual": "Na tej stronie"
-        },
-        "notifications": "Powiadomienia"
-    },
-    "post": {
-        "badges": {
-            "deleted": "Skasowane",
-            "nsfw": "NSFW",
-            "locked": "Zablokowane",
-            "featured": "Polecane",
-            "removed": "Usunięte",
-            "saved": "Zapisane"
-        },
-        "actions": {
-            "comments": "Komentarze",
-            "save": "Zapisz",
-            "unsave": "Usuń zapis",
-            "more": {
-                "label": "Więcej akcji",
-                "edit": "Edytuj",
-                "creator": "Twórca",
-                "actions": "Akcje",
-                "markRead": "Oznacz jako przeczytane",
-                "markUnread": "Oznacz jako nieprzeczytane",
-                "hide": "Ukryj",
-                "unhide": "Odkryj",
-                "translate": "Tłumacz",
-                "mediaBias": "Stronniczość mediów",
-                "share": "Udostępnij",
-                "crosspost": "Krzyżowy post",
-                "delete": "Usuń",
-                "restore": "Przywróć"
-            },
-            "mediaBias": {
-                "description": "Opis",
-                "credibility": "Wiarygodność",
-                "reporting": "Rzetelność raportowania",
-                "noData": {
-                    "title": "Brak danych",
-                    "description": "Brak danych o stronniczości dla tej strony internetowej."
-                },
-                "loading": "Ładowanie źródła",
-                "downloading": "Pobieranie zestawu danych"
-            },
-            "link": {
-                "title": "Alternatywne linki",
-                "actions": "Akcje linków"
-            },
-            "vote": {
-                "upvote": "Głosuj w górę",
-                "downvote": "Głosuj w dół",
-                "score": "Ocena"
-            }
-        },
-        "image": {
-            "zoomOut": "Oddal",
-            "close": "Zamknij",
-            "zoomIn": "Przybliż"
-        },
-        "meta": {
-            "lastEdited": "Ostatnio edytowane {{default}}",
-            "created": "Utworzone {{default}}"
-        }
-    },
-    "account": {
-        "login": "Zaloguj się",
-        "logout": "Wyloguj się",
-        "signup": "Zarejestruj się",
-        "accounts": "Konta",
-        "changeinstance": "Zmień instancję",
-        "resetColor": "Resetuj kolor",
-        "addGuest": "Dodaj gościa",
-        "moveUp": "Przesuń w górę",
-        "moveDown": "Przesuń w dół",
-        "guest": "Gość",
-        "versionGate": "Ta wersja Photon obsługuje instancje działające na {{version}} lub nowszej."
-    },
-    "filter": {
-        "location": {
-            "label": "Lokalizacja",
-            "all": "Wszystkie",
-            "local": "Lokalne",
-            "subscribed": "Subskrybowane",
-            "moderator": "Moderowane",
-            "global": "Globalne"
-        },
-        "sort": {
-            "label": "Sortowanie",
-            "active": "Aktywne",
-            "hot": "Popularne",
-            "top": {
-                "label": "Najlepsze",
-                "time": {
-                    "label": "Czas",
-                    "all": "Wszystkie",
-                    "9months": "9 Miesięcy",
-                    "6months": "6 Miesięcy",
-                    "3months": "3 Miesiące",
-                    "month": "Miesiąc",
-                    "week": "Tydzień",
-                    "day": "Dzień",
-                    "12hours": "12 Godzin",
-                    "6hours": "6 Godzin",
-                    "hour": "Godzina"
-                }
-            },
-            "new": "Nowe",
-            "old": "Stare",
-            "controversial": "Kontrowersyjne",
-            "scaled": "Zeskalowane",
-            "mostcomments": "Najwięcej komentarzy",
-            "newcomments": "Nowe odpowiedzi"
-        },
-        "view": {
-            "label": "Widok",
-            "cozy": "Przytulny",
-            "list": "Lista",
-            "compact": "Kompaktowy",
-            "legacy": "Stara wersja"
-        },
-        "type": "Typ",
-        "filter": "Filtr",
-        "unread": "Nieprzeczytane",
-        "inbox": {
-            "messages": "Wiadomości",
-            "replies": "Odpowiedzi",
-            "mentions": "Wzmianki"
+        "user": {
+            "note": "Ustaw notatkę"
         }
     },
     "cards": {
@@ -549,9 +535,8 @@
             "block": "Zablokuj",
             "unblock": "Odblokuj",
             "blockInstance": "Zablokuj instancję",
-            "favorite": "Ulubione",
-            "unfavorite": "Usuń z ulubionych",
-            "activeDay": "Aktywny dzisiaj"
+            "activeDay": "Aktywny dzisiaj",
+            "flair": "Ustaw moją etykietę"
         }
     },
     "admin": {
@@ -573,6 +558,65 @@
         "message": "Wiadomość",
         "url": "URL"
     },
+    "post": {
+        "actions": {
+            "comments": "Komentarze",
+            "save": "Zapisz",
+            "unsave": "Usuń zapis",
+            "more": {
+                "label": "Więcej akcji",
+                "edit": "Edytuj",
+                "creator": "Twórca",
+                "actions": "Akcje",
+                "markRead": "Oznacz jako przeczytane",
+                "markUnread": "Oznacz jako nieprzeczytane",
+                "hide": "Ukryj",
+                "unhide": "Odkryj",
+                "share": "Udostępnij",
+                "share.from": "Udostępnij z",
+                "share.global": "Serwer źródłowy",
+                "share.local": "Twój serwer",
+                "share.photon": "Link Photon",
+                "crosspost": "Krzyżowy post",
+                "delete": "Usuń",
+                "restore": "Przywróć"
+            },
+            "vote": {
+                "upvote": "Głosuj w górę",
+                "downvote": "Głosuj w dół",
+                "score": "Ocena"
+            }
+        },
+        "badges": {
+            "nsfw": "NSFW",
+            "locked": "Zablokowane",
+            "featured": "Polecane",
+            "removed": "Usunięte",
+            "deleted": "Skasowane",
+            "saved": "Zapisane"
+        },
+        "image": {
+            "zoomIn": "Przybliż",
+            "zoomOut": "Oddal"
+        },
+        "meta": {
+            "lastEdited": "Ostatnio edytowane {{default}}",
+            "created": "Utworzone {{default}}"
+        },
+        "poll": {
+            "votes": "{{votes:number}} głosów",
+            "results": {
+                "show": "Pokaż wyniki",
+                "hide": "Ukryj wyniki",
+                "ends": "Kończy się {{time}}",
+                "ended": "Zakończono {{time}}"
+            },
+            "choices": "Opcje",
+            "single": "Pojedynczy wybór",
+            "multiple": "Wielokrotny wybór",
+            "mode": "Tryb"
+        }
+    },
     "comment": {
         "reply": "Odpowiedz",
         "actions": {
@@ -581,7 +625,9 @@
         },
         "locked": "Ten post jest zablokowany.",
         "banned": "Zostałeś zbanowany z tej społeczności.",
-        "more": "{{comments:number}} więcej"
+        "more": "{{comments:number}} więcej",
+        "collapse": "Zwiń",
+        "expand": "Rozwiń"
     },
     "moderation": {
         "report": "Zgłoś",
@@ -608,7 +654,12 @@
         },
         "reportModal": {
             "title": "Zgłoś",
-            "success": "Zgłoszono to zgłoszenie."
+            "success": "Zgłoszono to zgłoszenie.",
+            "presets": {
+                "spam": "Spam/nadużycie",
+                "rules": "Łamie zasady społeczności",
+                "rules.content": "To zgłoszenie łamie zasady, ponieważ __"
+            }
         },
         "reason": "Powód",
         "lock": "Zablokuj",
@@ -619,12 +670,12 @@
         "labelInstanceOnly": "Moderacja (Tylko instancja)",
         "feature": "Polecane",
         "unfeature": "Usuń z polecanych",
+        "votes": "Głosy",
         "modlog": {
-            "post": "Dziennik moderacyjny posta",
             "user": "Dziennik moderacyjny użytkownika",
+            "post": "Dziennik moderacyjny posta",
             "comment": "Dziennik moderacyjny komentarza"
-        },
-        "votes": "Głosy"
+        }
     },
     "common": {
         "back": "Wstecz",
@@ -635,14 +686,16 @@
         "save": "Zapisz",
         "enabled": "Włączone",
         "disabled": "Wyłączone",
-        "general": "Ogólne",
         "enable": "Włącz",
         "disable": "Wyłącz",
         "add": "Dodaj",
         "cancel": "Anuluj",
         "send": "Wyślij",
+        "general": "Ogólne",
         "remove": "Usuń",
-        "download": "Pobierz"
+        "download": "Pobierz",
+        "attach": "Attach file",
+        "info": "Info"
     },
     "message": {
         "success": "Sukces",
@@ -684,7 +737,6 @@
         "resolveReport": "Rozwiązano ten raport.",
         "unresolveReport": "Otworzono ponownie ten raport.",
         "passwordReset": "Twoje hasło zostało zresetowane.",
-        "fetchPostOnHome": "Próba pobrania tego posta na twojej domowej instancji...",
         "loginRefresh": "Twoje logowanie zostało odświeżone.",
         "invalidLogin": "Nieprawidłowe dane logowania",
         "saveSettings": "Zapisano twoje ustawienia użytkownika. Jeśli zmieniłeś adres e-mail, wysłano link weryfikacyjny.",
@@ -705,26 +757,35 @@
         "purgeUser": "Wyczyszczono dane tego użytkownika.",
         "settingsImport": "Pomyślnie zaimportowano ustawienia",
         "settingsImportWarning": "Zaimportowane ustawienia wydają się nieprawidłowe. Czy na pewno chcesz je zaimportować?",
-        "userLoading": "Ładowanie danych użytkownika w toku..."
+        "userLoading": "Ładowanie danych użytkownika w toku...",
+        "lemmyDonate": "Your account's server runs Lemmy, and the developers are requesting donations. They are able to develop Lemmy as an open source platform, free of tracking and ads, thanks to the generosity of its users.\n\nAnnually, they ask you to consider donating to support their work, and allow them to continue maintaining and improving Lemmy.\n\n[Donate](https://join-lemmy.org/donate)\n\n*Note: this is a donation to Lemmy, not Photon.*"
     },
     "settings": {
+        "title": "Ustawienia",
         "beta": "Beta",
+        "desktop": "Komputer",
+        "tablet": "Tablet",
+        "mobile": "Telefon",
+        "export": "Eksportuj",
+        "import": "Importuj",
+        "reset": "Resetuj",
+        "navigation": {
+            "title": "Nawigacja",
+            "autoHide": {
+                "title": "Ukrywaj dock samoczynnie",
+                "description": "Ukrywa dock na telefonie gdy przewijasz w dół. Dock pojawi się z powrotem gdy przewiniesz w górę."
+            }
+        },
         "app": {
+            "title": "Photon",
+            "theming": {
+                "title": "Motywy",
+                "description": "Dostosuj kolory interfejsu.",
+                "link": "Przejdź do motywów"
+            },
             "lang": {
-                "zh-Hant": "Chiński (tradycyjny)",
                 "title": "Język",
                 "description": "Język używany w interfejsie.",
-                "note": "Języki inne niż angielski i hebrajski są tłumaczone przez społeczność i mogą być niekompletne.",
-                "en": "Angielski",
-                "en-US": "Angielski (US)",
-                "he": "Hebrajski",
-                "et": "Estoński",
-                "fr": "Francuski",
-                "de": "Niemiecki",
-                "fi": "Fiński",
-                "pt": "Portugalski",
-                "zh": "Chiński",
-                "zh-Hans": "Chiński (uproszczony)",
                 "auto": "Auto",
                 "credits": "Kredyty",
                 "useRtl": {
@@ -732,22 +793,10 @@
                     "description": "Użyj układu RTL dla języków RTL."
                 }
             },
-            "title": "Photon",
-            "theming": {
-                "title": "Motywy",
-                "description": "Dostosuj kolory interfejsu.",
-                "link": "Przejdź do motywów"
-            },
-            "colorscheme": {
-                "title": "Schemat kolorów",
-                "description": "Schemat kolorów do użycia."
-            },
             "view": {
                 "title": "Styl postów",
-                "list": "Pokaż posty w liście, z treścią postów i kompaktowymi multimediami.",
                 "cozy": "Pokaż posty z dużymi obrazami, bogatymi osadzonymi treściami i dłuższymi treściami postów.",
-                "compact": "Pokaż posty w liście, bez treści postów i z ciasnym odstępem.",
-                "legacy": "Stary wygląd Photon."
+                "compact": "Pokaż posty w liście, bez treści postów i z ciasnym odstępem."
             },
             "sort": {
                 "title": "Domyślne sortowanie",
@@ -791,24 +840,13 @@
                 "title": "Czcionka",
                 "description": "Czcionka używana w interfejsie."
             },
-            "translation": {
-                "title": "Tłumaczenie",
-                "description": "Instancja LibreTranslate do użycia w tłumaczeniu.",
-                "instance": "Domena"
-            },
             "titleTags": {
                 "title": "Parsuj tagi w tytule",
-                "description": "Zamień tekst w [nawiasach] na tagi, które można kliknąć, aby wyszukać.",
-                "rules": {
-                    "title": "Zasady",
-                    "blur-sm": "Rozmycie",
-                    "hide": "Ukryj",
-                    "show": "Pokaż"
-                }
+                "description": "Zamień tekst w [nawiasach] na tagi, które można kliknąć, aby wyszukać."
             },
             "reverseActions": {
-                "description": "Zamienia położenie przycisków do działań na postach i komentarzach.",
-                "title": "Odwróć porządek działań"
+                "title": "Odwróć porządek działań",
+                "description": "Zamienia położenie przycisków do działań na postach i komentarzach."
             },
             "absoluteDates": {
                 "title": "Absolutne znaczniki czasu",
@@ -817,45 +855,28 @@
             "titleOpensUrl": {
                 "title": "Tytuł otwiera URL",
                 "description": "Kliknięcie tytułu otworzy stronę linkowaną w poście, nie komentarze."
+            },
+            "voteRatioBar": {
+                "title": "Vote ratio bar",
+                "description": "When the controversiality of a post reaches greater than 15%, a bar will be displayed in the vote buttons to help visualize sentiment."
             }
         },
-        "title": "Ustawienia",
-        "desktop": "Komputer",
-        "tablet": "Tablet",
-        "mobile": "Telefon",
-        "export": "Eksportuj",
-        "import": "Importuj",
-        "reset": "Resetuj",
-        "navigation": {
-            "title": "Nawigacja",
-            "dockPos": {
-                "title": "Pozycja docka",
-                "description": "Gdzie dock powinien być umieszczony na ekranie.",
-                "top": "Góra",
-                "bottom": "Dół",
-                "adaptive": "Adaptacyjne"
+        "embeds": {
+            "title": "Osadzanie",
+            "clickToView": {
+                "title": "Kliknij, aby zobaczyć",
+                "description": "Osadzane treści ładują się dopiero po kliknięciu."
             },
-            "panel": {
-                "title": "Tryb panelu",
-                "description": "Rozszerz dock na krawędzie ekranu, podobnie jak panel.",
-                "on": "Włączone",
-                "off": "Wyłączone",
-                "adaptive": "Adaptacyjne"
+            "youtube": {
+                "description": "Strona internetowa do osadzania treści z YouTube."
             },
-            "pins": {
-                "title": "Piny",
-                "description": "Kliknij pin, aby przenieść go na górę paska bocznego. Kliknij prawym przyciskiem myszy przypięty element, aby go usunąć."
-            },
-            "autoHide": {
-                "title": "Ukrywaj dock samoczynnie",
-                "description": "Ukrywa dock na telefonie gdy przewijasz w dół. Dock pojawi się z powrotem gdy przewiniesz w górę."
+            "instance": {
+                "invidious": "Instancja Invidious",
+                "piped": "Instancja Piped",
+                "description": "Instancja do osadzania treści z YouTube."
             }
         },
         "lemmy": {
-            "instances": {
-                "title": "Pokaż instancje",
-                "description": "Pokaż instancje, z których pochodzą określone treści."
-            },
             "title": "Lemmy",
             "showHiddenPosts": {
                 "title": "Pokaż ukryte posty",
@@ -883,24 +904,21 @@
                 "deleted": "Usunięte przez użytkownika",
                 "removed": "Usunięte przez moderatora"
             },
+            "contentFilter": {
+                "title": "Filtry treści",
+                "description": "Ukryj lub zminimalizuj posty pasujące do podanych ciągów. Obsługuje wyrażenia regularne.",
+                "hide": "Ukryj",
+                "minimize": "Zminimalizuj",
+                "minimized": "Treść ukryta przez Twoje filtry",
+                "disabled": "Wył."
+            },
             "nsfwBlur": {
                 "title": "Rozmycie NSFW",
                 "description": "Rozmywa obrazy i usuwa treści postów NSFW."
-            }
-        },
-        "embeds": {
-            "title": "Osadzanie",
-            "clickToView": {
-                "title": "Kliknij, aby zobaczyć",
-                "description": "Osadzane treści ładują się dopiero po kliknięciu."
             },
-            "youtube": {
-                "description": "Strona internetowa do osadzania treści z YouTube."
-            },
-            "instance": {
-                "invidious": "Instancja Invidious",
-                "piped": "Instancja Piped",
-                "description": "Instancja do osadzania treści z YouTube."
+            "instances": {
+                "title": "Pokaż instancje",
+                "description": "Pokaż instancje, z których pochodzą określone treści."
             }
         },
         "moderation": {
@@ -922,18 +940,12 @@
                 "description": "Wirtualizacja renderuje tylko widoczne posty, znacznie zwiększając wydajność. Wyłącz wirtualizację, jeśli masz problemy z zacinaniem się. Wyłączenie tej funkcji spowoduje wyłączenie nieskończonego przewijania."
             }
         },
-        "donate": {
-            "description": "Ta aplikacja jest otwartym oprogramowaniem, i dołożyłem wszelkich starań w jej rozwinięcie i utrzymywanie. Jeżeli chcesz wesprzeć dalszy rozwój, możesz do niego dopłacić, lub po prostu polecić innym!"
-        },
         "account": {
             "title": "Konto"
+        },
+        "donate": {
+            "description": "Ta aplikacja jest otwartym oprogramowaniem, i dołożyłem wszelkich starań w jej rozwinięcie i utrzymywanie. Jeżeli chcesz wesprzeć dalszy rozwój, możesz do niego dopłacić, lub po prostu polecić innym!"
         }
-    },
-    "profile": {
-        "saved": "Zapisane",
-        "subscribed": "Subskrypcje",
-        "profile": "Profil",
-        "inbox": "Skrzynka odbiorcza"
     },
     "error": {
         "incorrect_login": "Nieprawidłowe dane logowania. Spróbuj ponownie.",
@@ -952,11 +964,12 @@
         "couldnt_find_post": "Post nie istnieje, nie ma go na instancji lub został usunięty.",
         "cant_block_yourself": "Nie możesz się zablokować. Nawet nie powinieneś, fajny z ciebie gość!",
         "email_not_verified": "Mail twojego konta nie został zweryfikowany.",
+        "passwords_do_not_match": "Oba twoje hasła nie pasują do siebie.",
         "honeypot_failed": "Zaraz, jak to- jesteś botem? Bip bop bap bup. Jeżeli nie, weryfikacja pułapką na boty zawiodła.",
         "downvotes_are_disabled": "Głosy w dół na tej instancji są wyłączone.",
         "email_already_exists": "Jest już konto z tym mailem.",
         "slurs": "Twój post zawiera słowo zakazane na tej instancji.",
-        "captcha_failed": "Niepoprawna odpowiedź CAPTCHA",
+        "captcha_incorrect": "Nieprawidłowa odpowiedź CAPTCHA.",
         "cant_block_local_instance": "Nie możesz zablokować instancji, z której korzystasz.",
         "invalid_vote_value": "Przepraszamy, nie możesz fałszować głosów na Lemmym.",
         "language_not_allowed": "Ten język nie jest dozwolony na tej społeczności. Odznacz, by skorzystać z domyślnego na społeczności.",
@@ -964,7 +977,11 @@
         "couldnt_find_community": "Ta społeczność nie istnieje.",
         "not_an_admin": "Nie jesteś administratorem tej instancji.",
         "rate_limit_error": "Działasz za szybko.",
-        "passwords_do_not_match": "Oba twoje hasła nie pasują do siebie."
+        "unimplemented": "That function of your account's server software is not yet supported by Photon.",
+        "unsupported": "That function is not supported by your account's server software.",
+        "not_live_supported": "Ten serwer nie uruchamia obsługiwanego oprogramowania lub jest offline.",
+        "token_not_found": "Ten link weryfikacyjny e-mail wygasł lub nigdy nie istniał.",
+        "invalid_password": "Nieprawidłowe hasło."
     },
     "aria": {
         "pagination": {
@@ -976,6 +993,22 @@
             "upvotes": "Głosy w górę: {{default}}",
             "downvotes": "Głosy w dół: {{default}}",
             "score": "Ocena: {{default}}"
+        },
+        "sidebar": {
+            "title": "Sidebar",
+            "accounts": "Accounts selector"
+        },
+        "loading": "Loading",
+        "element": {
+            "pageHeader": "Page header"
+        },
+        "postDecor": {
+            "openImage": "Open image: {{default}}",
+            "openLink": "Open link: {{default}}",
+            "openPost": "Open post: {{default}}"
+        },
+        "comments": {
+            "children": "{{childCount}} dzieci"
         }
     },
     "stats": {
@@ -983,8 +1016,12 @@
         "created": "Utworzono"
     },
     "placeholders": {
-        "comments": "Dołącz do rozmowy",
         "title": "Dodaj tytuł posta",
-        "body": "Co masz do powiedzenia?"
+        "body": "Co masz do powiedzenia?",
+        "comments": "Dołącz do rozmowy"
+    },
+    "class": {
+        "moderator": "Moderator",
+        "admin": "Administrator"
     }
 }

@@ -1,329 +1,4 @@
 {
-    "form": {
-        "profile": {
-            "email": "邮箱",
-            "displayName": "昵称",
-            "bio": "个人简介",
-            "avatar": "头像",
-            "banner": "背景横幅",
-            "showNSFW": "显示NSFW内容",
-            "scores": "显示分数",
-            "bot": "机器人账号",
-            "showBots": "显示机器人帖子",
-            "showRead": "显示已读",
-            "currentPassword": "当前密码",
-            "newPassword": "新密码",
-            "verifyNewPassword": "确认密码",
-            "matrix": "Matrix 用户",
-            "2fa": {
-                "totp": "TOTP",
-                "paste": "将此粘贴到您的身份验证器应用程序中。",
-                "2fa": "2FA"
-            },
-            "deleteAccount": {
-                "label": "删除帐户",
-                "deleteContent": "删除内容",
-                "warning": "这将删除您提交的所有内容。"
-            }
-        },
-        "username": "用户名",
-        "name": "名字",
-        "instance": "网址",
-        "password": "密码",
-        "confirmPassword": "确认密码",
-        "2fa": "2FA两步验证码",
-        "forgotpassword": "忘记密码",
-        "submit": "发送",
-        "edit": "编辑",
-        "preview": "预览",
-        "post": {
-            "create": "发布",
-            "edit": "编辑帖子",
-            "community": "社群",
-            "title": "标题",
-            "url": "网址",
-            "body": "正文",
-            "nsfw": "NSFW",
-            "generateTitle": "代入标题",
-            "uploadImage": "上传图片",
-            "altText": "替代文本",
-            "selectFile": "选择文件",
-            "readMore": "查看更多",
-            "addUrl": "添加链接",
-            "setLanguage": "设置语言",
-            "unset": "撤销设置"
-        },
-        "signup": {
-            "title": "注册",
-            "description": "选择您感兴趣的实例，或输入网址。",
-            "info": "实例是托管你账户的服务器，但你仍然可以访问来自其他实例的内容并与之互动。",
-            "chooseInstance": "选择一个实例",
-            "application": {
-                "label": "应用程序",
-                "info": "要加入此实例，您必须填写申请表，并等待审核结果。如果您的申请被接受，您将收到一封电子邮件通知。"
-            },
-            "closed": {
-                "title": "注册通道已关闭",
-                "description": "此实例的注册通道已关闭。请寻找其它实例。",
-                "anotherInstance": "寻找其它实例"
-            }
-        },
-        "email": "邮箱",
-        "setup": "配置",
-        "description": "描述"
-    },
-    "routes": {
-        "createPost": "发帖",
-        "saved": "保存",
-        "createCommunity": "建立社群",
-        "post": {
-            "crosspostCount": "转贴",
-            "commentCount": "评论",
-            "addComment": "新增评论",
-            "instanceWarning": "此帖子是从与您的账户不同的实例请求的。许多操作将无法进行。",
-            "scrollToTop": "回到顶部",
-            "remoteView": "所有",
-            "localView": "本站视图",
-            "thread": {
-                "single": "您正在查看单个对话串。",
-                "allComments": "所有评论",
-                "part": "您正在查看对话串的一部分。",
-                "context": "显示上下文"
-            },
-            "emptyComments": {
-                "title": "暂无评论",
-                "description": "开始对话！"
-            }
-        },
-        "verifyEmail": {
-            "message": "您已验证邮箱。您现在可以关闭此窗口。",
-            "error": "无法验证您的邮箱。"
-        },
-        "passwordChange": {
-            "title": "修改密码",
-            "description": "选择您的新密码。",
-            "instance": "您的帐户托管在哪个实例上？"
-        },
-        "resetLogin": {
-            "title": "重置密码",
-            "description": "输入您帐户的邮箱，系统将发送密码重置链接。如果您的帐户没有邮箱，请联系您的实例管理员。"
-        },
-        "theme": {
-            "title": "主题",
-            "import": "导入",
-            "export": "导出",
-            "reset": "重置",
-            "resetWarning": {
-                "description": "这将把所有颜色重置为默认值。建议在此之前导出主题。",
-                "title": "重置主题"
-            },
-            "accent": "强调色",
-            "preset": {
-                "title": "无法编辑",
-                "classic": "经典",
-                "imported": "你的主题",
-                "new": "新主题",
-                "description": "这是默认主题，因此无法编辑。",
-                "delete": {
-                    "title": "删除主题",
-                    "confirm": "确认"
-                },
-                "default": "默认",
-                "presets": "预设"
-            }
-        },
-        "admin": {
-            "applications": {
-                "empty": {
-                    "description": "你的实例的注册申请将显示在此处。",
-                    "title": "没有新的申请"
-                },
-                "title": "申请",
-                "application": "申请",
-                "approved": "已批准",
-                "denied": "已拒绝",
-                "user": "用户",
-                "deny": "拒绝",
-                "approve": "批准",
-                "reason": "原因",
-                "modalTitle": "拒绝申请"
-            },
-            "team": {
-                "empty": {
-                    "description": "好奇怪，这个实例竟然没有管理员。怎么会这样？？",
-                    "title": "没有管理员"
-                },
-                "title": "实例管理员"
-            },
-            "config": {
-                "slurFilter": "侮辱性词语过滤正则表达式",
-                "title": "配置",
-                "sidebar": "侧边栏",
-                "icon": "图标",
-                "banner": "横幅",
-                "downvotesEnabled": "启用点踩",
-                "nsfwEnabled": "启用NSFW",
-                "registration": {
-                    "label": "注册方式",
-                    "open": "开放注册",
-                    "application": "需要申请",
-                    "closed": "关闭"
-                },
-                "applicationQuestion": "申请问题",
-                "adminCommunityOnly": "只有管理员可以创建社群",
-                "requireVerifyEmail": "需要电子邮件验证",
-                "emailAdminsOnApplication": "在收到新申请时向管理员发送电子邮件",
-                "emailAdminsOnReport": "在收到新举报时向管理员发送电子邮件",
-                "listingType": {
-                    "label": "列表类型",
-                    "all": "全部",
-                    "local": "本站"
-                },
-                "private": "私有实例",
-                "hideModlogModNames": "隐藏管理日志中的管理员名称",
-                "federation": "联合已启用",
-                "federationDebug": "联合调试模式",
-                "captcha": {
-                    "enabled": "已启用验证码"
-                }
-            },
-            "federation": {
-                "emptyBlock": {
-                    "description": "屏蔽一个实例后，来自该实例的新帖子将被隐藏。",
-                    "title": "没有被屏蔽的实例"
-                },
-                "title": "联合",
-                "csv": "上传CSV",
-                "blocked": "被屏蔽的实例",
-                "block": "屏蔽",
-                "blockplaceholder": "屏蔽某个实例...",
-                "allowed": "白名单实例",
-                "allow": "白名单",
-                "allowplaceholder": "将实例列入白名单",
-                "emptyAllow": {
-                    "title": "没有白名单实例",
-                    "description": "将一个实例列入白名单将阻止与其他所有实例的联合。"
-                }
-            },
-            "title": "实例管理",
-            "taglines": {
-                "title": "标语",
-                "add": "添加标语",
-                "empty": {
-                    "title": "没有标语",
-                    "description": "当用户访问您的实例时，实例信息卡上会出现一条随机标语。"
-                }
-            }
-        },
-        "search": {
-            "noResults": {
-                "description": "没有符合该筛选条件的结果。请尝试优化你的搜索。",
-                "title": "没有内容",
-                "alt": "在整个联邦宇宙搜索"
-            },
-            "title": "搜索",
-            "federating": "联合",
-            "query": "查询",
-            "top": "最匹配的结果",
-            "other": "其它结果"
-        },
-        "profile": {
-            "moderates": "管理",
-            "user": "用户",
-            "settings": "设置",
-            "blocks": {
-                "empty": {
-                    "description": "屏蔽某个对象后，它将不再在你的信息流中出现。",
-                    "title": "暂无屏蔽的条目"
-                },
-                "title": "已屏蔽"
-            },
-            "credentials": "凭证",
-            "favorites": "收藏",
-            "upvoted": "点赞",
-            "downvoted": "点踩",
-            "media": {
-                "title": "媒体",
-                "download": "下载"
-            },
-            "welcome": "欢迎，{{default}}！",
-            "delete": {
-                "title": "删除帐户",
-                "warning": "此操作是永久性的。您确定要继续吗？"
-            },
-            "logins": "登录记录",
-            "overview": "概况",
-            "submissions": "发表历史"
-        },
-        "moderation": {
-            "resolve": "解决",
-            "unresolve": "撤销解决",
-            "title": "社群管理",
-            "empty": {
-                "title": "暂无新举报",
-                "description": "当帖子被举报时，您可以在此处采取行动。"
-            },
-            "reason": "原因",
-            "resolvedBy": "已解决，处理人是",
-            "resolved": "已解决"
-        },
-        "frontpage": {
-            "title": "首页",
-            "footer": "{{users:number}} 活跃 {{用户; 1:用户; default:用户;}}",
-            "endFeed": "您已到达{{community_name; undefined:信息流; default:{{community_name}}}}的末尾"
-        },
-        "modlog": "管理日志",
-        "instances": "实例",
-        "legal": {
-            "title": "条款",
-            "noLegal": "此实例未设置任何条款。"
-        },
-        "translators": "翻译",
-        "accounts": "账户",
-        "communities": {
-            "title": "社群",
-            "trending": "热门",
-            "search": {
-                "placeholder": "搜索新社群"
-            }
-        },
-        "inbox": {
-            "title": "收件箱",
-            "markAsRead": "标记全部已读",
-            "empty": {
-                "title": "没有新通知",
-                "description": "消息、回复和提及将显示在此处。"
-            },
-            "item": {
-                "reply": "{{user}} 在 {{post}} 中回复了你",
-                "message": "{{user}} 向 {{recipient}} 发送了消息",
-                "mention": "{{user}} 在 {{post}} 中提及了你"
-            }
-        },
-        "community": {
-            "settings": {
-                "team": "团队",
-                "settings": "设置",
-                "manage": "管理"
-            }
-        }
-    },
-    "common": {
-        "back": "后退",
-        "next": "下一页",
-        "refresh": "刷新",
-        "disabled": "已停用",
-        "cancel": "取消",
-        "debug": "调试",
-        "jump": "跳过",
-        "save": "保存",
-        "enabled": "已启用",
-        "enable": "启用",
-        "disable": "停用",
-        "add": "添加",
-        "send": "发送",
-        "general": "综合"
-    },
     "profile": {
         "profile": "帐户",
         "inbox": "收件箱",
@@ -344,7 +19,7 @@
         },
         "menu": {
             "label": "账户",
-            "app": "App",
+            "app": "应用",
             "settings": "设置",
             "colorscheme": {
                 "label": "配色方案",
@@ -355,11 +30,10 @@
             "theme": "主题",
             "about": "关于",
             "source": "来源",
-            "instance": "站点",
-            "donate": "捐款"
+            "donate": "捐款",
+            "instance": "站点"
         },
         "commands": {
-            "contextual": "在此页",
             "prompt": "指令面板",
             "recents": "最近使用",
             "content": "内容",
@@ -367,26 +41,29 @@
             "main": "常用",
             "setView": "设置视图",
             "setViewTo": "将视图模式设置为 {{default}}",
+            "setColor": "设置配色方案",
             "setColorTo": "将色调设置为 {{default}}",
             "feeds": "信源",
             "downloading": "正在加载操作",
-            "setColor": "设置配色方案",
             "setTheme": "设置主题",
-            "setThemeTo": "将主题设为 {{default}}"
-        }
+            "setThemeTo": "将主题设为 {{default}}",
+            "contextual": "在此页",
+            "communities": "包含 **{{default}}** 的社区",
+            "goto": "转到 **{{default}}**"
+        },
+        "notifications": "通知"
     },
     "account": {
         "login": "登录",
         "logout": "退出",
         "signup": "注册",
         "accounts": "账号",
-        "changeinstance": "更改实例",
         "resetColor": "重置颜色",
         "addGuest": "新增游客账户",
         "moveUp": "上移",
         "moveDown": "下移",
         "guest": "游客",
-        "versionGate": "当前版本的 Photon 支持 {{version}} 或更高版本的实例。"
+        "piefedGate": "Piefed 支持处于实验阶段。某些功能不受支持。"
     },
     "filter": {
         "location": {
@@ -395,7 +72,8 @@
             "local": "本站",
             "subscribed": "订阅",
             "moderator": "参与管理",
-            "global": "全部"
+            "global": "全部",
+            "popular": "热门"
         },
         "sort": {
             "label": "排序",
@@ -406,6 +84,7 @@
                 "time": {
                     "label": "时间",
                     "all": "所有",
+                    "year": "过去一年",
                     "9months": "9月内",
                     "6months": "6月内",
                     "3months": "3月内",
@@ -440,6 +119,407 @@
             "mentions": "提及"
         }
     },
+    "form": {
+        "username": "用户名",
+        "name": "名字",
+        "instance": "网址",
+        "password": "密码",
+        "confirmPassword": "确认密码",
+        "2fa": "2FA两步验证码",
+        "forgotpassword": "忘记密码",
+        "submit": "发送",
+        "edit": "编辑",
+        "preview": "预览",
+        "post": {
+            "create": "发布",
+            "edit": "编辑帖子",
+            "community": "社群",
+            "title": "标题",
+            "url": "网址",
+            "body": "正文",
+            "nsfw": "NSFW",
+            "generateTitle": "代入标题",
+            "uploadImage": "上传图片",
+            "selectFile": "选择文件",
+            "altText": "替代文本",
+            "addUrl": "添加链接",
+            "setLanguage": "设置语言",
+            "unset": "撤销设置",
+            "readMore": "查看更多",
+            "flair": "添加标签",
+            "fetching": "正在获取站点元数据",
+            "types": {
+                "normal": "讨论",
+                "poll": "投票",
+                "event": "活动"
+            },
+            "autosubmit": "自动提交",
+            "customThumbnail": "设置缩略图"
+        },
+        "profile": {
+            "displayName": "昵称",
+            "bio": "个人简介",
+            "avatar": "头像",
+            "banner": "背景横幅",
+            "email": "邮箱",
+            "matrix": "Matrix 用户",
+            "showNSFW": "显示NSFW内容",
+            "scores": "显示分数",
+            "bot": "机器人账号",
+            "showBots": "显示机器人帖子",
+            "showRead": "显示已读",
+            "currentPassword": "当前密码",
+            "newPassword": "新密码",
+            "verifyNewPassword": "确认密码",
+            "2fa": {
+                "totp": "TOTP",
+                "2fa": "双重认证",
+                "paste": "将此粘贴到您的身份验证器应用程序中。",
+                "disabled": "双重认证已禁用"
+            },
+            "deleteAccount": {
+                "deleteContent": "删除内容",
+                "warning": "这将删除您提交的所有内容。"
+            },
+            "languages": {
+                "title": "语言",
+                "description": "如果设置了任何语言，您将只能看到明确标记为该语言的内容。大多数未标记的内容属于“未定”。"
+            },
+            "credentials": {
+                "title": "管理登录方式",
+                "description": "您可以在此处启用双重认证以提高安全性，更改密码，查看登录设备或删除帐户。"
+            }
+        },
+        "email": "邮箱",
+        "setup": "配置",
+        "signup": {
+            "title": "注册",
+            "description": "选择您感兴趣的实例，或输入网址。",
+            "info": "实例是托管你账户的服务器，但你仍然可以访问来自其他实例的内容并与之互动。",
+            "chooseInstance": "选择一个实例",
+            "application": {
+                "label": "应用程序",
+                "info": "要加入此实例，您必须填写申请表，并等待审核结果。如果您的申请被接受，您将收到一封电子邮件通知。",
+                "notice": "您的注册正在等待中。一旦管理员审核通过，您将收到一封电子邮件。然后您可以登录。"
+            },
+            "closed": {
+                "title": "注册通道已关闭",
+                "description": "此实例的注册通道已关闭。请寻找其它实例。",
+                "anotherInstance": "寻找其它实例"
+            },
+            "verify": {
+                "title": "验证电子邮件",
+                "description": "检查您的收件箱中的验证链接。点击后，按下方的按钮。",
+                "submit": "我已验证我的电子邮件",
+                "error": "您的电子邮件尚未验证。"
+            }
+        },
+        "description": "描述",
+        "time": {
+            "duration": "持续时间",
+            "minutes": "分钟",
+            "hours": "小时",
+            "days": "天",
+            "months": "月",
+            "years": "年",
+            "permanent": "永久"
+        },
+        "instanceType": "服务器软件类型"
+    },
+    "routes": {
+        "frontpage": {
+            "title": "首页",
+            "footer": "{{users:number}} 活跃 {{用户; 1:用户; default:用户;}}",
+            "endFeed": "您已到达{{community_name; undefined:信息流; default:{{community_name}}}}的末尾",
+            "empty": {
+                "title": "没有帖子",
+                "description": "没有符合此过滤器的帖子。"
+            }
+        },
+        "modlog": {
+            "title": "管理日志",
+            "filters": "过滤器"
+        },
+        "instances": "实例",
+        "legal": {
+            "title": "条款",
+            "noLegal": "此实例未设置任何条款。"
+        },
+        "profile": {
+            "user": "用户",
+            "settings": "设置",
+            "blocks": {
+                "title": "已屏蔽",
+                "empty": {
+                    "user": {
+                        "title": "没有屏蔽的用户",
+                        "description": "屏蔽用户将从源中隐藏其帖子和评论。"
+                    },
+                    "community": {
+                        "title": "没有屏蔽的社区",
+                        "description": "屏蔽社区将从源中隐藏其帖子。"
+                    },
+                    "instance": {
+                        "title": "没有屏蔽的服务器",
+                        "description": "屏蔽服务器将从源中隐藏其社区的帖子。"
+                    }
+                }
+            },
+            "credentials": "凭证",
+            "moderates": "管理",
+            "favorites": "收藏",
+            "upvoted": "点赞",
+            "downvoted": "点踩",
+            "media": {
+                "title": "媒体",
+                "download": "下载"
+            },
+            "logins": "登录记录",
+            "delete": {
+                "title": "删除帐户",
+                "warning": "此操作是永久性的。您确定要继续吗？"
+            },
+            "overview": "概况",
+            "submissions": "发表历史",
+            "edit": "编辑"
+        },
+        "translators": "翻译",
+        "accounts": "账户",
+        "accounts.placeholder": {
+            "title": "未登录",
+            "description": "您尚未登录。您可以在此注册或登录。",
+            "descriptionWithGuest": "您尚未登录。您可以在此登录，注册或添加新的访客帐户。"
+        },
+        "explore": {
+            "title": "探索",
+            "feeds": "源",
+            "topics": "话题"
+        },
+        "communities": {
+            "title": "社群",
+            "trending": "热门",
+            "search": {
+                "placeholder": "搜索新社群"
+            }
+        },
+        "search": {
+            "title": "搜索",
+            "federating": "联合",
+            "query": "查询",
+            "noResults": {
+                "title": "没有内容",
+                "description": "没有符合该筛选条件的结果。请尝试优化你的搜索。",
+                "alt": "在整个联邦宇宙搜索"
+            },
+            "top": "最匹配的结果",
+            "other": "其它结果"
+        },
+        "saved": "保存",
+        "post": {
+            "crosspostCount": "转贴",
+            "commentCount": "评论",
+            "addComment": "新增评论",
+            "scrollToTop": "回到顶部",
+            "thread": {
+                "single": "您正在查看单个对话串。",
+                "allComments": "所有评论",
+                "part": "您正在查看对话串的一部分。",
+                "context": "显示上下文"
+            },
+            "emptyComments": {
+                "title": "暂无评论",
+                "description": "开始对话！"
+            },
+            "commented": "您的评论已发布。",
+            "loadComments": "加载评论"
+        },
+        "postRedirect": {
+            "title": "跨服务器内容",
+            "description": "该内容并非源自 {{homeInstance}}。",
+            "actions": {
+                "back": "返回",
+                "fetch": "在 {{homeInstance}} 上继续",
+                "switch": "切换到 {{destInstance}} 上的帐户"
+            },
+            "automatic": {
+                "title": "正在定位帖子",
+                "description": "该内容并非源自您帐户的服务器。"
+            }
+        },
+        "inbox": {
+            "title": "收件箱",
+            "markAsRead": "标记全部已读",
+            "empty": {
+                "title": "没有新通知",
+                "description": "消息、回复和提及将显示在此处。"
+            },
+            "item": {
+                "reply": "{{user}} 在 {{post}} 中回复了你",
+                "mention": "{{user}} 在 {{post}} 中提及了你",
+                "message": "{{user}} 向 {{recipient}} 发送了消息"
+            },
+            "messages": {
+                "conversation": "这是您与 {{user}} 对话的开始",
+                "indicator": "正在给 {{user}} 发消息",
+                "start": "开始聊天",
+                "empty": {
+                    "title": "没有消息"
+                }
+            }
+        },
+        "moderation": {
+            "title": "社群管理",
+            "empty": {
+                "title": "暂无新举报",
+                "description": "当帖子被举报时，您可以在此处采取行动。"
+            },
+            "reason": "原因",
+            "resolve": "解决",
+            "resolved": "已解决",
+            "unresolve": "撤销解决",
+            "resolvedBy": "已解决，处理人是",
+            "markAll": "标记页面为已解决",
+            "markAllComplete": "批量操作已完成。",
+            "feed": "报告",
+            "manage": {
+                "title": "管理",
+                "modlogs": "最近的管理日志",
+                "ban": "封禁",
+                "unban": "解封"
+            }
+        },
+        "admin": {
+            "title": "实例管理",
+            "config": {
+                "title": "配置",
+                "sidebar": "侧边栏",
+                "icon": "图标",
+                "banner": "横幅",
+                "downvotesEnabled": "启用点踩",
+                "nsfwEnabled": "启用NSFW",
+                "registration": {
+                    "label": "注册方式",
+                    "open": "开放注册",
+                    "application": "需要申请",
+                    "closed": "关闭"
+                },
+                "applicationQuestion": "申请问题",
+                "adminCommunityOnly": "只有管理员可以创建社群",
+                "requireVerifyEmail": "需要电子邮件验证",
+                "emailAdminsOnApplication": "在收到新申请时向管理员发送电子邮件",
+                "emailAdminsOnReport": "在收到新举报时向管理员发送电子邮件",
+                "listingType": {
+                    "label": "列表类型",
+                    "all": "全部",
+                    "local": "本站"
+                },
+                "private": "私有实例",
+                "hideModlogModNames": "隐藏管理日志中的管理员名称",
+                "slurFilter": "侮辱性词语过滤正则表达式",
+                "federation": "联合已启用",
+                "federationDebug": "联合调试模式",
+                "captcha": {
+                    "enabled": "已启用验证码"
+                }
+            },
+            "applications": {
+                "title": "申请",
+                "empty": {
+                    "title": "没有新的申请",
+                    "description": "你的实例的注册申请将显示在此处。"
+                },
+                "application": "申请",
+                "approved": "已批准",
+                "denied": "已拒绝",
+                "user": "用户",
+                "deny": "拒绝",
+                "approve": "批准",
+                "reason": "原因",
+                "modalTitle": "拒绝申请"
+            },
+            "taglines": {
+                "title": "标语",
+                "add": "添加标语",
+                "empty": {
+                    "title": "没有标语",
+                    "description": "当用户访问您的实例时，实例信息卡上会出现一条随机标语。"
+                }
+            },
+            "team": {
+                "title": "实例管理员",
+                "empty": {
+                    "title": "没有管理员",
+                    "description": "好奇怪，这个实例竟然没有管理员。怎么会这样？？"
+                }
+            },
+            "federation": {
+                "title": "联合",
+                "csv": "上传CSV",
+                "blocked": "被屏蔽的实例",
+                "block": "屏蔽",
+                "blockplaceholder": "屏蔽某个实例...",
+                "allowed": "白名单实例",
+                "allow": "白名单",
+                "allowplaceholder": "将实例列入白名单",
+                "emptyBlock": {
+                    "title": "没有被屏蔽的实例",
+                    "description": "屏蔽一个实例后，来自该实例的新帖子将被隐藏。"
+                },
+                "emptyAllow": {
+                    "title": "没有白名单实例",
+                    "description": "将一个实例列入白名单将阻止与其他所有实例的联合。"
+                }
+            },
+            "media": {
+                "title": "媒体"
+            }
+        },
+        "verifyEmail": {
+            "message": "您已验证邮箱。您现在可以关闭此窗口。",
+            "error": "无法验证您的邮箱。"
+        },
+        "passwordChange": {
+            "title": "修改密码",
+            "description": "选择您的新密码。",
+            "instance": "您的帐户托管在哪个实例上？"
+        },
+        "resetLogin": {
+            "title": "重置密码",
+            "description": "输入您帐户的邮箱，系统将发送密码重置链接。如果您的帐户没有邮箱，请联系您的实例管理员。"
+        },
+        "theme": {
+            "title": "主题",
+            "accent": "强调色",
+            "resetWarning": {
+                "title": "重置主题",
+                "description": "这将把所有颜色重置为默认值。建议在此之前导出主题。"
+            },
+            "preset": {
+                "title": "无法编辑",
+                "description": "这是默认主题，因此无法编辑。",
+                "delete": {
+                    "title": "删除主题",
+                    "confirm": "确认"
+                },
+                "default": "默认",
+                "classic": "经典",
+                "imported": "你的主题",
+                "new": "新主题",
+                "presets": "预设"
+            }
+        },
+        "community": {
+            "settings": {
+                "team": "团队",
+                "settings": "设置",
+                "manage": "管理"
+            },
+            "languageWarning": "此社区中的内容使用了您未选择的语言。部分或所有帖子可能会丢失。"
+        },
+        "user": {
+            "note": "设置备注"
+        }
+    },
     "cards": {
         "site": {
             "about": "关于",
@@ -451,13 +531,21 @@
             "moderators": "社群管理员",
             "subscribe": "关注",
             "subscribed": "已关注",
+            "modlog": "日志",
             "block": "屏蔽",
             "unblock": "取消屏蔽",
             "blockInstance": "屏蔽实例",
-            "favorite": "收藏",
-            "unfavorite": "取消收藏",
-            "modlog": "日志",
-            "activeDay": "今日活跃"
+            "activeDay": "今日活跃",
+            "flair": "设置我的标签"
+        }
+    },
+    "admin": {
+        "purge": "清除",
+        "instance": "实例",
+        "label": "实例管理",
+        "purgeCommunity": {
+            "title": "清除社群",
+            "warning": "这将删除所有帖子。你确定吗？（该按钮将在3秒后启用）"
         }
     },
     "content": {
@@ -467,13 +555,15 @@
         "comments": "评论",
         "communities": "社群",
         "instances": "实例",
-        "message": "消息"
+        "message": "消息",
+        "url": "URL"
     },
     "post": {
         "actions": {
+            "comments": "评论",
             "save": "保存",
+            "unsave": "不保存",
             "more": {
-                "crosspost": "转发",
                 "label": "更多操作",
                 "edit": "编辑",
                 "creator": "作者",
@@ -482,79 +572,65 @@
                 "markUnread": "标记为未读",
                 "hide": "隐藏",
                 "unhide": "取消隐藏",
-                "translate": "翻译",
-                "mediaBias": "媒体偏见",
                 "share": "分享",
+                "share.from": "分享自",
+                "share.global": "源服务器",
+                "share.local": "您的服务器",
+                "share.photon": "Photon 链接",
+                "crosspost": "转发",
                 "delete": "删除",
                 "restore": "恢复"
             },
-            "mediaBias": {
-                "noData": {
-                    "description": "本实例没有偏见数据。",
-                    "title": "无数据"
-                },
-                "description": "描述",
-                "credibility": "可信度",
-                "reporting": "事实报道",
-                "downloading": "正在下载数据集",
-                "loading": "正在加载源"
-            },
-            "comments": "评论",
-            "unsave": "不保存",
             "vote": {
                 "upvote": "顶",
                 "downvote": "踩",
                 "score": "分数"
-            },
-            "link": {
-                "title": "备用链接",
-                "actions": "链接操作"
             }
         },
         "badges": {
             "nsfw": "NSFW",
-            "featured": "已加精",
             "locked": "已锁定",
+            "featured": "已加精",
             "removed": "已被移除",
             "deleted": "已删除",
             "saved": "已保存"
         },
         "image": {
             "zoomIn": "放大",
-            "zoomOut": "缩小",
-            "close": "关闭"
+            "zoomOut": "缩小"
         },
         "meta": {
             "lastEdited": "最后编辑于 {{default}}",
             "created": "创建于 {{default}}"
+        },
+        "poll": {
+            "votes": "{{votes:number}} 票",
+            "results": {
+                "show": "显示结果",
+                "hide": "隐藏结果",
+                "ends": "结束于 {{time}}",
+                "ended": "结束于 {{time}}"
+            },
+            "choices": "选项",
+            "single": "单选",
+            "multiple": "多选",
+            "mode": "模式"
         }
+    },
+    "comment": {
+        "reply": "回复",
+        "actions": {
+            "label": "操作",
+            "link": "复制链接"
+        },
+        "locked": "此帖子已被锁定。",
+        "banned": "你已被此社群封禁。",
+        "more": "更多 {{comments:number}} 条",
+        "collapse": "折叠",
+        "expand": "展开"
     },
     "moderation": {
         "report": "举报",
-        "removeSubmission": {
-            "failEmptyReply": "如果启用了“回复原因”，您的回复不能为空。",
-            "title": "删除提交内容",
-            "titleRestore": "恢复提交内容",
-            "titlePurge": "清除提交内容",
-            "withReason": "回复理由",
-            "comment": "评论",
-            "message": "留言",
-            "failReply": "无法发布回复。仍然继续删除…",
-            "failMessage": "无法向用户留言。仍然继续删除...",
-            "successPurge": "已成功清除该条提交内容。"
-        },
-        "reportModal": {
-            "title": "举报",
-            "success": "举报了该条提交内容。"
-        },
-        "reason": "原因",
-        "unlock": "解除锁定",
-        "remove": "删除",
-        "lock": "锁定",
-        "label": "社群管理",
-        "labelInstanceOnly": "社群管理（仅实例）",
-        "feature": "加精",
-        "unfeature": "取消加精",
         "ban": {
             "banning": "封禁用户",
             "unbanning": "取消封禁用户",
@@ -564,47 +640,191 @@
             "banFromCommunity": "从社群封禁",
             "unbanFromCommunity": "从社群解除封禁"
         },
-        "restore": "恢复"
+        "removeSubmission": {
+            "title": "删除提交内容",
+            "titleRestore": "恢复提交内容",
+            "titlePurge": "清除提交内容",
+            "withReason": "回复理由",
+            "comment": "评论",
+            "message": "留言",
+            "failReply": "无法发布回复。仍然继续删除…",
+            "failMessage": "无法向用户留言。仍然继续删除...",
+            "failEmptyReply": "如果启用了“回复原因”，您的回复不能为空。",
+            "successPurge": "已成功清除该条提交内容。"
+        },
+        "reportModal": {
+            "title": "举报",
+            "success": "举报了该条提交内容。",
+            "presets": {
+                "spam": "垃圾邮件/滥用",
+                "rules": "违反社区规则",
+                "rules.content": "此提交违反了规则，因为 __"
+            }
+        },
+        "reason": "原因",
+        "lock": "锁定",
+        "unlock": "解除锁定",
+        "remove": "删除",
+        "restore": "恢复",
+        "label": "社群管理",
+        "labelInstanceOnly": "社群管理（仅实例）",
+        "feature": "加精",
+        "unfeature": "取消加精",
+        "votes": "投票",
+        "modlog": {
+            "user": "用户管理日志",
+            "post": "帖子管理日志",
+            "comment": "评论管理日志"
+        }
+    },
+    "common": {
+        "back": "后退",
+        "next": "下一页",
+        "debug": "调试",
+        "refresh": "刷新",
+        "jump": "跳过",
+        "save": "保存",
+        "enabled": "已启用",
+        "disabled": "已停用",
+        "enable": "启用",
+        "disable": "停用",
+        "add": "添加",
+        "cancel": "取消",
+        "send": "发送",
+        "general": "综合",
+        "remove": "移除",
+        "download": "下载",
+        "attach": "附加文件",
+        "info": "信息"
+    },
+    "message": {
+        "success": "成功",
+        "error": "错误",
+        "retry": "重试"
+    },
+    "toast": {
+        "noComments": "API未返回任何评论。",
+        "loginVoteGate": "您必须登录才能赞踩。",
+        "blockedCommunity": "已屏蔽该社群。",
+        "unblockedCommunity": "已取消屏蔽该社群。",
+        "purgedCommunity": "已清除该社群。",
+        "blockedInstance": "已屏蔽该实例。",
+        "updatedCommunity": "您的社群已被更新。",
+        "sentMessage": "消息已发送。",
+        "invalidDateAbsolute": "日期无效。必须是绝对日期。",
+        "invalidDateBeforeCurrent": "日期无效。 日期在当前时间之前。",
+        "bannedUser": "已封禁该用户。",
+        "unbannedUser": "已取消封禁该用户。",
+        "needCommunity": "你必须建立一个社群。",
+        "invalidURL": "链接无效",
+        "generatedTitle": "从链接生成了标题和正文。 是否撤消此操作？",
+        "failGenerateTitle": "该实例没有可用的标题或描述。",
+        "restoredFromDraft": "已从草稿中恢复您的帖子。",
+        "copied": "已复制到剪贴板。",
+        "approvedApplication": "已批准该申请。",
+        "deniedApplication": "已拒绝该申请。",
+        "updatedSite": "已更新你的站点。",
+        "failCSV": "读取CSV失败",
+        "removeAdminWarning": "您确定要删除该实例管理员吗？",
+        "removeAdmin": "已删除该实例管理员。",
+        "failFindUser": "找不到该用户。",
+        "addMod": "已添加该社群管理员。",
+        "updateMods": "已更新社群管理员。",
+        "logIn": "已成功登录。",
+        "failInstanceURL": "联系该实例失败。 该实例是否处于下线状态？",
+        "addAccount": "已添加该帐户。",
+        "resetLink": "密码重置链接已发送到您的邮箱。",
+        "resolveReport": "已解决该举报。",
+        "unresolveReport": "已撤销解决该举报。",
+        "passwordReset": "您的密码已重置。",
+        "loginRefresh": "您的登录已被刷新。",
+        "invalidLogin": "提供的凭据有误",
+        "saveSettings": "已保存您的用户设置。 如果您更改了邮箱， 则会发送验证链接。",
+        "confirmDelete1": "您确定要删除您的帐户吗？",
+        "confirmDelete2": "你真的确定吗？",
+        "confirmDelete3": "最后警告。你真的确定吗？",
+        "needPassword": "您必须提供密码。",
+        "deleting": "正在删除您的帐户...",
+        "deleted": "您的帐户已被删除。",
+        "resetSettings": "您是否想将设置重置为默认值？",
+        "failFetchInstances": "无法获取可用实例。",
+        "verifyEmail": "验证链接已发送到您的邮箱。验证您的邮箱，然后登录。",
+        "failSignup": "注册失败。",
+        "successSignup": "已注册。",
+        "waitApplication": "在登录前，请先等待您的注册申请被批准。",
+        "blockUser": "已屏蔽该用户。",
+        "unblockUser": "已取消屏蔽该用户。",
+        "purgeUser": "已清除该用户。",
+        "settingsImport": "已成功导入设置",
+        "settingsImportWarning": "导入的设置似乎无效。您确定要导入吗？",
+        "userLoading": "仍在加载你的用户数据。。。",
+        "lemmyDonate": "您帐户的服务器运行 Lemmy，开发人员正在请求捐款。由于用户的慷慨解囊，他们能够将 Lemmy 开发为一个开源平台，免受跟踪和广告的侵扰。\n\n每年，他们都会请您考虑捐款以支持他们的工作，并允许他们继续维护和改进 Lemmy。\n\n[捐赠](https://join-lemmy.org/donate)\n\n*注意：这是对 Lemmy 的捐赠，而不是对 Photon 的捐赠。*"
     },
     "settings": {
         "title": "设置",
+        "beta": "测试版",
+        "desktop": "桌面",
+        "tablet": "平板",
+        "mobile": "手机",
+        "export": "导出",
+        "import": "导入",
+        "reset": "重置",
+        "navigation": {
+            "title": "导航",
+            "autoHide": {
+                "title": "自动隐藏停靠栏",
+                "description": "向下滚动时在移动设备上隐藏停靠栏，向上滚动时重新显示。"
+            }
+        },
         "app": {
+            "title": "Photon",
+            "theming": {
+                "title": "主题",
+                "description": "自定义 Photon 的颜色。",
+                "link": "转到主题"
+            },
             "lang": {
                 "title": "语言",
+                "description": "Photon的用户界面所使用的语言。",
                 "auto": "自动",
-                "zh-Hans": "中文（简体）",
-                "zh-Hant": "中文（繁体）",
+                "credits": "致谢",
                 "useRtl": {
                     "title": "使用RTL布局",
                     "description": "对RTL语言使用RTL布局。"
-                },
-                "description": "Photon的用户界面所使用的语言。",
-                "note": "英语和希伯来语以外的语言均由社区翻译，可能不完整。",
-                "en": "英语",
-                "en-US": "英语（美国）",
-                "he": "希伯来语",
-                "et": "爱沙尼亚语",
-                "fr": "法语",
-                "de": "德语",
-                "fi": "芬兰语",
-                "pt": "葡萄牙语",
-                "zh": "中文",
-                "credits": "致谢"
-            },
-            "expandImages": {
-                "description": "点击帖子图片会使您进入大图浏览，而不是帖子页面。",
-                "title": "展开图片"
+                }
             },
             "view": {
-                "list": "按列表展示帖子，显示帖子内容和紧凑格式的媒体。",
+                "title": "帖子风格",
                 "cozy": "显示大图像、富文本嵌入内容与长帖子正文。",
-                "compact": "按列表显示帖子，不显示帖子正文，间隔更紧凑。",
-                "legacy": "旧版 Photon 外观。",
-                "title": "帖子风格"
+                "compact": "按列表显示帖子，不显示帖子正文，间隔更紧凑。"
+            },
+            "sort": {
+                "title": "默认排序方式",
+                "description": "在信息源中使用的默认排序方式。"
             },
             "infiniteScroll": {
-                "description": "新帖子会在你向下滚动时自动加载，不需要点击“下一页”。",
-                "title": "无限滚动"
+                "title": "无限滚动",
+                "description": "新帖子会在你向下滚动时自动加载，不需要点击“下一页”。"
+            },
+            "postsInNewTab": {
+                "title": "在新标签页中打开帖子",
+                "description": "用单独标签页，而不是在当前选项卡打开帖子。"
+            },
+            "displayName": {
+                "title": "使用昵称",
+                "description": "显示用户的昵称，而不是他们的实际用户名。"
+            },
+            "limitLayoutWidth": {
+                "title": "限制布局宽度",
+                "description": "通过限制主要内容的宽度来提高可读性。"
+            },
+            "placeholders": {
+                "title": "随机占位符",
+                "description": "为某些文本输入框显示随机占位符。"
+            },
+            "expandImages": {
+                "title": "展开图片",
+                "description": "点击帖子图片会使您进入大图浏览，而不是帖子页面。"
             },
             "duplicateTitles": {
                 "title": "隐藏重复的标题/正文",
@@ -620,116 +840,25 @@
                 "title": "字体",
                 "description": "Photon 在用户界面中使用什么字体。"
             },
-            "translation": {
-                "title": "翻译",
-                "description": "用于翻译的LibreTranslate实例。",
-                "instance": "域名"
-            },
-            "placeholders": {
-                "title": "随机占位符",
-                "description": "为某些文本输入框显示随机占位符。"
-            },
-            "limitLayoutWidth": {
-                "description": "通过限制主要内容的宽度来提高可读性。",
-                "title": "限制布局宽度"
-            },
-            "title": "Photon",
-            "theming": {
-                "title": "主题",
-                "description": "自定义 Photon 的颜色。",
-                "link": "转到主题"
-            },
-            "colorscheme": {
-                "title": "配色方案",
-                "description": "要使用的配色方案。"
-            },
-            "sort": {
-                "title": "默认排序方式",
-                "description": "在信息源中使用的默认排序方式。"
-            },
-            "postsInNewTab": {
-                "title": "在新标签页中打开帖子",
-                "description": "用单独标签页，而不是在当前选项卡打开帖子。"
-            },
-            "displayName": {
-                "title": "使用昵称",
-                "description": "显示用户的昵称，而不是他们的实际用户名。"
-            },
             "titleTags": {
                 "title": "解析标题中的标签",
-                "description": "将[括号]中的文本转换为可以单击搜索的标签。",
-                "rules": {
-                    "title": "规则",
-                    "blur-sm": "模糊",
-                    "hide": "隐藏",
-                    "show": "显示"
-                }
+                "description": "将[括号]中的文本转换为可以单击搜索的标签。"
             },
             "reverseActions": {
                 "title": "反转操作列",
                 "description": "反转帖子和评论中的操作顺序。"
-            }
-        },
-        "lemmy": {
-            "nsfwBlur": {
-                "title": "模糊 NSFW 内容",
-                "description": "模糊图像并移除NSFW帖子的内容。"
             },
-            "fadeReadPosts": {
-                "description": "淡化你已经阅读过的帖子的标题",
-                "title": "淡化已读帖子"
+            "absoluteDates": {
+                "title": "绝对时间戳",
+                "description": "将相对时间戳（3 小时前）替换为绝对时间戳（15/6/25）。"
             },
-            "markReadPosts": {
-                "description": "点击帖子时，将其标记为已读",
-                "title": "将帖子标记为已读"
+            "titleOpensUrl": {
+                "title": "标题打开 URL",
+                "description": "单击标题打开帖子附带的 URL，而不是评论。"
             },
-            "instances": {
-                "description": "显示某些内容来自的实例。",
-                "title": "显示实例"
-            },
-            "title": "Lemmy",
-            "showHiddenPosts": {
-                "title": "显示被隐藏的帖子",
-                "description": "显示您手动隐藏的帖子。"
-            },
-            "compactFeatured": {
-                "title": "紧凑显示精华帖",
-                "description": "使精华帖的展示更加紧凑"
-            },
-            "crosspostMarker": {
-                "title": "标记转帖",
-                "description": "转帖时显示 '转自'。"
-            },
-            "hideSubmissions": {
-                "title": "隐藏提交内容",
-                "description": "隐藏某些类型的提交内容。",
-                "deleted": "已被用户删除的",
-                "removed": "已被社群管理员删除的"
-            }
-        },
-        "navigation": {
-            "pins": {
-                "description": "点击一个图钉即可将其置于侧边栏顶部。右键点击已固定的项目即可将其移除。",
-                "title": "置顶"
-            },
-            "dockPos": {
-                "bottom": "底部",
-                "adaptive": "自适应",
-                "title": "Dock栏位置",
-                "description": "Dock栏应放在屏幕上的位置。",
-                "top": "顶部"
-            },
-            "panel": {
-                "title": "面板模式",
-                "description": "将Dock栏延伸到屏幕边缘，类似于面板。",
-                "on": "开",
-                "off": "关",
-                "adaptive": "自适应"
-            },
-            "title": "导航",
-            "commands": {
-                "title": "指令面板",
-                "description": "按下斜杠键或右键单击Photon标志，即可通过搜索在应用各部分间跳转。"
+            "voteRatioBar": {
+                "title": "投票比例条",
+                "description": "当帖子的争议性超过 15% 时，投票按钮中将显示一个条形图以帮助可视化情绪。"
             }
         },
         "embeds": {
@@ -745,6 +874,51 @@
                 "invidious": "Invidious 实例",
                 "piped": "Piped 实例",
                 "description": "嵌入 YouTube 内容的实例。"
+            }
+        },
+        "lemmy": {
+            "title": "Lemmy",
+            "showHiddenPosts": {
+                "title": "显示被隐藏的帖子",
+                "description": "显示您手动隐藏的帖子。"
+            },
+            "compactFeatured": {
+                "title": "紧凑显示精华帖",
+                "description": "使精华帖的展示更加紧凑"
+            },
+            "markReadPosts": {
+                "title": "将帖子标记为已读",
+                "description": "点击帖子时，将其标记为已读"
+            },
+            "fadeReadPosts": {
+                "title": "淡化已读帖子",
+                "description": "淡化你已经阅读过的帖子的标题"
+            },
+            "crosspostMarker": {
+                "title": "标记转帖",
+                "description": "转帖时显示 '转自'。"
+            },
+            "hideSubmissions": {
+                "title": "隐藏提交内容",
+                "description": "隐藏某些类型的提交内容。",
+                "deleted": "已被用户删除的",
+                "removed": "已被社群管理员删除的"
+            },
+            "contentFilter": {
+                "title": "内容过滤器",
+                "description": "隐藏或最小化匹配给定字符串的帖子。支持正则表达式。",
+                "hide": "隐藏",
+                "minimize": "最小化",
+                "minimized": "被您的过滤器隐藏的内容",
+                "disabled": "关闭"
+            },
+            "nsfwBlur": {
+                "title": "模糊 NSFW 内容",
+                "description": "模糊图像并移除NSFW帖子的内容。"
+            },
+            "instances": {
+                "title": "显示实例",
+                "description": "显示某些内容来自的实例。"
             }
         },
         "moderation": {
@@ -766,116 +940,22 @@
                 "description": "虚拟化仅渲染可见的帖子，从而大幅提高性能。如果遇到卡顿问题，请禁用虚拟化。这将禁用无限滚动。"
             }
         },
-        "beta": "Beta",
-        "desktop": "桌面",
-        "tablet": "平板",
-        "mobile": "手机",
-        "export": "导出",
-        "import": "导入",
-        "reset": "重置",
         "account": {
             "title": "账户"
+        },
+        "donate": {
+            "description": "Photon 将永远免费且开源，并不断开发和设计以提供帮助。如果您喜欢 Photon 并希望在经济上支持其开发，可以在此处捐款。"
         }
     },
-    "toast": {
-        "settingsImportWarning": "导入的设置似乎无效。您确定要导入吗？",
-        "resetLink": "密码重置链接已发送到您的邮箱。",
-        "needPassword": "您必须提供密码。",
-        "verifyEmail": "验证链接已发送到您的邮箱。验证您的邮箱，然后登录。",
-        "unblockedCommunity": "已取消屏蔽该社群。",
-        "invalidDateBeforeCurrent": "日期无效。 日期在当前时间之前。",
-        "confirmDelete3": "最后警告。你真的确定吗？",
-        "failGenerateTitle": "该实例没有可用的标题或描述。",
-        "saveSettings": "已保存您的用户设置。 如果您更改了邮箱， 则会发送验证链接。",
-        "noComments": "API未返回任何评论。",
-        "loginVoteGate": "您必须登录才能赞踩。",
-        "blockedCommunity": "已屏蔽该社群。",
-        "purgedCommunity": "已清除该社群。",
-        "blockedInstance": "已屏蔽该实例。",
-        "updatedCommunity": "您的社群已被更新。",
-        "sentMessage": "消息已发送。",
-        "invalidDateAbsolute": "日期无效。必须是绝对日期。",
-        "bannedUser": "已封禁该用户。",
-        "unbannedUser": "已取消封禁该用户。",
-        "needCommunity": "你必须建立一个社群。",
-        "invalidURL": "链接无效",
-        "generatedTitle": "从链接生成了标题和正文。 是否撤消此操作？",
-        "restoredFromDraft": "已从草稿中恢复您的帖子。",
-        "copied": "已复制到剪贴板。",
-        "approvedApplication": "已批准该申请。",
-        "deniedApplication": "已拒绝该申请。",
-        "updateMods": "已更新社群管理员。",
-        "logIn": "已成功登录。",
-        "failInstanceURL": "联系该实例失败。 该实例是否处于下线状态？",
-        "addAccount": "已添加该帐户。",
-        "updatedSite": "已更新你的站点。",
-        "failCSV": "读取CSV失败",
-        "removeAdminWarning": "您确定要删除该实例管理员吗？",
-        "removeAdmin": "已删除该实例管理员。",
-        "failFindUser": "找不到该用户。",
-        "addMod": "已添加该社群管理员。",
-        "resolveReport": "已解决该举报。",
-        "unresolveReport": "已撤销解决该举报。",
-        "passwordReset": "您的密码已重置。",
-        "fetchPostOnHome": "正在尝试从您的主实例上获取此帖...",
-        "loginRefresh": "您的登录已被刷新。",
-        "invalidLogin": "提供的凭据有误",
-        "confirmDelete1": "您确定要删除您的帐户吗？",
-        "confirmDelete2": "你真的确定吗？",
-        "deleting": "正在删除您的帐户...",
-        "deleted": "您的帐户已被删除。",
-        "resetSettings": "您是否想将设置重置为默认值？",
-        "failFetchInstances": "无法获取可用实例。",
-        "failSignup": "注册失败。",
-        "successSignup": "已注册。",
-        "waitApplication": "在登录前，请先等待您的注册申请被批准。",
-        "blockUser": "已屏蔽该用户。",
-        "unblockUser": "已取消屏蔽该用户。",
-        "purgeUser": "已清除该用户。",
-        "settingsImport": "已成功导入设置",
-        "userLoading": "仍在加载你的用户数据。。。"
-    },
-    "admin": {
-        "purgeCommunity": {
-            "warning": "这将删除所有帖子。你确定吗？（该按钮将在3秒后启用）",
-            "title": "清除社群"
-        },
-        "purge": "清除",
-        "instance": "实例",
-        "label": "实例管理"
-    },
-    "message": {
-        "success": "成功",
-        "error": "错误",
-        "retry": "重试"
-    },
-    "comment": {
-        "reply": "回复",
-        "actions": {
-            "label": "操作",
-            "link": "复制链接"
-        },
-        "locked": "此帖子已被锁定。",
-        "banned": "你已被此社群封禁。",
-        "more": "更多 {{comments:number}} 条"
-    },
     "error": {
-        "language_not_allowed": "该语言在此社群中不被允许。请撤销语言设置以使用社群的默认语言。",
-        "invalid_vote_value": "抱歉，你不能在 Lemmy 帖子上进行投票欺诈。",
         "incorrect_login": "登录凭据不正确。请重试。",
-        "email_not_verified": "你还没有验证账户邮箱。",
-        "passwords_do_not_match": "你输入的密码与确认密码不一致。",
-        "honeypot_failed": "你是... 你是机器人吗？哔哔叭噗。如果你不是，那这个检测可就失败了。",
-        "downvotes_are_disabled": "此实例已禁用点踩功能。",
-        "email_already_exists": "此邮箱已经与一个现有账户关联。",
-        "captcha_failed": "验证码应答失败。",
-        "incorrect_login_5": "我觉得你一定是按错键了。",
-        "incorrect_login_7": "要么你是有打字障碍，要么你是在骚扰我。",
-        "incorrect_login_8": "我服了。",
         "incorrect_login_2": "登录凭据不正确。请重试。",
         "incorrect_login_3": "登录凭据仍然不正确。需要继续重试。",
         "incorrect_login_4": "登录凭据仍然不正确。继续重试。",
+        "incorrect_login_5": "我觉得你一定是按错键了。",
         "incorrect_login_6": "这好玩吗？",
+        "incorrect_login_7": "要么你是有打字障碍，要么你是在骚扰我。",
+        "incorrect_login_8": "我服了。",
         "incorrect_login_9": "你知道吗，你每次这么一弄，都得费老大劲传一堆数据。结果呢？登录失败。",
         "incorrect_login_10": "你想过没？就因为你这些没用的请求，可怜的管理员还得维护服务器。",
         "incorrect_login_11": "这次我真服了。",
@@ -883,25 +963,65 @@
         "registration_application_is_pending": "该账户的注册申请目前尚未被接受。",
         "couldnt_find_post": "该帖子不存在、不在此实例或已被删除。",
         "cant_block_yourself": "你不能屏蔽自己。也不应该这么做，你是个很好的人！",
+        "email_not_verified": "你还没有验证账户邮箱。",
+        "passwords_do_not_match": "你输入的密码与确认密码不一致。",
+        "honeypot_failed": "你是... 你是机器人吗？哔哔叭噗。如果你不是，那这个检测可就失败了。",
+        "downvotes_are_disabled": "此实例已禁用点踩功能。",
+        "email_already_exists": "此邮箱已经与一个现有账户关联。",
         "slurs": "你提交的内容含有被此实例屏蔽的关键词。",
+        "captcha_incorrect": "验证码答案不正确。",
         "cant_block_local_instance": "你不能屏蔽你正在使用的实例。",
+        "invalid_vote_value": "抱歉，你不能在 Lemmy 帖子上进行投票欺诈。",
+        "language_not_allowed": "该语言在此社群中不被允许。请撤销语言设置以使用社群的默认语言。",
         "couldnt_find_person": "该用户不存在。",
-        "couldnt_find_community": "该社群不存在。"
+        "couldnt_find_community": "该社群不存在。",
+        "not_an_admin": "您不是此服务器的管理员。",
+        "rate_limit_error": "您执行此操作太快。",
+        "unimplemented": "Photon 尚未支持您帐户服务器软件的该功能。",
+        "unsupported": "您帐户的服务器软件不支持该功能。",
+        "not_live_supported": "该服务器未运行受支持的软件，或已离线。",
+        "token_not_found": "该电子邮件验证链接已过期，或从未存在过。",
+        "invalid_password": "密码无效。"
     },
     "aria": {
-        "vote": {
-            "downvotes": "{{default}} 踩",
-            "upvotes": "{{default}} 赞",
-            "score": "分数: {{default}}",
-            "group": "帖子赞踩控制"
-        },
         "pagination": {
             "nav": "分页",
             "current": "当前页"
+        },
+        "vote": {
+            "group": "帖子赞踩控制",
+            "upvotes": "{{default}} 赞",
+            "downvotes": "{{default}} 踩",
+            "score": "分数: {{default}}"
+        },
+        "sidebar": {
+            "title": "侧边栏",
+            "accounts": "帐户选择器"
+        },
+        "loading": "正在加载",
+        "element": {
+            "pageHeader": "页眉"
+        },
+        "postDecor": {
+            "openImage": "打开图片：{{default}}",
+            "openLink": "打开链接：{{default}}",
+            "openPost": "打开帖子：{{default}}"
+        },
+        "comments": {
+            "children": "{{childCount}} 个子评论"
         }
     },
     "stats": {
         "joined": "加入于",
         "created": "创建于"
+    },
+    "placeholders": {
+        "title": "添加帖子标题",
+        "body": "您有什么想说的？",
+        "comments": "加入对话"
+    },
+    "class": {
+        "moderator": "版主",
+        "admin": "管理员"
     }
 }

@@ -1,8 +1,8 @@
 {
     "profile": {
+        "profile": "Profil",
         "inbox": "Postaláda",
         "saved": "Mentve",
-        "profile": "Profil",
         "subscribed": "Feliratkozások"
     },
     "nav": {
@@ -34,43 +34,57 @@
             "instance": "Szerver"
         },
         "commands": {
+            "prompt": "Command palette",
+            "recents": "Legutóbbiak",
             "content": "Tartalom",
+            "search": "Keresés erre: {{default}}",
+            "main": "Main",
             "setView": "Nézet beállítása",
             "setViewTo": "Nézet beállítása erre: {{default}}",
             "setColor": "Színséma beállítása",
             "setColorTo": "Színséma beállítása erre: {{default}}",
             "feeds": "Feedek",
+            "downloading": "Downloading actions",
             "setTheme": "Téma beállítása",
-            "recents": "Legutóbbiak",
-            "search": "Keresés erre: {{default}}"
-        }
+            "setThemeTo": "Set theme to **{{default}}**",
+            "contextual": "On this page",
+            "communities": "Közösségek ezzel: **{{default}}**",
+            "goto": "Ugrás ide: **{{default}}**"
+        },
+        "notifications": "Notifications"
     },
     "account": {
         "login": "Bejelentkezés",
+        "logout": "Kijelentkezés",
         "signup": "Regisztráció",
         "accounts": "Fiókok",
-        "changeinstance": "Szerver váltás",
+        "resetColor": "Reset color",
         "addGuest": "Vendég hozzáadása",
+        "moveUp": "Move up",
+        "moveDown": "Move down",
         "guest": "Vendég",
-        "logout": "Kijelentkezés"
+        "piefedGate": "Piefed support is experimental. Some features are not supported."
     },
     "filter": {
         "location": {
             "label": "Hely",
+            "all": "Összes",
             "local": "Helyi",
             "subscribed": "Feliratkozások",
             "moderator": "Moderátor",
             "global": "Globális",
-            "all": "Összes"
+            "popular": "Popular"
         },
         "sort": {
             "label": "Rendezés",
             "active": "Aktív",
             "hot": "Forró",
             "top": {
+                "label": "Legnépszerűbb",
                 "time": {
                     "label": "Idő",
                     "all": "Mindenidők",
+                    "year": "Elmúlt év",
                     "9months": "9 hónap",
                     "6months": "6 hónap",
                     "3months": "3 hónap",
@@ -80,30 +94,30 @@
                     "12hours": "12 óra",
                     "6hours": "6 óra",
                     "hour": "Óra"
-                },
-                "label": "Legnépszerűbb"
+                }
             },
             "new": "Új",
             "old": "Régi",
+            "controversial": "Megosztó",
             "scaled": "Mérlegelt",
             "mostcomments": "Megjegyzések",
-            "newcomments": "Új válaszok",
-            "controversial": "Megosztó"
+            "newcomments": "Új válaszok"
         },
         "view": {
             "label": "Nézet",
             "cozy": "Kényelmes",
             "list": "Lista",
-            "compact": "Kompakt"
+            "compact": "Kompakt",
+            "legacy": "Legacy"
         },
+        "type": "Típus",
         "filter": "Szűrő",
+        "unread": "Olvasatlan",
         "inbox": {
             "messages": "Üzenetek",
             "replies": "Válaszok",
             "mentions": "Említések"
-        },
-        "unread": "Olvasatlan",
-        "type": "Típus"
+        }
     },
     "form": {
         "username": "Felhasználónév",
@@ -119,17 +133,31 @@
         "post": {
             "create": "Bejegyzés létrehozása",
             "edit": "Bejegyzés szerkesztése",
+            "community": "Közösség",
             "title": "Cím",
             "url": "URL",
             "body": "Tartalom",
             "nsfw": "NSFW",
             "generateTitle": "Cím generálása",
+            "uploadImage": "Kép feltöltése",
             "selectFile": "Fájl kiválasztása",
             "altText": "Alternatív szöveg",
-            "uploadImage": "Kép feltöltése",
-            "community": "Közösség"
+            "addUrl": "Add link",
+            "setLanguage": "Set language",
+            "unset": "Unset",
+            "readMore": "Read more",
+            "flair": "Címke hozzáadása",
+            "fetching": "Oldal metaadatainak lekérése",
+            "types": {
+                "normal": "Beszélgetés",
+                "poll": "Szavazás",
+                "event": "Esemény"
+            },
+            "autosubmit": "Automatikus küldés",
+            "customThumbnail": "Bélyegkép beállítása"
         },
         "profile": {
+            "displayName": "Megjelenítendő név",
             "bio": "Biográfia",
             "avatar": "Avatár",
             "banner": "Banner kép",
@@ -137,48 +165,81 @@
             "matrix": "Matrix felhasználó",
             "showNSFW": "NSFW tartalmak mutatása",
             "scores": "Pontok mutatása",
+            "bot": "Robot fiók",
             "showBots": "Robotok mutatása",
             "showRead": "Elolvasott bejegyzések mutatása",
             "currentPassword": "Jelenlegi jelszó",
             "newPassword": "Új jelszó",
+            "verifyNewPassword": "Új jelszó megerősítése",
             "2fa": {
-                "2fa": "Kétlépcsős azonosítás",
-                "paste": "Illeszd ezt be a hitelesítő alkalmazásba."
+                "totp": "TOTP",
+                "2fa": "2FA",
+                "paste": "Illeszd ezt be a hitelesítő alkalmazásba.",
+                "disabled": "2FA is disabled"
             },
             "deleteAccount": {
-                "label": "Fiók törlése",
                 "deleteContent": "Tartalom törlése",
                 "warning": "Ezzel törlődni fog az ÖSSZES bejegyzésed."
             },
-            "displayName": "Megjelenítendő név",
-            "bot": "Robot fiók",
-            "verifyNewPassword": "Új jelszó megerősítése"
+            "languages": {
+                "title": "Languages",
+                "description": "If any are set, you will only see content explicitly tagged as that language. Most content, untagged, falls under 'Undetermined'."
+            },
+            "credentials": {
+                "title": "Manage how you log in",
+                "description": "You can enable 2FA for greater security, change your password, view logged in devices, or delete your account here."
+            }
         },
         "email": "Email",
         "setup": "Beállítás",
         "signup": {
             "title": "Regisztráció",
             "description": "Válassz egy szervert ami érdekes számodra, vagy gépelj be egy URL-t manuálisan.",
+            "info": "A választott szerveren lesz tárolva a fiókod, de képes leszel interaktálni más szervereken található tartalmakkal is.",
             "chooseInstance": "Válassz egy szervert",
             "application": {
                 "label": "Alkalmazás",
-                "info": "Hogy csatlakozhass ehhez a szerverhez, ki kell töltened ezt a jelentkezési lapot, és meg kell várni hogy elfogadják. Az elfogadást követően kapsz egy email-es értesítést."
+                "info": "Hogy csatlakozhass ehhez a szerverhez, ki kell töltened ezt a jelentkezési lapot, és meg kell várni hogy elfogadják. Az elfogadást követően kapsz egy email-es értesítést.",
+                "notice": "Your signup is now pending. Once an administrator reviews it, you will receive an email if it was accepted. You then can log in."
             },
             "closed": {
                 "title": "A regisztrációk le vannak zárva",
-                "anotherInstance": "Másik szerver keresése",
-                "description": "Ezen a szerveren le van zárva a regisztráció lehetősége. Válassz egy másik szervert."
+                "description": "Ezen a szerveren le van zárva a regisztráció lehetősége. Válassz egy másik szervert.",
+                "anotherInstance": "Másik szerver keresése"
             },
-            "info": "A választott szerveren lesz tárolva a fiókod, de képes leszel interaktálni más szervereken található tartalmakkal is."
+            "verify": {
+                "title": "Verify email",
+                "description": "Check your inbox for a verification link. Once you've clicked it, press the button below.",
+                "submit": "I've verified my email",
+                "error": "Your email has not been verified."
+            }
         },
-        "description": "Leírás"
+        "description": "Leírás",
+        "time": {
+            "duration": "Duration",
+            "minutes": "Minutes",
+            "hours": "Hours",
+            "days": "Days",
+            "months": "Months",
+            "years": "Years",
+            "permanent": "Permanent"
+        },
+        "instanceType": "Szerver szoftver típusa"
     },
     "routes": {
         "frontpage": {
             "title": "Főoldal",
-            "footer": "{{users:number}} aktív {{users; 1:user; default:users;}}"
+            "footer": "{{users:number}} aktív {{users; 1:user; default:users;}}",
+            "endFeed": "You have reached the end of {{community_name; undefined:the feed.; default:{{community_name}}.}}",
+            "empty": {
+                "title": "No posts",
+                "description": "There are no posts that match this filter."
+            }
         },
-        "modlog": "Moderálási napló",
+        "modlog": {
+            "title": "Modlog",
+            "filters": "Filters"
+        },
         "instances": "Szerverek",
         "legal": {
             "title": "Jogi",
@@ -187,7 +248,23 @@
         "profile": {
             "user": "Felhasználó",
             "settings": "Beállítások",
-            "blocks": "Letiltások",
+            "blocks": {
+                "title": "Blocked",
+                "empty": {
+                    "user": {
+                        "title": "Nincsenek tiltott felhasználók",
+                        "description": "Egy felhasználó tiltása elrejti a bejegyzéseit és hozzászólásait a hírfolyamokból."
+                    },
+                    "community": {
+                        "title": "Nincsenek tiltott közösségek",
+                        "description": "Egy közösség tiltása elrejti a bejegyzéseit a hírfolyamokból."
+                    },
+                    "instance": {
+                        "title": "Nincsenek tiltott szerverek",
+                        "description": "Egy szerver tiltása elrejti a közösségeinek bejegyzéseit a hírfolyamokból."
+                    }
+                }
+            },
             "credentials": "Fiók",
             "moderates": "Moderálás",
             "favorites": "Kedvencek",
@@ -202,46 +279,93 @@
                 "title": "Fiók törlése",
                 "warning": "Ez visszavonhatatlan. Biztos vagy benne, hogy ezt akarod tenni?"
             },
-            "welcome": "Üdvözöljük, {{default}}!"
+            "overview": "Overview",
+            "submissions": "Submissions",
+            "edit": "Edit"
         },
         "translators": "Fordítók",
         "accounts": "Fiókok",
+        "accounts.placeholder": {
+            "title": "Nincs bejelentkezve",
+            "description": "Nem vagy bejelentkezve. Itt regisztrálhatsz vagy jelentkezhetsz be.",
+            "descriptionWithGuest": "Nem vagy bejelentkezve. Itt jelentkezhetsz be, regisztrálhatsz vagy adhatsz hozzá vendégfiókot."
+        },
+        "explore": {
+            "title": "Felfedezés",
+            "feeds": "Hírfolyamok",
+            "topics": "Témák"
+        },
+        "communities": {
+            "title": "Communities",
+            "trending": "Trending",
+            "search": {
+                "placeholder": "Search for a new community"
+            }
+        },
         "search": {
             "title": "Keresés",
             "federating": "Federáció",
             "query": "Lekérdezés",
             "noResults": {
                 "title": "Nincs találat",
-                "alt": "Keresés a fediverzumban",
-                "description": "Nincsenek a szűrőknek megfelelő találatok. Próbálj meg másképp rákeresni."
+                "description": "Nincsenek a szűrőknek megfelelő találatok. Próbálj meg másképp rákeresni.",
+                "alt": "Keresés a fediverzumban"
             },
             "top": "Legjobb találatok",
             "other": "További találatok"
         },
         "saved": "Mentve",
-        "createPost": "Bejegyzés létrehozása",
         "post": {
+            "crosspostCount": "Crossposts",
             "commentCount": "megjegyzések",
             "addComment": "Megjegyzés hozzáadása",
+            "scrollToTop": "Görgetés a tetejére",
             "thread": {
+                "single": "Egyetlen megjegyzés szálat nézel.",
                 "allComments": "Összes megjegyzés",
                 "part": "Egy megjegyzés szálnak egy részét nézed.",
-                "context": "Kontextus megjelenítése",
-                "single": "Egyetlen megjegyzés szálat nézel."
+                "context": "Kontextus megjelenítése"
             },
             "emptyComments": {
                 "title": "Nincsenek megjegyzések",
                 "description": "Kezdd el a beszélgetést!"
             },
-            "scrollToTop": "Görgetés a tetejére"
+            "commented": "Your comment was posted.",
+            "loadComments": "Load comments"
+        },
+        "postRedirect": {
+            "title": "Cross-server content",
+            "description": "That content does not originate from {{homeInstance}}.",
+            "actions": {
+                "back": "Go back",
+                "fetch": "Continue on {{homeInstance}}",
+                "switch": "Switch to an account on {{destInstance}}"
+            },
+            "automatic": {
+                "title": "Bejegyzés keresése",
+                "description": "Ez a tartalom nem a fiókod szerveréről származik."
+            }
         },
         "inbox": {
             "title": "Postaláda",
+            "markAsRead": "Az összes megjelölése olvasottként",
             "empty": {
                 "title": "Nincsenek új értesítések",
                 "description": "Az üzenetek, válaszok és megemlítések itt fognak megjelenni."
             },
-            "markAsRead": "Az összes megjelölése olvasottként"
+            "item": {
+                "reply": "{{user}} replied to you in {{post}}",
+                "mention": "{{user}} mentioned you in {{post}}",
+                "message": "{{user}} messaged {{recipient}}"
+            },
+            "messages": {
+                "conversation": "This is the beginning of your conversation with {{user}}",
+                "indicator": "Messaging {{user}}",
+                "start": "Start chat",
+                "empty": {
+                    "title": "No messages"
+                }
+            }
         },
         "moderation": {
             "title": "Moderálás",
@@ -253,7 +377,16 @@
             "resolve": "Megoldás",
             "resolved": "Megoldva",
             "unresolve": "Megoldatlan",
-            "resolvedBy": "Megoldva általa:"
+            "resolvedBy": "Megoldva általa:",
+            "markAll": "Mark page resolved",
+            "markAllComplete": "Batch action completed.",
+            "feed": "Reports",
+            "manage": {
+                "title": "Manage",
+                "modlogs": "Recent moderation logs",
+                "ban": "Ban",
+                "unban": "Unban"
+            }
         },
         "admin": {
             "title": "Adminisztráció",
@@ -261,6 +394,8 @@
                 "title": "Konfiguráció",
                 "sidebar": "Oldalsáv",
                 "icon": "Ikon",
+                "banner": "Banner",
+                "downvotesEnabled": "Leszavazások engedélyezése",
                 "nsfwEnabled": "NSFW engedélyezése",
                 "registration": {
                     "label": "Regisztráció mód",
@@ -270,15 +405,78 @@
                 },
                 "applicationQuestion": "Jelentkezési kérdés",
                 "adminCommunityOnly": "Csak adminisztrátorok tudnak közösségeket létrehozni",
-                "downvotesEnabled": "Leszavazások engedélyezése",
-                "requireVerifyEmail": "Email igazolás szükséges"
+                "requireVerifyEmail": "Email igazolás szükséges",
+                "emailAdminsOnApplication": "Email admins on receiving new applications",
+                "emailAdminsOnReport": "Email admins on receiving new reports",
+                "listingType": {
+                    "label": "Listing Type",
+                    "all": "All",
+                    "local": "Local"
+                },
+                "private": "Private instance",
+                "hideModlogModNames": "Hide modlog mod names",
+                "slurFilter": "Slur filter regex",
+                "federation": "Federation enabled",
+                "federationDebug": "Federation debug mode",
+                "captcha": {
+                    "enabled": "CAPTCHA enabled"
+                }
+            },
+            "applications": {
+                "title": "Applications",
+                "empty": {
+                    "title": "No new applications",
+                    "description": "Applications to join your server will appear here."
+                },
+                "application": "Application",
+                "approved": "Approved",
+                "denied": "Denied",
+                "user": "User",
+                "deny": "Deny",
+                "approve": "Approve",
+                "reason": "Reason",
+                "modalTitle": "Deny application"
+            },
+            "taglines": {
+                "title": "Taglines",
+                "add": "Add a tagline",
+                "empty": {
+                    "title": "No taglines",
+                    "description": "A random tagline will appear on the site card when users visit your server."
+                }
+            },
+            "team": {
+                "title": "Admins",
+                "empty": {
+                    "title": "No admins",
+                    "description": "Somehow there's no admins of this site. How??"
+                }
+            },
+            "federation": {
+                "title": "Federation",
+                "csv": "Upload CSV",
+                "blocked": "Blocked servers",
+                "block": "Block",
+                "blockplaceholder": "Block a server...",
+                "allowed": "Whitelisted servers",
+                "allow": "Whitelist",
+                "allowplaceholder": "Whitelist a server",
+                "emptyBlock": {
+                    "title": "No blocked servers",
+                    "description": "Blocking an server will hide new submissions from that server."
+                },
+                "emptyAllow": {
+                    "title": "No whitelisted servers",
+                    "description": "Whitelisting an server will block every other server."
+                }
+            },
+            "media": {
+                "title": "Média"
             }
         },
-        "createCommunity": "Közösség létrehozása",
-        "communities": "Közösségek",
         "verifyEmail": {
-            "error": "Sikertelen email megerősítés.",
-            "message": "Az email címed sikeresen meg lett erősítve. Mostmár bezárhatod ezt az ablakot."
+            "message": "Az email címed sikeresen meg lett erősítve. Mostmár bezárhatod ezt az ablakot.",
+            "error": "Sikertelen email megerősítés."
         },
         "passwordChange": {
             "title": "Jelszó megváltoztatása",
@@ -291,14 +489,13 @@
         },
         "theme": {
             "title": "Téma",
-            "import": "Importálás",
-            "export": "Exportálás",
-            "reset": "Alaphelyzet",
+            "accent": "Accent",
             "resetWarning": {
                 "title": "Téma alaphelyzet",
                 "description": "Ezzel visszaállítod a szím beállításaidat a gyári alapértelmezettre. Mielőtt ezt megteszed, ajánlott a jelenlegi beállításaidat exportálni."
             },
             "preset": {
+                "title": "Nem lehet módosítani",
                 "description": "Ez egy alapértelmezett téma és nem lehet módosítani.",
                 "delete": {
                     "title": "Téma törlése",
@@ -308,14 +505,19 @@
                 "classic": "Klasszikus",
                 "imported": "Saját téma",
                 "new": "Új téma",
-                "title": "Nem lehet módosítani"
+                "presets": "Presets"
             }
         },
         "community": {
             "settings": {
                 "team": "Csapat",
-                "settings": "Beállítások"
-            }
+                "settings": "Beállítások",
+                "manage": "Manage"
+            },
+            "languageWarning": "Content in this community is in languages you do not have selected. Some or all posts may be missing."
+        },
+        "user": {
+            "note": "Megjegyzés beállítása"
         }
     },
     "cards": {
@@ -333,9 +535,17 @@
             "block": "Tiltás",
             "unblock": "Tiltás feloldása",
             "blockInstance": "Szerver tiltása",
-            "favorite": "Kedvenc",
             "activeDay": "Ma aktív",
-            "unfavorite": "Eltávolítás a kedvencek közül"
+            "flair": "Címkém beállítása"
+        }
+    },
+    "admin": {
+        "purge": "Purge",
+        "instance": "Server",
+        "label": "Administration",
+        "purgeCommunity": {
+            "title": "Purging community",
+            "warning": "This will delete all posts. Are you sure? (The button will enable in 3 seconds.)"
         }
     },
     "content": {
@@ -344,8 +554,9 @@
         "posts": "Bejegyzések",
         "comments": "Megjegyzések",
         "communities": "Közösségek",
+        "instances": "Szerverek",
         "message": "Üzenet",
-        "instances": "Szerverek"
+        "url": "URL"
     },
     "post": {
         "actions": {
@@ -353,34 +564,27 @@
             "save": "Mentés",
             "unsave": "Eltávolítás a mentettek közül",
             "more": {
+                "label": "További műveletek",
                 "edit": "Szerkesztés",
                 "creator": "Készítő",
+                "actions": "Műveletek",
+                "markRead": "Megjelölés olvasottként",
                 "markUnread": "Megjelölés olvasatlanként",
                 "hide": "Elrejtés",
                 "unhide": "Elrejtés visszavonása",
-                "translate": "Fordítás",
-                "mediaBias": "A média elfogultsága",
                 "share": "Megosztás",
+                "share.from": "Megosztás innen",
+                "share.global": "Eredeti szerver",
+                "share.local": "Saját szerver",
+                "share.photon": "Photon link",
+                "crosspost": "Crosspost",
                 "delete": "Törlés",
-                "restore": "Visszaállítás",
-                "label": "További műveletek",
-                "actions": "Műveletek",
-                "markRead": "Megjelölés olvasottként"
+                "restore": "Visszaállítás"
             },
-            "mediaBias": {
-                "credibility": "Hitelesség",
-                "reporting": "Tényszerű tudósítás",
-                "downloading": "Adatkészlet letöltése",
-                "loading": "Forrás betöltése",
-                "noData": {
-                    "description": "Nincs elérhető adat erről a weboldalról.",
-                    "title": "Nincs adat"
-                },
-                "description": "Leírás"
-            },
-            "link": {
-                "title": "Alternatív linkek",
-                "actions": "Link opciók"
+            "vote": {
+                "upvote": "Upvote",
+                "downvote": "Downvote",
+                "score": "Score"
             }
         },
         "badges": {
@@ -390,6 +594,27 @@
             "removed": "Eltávolítva",
             "deleted": "Törölve",
             "saved": "Mentve"
+        },
+        "image": {
+            "zoomIn": "Zoom in",
+            "zoomOut": "Zoom out"
+        },
+        "meta": {
+            "lastEdited": "Last edited {{default}}",
+            "created": "Created {{default}}"
+        },
+        "poll": {
+            "votes": "{{votes:number}} szavazat",
+            "results": {
+                "show": "Eredmények mutatása",
+                "hide": "Eredmények elrejtése",
+                "ends": "Vége: {{time}}",
+                "ended": "Véget ért: {{time}}"
+            },
+            "choices": "Lehetőségek",
+            "single": "Egy választás",
+            "multiple": "Több választás",
+            "mode": "Mód"
         }
     },
     "comment": {
@@ -399,30 +624,78 @@
             "link": "Link másolása"
         },
         "locked": "Ez a bejegyzés zárolva van.",
-        "banned": "Ki vagy tiltva ebből a közösségből."
+        "banned": "Ki vagy tiltva ebből a közösségből.",
+        "more": "{{comments:number}} more",
+        "collapse": "Összecsukás",
+        "expand": "Kibontás"
     },
     "moderation": {
+        "report": "Jelentés",
         "ban": {
             "banning": "Felhasználó kitiltása",
             "unbanning": "Felhasználó tiltásának feloldása",
-            "deleteData": "Adat törlése"
+            "deleteData": "Adat törlése",
+            "warning": "This will delete ALL of this user's submissions here.",
+            "expires": "Expires (UTC)",
+            "banFromCommunity": "Ban user from community",
+            "unbanFromCommunity": "Unban user from community"
         },
-        "report": "Jelentés"
+        "removeSubmission": {
+            "title": "Removing Submission",
+            "titleRestore": "Restoring Submission",
+            "titlePurge": "Purging Submission",
+            "withReason": "Notify author",
+            "comment": "Comment",
+            "message": "Message",
+            "failReply": "Failed to post reply. Removing anyway...",
+            "failMessage": "Failed to message user. Removing anyway...",
+            "failEmptyReply": "Your reply cannot be empty if 'Notify author' is enabled.",
+            "successPurge": "Successfully purged that submission."
+        },
+        "reportModal": {
+            "title": "Report",
+            "success": "Reported that submission.",
+            "presets": {
+                "spam": "Spam/visszaélés",
+                "rules": "Közösségi szabályok megsértése",
+                "rules.content": "Ez a beküldés megsérti a szabályokat, mert __"
+            }
+        },
+        "reason": "Reason",
+        "lock": "Lock",
+        "unlock": "Unlock",
+        "remove": "Remove",
+        "restore": "Restore",
+        "label": "Moderation",
+        "labelInstanceOnly": "Moderation (Local only)",
+        "feature": "Feature",
+        "unfeature": "Unfeature",
+        "votes": "Votes",
+        "modlog": {
+            "user": "User moderation log",
+            "post": "Post moderation log",
+            "comment": "Comment moderation log"
+        }
     },
     "common": {
+        "back": "Vissza",
         "next": "Következő",
+        "debug": "Debug",
         "refresh": "Frissítés",
         "jump": "Ugrás",
         "save": "Mentés",
         "enabled": "Engedélyezve",
+        "disabled": "Kikapcsolva",
         "enable": "Engedélyez",
         "disable": "Kikapcsolás",
         "add": "Hozzáadás",
         "cancel": "Mégse",
         "send": "Küldés",
         "general": "Általános",
-        "back": "Vissza",
-        "disabled": "Kikapcsolva"
+        "remove": "Remove",
+        "download": "Download",
+        "attach": "Attach file",
+        "info": "Info"
     },
     "message": {
         "success": "Siker",
@@ -430,101 +703,65 @@
         "retry": "Újra"
     },
     "toast": {
+        "noComments": "The API returned no comments.",
+        "loginVoteGate": "Ahhoz hogy szavazhass be kell jelentkezned.",
         "blockedCommunity": "A közösség letiltva.",
         "unblockedCommunity": "A közösség feloldva.",
+        "purgedCommunity": "Purged that community.",
         "blockedInstance": "A szerver letiltva.",
+        "updatedCommunity": "Your community was updated.",
         "sentMessage": "Az üzenet elküldve.",
+        "invalidDateAbsolute": "Invalid date. It must be an absolute date.",
+        "invalidDateBeforeCurrent": "Invalid date. It is before the current time.",
         "bannedUser": "Felhasználó kitiltva.",
+        "unbannedUser": "Felhasználó feloldva.",
+        "needCommunity": "You must set a community.",
         "invalidURL": "Érvénytelen URL",
         "generatedTitle": "URL-ből generált cím és bejegyzés tartalom. Vissza akarod ezt vonni?",
+        "failGenerateTitle": "Nem volt használható címe vagy leírása a weboldalnak.",
         "restoredFromDraft": "Visszaállított bejegyzés a piszkozatból.",
         "copied": "Vágólapra másolva.",
         "approvedApplication": "Kérelem jóváhagyva.",
         "deniedApplication": "Kérelem elutasítva.",
+        "updatedSite": "Updated your site.",
+        "failCSV": "Failed to read CSV",
+        "removeAdminWarning": "Are you sure you want to remove that admin?",
+        "removeAdmin": "Removed that admin.",
+        "failFindUser": "Could not find that user.",
+        "addMod": "Added that moderator.",
+        "updateMods": "Updated community moderators.",
         "logIn": "Sikeres bejelentkezés.",
+        "failInstanceURL": "Failed to contact that server URL with those settings. Is it down?",
+        "addAccount": "Fiók hozzáadva.",
+        "resetLink": "Egy jelszó visszaállító link el lett küldve az email címedre.",
+        "resolveReport": "Resolved that report.",
+        "unresolveReport": "Unresolved that report.",
         "passwordReset": "A jelszavad visszaállításra került.",
+        "loginRefresh": "Your login was refreshed.",
         "invalidLogin": "Érvénytelen hitelesítő adatok",
+        "saveSettings": "Beállításaid mentésre kerültek. Ha megváltoztattad az email címedet, egy hitelesítő linket küldtünk.",
         "confirmDelete1": "Biztos vagy benne hogy törölni szeretnéd a fiókod?",
         "confirmDelete2": "Tényleg biztos vagy benne?",
         "confirmDelete3": "Utolsó figyelmeztetés. Tényleg biztos vagy benne?",
         "needPassword": "Meg kell adnod a jelszavadat.",
         "deleting": "Fiók törlése...",
         "deleted": "A fiókod törölve lett.",
-        "resetLink": "Egy jelszó visszaállító link el lett küldve az email címedre.",
-        "addAccount": "Fiók hozzáadva.",
-        "saveSettings": "Beállításaid mentésre kerültek. Ha megváltoztattad az email címedet, egy hitelesítő linket küldtünk.",
         "resetSettings": "Vissza akarod állítani a beállításokat az alapértelmezettre?",
-        "unbannedUser": "Felhasználó feloldva.",
-        "failGenerateTitle": "Nem volt használható címe vagy leírása a weboldalnak.",
-        "loginVoteGate": "Ahhoz hogy szavazhass be kell jelentkezned.",
-        "settingsImportWarning": "A beimportált beállítások nem tűnnek érvényesnek. Biztos beszeretnéd importálni?",
-        "verifyEmail": "Egy megerősítő email-t küldtünk az email címedre. Erősítsd meg az email címed, majd jelentkezz be.",
         "failFetchInstances": "Nem sikerült lekérni az elérhető szerverek listáját.",
+        "verifyEmail": "Egy megerősítő email-t küldtünk az email címedre. Erősítsd meg az email címed, majd jelentkezz be.",
+        "failSignup": "Sikertelen bejelentkezés.",
         "successSignup": "Bejelentkezve.",
         "waitApplication": "Bejelentkezés előtt várd meg amíg a regisztrációd elfogadásra kerül.",
         "blockUser": "Felhasználó letiltva.",
         "unblockUser": "Felhasználó tiltása feloldva,",
-        "failSignup": "Sikertelen bejelentkezés.",
+        "purgeUser": "Purged that user.",
         "settingsImport": "Beállítások importálása sikeres",
-        "userLoading": "Még mindig töltődnek a felhasználói adataid..."
+        "settingsImportWarning": "A beimportált beállítások nem tűnnek érvényesnek. Biztos beszeretnéd importálni?",
+        "userLoading": "Még mindig töltődnek a felhasználói adataid...",
+        "lemmyDonate": "Your account's server runs Lemmy, and the developers are requesting donations. They are able to develop Lemmy as an open source platform, free of tracking and ads, thanks to the generosity of its users.\n\nAnnually, they ask you to consider donating to support their work, and allow them to continue maintaining and improving Lemmy.\n\n[Donate](https://join-lemmy.org/donate)\n\n*Note: this is a donation to Lemmy, not Photon.*"
     },
     "settings": {
-        "app": {
-            "lang": {
-                "note": "Az angol és héber nyelveken kívüli nyelveket a közösség fordította, és hiányosak lehetnek.",
-                "title": "Nyelv",
-                "description": "A Photon felhasználói felületének nyelve.",
-                "en-US": "Angol",
-                "zh-Hans": "Kínai (egyszerűsített)",
-                "zh-Hant": "Kínai (hagyományos)",
-                "auto": "Automatikus",
-                "credits": "Kreditek",
-                "en": "Angol",
-                "he": "Héber",
-                "et": "Észt",
-                "fr": "Francia",
-                "de": "Német",
-                "fi": "Finn",
-                "pt": "Portugál",
-                "zh": "Kínai"
-            },
-            "theming": {
-                "description": "A Photon színeinek személyreszabása.",
-                "link": "Ugrás a témákhoz",
-                "title": "Témák"
-            },
-            "colorscheme": {
-                "title": "Színséma",
-                "description": "A használandó színséma."
-            },
-            "title": "Photon",
-            "view": {
-                "title": "Bejegyzések stílusa",
-                "cozy": "Nagyméretű képek, bő beágyazások, és hosszabb poszttestek.",
-                "list": "A bejegyzések megjelenítése lista nézetben, kompakt médiával."
-            }
-        },
-        "navigation": {
-            "panel": {
-                "description": "Dokkoló kiterjesztése a képernyő széleihez, panelhez hasonlóan.",
-                "off": "Ki",
-                "adaptive": "Adaptív",
-                "title": "Panel mód",
-                "on": "Be"
-            },
-            "pins": {
-                "title": "Kitűzés",
-                "description": "Kattints egy ikonra hogy az kitűzésre kerüljön az oldalsáv tetejére. Eltávolításhoz kattints jobb klikkel a kitűzött elemre."
-            },
-            "title": "Navigáció",
-            "dockPos": {
-                "title": "Dokk pozíció",
-                "description": "A dokk helye a képernyőn.",
-                "top": "Fent",
-                "bottom": "Lent",
-                "adaptive": "Adaptív"
-            }
-        },
+        "title": "Beállítások",
         "beta": "Béta",
         "desktop": "Asztali",
         "tablet": "Táblagép",
@@ -532,6 +769,259 @@
         "export": "Exportálás",
         "import": "Importálás",
         "reset": "Alapértelmezett beállítások visszaállítása",
-        "title": "Beállítások"
+        "navigation": {
+            "title": "Navigáció",
+            "autoHide": {
+                "title": "Auto hide dock",
+                "description": "Hides the dock on mobile when you scroll down, re-appears when you scroll up."
+            }
+        },
+        "app": {
+            "title": "Photon",
+            "theming": {
+                "title": "Témák",
+                "description": "A Photon színeinek személyreszabása.",
+                "link": "Ugrás a témákhoz"
+            },
+            "lang": {
+                "title": "Nyelv",
+                "description": "A Photon felhasználói felületének nyelve.",
+                "auto": "Automatikus",
+                "credits": "Kreditek",
+                "useRtl": {
+                    "title": "Use RTL layout",
+                    "description": "Use an RTL layout for RTL languages."
+                }
+            },
+            "view": {
+                "title": "Bejegyzések stílusa",
+                "cozy": "Nagyméretű képek, bő beágyazások, és hosszabb poszttestek.",
+                "compact": "Show posts in a list, without post bodies and with tighter spacing."
+            },
+            "sort": {
+                "title": "Default sort",
+                "description": "Changes the default sort type used in feeds."
+            },
+            "infiniteScroll": {
+                "title": "Infinite scroll",
+                "description": "Loads new posts as you scroll and appends them to the feed."
+            },
+            "postsInNewTab": {
+                "title": "Open posts in new tab",
+                "description": "Opens posts in a separate tab instead of the current."
+            },
+            "displayName": {
+                "title": "Use display name",
+                "description": "Show users' display names instead of their actual usernames."
+            },
+            "limitLayoutWidth": {
+                "title": "Limit layout width",
+                "description": "Improve readability by limiting the main content width."
+            },
+            "placeholders": {
+                "title": "Random placeholders",
+                "description": "Show random placeholders for certain text inputs."
+            },
+            "expandImages": {
+                "title": "Expandable thumbnails",
+                "description": "Clicking on a post's image brings you to an expanded view rather than the post page."
+            },
+            "duplicateTitles": {
+                "title": "Hide duplicate embed content",
+                "description": "Hides the post title and body if they are identical to the embed."
+            },
+            "thumbnailSide": {
+                "title": "Thumbnail alignment",
+                "description": "Changes where thumbnails for posts are displayed in compact mode.",
+                "left": "Left",
+                "right": "Right"
+            },
+            "font": {
+                "title": "Font",
+                "description": "The font used for text in the UI."
+            },
+            "titleTags": {
+                "title": "Parse tags in title",
+                "description": "Take text in [brackets] and turn it into tags that you can click to search for."
+            },
+            "reverseActions": {
+                "title": "Reverse action row",
+                "description": "Reverses the order of actions on posts and comments."
+            },
+            "absoluteDates": {
+                "title": "Absolute timestamps",
+                "description": "Replaces relative timestamps (3 hours ago) with absolute ones (15/6/25)."
+            },
+            "titleOpensUrl": {
+                "title": "Title opens URL",
+                "description": "Makes clicking the title open the post's attached URL, rather than the comments."
+            },
+            "voteRatioBar": {
+                "title": "Vote ratio bar",
+                "description": "When the controversiality of a post reaches greater than 15%, a bar will be displayed in the vote buttons to help visualize sentiment."
+            }
+        },
+        "embeds": {
+            "title": "Embeds",
+            "clickToView": {
+                "title": "Click to view",
+                "description": "Only load embeds once you click on them."
+            },
+            "youtube": {
+                "description": "The website to embed YouTube content in."
+            },
+            "instance": {
+                "invidious": "Invidious instance",
+                "piped": "Piped instance",
+                "description": "The instance to embed YouTube content in."
+            }
+        },
+        "lemmy": {
+            "title": "Lemmy",
+            "showHiddenPosts": {
+                "title": "Show hidden posts",
+                "description": "Shows the posts you've manually hidden."
+            },
+            "compactFeatured": {
+                "title": "Compact featured posts",
+                "description": "Makes featured posts more compact."
+            },
+            "markReadPosts": {
+                "title": "Mark posts as read automatically",
+                "description": "Marks posts as read when you visit them."
+            },
+            "fadeReadPosts": {
+                "title": "Fade read posts",
+                "description": "Fade the title of posts you've already read"
+            },
+            "crosspostMarker": {
+                "title": "Mark crossposts",
+                "description": "Insert 'crossposted from' and a link when crossposting."
+            },
+            "hideSubmissions": {
+                "title": "Hide submissions",
+                "description": "Hide certain types of submissions.",
+                "deleted": "Deleted by user",
+                "removed": "Removed by moderator"
+            },
+            "contentFilter": {
+                "title": "Tartalomszűrők",
+                "description": "Adott szövegeknek megfelelő bejegyzések elrejtése vagy kicsinyítése. Támogatja a reguláris kifejezéseket.",
+                "hide": "Elrejtés",
+                "minimize": "Kicsinyítés",
+                "minimized": "Szűrőid által elrejtett tartalom",
+                "disabled": "Ki"
+            },
+            "nsfwBlur": {
+                "title": "NSFW blur",
+                "description": "Blurs images and remove post bodies of NSFW posts."
+            },
+            "instances": {
+                "title": "Show server identifiers",
+                "description": "Shows the servers where certain content originated from."
+            }
+        },
+        "moderation": {
+            "title": "Moderation",
+            "replyPresets": {
+                "title": "Removal reply presets",
+                "description": "Presets to use for 'reply reason' in the submission removal dialog.",
+                "syntax": "Syntax"
+            }
+        },
+        "other": {
+            "title": "Other",
+            "debug": {
+                "title": "Debug info",
+                "description": "Displays debug information."
+            },
+            "virtualizeFeeds": {
+                "title": "Don't virtualize feeds",
+                "description": "Virtualization only renders visible posts, increasing performance drastically. Disable virtualization if you are having stutter problems. This will disable infinite scroll."
+            }
+        },
+        "account": {
+            "title": "Account"
+        },
+        "donate": {
+            "description": "Photon will always be free and open-source, and is continously developed and designed to be helpful. If you like Photon and want to financially support its development, you can donate here."
+        }
+    },
+    "error": {
+        "incorrect_login": "Incorrect login credentials. Please try again.",
+        "incorrect_login_2": "Incorrect login credentials. Try again.",
+        "incorrect_login_3": "Incorrect, again. Try a few more times.",
+        "incorrect_login_4": "You got this. Just a few more tries.",
+        "incorrect_login_5": "Look at your keyboard while typing this time.",
+        "incorrect_login_6": "I believe in you.",
+        "incorrect_login_7": "Okay, you're messing with me now.",
+        "incorrect_login_8": "I give up.",
+        "incorrect_login_9": "Each of these requests you make are sending data through via an incredible technology. And you're using it to make failed logins.",
+        "incorrect_login_10": "Think about this. The poor server admins have to maintain their server just for you to make these useless requests.",
+        "incorrect_login_11": "Each press of the button uses thousands of CPU cycles to process your request, which ends up failing.",
+        "incorrect_login_12": "...",
+        "registration_application_is_pending": "The registration application for that account hasn't been accepted yet.",
+        "couldnt_find_post": "That post doesn't exist, is not on this server, or was removed.",
+        "cant_block_yourself": "You cannot block yourself. You shouldn't either, you're (probably) a great person!",
+        "email_not_verified": "Your account's email is not verified.",
+        "passwords_do_not_match": "Your input password and the verification password do not match.",
+        "honeypot_failed": "Are you a bot? Beep bop bap boop. If you're not, the Honeypot check failed.",
+        "downvotes_are_disabled": "Downvotes are disabled on this server.",
+        "email_already_exists": "An account already exists with that email.",
+        "slurs": "Your submission contains a term banned in this server.",
+        "captcha_incorrect": "Helytelen CAPTCHA válasz.",
+        "cant_block_local_instance": "You cannot block the server you are actively using.",
+        "invalid_vote_value": "You cannot commit voter fraud on Lemmy posts, sorry.",
+        "language_not_allowed": "That language is not allowed in this community. Unset it to use the community's default.",
+        "couldnt_find_person": "That user doesn't exist.",
+        "couldnt_find_community": "That community doesn't exist.",
+        "not_an_admin": "You are not an admin of this server.",
+        "rate_limit_error": "You are performing that action too fast.",
+        "unimplemented": "That function of your account's server software is not yet supported by Photon.",
+        "unsupported": "That function is not supported by your account's server software.",
+        "not_live_supported": "Ez a szerver nem támogatott szoftvert futtat, vagy offline.",
+        "token_not_found": "Ez az e-mail megerősítő link lejárt, vagy soha nem létezett.",
+        "invalid_password": "Érvénytelen jelszó."
+    },
+    "aria": {
+        "pagination": {
+            "nav": "Pagination",
+            "current": "Current page"
+        },
+        "vote": {
+            "group": "Post voting controls",
+            "upvotes": "{{default}} upvotes",
+            "downvotes": "{{default}} downvotes",
+            "score": "Score: {{default}}"
+        },
+        "sidebar": {
+            "title": "Sidebar",
+            "accounts": "Accounts selector"
+        },
+        "loading": "Loading",
+        "element": {
+            "pageHeader": "Page header"
+        },
+        "postDecor": {
+            "openImage": "Open image: {{default}}",
+            "openLink": "Open link: {{default}}",
+            "openPost": "Open post: {{default}}"
+        },
+        "comments": {
+            "children": "{{childCount}} gyermek"
+        }
+    },
+    "stats": {
+        "joined": "Joined",
+        "created": "Created"
+    },
+    "placeholders": {
+        "title": "Add a post title",
+        "body": "What do you have to say?",
+        "comments": "Join the conversation"
+    },
+    "class": {
+        "moderator": "Moderator",
+        "admin": "Administrator"
     }
 }

@@ -1,14 +1,14 @@
 {
     "profile": {
-        "inbox": "信箱",
         "profile": "個人資料",
+        "inbox": "信箱",
         "saved": "保存",
         "subscribed": "訂閱"
     },
     "nav": {
         "home": "首頁",
-        "moderation": "管理",
         "admin": "設定",
+        "moderation": "管理",
         "communities": "探索",
         "search": "搜尋",
         "create": {
@@ -18,7 +18,8 @@
             "logingate": "你需要登入,才能發文."
         },
         "menu": {
-            "app": "App",
+            "label": "個人資料",
+            "app": "應用程式",
             "settings": "設定",
             "colorscheme": {
                 "label": "主題",
@@ -29,63 +30,84 @@
             "theme": "主題",
             "about": "關於",
             "source": "來源",
-            "instance": "站點",
-            "label": "個人資料"
-        }
+            "donate": "捐贈",
+            "instance": "站點"
+        },
+        "commands": {
+            "prompt": "命令面板",
+            "recents": "最近",
+            "content": "內容",
+            "search": "搜尋 **{{default}}**",
+            "main": "主要",
+            "setView": "設定檢視",
+            "setViewTo": "設定檢視為 **{{default}}**",
+            "setColor": "設定配色方案",
+            "setColorTo": "設定配色方案為 **{{default}}**",
+            "feeds": "來源",
+            "downloading": "下載動作",
+            "setTheme": "設定主題",
+            "setThemeTo": "設定主題為 **{{default}}**",
+            "contextual": "此頁面",
+            "communities": "包含 **{{default}}** 的社群",
+            "goto": "前往 **{{default}}**"
+        },
+        "notifications": "通知"
     },
     "account": {
         "login": "登入",
         "logout": "登出",
+        "signup": "註冊",
         "accounts": "帳號",
-        "changeinstance": "變更站點",
         "resetColor": "重設顏色",
         "addGuest": "新增遊客",
         "moveUp": "往上",
         "moveDown": "往下",
         "guest": "遊客",
-        "signup": "註冊"
+        "piefedGate": "Piefed 支援處於實驗階段。某些功能不受支援。"
     },
     "filter": {
         "location": {
             "label": "範圍",
             "all": "所有",
+            "local": "本站",
             "subscribed": "已訂閱",
             "moderator": "管理的",
             "global": "全部",
-            "local": "本站"
+            "popular": "熱門"
         },
         "sort": {
             "label": "排序",
+            "active": "活躍",
             "hot": "熱門",
             "top": {
                 "label": "最佳",
                 "time": {
                     "label": "時間",
                     "all": "所有",
+                    "year": "過去一年",
                     "9months": "9月以來",
                     "6months": "6月以來",
                     "3months": "3月以來",
                     "month": "這月以來",
                     "week": "這周",
                     "day": "日",
+                    "12hours": "12小時",
                     "6hours": "6小時",
-                    "hour": "這小時",
-                    "12hours": "12小時"
+                    "hour": "這小時"
                 }
             },
             "new": "最新",
             "old": "最舊",
             "controversial": "最有爭議",
             "scaled": "各版熱門",
-            "newcomments": "最新留言",
             "mostcomments": "最多留言",
-            "active": "活躍"
+            "newcomments": "最新留言"
         },
         "view": {
+            "label": "顯示模式",
             "cozy": "可莉",
             "list": "列表",
             "compact": "緊湊",
-            "label": "顯示模式",
             "legacy": "經典"
         },
         "type": "類型",
@@ -98,11 +120,12 @@
         }
     },
     "form": {
+        "username": "使用者名稱",
         "name": "名稱",
         "instance": "站點網址",
-        "username": "使用者名稱",
         "password": "密碼",
         "confirmPassword": "確認密碼",
+        "2fa": "2FA兩步驗證碼",
         "forgotpassword": "忘記密碼",
         "submit": "送出",
         "edit": "編輯",
@@ -115,42 +138,345 @@
             "url": "網址",
             "body": "內文",
             "nsfw": "限制級(NSFW)",
-            "altText": "替代文字",
             "generateTitle": "代入標題",
-            "uploadImage": "上傳影像"
+            "uploadImage": "上傳影像",
+            "selectFile": "選擇檔案",
+            "altText": "替代文字",
+            "addUrl": "新增連結",
+            "setLanguage": "設定語言",
+            "unset": "取消設定",
+            "readMore": "閱讀更多",
+            "flair": "新增標籤",
+            "fetching": "正在獲取網站元數據",
+            "types": {
+                "normal": "討論",
+                "poll": "投票",
+                "event": "活動"
+            },
+            "autosubmit": "自動提交",
+            "customThumbnail": "設定縮圖"
         },
         "profile": {
             "displayName": "顯示名稱",
             "bio": "個人簡介",
             "avatar": "大頭貼",
             "banner": "背景橫幅",
-            "email": "Email",
+            "email": "電子郵件",
+            "matrix": "在 Matrix 上聊天",
             "showNSFW": "顯示限制級(NSFW)內容",
             "scores": "顯示讚數",
             "bot": "機器人帳號",
+            "showBots": "顯示機器人貼文",
             "showRead": "顯示已讀貼文",
             "currentPassword": "當前密碼",
             "newPassword": "新密碼",
             "verifyNewPassword": "確認密碼",
-            "showBots": "顯示機器人貼文"
+            "2fa": {
+                "totp": "TOTP",
+                "2fa": "雙重認證",
+                "paste": "將此貼上到您的驗證應用程式中。",
+                "disabled": "雙重認證已停用"
+            },
+            "deleteAccount": {
+                "deleteContent": "刪除內容",
+                "warning": "這將刪除您所有的提交。"
+            },
+            "languages": {
+                "title": "語言",
+                "description": "如果設定了任何語言，您將只能看到明確標記為該語言的內容。大多數未標記的內容屬於「未定」。"
+            },
+            "credentials": {
+                "title": "管理登入方式",
+                "description": "您可以在此處啟用雙重認證以提高安全性，更改密碼，查看登入裝置或刪除帳戶。"
+            }
         },
+        "email": "電子郵件",
+        "setup": "設定",
         "signup": {
-            "title": "註冊"
+            "title": "註冊",
+            "description": "選擇您感興趣的伺服器，或手動輸入 URL。",
+            "info": "您選擇的伺服器將是您帳戶的所在地。但是，每個伺服器都是連接的，您仍然可以訪問幾乎所有連結的內容。",
+            "chooseInstance": "選擇伺服器",
+            "application": {
+                "label": "申請",
+                "info": "要加入此伺服器，您必須填寫此申請表，並等待被接受。如果您的申請被接受，您將收到一封電子郵件。",
+                "notice": "您的註冊正在等待中。一旦管理員審核通過，您將收到一封電子郵件。然後您可以登入。"
+            },
+            "closed": {
+                "title": "註冊已關閉",
+                "description": "此伺服器已關閉註冊。請尋找其他伺服器。",
+                "anotherInstance": "尋找其他伺服器"
+            },
+            "verify": {
+                "title": "驗證電子郵件",
+                "description": "檢查您的收件箱中的驗證連結。點擊後，按下方的按鈕。",
+                "submit": "我已驗證我的電子郵件",
+                "error": "您的電子郵件尚未驗證。"
+            }
         },
-        "2fa": "2FA兩步驗證碼"
+        "description": "描述",
+        "time": {
+            "duration": "持續時間",
+            "minutes": "分鐘",
+            "hours": "小時",
+            "days": "天",
+            "months": "月",
+            "years": "年",
+            "permanent": "永久"
+        },
+        "instanceType": "伺服器軟體類型"
     },
     "routes": {
+        "frontpage": {
+            "title": "首頁",
+            "footer": "{{users:number}} 活躍 {{users; 1:使用者; default:使用者;}}",
+            "endFeed": "您已到達 {{community_name; undefined:來源的盡頭。; default:{{community_name}} 的盡頭。}}",
+            "empty": {
+                "title": "沒有帖子",
+                "description": "沒有符合此過濾器的帖子。"
+            }
+        },
+        "modlog": {
+            "title": "管理日誌",
+            "filters": "過濾器"
+        },
+        "instances": "連結的伺服器",
+        "legal": {
+            "title": "法律",
+            "noLegal": "此伺服器沒有任何法律資訊。"
+        },
+        "profile": {
+            "user": "使用者",
+            "settings": "設定",
+            "blocks": {
+                "title": "已封鎖",
+                "empty": {
+                    "user": {
+                        "title": "沒有封鎖的使用者",
+                        "description": "封鎖使用者將從來源中隱藏其帖子和評論。"
+                    },
+                    "community": {
+                        "title": "沒有封鎖的社群",
+                        "description": "封鎖社群將從來源中隱藏其帖子。"
+                    },
+                    "instance": {
+                        "title": "沒有封鎖的伺服器",
+                        "description": "封鎖伺服器將從來源中隱藏其社群的帖子。"
+                    }
+                }
+            },
+            "credentials": "憑證",
+            "moderates": "正在管理",
+            "favorites": "收藏",
+            "upvoted": "已推",
+            "downvoted": "已噓",
+            "media": {
+                "title": "媒體",
+                "download": "下載"
+            },
+            "logins": "登入",
+            "delete": {
+                "title": "刪除帳戶",
+                "warning": "這是永久性的。您確定要這樣做嗎？"
+            },
+            "overview": "概覽",
+            "submissions": "提交",
+            "edit": "編輯"
+        },
+        "translators": "翻譯者",
+        "accounts": "帳戶",
+        "accounts.placeholder": {
+            "title": "未登入",
+            "description": "您尚未登入。您可以在此註冊或登入。",
+            "descriptionWithGuest": "您尚未登入。您可以在此登入，註冊或新增訪客帳戶。"
+        },
+        "explore": {
+            "title": "探索",
+            "feeds": "來源",
+            "topics": "話題"
+        },
+        "communities": {
+            "title": "社群",
+            "trending": "趨勢",
+            "search": {
+                "placeholder": "搜尋新社群"
+            }
+        },
+        "search": {
+            "title": "搜尋",
+            "federating": "聯邦化",
+            "query": "查詢",
+            "noResults": {
+                "title": "沒有結果",
+                "description": "沒有符合該過濾器的結果。嘗試優化您的搜尋。",
+                "alt": "在整個聯邦宇宙中搜尋任何內容。"
+            },
+            "top": "熱門結果",
+            "other": "其他結果"
+        },
         "saved": "保存",
-        "createPost": "發文",
-        "createCommunity": "創建社群",
         "post": {
             "crosspostCount": "轉貼",
             "commentCount": "留言",
-            "addComment": "新增留言"
+            "addComment": "新增留言",
+            "scrollToTop": "捲動到頂部",
+            "thread": {
+                "single": "您正在檢視單一討論串。",
+                "allComments": "所有評論",
+                "part": "您正在檢視部分討論串。",
+                "context": "顯示上下文"
+            },
+            "emptyComments": {
+                "title": "沒有評論",
+                "description": "開始對話！"
+            },
+            "commented": "您的評論已發佈。",
+            "loadComments": "載入評論"
+        },
+        "postRedirect": {
+            "title": "跨伺服器內容",
+            "description": "該內容並非源自 {{homeInstance}}。",
+            "actions": {
+                "back": "返回",
+                "fetch": "在 {{homeInstance}} 上繼續",
+                "switch": "切換到 {{destInstance}} 上的帳戶"
+            },
+            "automatic": {
+                "title": "正在定位帖子",
+                "description": "該內容並非源自您帳戶的伺服器。"
+            }
+        },
+        "inbox": {
+            "title": "收件箱",
+            "markAsRead": "標記為已讀",
+            "empty": {
+                "title": "沒有新通知",
+                "description": "訊息、回覆和提及將顯示在這裡。"
+            },
+            "item": {
+                "reply": "{{user}} 在 {{post}} 中回覆了您",
+                "mention": "{{user}} 在 {{post}} 中提及了您",
+                "message": "{{user}} 傳送訊息給 {{recipient}}"
+            },
+            "messages": {
+                "conversation": "這是您與 {{user}} 對話的開始",
+                "indicator": "正在傳送訊息給 {{user}}",
+                "start": "開始聊天",
+                "empty": {
+                    "title": "沒有訊息"
+                }
+            }
+        },
+        "moderation": {
+            "title": "管理",
+            "empty": {
+                "title": "沒有新報告",
+                "description": "當提交被報告時，您可以在這裡處理它們。"
+            },
+            "reason": "原因",
+            "resolve": "解決",
+            "resolved": "已解決",
+            "unresolve": "未解決",
+            "resolvedBy": "解決者",
+            "markAll": "標記頁面為已解決",
+            "markAllComplete": "批次操作已完成。",
+            "feed": "報告",
+            "manage": {
+                "title": "管理",
+                "modlogs": "最近的管理日誌",
+                "ban": "封禁",
+                "unban": "解封"
+            }
+        },
+        "admin": {
+            "title": "管理",
+            "config": {
+                "title": "組態",
+                "sidebar": "側邊欄",
+                "icon": "圖示",
+                "banner": "橫幅",
+                "downvotesEnabled": "啟用噓",
+                "nsfwEnabled": "啟用 NSFW",
+                "registration": {
+                    "label": "註冊模式",
+                    "open": "開放",
+                    "application": "需要申請",
+                    "closed": "關閉"
+                },
+                "applicationQuestion": "申請問題",
+                "adminCommunityOnly": "僅管理員可建立社群",
+                "requireVerifyEmail": "需要電子郵件驗證",
+                "emailAdminsOnApplication": "收到新申請時發送電子郵件給管理員",
+                "emailAdminsOnReport": "收到新報告時發送電子郵件給管理員",
+                "listingType": {
+                    "label": "列表類型",
+                    "all": "全部",
+                    "local": "本地"
+                },
+                "private": "私人伺服器",
+                "hideModlogModNames": "隱藏管理日誌中的管理員名稱",
+                "slurFilter": "侮辱性詞彙過濾正則表達式",
+                "federation": "啟用聯邦化",
+                "federationDebug": "聯邦化除錯模式",
+                "captcha": {
+                    "enabled": "啟用 CAPTCHA"
+                }
+            },
+            "applications": {
+                "title": "申請",
+                "empty": {
+                    "title": "沒有新申請",
+                    "description": "加入您伺服器的申請將顯示在這裡。"
+                },
+                "application": "申請",
+                "approved": "已批准",
+                "denied": "已拒絕",
+                "user": "使用者",
+                "deny": "拒絕",
+                "approve": "批准",
+                "reason": "原因",
+                "modalTitle": "拒絕申請"
+            },
+            "taglines": {
+                "title": "標語",
+                "add": "新增標語",
+                "empty": {
+                    "title": "沒有標語",
+                    "description": "當使用者訪問您的伺服器時，隨機標語將顯示在網站卡片上。"
+                }
+            },
+            "team": {
+                "title": "管理員",
+                "empty": {
+                    "title": "沒有管理員",
+                    "description": "不知為何這個站點沒有管理員。怎麼會這樣？？"
+                }
+            },
+            "federation": {
+                "title": "聯邦化",
+                "csv": "上傳 CSV",
+                "blocked": "已封鎖的伺服器",
+                "block": "封鎖",
+                "blockplaceholder": "封鎖伺服器...",
+                "allowed": "白名單伺服器",
+                "allow": "白名單",
+                "allowplaceholder": "白名單伺服器",
+                "emptyBlock": {
+                    "title": "沒有封鎖的伺服器",
+                    "description": "封鎖伺服器將隱藏來自該伺服器的新提交。"
+                },
+                "emptyAllow": {
+                    "title": "沒有白名單伺服器",
+                    "description": "將伺服器列入白名單將封鎖所有其他伺服器。"
+                }
+            },
+            "media": {
+                "title": "媒體"
+            }
         },
         "verifyEmail": {
-            "error": "無法驗證您的電子郵件。",
-            "message": "您的電子郵件已通過驗證。您現在可以關閉此視窗。"
+            "message": "您的電子郵件已通過驗證。您現在可以關閉此視窗。",
+            "error": "無法驗證您的電子郵件。"
         },
         "passwordChange": {
             "title": "更改密碼",
@@ -163,9 +489,35 @@
         },
         "theme": {
             "title": "主題",
-            "import": "匯入",
-            "export": "匯出",
-            "reset": "重設"
+            "accent": "強調色",
+            "resetWarning": {
+                "title": "重設主題",
+                "description": "這將重設您所有的顏色為預設值。建議在此之前匯出您的主題。"
+            },
+            "preset": {
+                "title": "無法修改",
+                "description": "這是一個預設主題，無法修改。",
+                "delete": {
+                    "title": "刪除主題",
+                    "confirm": "確認"
+                },
+                "default": "預設",
+                "classic": "經典",
+                "imported": "您的主題",
+                "new": "新主題",
+                "presets": "預設值"
+            }
+        },
+        "community": {
+            "settings": {
+                "team": "團隊",
+                "settings": "設定",
+                "manage": "管理"
+            },
+            "languageWarning": "此社群中的內容使用了您未選擇的語言。部分或所有帖子可能會丟失。"
+        },
+        "user": {
+            "note": "設定備註"
         }
     },
     "cards": {
@@ -175,54 +527,501 @@
             "admins": "管理員"
         },
         "community": {
+            "members": "訪客",
             "moderators": "管理員",
             "subscribe": "訂閱",
             "subscribed": "已訂閱",
+            "modlog": "管理日誌",
             "block": "封鎖",
             "unblock": "取消封鎖",
             "blockInstance": "封鎖站點",
-            "favorite": "最愛",
-            "unfavorite": "取消最愛",
-            "members": "訪客"
+            "activeDay": "今日活躍",
+            "flair": "設定我的標籤"
+        }
+    },
+    "admin": {
+        "purge": "清除",
+        "instance": "伺服器",
+        "label": "管理",
+        "purgeCommunity": {
+            "title": "清除社群",
+            "warning": "這將刪除所有帖子。您確定嗎？（按鈕將在 3 秒後啟用。）"
         }
     },
     "content": {
-        "all": "所有",
-        "users": "使用者"
+        "all": "全部",
+        "users": "使用者",
+        "posts": "帖子",
+        "comments": "評論",
+        "communities": "社群",
+        "instances": "伺服器",
+        "message": "訊息",
+        "url": "URL"
     },
     "post": {
         "actions": {
-            "save": "保存",
+            "comments": "評論",
+            "save": "儲存",
+            "unsave": "取消儲存",
             "more": {
-                "crosspost": "轉貼"
+                "label": "更多動作",
+                "edit": "編輯",
+                "creator": "創作者",
+                "actions": "動作",
+                "markRead": "標記為已讀",
+                "markUnread": "標記為未讀",
+                "hide": "隱藏",
+                "unhide": "取消隱藏",
+                "share": "分享",
+                "share.from": "分享自",
+                "share.global": "來源伺服器",
+                "share.local": "您的伺服器",
+                "share.photon": "Photon 連結",
+                "crosspost": "轉貼",
+                "delete": "刪除",
+                "restore": "還原"
+            },
+            "vote": {
+                "upvote": "推",
+                "downvote": "噓",
+                "score": "分數"
             }
         },
         "badges": {
             "nsfw": "限制級(NSFW)",
-            "featured": "置頂"
+            "locked": "已鎖定",
+            "featured": "置頂",
+            "removed": "已移除",
+            "deleted": "已刪除",
+            "saved": "已儲存"
+        },
+        "image": {
+            "zoomIn": "放大",
+            "zoomOut": "縮小"
+        },
+        "meta": {
+            "lastEdited": "最後編輯 {{default}}",
+            "created": "建立於 {{default}}"
+        },
+        "poll": {
+            "votes": "{{votes:number}} 票",
+            "results": {
+                "show": "顯示結果",
+                "hide": "隱藏結果",
+                "ends": "結束於 {{time}}",
+                "ended": "結束於 {{time}}"
+            },
+            "choices": "選項",
+            "single": "單選",
+            "multiple": "多選",
+            "mode": "模式"
         }
     },
-    "moderation": {
-        "report": "檢舉"
+    "comment": {
+        "reply": "回覆",
+        "actions": {
+            "label": "動作",
+            "link": "複製連結"
+        },
+        "locked": "此帖子已鎖定。",
+        "banned": "您已被此社群封鎖。",
+        "more": "{{comments:number}} 更多",
+        "collapse": "摺疊",
+        "expand": "展開"
     },
-    "settings": {
-        "title": "設定",
-        "app": {
-            "lang": {
-                "auto": "自動",
-                "title": "語言"
+    "moderation": {
+        "report": "報告",
+        "ban": {
+            "banning": "正在封鎖使用者",
+            "unbanning": "正在解封使用者",
+            "deleteData": "刪除資料",
+            "warning": "這將刪除此使用者在此處的所有提交。",
+            "expires": "過期 (UTC)",
+            "banFromCommunity": "從社群封鎖使用者",
+            "unbanFromCommunity": "從社群解封使用者"
+        },
+        "removeSubmission": {
+            "title": "正在移除提交",
+            "titleRestore": "正在還原提交",
+            "titlePurge": "正在清除提交",
+            "withReason": "通知作者",
+            "comment": "評論",
+            "message": "訊息",
+            "failReply": "發布回覆失敗。無論如何都要移除...",
+            "failMessage": "傳送訊息給使用者失敗。無論如何都要移除...",
+            "failEmptyReply": "如果啟用了「通知作者」，您的回覆不能為空。",
+            "successPurge": "成功清除了該提交。"
+        },
+        "reportModal": {
+            "title": "報告",
+            "success": "已報告該提交。",
+            "presets": {
+                "spam": "垃圾郵件/濫用",
+                "rules": "違反社群規則",
+                "rules.content": "此提交違反了規則，因為 __"
             }
         },
-        "lemmy": {
-            "nsfwBlur": {
-                "description": "模糊圖片並隱藏限制級(NSFW)帖文預覽。",
-                "title": "限制級(NSFW) 遮擋"
-            }
+        "reason": "原因",
+        "lock": "鎖定",
+        "unlock": "解鎖",
+        "remove": "移除",
+        "restore": "還原",
+        "label": "管理",
+        "labelInstanceOnly": "管理（僅限本地）",
+        "feature": "精選",
+        "unfeature": "取消精選",
+        "votes": "票數",
+        "modlog": {
+            "user": "使用者管理日誌",
+            "post": "帖子管理日誌",
+            "comment": "評論管理日誌"
         }
     },
     "common": {
-        "next": "往後",
-        "back": "往前",
-        "refresh": "重整"
+        "back": "返回",
+        "next": "下一步",
+        "debug": "除錯",
+        "refresh": "重新整理",
+        "jump": "跳轉",
+        "save": "儲存",
+        "enabled": "已啟用",
+        "disabled": "已停用",
+        "enable": "啟用",
+        "disable": "停用",
+        "add": "新增",
+        "cancel": "取消",
+        "send": "傳送",
+        "general": "一般",
+        "remove": "移除",
+        "download": "下載",
+        "attach": "附加檔案",
+        "info": "資訊"
+    },
+    "message": {
+        "success": "成功",
+        "error": "錯誤",
+        "retry": "重試"
+    },
+    "toast": {
+        "noComments": "API 未返回評論。",
+        "loginVoteGate": "您必須登入才能投票。",
+        "blockedCommunity": "已封鎖該社群。",
+        "unblockedCommunity": "已解封該社群。",
+        "purgedCommunity": "已清除該社群。",
+        "blockedInstance": "已封鎖該伺服器。",
+        "updatedCommunity": "您的社群已更新。",
+        "sentMessage": "已傳送該訊息。",
+        "invalidDateAbsolute": "無效的日期。它必須是絕對日期。",
+        "invalidDateBeforeCurrent": "無效的日期。它早於當前時間。",
+        "bannedUser": "已封鎖該使用者。",
+        "unbannedUser": "已解封該使用者。",
+        "needCommunity": "您必須設定一個社群。",
+        "invalidURL": "無效的 URL",
+        "generatedTitle": "從 URL 產生的標題和內容。您要復原此操作嗎？",
+        "failGenerateTitle": "該網站沒有可用的標題或描述。",
+        "restoredFromDraft": "已從草稿還原您的帖子。",
+        "copied": "已複製到剪貼簿。",
+        "approvedApplication": "已批准該申請。",
+        "deniedApplication": "已拒絕該申請。",
+        "updatedSite": "已更新您的站點。",
+        "failCSV": "讀取 CSV 失敗",
+        "removeAdminWarning": "您確定要移除該管理員嗎？",
+        "removeAdmin": "已移除該管理員。",
+        "failFindUser": "找不到該使用者。",
+        "addMod": "已新增該版主。",
+        "updateMods": "已更新社群版主。",
+        "logIn": "成功登入。",
+        "failInstanceURL": "無法使用這些設定聯絡該伺服器 URL。它當機了嗎？",
+        "addAccount": "已新增該帳戶。",
+        "resetLink": "密碼重設連結已發送到您的電子郵件。",
+        "resolveReport": "已解決該報告。",
+        "unresolveReport": "已重新開啟該報告。",
+        "passwordReset": "您的密碼已重設。",
+        "loginRefresh": "您的登入已重新整理。",
+        "invalidLogin": "無效的憑證",
+        "saveSettings": "已儲存您的使用者設定。如果您更改了電子郵件，則已發送驗證連結。",
+        "confirmDelete1": "您確定要刪除您的帳戶嗎？",
+        "confirmDelete2": "您真的確定嗎？",
+        "confirmDelete3": "最後警告。您真的確定嗎？",
+        "needPassword": "您必須提供您的密碼。",
+        "deleting": "正在刪除您的帳戶...",
+        "deleted": "您的帳戶已刪除。",
+        "resetSettings": "您要將設定重設為預設值嗎？",
+        "failFetchInstances": "無法獲取可用伺服器。",
+        "verifyEmail": "驗證連結已發送到您的電子郵件。驗證您的電子郵件，然後登入。",
+        "failSignup": "註冊失敗。",
+        "successSignup": "已註冊。",
+        "waitApplication": "在登入之前，請等待您的註冊申請被接受。",
+        "blockUser": "已封鎖該使用者。",
+        "unblockUser": "已解封該使用者。",
+        "purgeUser": "已清除該使用者。",
+        "settingsImport": "成功匯入設定",
+        "settingsImportWarning": "匯入的設定似乎無效。您確定要匯入此內容嗎？",
+        "userLoading": "仍在載入您的使用者資料...",
+        "lemmyDonate": "您帳戶的伺服器執行 Lemmy，開發人員正在請求捐款。由於使用者的慷慨解囊，他們能夠將 Lemmy 開發為一個開源平台，免受追蹤和廣告的侵擾。\n\n每年，他們都會請您考慮捐款以支援他們的工作，並允許他們繼續維護和改進 Lemmy。\n\n[捐贈](https://join-lemmy.org/donate)\n\n*注意：這是對 Lemmy 的捐贈，而不是對 Photon 的捐贈。*"
+    },
+    "settings": {
+        "title": "設定",
+        "beta": "測試版",
+        "desktop": "桌面",
+        "tablet": "平板",
+        "mobile": "行動",
+        "export": "匯出",
+        "import": "匯入",
+        "reset": "重設",
+        "navigation": {
+            "title": "導航",
+            "autoHide": {
+                "title": "自動隱藏停靠欄",
+                "description": "向下捲動時在行動裝置上隱藏停靠欄，向上捲動時重新顯示。"
+            }
+        },
+        "app": {
+            "title": "應用程式",
+            "theming": {
+                "title": "主題",
+                "description": "自訂 UI 顏色。",
+                "link": "前往主題"
+            },
+            "lang": {
+                "title": "語言",
+                "description": "UI 中用於文字的語言。",
+                "auto": "自動",
+                "credits": "製作人員",
+                "useRtl": {
+                    "title": "使用 RTL 佈局",
+                    "description": "對 RTL 語言使用 RTL 佈局。"
+                }
+            },
+            "view": {
+                "title": "帖子樣式",
+                "cozy": "顯示帶有大圖、豐富嵌入內容和較長帖子正文的帖子。",
+                "compact": "在列表中顯示帖子，沒有帖子正文，間距更緊湊。"
+            },
+            "sort": {
+                "title": "預設排序",
+                "description": "更改來源中使用的預設排序類型。"
+            },
+            "infiniteScroll": {
+                "title": "無限捲動",
+                "description": "在您捲動時載入新帖子並將其附加到來源。"
+            },
+            "postsInNewTab": {
+                "title": "在新分頁中打開帖子",
+                "description": "在單獨的分頁中打開帖子，而不是當前分頁。"
+            },
+            "displayName": {
+                "title": "使用顯示名稱",
+                "description": "顯示使用者的顯示名稱，而不是他們的實際使用者名稱。"
+            },
+            "limitLayoutWidth": {
+                "title": "限制佈局寬度",
+                "description": "透過限制主要內容寬度來提高可讀性。"
+            },
+            "placeholders": {
+                "title": "隨機佔位符",
+                "description": "為某些文字輸入顯示隨機佔位符。"
+            },
+            "expandImages": {
+                "title": "可擴展縮圖",
+                "description": "點擊帖子的圖片會帶您進入擴展視圖，而不是帖子頁面。"
+            },
+            "duplicateTitles": {
+                "title": "隱藏重複的嵌入內容",
+                "description": "如果標題和正文與嵌入內容相同，則隱藏帖子標題和正文。"
+            },
+            "thumbnailSide": {
+                "title": "縮圖對齊",
+                "description": "更改緊湊模式下帖子縮圖的顯示位置。",
+                "left": "左",
+                "right": "右"
+            },
+            "font": {
+                "title": "字型",
+                "description": "UI 中用於文字的字型。"
+            },
+            "titleTags": {
+                "title": "解析標題中的標籤",
+                "description": "將 [括號] 中的文字轉換為您可以點擊搜尋的標籤。"
+            },
+            "reverseActions": {
+                "title": "反轉動作列",
+                "description": "反轉帖子和評論上的動作順序。"
+            },
+            "absoluteDates": {
+                "title": "絕對時間戳",
+                "description": "將相對時間戳（3 小時前）替換為絕對時間戳（15/6/25）。"
+            },
+            "titleOpensUrl": {
+                "title": "標題打開 URL",
+                "description": "點擊標題打開帖子附帶的 URL，而不是評論。"
+            },
+            "voteRatioBar": {
+                "title": "投票比例條",
+                "description": "當帖子的爭議性超過 15% 時，投票按鈕中將顯示一個條形圖以幫助可視化情緒。"
+            }
+        },
+        "embeds": {
+            "title": "嵌入",
+            "clickToView": {
+                "title": "點擊以檢視",
+                "description": "僅在您點擊時載入嵌入內容。"
+            },
+            "youtube": {
+                "description": "用於嵌入 YouTube 內容的網站。"
+            },
+            "instance": {
+                "invidious": "Invidious 伺服器",
+                "piped": "Piped 伺服器",
+                "description": "用於嵌入 YouTube 內容的伺服器。"
+            }
+        },
+        "lemmy": {
+            "title": "Lemmy",
+            "showHiddenPosts": {
+                "title": "顯示隱藏的帖子",
+                "description": "顯示您已手動隱藏的帖子。"
+            },
+            "compactFeatured": {
+                "title": "緊湊的精選帖子",
+                "description": "使精選帖子更緊湊。"
+            },
+            "markReadPosts": {
+                "title": "自動將帖子標記為已讀",
+                "description": "當您訪問帖子時將其標記為已讀。"
+            },
+            "fadeReadPosts": {
+                "title": "淡化已讀帖子",
+                "description": "淡化您已讀過的帖子的標題"
+            },
+            "crosspostMarker": {
+                "title": "標記轉貼",
+                "description": "轉貼時插入「轉貼自」和連結。"
+            },
+            "hideSubmissions": {
+                "title": "隱藏提交",
+                "description": "隱藏某些類型的提交。",
+                "deleted": "使用者已刪除",
+                "removed": "版主已移除"
+            },
+            "contentFilter": {
+                "title": "內容過濾器",
+                "description": "隱藏或最小化符合給定字串的帖子。支援正則表達式。",
+                "hide": "隱藏",
+                "minimize": "最小化",
+                "minimized": "被您的過濾器隱藏的內容",
+                "disabled": "關閉"
+            },
+            "nsfwBlur": {
+                "title": "NSFW 模糊",
+                "description": "模糊圖片並移除 NSFW 帖子的正文。"
+            },
+            "instances": {
+                "title": "顯示伺服器識別碼",
+                "description": "顯示某些內容源自的伺服器。"
+            }
+        },
+        "moderation": {
+            "title": "管理",
+            "replyPresets": {
+                "title": "移除回覆預設值",
+                "description": "用於提交移除對話框中「回覆原因」的預設值。",
+                "syntax": "語法"
+            }
+        },
+        "other": {
+            "title": "其他",
+            "debug": {
+                "title": "除錯資訊",
+                "description": "顯示除錯資訊。"
+            },
+            "virtualizeFeeds": {
+                "title": "不要虛擬化來源",
+                "description": "虛擬化僅渲染可見的帖子，從而大幅提高效能。如果您遇到卡頓問題，請停用虛擬化。這將停用無限捲動。"
+            }
+        },
+        "account": {
+            "title": "帳戶"
+        },
+        "donate": {
+            "description": "Photon 將永遠免費且開源，並不斷開發和設計以提供幫助。如果您喜歡 Photon 並希望在經濟上支援其開發，可以在此處捐款。"
+        }
+    },
+    "error": {
+        "incorrect_login": "登入憑證不正確。請重試。",
+        "incorrect_login_2": "登入憑證不正確。重試。",
+        "incorrect_login_3": "不正確，再一次。再試幾次。",
+        "incorrect_login_4": "您可以的。再試幾次。",
+        "incorrect_login_5": "這次輸入時看著您的鍵盤。",
+        "incorrect_login_6": "我相信您。",
+        "incorrect_login_7": "好吧，您現在是在跟我開玩笑。",
+        "incorrect_login_8": "我放棄。",
+        "incorrect_login_9": "您發出的每一個請求都透過一項令人難以置信的技術傳送資料。而您卻用它來製造失敗的登入。",
+        "incorrect_login_10": "想想這個。可憐的伺服器管理員必須維護他們的伺服器，只為了讓您發出這些無用的請求。",
+        "incorrect_login_11": "每次按下按鈕都會使用數千個 CPU 週期來處理您的請求，結果卻失敗了。",
+        "incorrect_login_12": "...",
+        "registration_application_is_pending": "該帳戶的註冊申請尚未被接受。",
+        "couldnt_find_post": "該帖子不存在，不在此伺服器上，或已被移除。",
+        "cant_block_yourself": "您不能封鎖自己。您也不應該這樣做，您（可能）是個好人！",
+        "email_not_verified": "您帳戶的電子郵件尚未驗證。",
+        "passwords_do_not_match": "您輸入的密碼和驗證密碼不相符。",
+        "honeypot_failed": "您是機器人嗎？嗶啵叭噗。如果您不是，蜜罐檢查失敗。",
+        "downvotes_are_disabled": "此伺服器已停用噓。",
+        "email_already_exists": "該電子郵件已存在帳戶。",
+        "slurs": "您的提交包含此伺服器禁止的術語。",
+        "captcha_incorrect": "CAPTCHA 答案不正確。",
+        "cant_block_local_instance": "您無法封鎖您正在使用的伺服器。",
+        "invalid_vote_value": "抱歉，您不能在 Lemmy 帖子上進行選民欺詐。",
+        "language_not_allowed": "該語言在此社群中不被允許。取消設定以使用社群的預設值。",
+        "couldnt_find_person": "該使用者不存在。",
+        "couldnt_find_community": "該社群不存在。",
+        "not_an_admin": "您不是此伺服器的管理員。",
+        "rate_limit_error": "您執行該動作太快。",
+        "unimplemented": "Photon 尚未支援您帳戶伺服器軟體的該功能。",
+        "unsupported": "您帳戶的伺服器軟體不支援該功能。",
+        "not_live_supported": "該伺服器未執行受支援的軟體，或已離線。",
+        "token_not_found": "該電子郵件驗證連結已過期，或從未存在過。",
+        "invalid_password": "密碼無效。"
+    },
+    "aria": {
+        "pagination": {
+            "nav": "分頁",
+            "current": "目前頁面"
+        },
+        "vote": {
+            "group": "帖子投票控制",
+            "upvotes": "{{default}} 推",
+            "downvotes": "{{default}} 噓",
+            "score": "分數：{{default}}"
+        },
+        "sidebar": {
+            "title": "側邊欄",
+            "accounts": "帳戶選擇器"
+        },
+        "loading": "正在載入",
+        "element": {
+            "pageHeader": "頁首"
+        },
+        "postDecor": {
+            "openImage": "打開圖片：{{default}}",
+            "openLink": "打開連結：{{default}}",
+            "openPost": "打開帖子：{{default}}"
+        },
+        "comments": {
+            "children": "{{childCount}} 個子評論"
+        }
+    },
+    "stats": {
+        "joined": "已加入",
+        "created": "已建立"
+    },
+    "placeholders": {
+        "title": "新增帖子標題",
+        "body": "您有什麼想說的？",
+        "comments": "加入對話"
+    },
+    "class": {
+        "moderator": "版主",
+        "admin": "管理員"
     }
 }

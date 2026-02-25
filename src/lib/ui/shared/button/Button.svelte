@@ -77,8 +77,10 @@
   }
   type ButtonGap = keyof typeof buttonGap
 
-  interface Props
-    extends Omit<HTMLButtonAttributes | HTMLAnchorAttributes, 'prefix'> {
+  interface Props extends Omit<
+    HTMLButtonAttributes | HTMLAnchorAttributes,
+    'prefix'
+  > {
     loading?: boolean
     submit?: boolean
     type?: 'button' | 'none'
