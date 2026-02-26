@@ -42,14 +42,16 @@
 <div class="flex flex-col gap-1">
   {#snippet img()}
     <button
-      onclick={
-        () =>
-          showImage(`${instanceToURL(profile.current.instance)}/pictrs/image/${image.pictrs_alias}`)
-      }
-      class="cursor-pointer"  
+      onclick={() =>
+        showImage(
+          `${instanceToURL(profile.current.instance)}/pictrs/image/${image.pictrs_alias}`,
+        )}
+      class="cursor-pointer"
     >
       <img
-        src="{instanceToURL(profile.current.instance)}/pictrs/image/{image.pictrs_alias}"
+        src="{instanceToURL(
+          profile.current.instance,
+        )}/pictrs/image/{image.pictrs_alias}"
         width="500"
         height="500"
         class="aspect-square w-full h-full object-cover rounded-xl"
@@ -70,7 +72,9 @@
     />
     <Button
       title={$t('routes.profile.media.download')}
-      href="{instanceToURL(profile.current.instance)}/pictrs/image/{image.pictrs_alias}"
+      href="{instanceToURL(
+        profile.current.instance,
+      )}/pictrs/image/{image.pictrs_alias}"
       size="square-md"
       class="ml-auto"
       icon={ArrowDownTray}

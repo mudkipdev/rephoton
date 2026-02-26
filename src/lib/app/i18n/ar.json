@@ -1,20 +1,21 @@
 {
     "profile": {
+        "profile": "ملف الشخضي",
         "inbox": "صندوق الوارد",
         "saved": "المحفوظ",
-        "subscribed": "الاشتراكات",
-        "profile": "ملف الشخضي"
+        "subscribed": "الاشتراكات"
     },
     "nav": {
         "home": "الصفحة الرئيسية",
         "admin": "مدير",
+        "moderation": "الإشراف",
         "communities": "اكتشف",
         "search": "ابحث",
         "create": {
+            "label": "أنشئ",
             "post": "أنشئ منشور",
             "community": "مجتمع",
-            "logingate": "يجب تسجيل الدخول لإنشاء محتويات.",
-            "label": "أنشئ"
+            "logingate": "يجب تسجيل الدخول لإنشاء محتويات."
         },
         "menu": {
             "label": "الملف الشخصي",
@@ -33,43 +34,46 @@
             "instance": "الخادوم"
         },
         "commands": {
-            "search": "ابحث عن {{default}}",
             "prompt": "لوحة التحكم",
             "recents": "مؤخرًا",
             "content": "محتويات",
+            "search": "ابحث عن {{default}}",
             "main": "رئيسي",
             "setView": "اختار طريقة العرض",
+            "setViewTo": "ضبط طريقة العرض إلى {{default}}",
             "setColor": "اختار الألوان",
             "setColorTo": "ضبط الألوان إلى {{default}}",
-            "setViewTo": "ضبط طريقة العرض إلى {{default}}",
             "feeds": "تغذية",
+            "downloading": "جاري تنزيل الإجراءات",
             "setTheme": "ضبط مظهر",
             "setThemeTo": "ضبط المضهر إلى {{default}}",
-            "contextual": "على هذه الصفحة"
+            "contextual": "على هذه الصفحة",
+            "communities": "مجتمعات مع **{{default}}**",
+            "goto": "اذهب إلى **{{default}}**"
         },
-        "moderation": "الإشراف"
+        "notifications": "إشعارات"
     },
     "account": {
+        "login": "تسجيل الدخول",
         "logout": "تسجيل الخروج",
         "signup": "الاشتراك",
         "accounts": "حسابات",
-        "changeinstance": "غير الخادوم",
+        "resetColor": "إعادة ضبط اللون",
         "addGuest": "إضافة حساب ضيف",
         "moveUp": "ارفع",
         "moveDown": "نزل",
         "guest": "صيف",
-        "login": "تسجيل الدخول",
-        "resetColor": "إعادة ضبط اللون",
-        "versionGate": "هذا الإصدار الفوتون يقبل الخوادم بالإصدار {{version}} أو اعلى."
+        "piefedGate": "دعم Piefed تجريبي. بعض الميزات غير مدعومة."
     },
     "filter": {
         "location": {
             "label": "موقع",
             "all": "الكل",
+            "local": "المحلي",
             "subscribed": "الإشتراكات",
             "moderator": "المشرف",
             "global": "عالمياً",
-            "local": "المحلي"
+            "popular": "شائع"
         },
         "sort": {
             "label": "الترتيب",
@@ -79,24 +83,25 @@
                 "label": "الأفضل",
                 "time": {
                     "label": "الزمن",
+                    "all": "جميع الأوقات",
+                    "year": "العام الماضي",
                     "9months": "9 اشهر",
                     "6months": "6 أشهر",
                     "3months": "3 أشهر",
                     "month": "شهر",
                     "week": "إسبوع",
-                    "12hours": "12 ساعة",
-                    "hour": "ساعة",
-                    "all": "جميع الأوقات",
                     "day": "يوم",
-                    "6hours": "6 ساعات"
+                    "12hours": "12 ساعة",
+                    "6hours": "6 ساعات",
+                    "hour": "ساعة"
                 }
             },
             "new": "جديد",
             "old": "قديم",
             "controversial": "جدلي",
+            "scaled": "موزون",
             "mostcomments": "أكثر تعليقاً",
-            "newcomments": "تعليقات جديدة",
-            "scaled": "موزون"
+            "newcomments": "تعليقات جديدة"
         },
         "view": {
             "label": "عرض",
@@ -107,17 +112,18 @@
         },
         "type": "نوع",
         "filter": "فلتر",
+        "unread": "غير مقروء",
         "inbox": {
             "messages": "رسالات",
             "replies": "الردود",
             "mentions": "الإشارات"
-        },
-        "unread": "غير مقروء"
+        }
     },
     "form": {
         "username": "اسم المستخدم",
         "name": "اسم",
         "instance": "رابط الخادوم",
+        "password": "كلمة المرور",
         "confirmPassword": "تأكيد كلمة المرور",
         "2fa": "رمز 2FA",
         "forgotpassword": "نسيت الكلمة المرور",
@@ -125,21 +131,30 @@
         "edit": "عدل",
         "preview": "معاينة",
         "post": {
+            "create": "إنشاء منشور",
+            "edit": "عدل منشور",
             "community": "مجتمع",
             "title": "عنوان",
             "url": "رابط",
             "body": "نص",
+            "nsfw": "محتويات الحساسة",
             "generateTitle": "إنشاء عنوان",
             "uploadImage": "تحميل صورة",
             "selectFile": "إختار ملف",
             "altText": "نص بديل",
+            "addUrl": "ضيف رابط",
             "setLanguage": "إختار لغة",
             "unset": "إلغاء",
             "readMore": "اقرا المزيد",
-            "addUrl": "ضيف رابط",
-            "edit": "عدل منشور",
-            "create": "إنشاء منشور",
-            "nsfw": "محتويات الحساسة"
+            "flair": "إضافة شارة",
+            "fetching": "جلب بيانات الموقع",
+            "types": {
+                "normal": "نقاش",
+                "poll": "استطلاع",
+                "event": "حدث"
+            },
+            "autosubmit": "إرسال تلقائي",
+            "customThumbnail": "تعيين صورة مصغرة"
         },
         "profile": {
             "displayName": "كنية",
@@ -147,69 +162,112 @@
             "avatar": "صورة الرمزية",
             "banner": "خلفية",
             "email": "بريد الإلكتروني",
+            "matrix": "اسم المستخدم Matrix",
+            "showNSFW": "عرض المحتويات الحساسة",
             "scores": "إظهار النقاط",
             "bot": "حساب الالي",
             "showBots": "إظهار الألات",
             "showRead": "إظهار المنشورات المقروء",
+            "currentPassword": "كلمة المرور الحالية",
             "newPassword": "كلمة المرور الجديدة",
-            "showNSFW": "عرض المحتويات الحساسة",
+            "verifyNewPassword": "تحقق من كلمة المرور الجديدة",
             "2fa": {
                 "totp": "TOTP",
                 "2fa": "2FA",
-                "paste": "الصق هذا في التطبيق التحقيق."
+                "paste": "الصق هذا في التطبيق التحقيق.",
+                "disabled": "2FA is disabled"
             },
             "deleteAccount": {
-                "label": "حذف الحساب",
                 "deleteContent": "إحذف المحتوى",
                 "warning": "هذا سيحذف كل تقديماتك."
             },
-            "currentPassword": "كلمة المرور الحالية",
-            "matrix": "اسم المستخدم Matrix",
-            "verifyNewPassword": "تحقق من كلمة المرور الجديدة"
+            "languages": {
+                "title": "Languages",
+                "description": "If any are set, you will only see content explicitly tagged as that language. Most content, untagged, falls under 'Undetermined'."
+            },
+            "credentials": {
+                "title": "Manage how you log in",
+                "description": "You can enable 2FA for greater security, change your password, view logged in devices, or delete your account here."
+            }
         },
         "email": "بريد الإلكتروني",
         "setup": "إعداد",
         "signup": {
             "title": "اشتراك",
             "description": "اختار خادوم التي تهمك, أو اكتب الرابط يدوياً.",
+            "info": "الخادوم هو الذي سيخزن حسابك, لاكن لا يزال توصل إلى المحتويات من الخوادم الأخرة.",
             "chooseInstance": "إختار خادوم",
             "application": {
                 "label": "تطبيق",
-                "info": "لتسجل لهذا الخادوم, لازملك ان تعبئة هذا الطلب, وتنتظر لقبولك. سيرسلك بريد إذا مقبول طلبك."
+                "info": "لتسجل لهذا الخادوم, لازملك ان تعبئة هذا الطلب, وتنتظر لقبولك. سيرسلك بريد إذا مقبول طلبك.",
+                "notice": "Your signup is now pending. Once an administrator reviews it, you will receive an email if it was accepted. You then can log in."
             },
             "closed": {
                 "title": "التسجيلات مغلوق",
                 "description": "هذا الخادوم تم تغليق التسجيلات. ابحث عن خادوم اخر.",
                 "anotherInstance": "ابحث عن خادوم اخر"
             },
-            "info": "الخادوم هو الذي سيخزن حسابك, لاكن لا يزال توصل إلى المحتويات من الخوادم الأخرة."
+            "verify": {
+                "title": "Verify email",
+                "description": "Check your inbox for a verification link. Once you've clicked it, press the button below.",
+                "submit": "I've verified my email",
+                "error": "Your email has not been verified."
+            }
         },
         "description": "وصف",
-        "password": "كلمة المرور"
+        "time": {
+            "duration": "Duration",
+            "minutes": "Minutes",
+            "hours": "Hours",
+            "days": "Days",
+            "months": "Months",
+            "years": "Years",
+            "permanent": "Permanent"
+        },
+        "instanceType": "نوع برنامج الخادم"
     },
     "routes": {
         "frontpage": {
             "title": "صفحة الرئيسية",
             "footer": "{{users:number}} {{users; 1:مستخدم; default:مستخدمين}} {{users; 1:نشيط; default:نشيطين}}",
-            "endFeed": "إنك وصلت للنهاية {{{{community_name}}:default .الأعلاف:community_name; undefined}}"
+            "endFeed": "إنك وصلت للنهاية {{{{community_name}}:default .الأعلاف:community_name; undefined}}",
+            "empty": {
+                "title": "No posts",
+                "description": "There are no posts that match this filter."
+            }
         },
-        "modlog": "سجل الإشراف",
+        "modlog": {
+            "title": "Modlog",
+            "filters": "Filters"
+        },
         "instances": "خوادم",
         "legal": {
             "title": "قانونية",
             "noLegal": "هذا الخادوم لا يوجد له معلومات قانونية."
         },
         "profile": {
+            "user": "مستخدم",
             "settings": "إعدادات",
             "blocks": {
                 "title": "محجوب",
                 "empty": {
-                    "description": "عند تحجيب أي شيء, لم ستضهر في أعلافك.",
-                    "title": "عدم وجود كيانات محجوبة"
+                    "user": {
+                        "title": "لا يوجد مستخدمون محظورون",
+                        "description": "حظر المستخدم سيخفي مشاركاته وتعليقاته من الخلاصات."
+                    },
+                    "community": {
+                        "title": "لا توجد مجتمعات محظورة",
+                        "description": "حظر المجتمع سيخفي مشاركاته من الخلاصات."
+                    },
+                    "instance": {
+                        "title": "لا توجد خوادم محظورة",
+                        "description": "حظر الخادم سيخفي مشاركات مجتمعاته من الخلاصات."
+                    }
                 }
             },
             "credentials": "حساب",
             "moderates": "يشرف",
+            "favorites": "مفضلات",
             "upvoted": "تصويات الإجابية",
             "downvoted": "تصويات السالبة",
             "media": {
@@ -217,18 +275,26 @@
                 "download": "حمِّل"
             },
             "logins": "تسجيلات الدخول",
-            "welcome": "سلام, {{default}}!",
             "delete": {
-                "warning": "هذا دائم. هل متئكد ان تريد ان تفعل هذا؟",
-                "title": "احذف الحساب"
+                "title": "احذف الحساب",
+                "warning": "هذا دائم. هل متئكد ان تريد ان تفعل هذا؟"
             },
-            "user": "مستخدم",
-            "favorites": "مفضلات",
             "overview": "إظهار عامة",
-            "submissions": "تقديمات"
+            "submissions": "تقديمات",
+            "edit": "Edit"
         },
         "translators": "مترجمين",
         "accounts": "حواسب",
+        "accounts.placeholder": {
+            "title": "لم يتم تسجيل الدخول",
+            "description": "لم تقم بتسجيل الدخول. يمكنك التسجيل أو تسجيل الدخول هنا.",
+            "descriptionWithGuest": "لم تقم بتسجيل الدخول. يمكنك تسجيل الدخول، أو التسجيل، أو إضافة حساب ضيف هنا."
+        },
+        "explore": {
+            "title": "استكشاف",
+            "feeds": "خلاصات",
+            "topics": "مواضيع"
+        },
         "communities": {
             "title": "مجتمعات",
             "trending": "رائجة",
@@ -242,44 +308,63 @@
             "query": "استعلام",
             "noResults": {
                 "title": "لا يوجد نتائج",
-                "alt": "ابحث حول الإتحاد",
-                "description": "لا يوجد نتائج التي يشبه تصفيتك. حاول ان تعدل تصفيتك."
+                "description": "لا يوجد نتائج التي يشبه تصفيتك. حاول ان تعدل تصفيتك.",
+                "alt": "ابحث حول الإتحاد"
             },
             "top": "النتائج الغالبة",
             "other": "نتائج أخر"
         },
         "saved": "محفوظ",
-        "createPost": "إنشاء منشور",
-        "createCommunity": "إنشاء مجتمع",
         "post": {
             "crosspostCount": "منشورات المتقاطعة",
             "commentCount": "تعليقات",
-            "scrollToTop": "العودة إلى الأعلى",
             "addComment": "إضافة تعليق",
-            "remoteView": "عرض عن بعد",
-            "localView": "عرض محلي",
+            "scrollToTop": "العودة إلى الأعلى",
             "thread": {
+                "single": "أنك تعرض موضوعاً واحداً.",
                 "allComments": "جميع التعليقات",
                 "part": "أنك ظاهر جزء من موضوعاً.",
-                "context": "إظهار السياق",
-                "single": "أنك تعرض موضوعاً واحداً."
+                "context": "إظهار السياق"
             },
             "emptyComments": {
                 "title": "لا يوجد تعليقات",
                 "description": "ابدأ المحادثة!"
+            },
+            "commented": "Your comment was posted.",
+            "loadComments": "Load comments"
+        },
+        "postRedirect": {
+            "title": "Cross-server content",
+            "description": "That content does not originate from {{homeInstance}}.",
+            "actions": {
+                "back": "Go back",
+                "fetch": "Continue on {{homeInstance}}",
+                "switch": "Switch to an account on {{destInstance}}"
+            },
+            "automatic": {
+                "title": "تحديد موقع المنشور",
+                "description": "هذا المحتوى لا ينشأ من خادم حسابك."
             }
         },
         "inbox": {
             "title": "صندوق الوارد",
             "markAsRead": "وضع علامة كمقروءة بالكامل",
             "empty": {
-                "description": "ستظهر الرسائل والردود والإشارات هنا.",
-                "title": "لا يوجد إشعارات جديدة"
+                "title": "لا يوجد إشعارات جديدة",
+                "description": "ستظهر الرسائل والردود والإشارات هنا."
             },
             "item": {
                 "reply": "{{user}} رد عليك في {{post}}",
                 "mention": "{{user}} ذكرك في {{post}}",
                 "message": "{{user}} أرسل إلى {{recipient}}"
+            },
+            "messages": {
+                "conversation": "هذه بداية محادثتك مع {{user}}",
+                "indicator": "مراسلة {{user}}",
+                "start": "بدء الدردشة",
+                "empty": {
+                    "title": "لا توجد رسائل"
+                }
             }
         },
         "moderation": {
@@ -292,14 +377,25 @@
             "resolve": "حل",
             "resolved": "محلول",
             "unresolve": "إلغاء الحل",
-            "resolvedBy": "محلول بيد"
+            "resolvedBy": "محلول بيد",
+            "markAll": "تحديد الصفحة كمحلولة",
+            "markAllComplete": "اكتمل الإجراء المجمع.",
+            "feed": "Reports",
+            "manage": {
+                "title": "إدارة",
+                "modlogs": "سجلات الإشراف الحديثة",
+                "ban": "حظر",
+                "unban": "رفع الحظر"
+            }
         },
         "admin": {
             "title": "إدارة",
             "config": {
                 "title": "إعدادات",
                 "sidebar": "شريط الجانبي",
+                "icon": "أيقونة",
                 "banner": "خلفية",
+                "downvotesEnabled": "تمكين التصويتات السلبية",
                 "nsfwEnabled": "إظهار التقديمات الحساسة",
                 "registration": {
                     "label": "نمط التسجيل",
@@ -307,14 +403,625 @@
                     "application": "طلب تطبيق",
                     "closed": "مقفول"
                 },
-                "icon": "أيقونة",
-                "downvotesEnabled": "تمكين التصويتات السلبية",
+                "applicationQuestion": "سوأل عن الطلب",
                 "adminCommunityOnly": "فقط المشرفين يستطع إنشاء مجموعات",
                 "requireVerifyEmail": "إيجاب التحقيق بالبريد الإلكتروني",
-                "applicationQuestion": "سوأل عن الطلب",
                 "emailAdminsOnApplication": "إرسال بريد للمشرفين لما يصل طلبات جديدة",
-                "emailAdminsOnReport": "إرسال بريد للمشرفين لما يصل التقارير جديدة"
+                "emailAdminsOnReport": "إرسال بريد للمشرفين لما يصل التقارير جديدة",
+                "listingType": {
+                    "label": "Listing Type",
+                    "all": "All",
+                    "local": "Local"
+                },
+                "private": "Private instance",
+                "hideModlogModNames": "Hide modlog mod names",
+                "slurFilter": "Slur filter regex",
+                "federation": "Federation enabled",
+                "federationDebug": "Federation debug mode",
+                "captcha": {
+                    "enabled": "CAPTCHA enabled"
+                }
+            },
+            "applications": {
+                "title": "Applications",
+                "empty": {
+                    "title": "No new applications",
+                    "description": "Applications to join your server will appear here."
+                },
+                "application": "Application",
+                "approved": "Approved",
+                "denied": "Denied",
+                "user": "User",
+                "deny": "Deny",
+                "approve": "Approve",
+                "reason": "Reason",
+                "modalTitle": "Deny application"
+            },
+            "taglines": {
+                "title": "Taglines",
+                "add": "Add a tagline",
+                "empty": {
+                    "title": "No taglines",
+                    "description": "A random tagline will appear on the site card when users visit your server."
+                }
+            },
+            "team": {
+                "title": "Admins",
+                "empty": {
+                    "title": "No admins",
+                    "description": "Somehow there's no admins of this site. How??"
+                }
+            },
+            "federation": {
+                "title": "Federation",
+                "csv": "Upload CSV",
+                "blocked": "Blocked servers",
+                "block": "Block",
+                "blockplaceholder": "Block a server...",
+                "allowed": "Whitelisted servers",
+                "allow": "Whitelist",
+                "allowplaceholder": "Whitelist a server",
+                "emptyBlock": {
+                    "title": "No blocked servers",
+                    "description": "Blocking an server will hide new submissions from that server."
+                },
+                "emptyAllow": {
+                    "title": "No whitelisted servers",
+                    "description": "Whitelisting an server will block every other server."
+                }
+            },
+            "media": {
+                "title": "وسائط"
             }
+        },
+        "verifyEmail": {
+            "message": "Your email was verified. You can now close this window.",
+            "error": "Failed to verify your email."
+        },
+        "passwordChange": {
+            "title": "Change password",
+            "description": "Choose your new password.",
+            "instance": "Which server is your account hosted on?"
+        },
+        "resetLogin": {
+            "title": "Reset Password",
+            "description": "Enter your account's email, and a password reset link will be sent. If your account does not have an email, contact your server admins."
+        },
+        "theme": {
+            "title": "Theme",
+            "accent": "Accent",
+            "resetWarning": {
+                "title": "Reset theme",
+                "description": "This will reset all of your colors to the default. It is recommended to export your theme before this."
+            },
+            "preset": {
+                "title": "cannot be modified",
+                "description": "This is a default theme, and cannot be modified.",
+                "delete": {
+                    "title": "Delete theme",
+                    "confirm": "Confirm"
+                },
+                "default": "Default",
+                "classic": "Classic",
+                "imported": "Your theme",
+                "new": "New theme",
+                "presets": "Presets"
+            }
+        },
+        "community": {
+            "settings": {
+                "team": "Team",
+                "settings": "Settings",
+                "manage": "Manage"
+            },
+            "languageWarning": "Content in this community is in languages you do not have selected. Some or all posts may be missing."
+        },
+        "user": {
+            "note": "تعيين ملاحظة"
         }
+    },
+    "cards": {
+        "site": {
+            "about": "About",
+            "stats": "Statistics",
+            "admins": "Admins"
+        },
+        "community": {
+            "members": "Members",
+            "moderators": "Moderators",
+            "subscribe": "Subscribe",
+            "subscribed": "Subscribed",
+            "modlog": "Modlog",
+            "block": "Block",
+            "unblock": "Unblock",
+            "blockInstance": "Block server",
+            "activeDay": "Active Today",
+            "flair": "تعيين شارتي"
+        }
+    },
+    "admin": {
+        "purge": "Purge",
+        "instance": "Server",
+        "label": "Administration",
+        "purgeCommunity": {
+            "title": "Purging community",
+            "warning": "This will delete all posts. Are you sure? (The button will enable in 3 seconds.)"
+        }
+    },
+    "content": {
+        "all": "All",
+        "users": "Users",
+        "posts": "Posts",
+        "comments": "Comments",
+        "communities": "Communities",
+        "instances": "Servers",
+        "message": "Message",
+        "url": "رابط"
+    },
+    "post": {
+        "actions": {
+            "comments": "Comments",
+            "save": "Save",
+            "unsave": "Unsave",
+            "more": {
+                "label": "More actions",
+                "edit": "Edit",
+                "creator": "Creator",
+                "actions": "Actions",
+                "markRead": "Mark as read",
+                "markUnread": "Mark as unread",
+                "hide": "Hide",
+                "unhide": "Unhide",
+                "share": "Share",
+                "share.from": "مشاركة من",
+                "share.global": "الخادم الأصلي",
+                "share.local": "خادمك",
+                "share.photon": "رابط Photon",
+                "crosspost": "Crosspost",
+                "delete": "Delete",
+                "restore": "Restore"
+            },
+            "vote": {
+                "upvote": "Upvote",
+                "downvote": "Downvote",
+                "score": "Score"
+            }
+        },
+        "badges": {
+            "nsfw": "NSFW",
+            "locked": "Locked",
+            "featured": "Featured",
+            "removed": "Removed",
+            "deleted": "Deleted",
+            "saved": "Saved"
+        },
+        "image": {
+            "zoomIn": "Zoom in",
+            "zoomOut": "Zoom out"
+        },
+        "meta": {
+            "lastEdited": "Last edited {{default}}",
+            "created": "Created {{default}}"
+        },
+        "poll": {
+            "votes": "{{votes:number}} أصوات",
+            "results": {
+                "show": "إظهار النتائج",
+                "hide": "إخفاء النتائج",
+                "ends": "ينتهي {{time}}",
+                "ended": "انتهى {{time}}"
+            },
+            "choices": "خيارات",
+            "single": "اختيار واحد",
+            "multiple": "اختيار متعدد",
+            "mode": "وضع"
+        }
+    },
+    "comment": {
+        "reply": "Reply",
+        "actions": {
+            "label": "Actions",
+            "link": "Copy Link"
+        },
+        "locked": "This post is locked.",
+        "banned": "You are banned from this community.",
+        "more": "{{comments:number}} more",
+        "collapse": "طي",
+        "expand": "توسيع"
+    },
+    "moderation": {
+        "report": "Report",
+        "ban": {
+            "banning": "Banning User",
+            "unbanning": "Unbanning User",
+            "deleteData": "Delete data",
+            "warning": "This will delete ALL of this user's submissions here.",
+            "expires": "Expires (UTC)",
+            "banFromCommunity": "Ban user from community",
+            "unbanFromCommunity": "Unban user from community"
+        },
+        "removeSubmission": {
+            "title": "Removing Submission",
+            "titleRestore": "Restoring Submission",
+            "titlePurge": "Purging Submission",
+            "withReason": "Notify author",
+            "comment": "Comment",
+            "message": "Message",
+            "failReply": "Failed to post reply. Removing anyway...",
+            "failMessage": "Failed to message user. Removing anyway...",
+            "failEmptyReply": "Your reply cannot be empty if 'Notify author' is enabled.",
+            "successPurge": "Successfully purged that submission."
+        },
+        "reportModal": {
+            "title": "Report",
+            "success": "Reported that submission.",
+            "presets": {
+                "spam": "بريد عشوائي/إساءة",
+                "rules": "يخالف قواعد المجتمع",
+                "rules.content": "هذا المحتوى يخالف القواعد بسبب __"
+            }
+        },
+        "reason": "Reason",
+        "lock": "Lock",
+        "unlock": "Unlock",
+        "remove": "Remove",
+        "restore": "Restore",
+        "label": "Moderation",
+        "labelInstanceOnly": "Moderation (Local only)",
+        "feature": "Feature",
+        "unfeature": "Unfeature",
+        "votes": "Votes",
+        "modlog": {
+            "user": "User moderation log",
+            "post": "Post moderation log",
+            "comment": "Comment moderation log"
+        }
+    },
+    "common": {
+        "back": "Back",
+        "next": "Next",
+        "debug": "Debug",
+        "refresh": "Refresh",
+        "jump": "Jump",
+        "save": "Save",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "enable": "Enable",
+        "disable": "Disable",
+        "add": "Add",
+        "cancel": "Cancel",
+        "send": "Send",
+        "general": "General",
+        "remove": "Remove",
+        "download": "Download",
+        "attach": "Attach file",
+        "info": "Info"
+    },
+    "message": {
+        "success": "Success",
+        "error": "Error",
+        "retry": "Retry"
+    },
+    "toast": {
+        "noComments": "The API returned no comments.",
+        "loginVoteGate": "You must be logged in to vote.",
+        "blockedCommunity": "Blocked that community.",
+        "unblockedCommunity": "Unblocked that community.",
+        "purgedCommunity": "Purged that community.",
+        "blockedInstance": "Blocked that server.",
+        "updatedCommunity": "Your community was updated.",
+        "sentMessage": "Sent that message.",
+        "invalidDateAbsolute": "Invalid date. It must be an absolute date.",
+        "invalidDateBeforeCurrent": "Invalid date. It is before the current time.",
+        "bannedUser": "Banned that user.",
+        "unbannedUser": "Unbanned that user.",
+        "needCommunity": "You must set a community.",
+        "invalidURL": "Invalid URL",
+        "generatedTitle": "Generated title and body from the URL. Do you want to undo this?",
+        "failGenerateTitle": "There was no usable title or description of that website.",
+        "restoredFromDraft": "Restored your post from the draft.",
+        "copied": "Copied to clipboard.",
+        "approvedApplication": "Approved that application.",
+        "deniedApplication": "Denied that application.",
+        "updatedSite": "Updated your site.",
+        "failCSV": "Failed to read CSV",
+        "removeAdminWarning": "Are you sure you want to remove that admin?",
+        "removeAdmin": "Removed that admin.",
+        "failFindUser": "Could not find that user.",
+        "addMod": "Added that moderator.",
+        "updateMods": "Updated community moderators.",
+        "logIn": "Successfully logged in.",
+        "failInstanceURL": "Failed to contact that server URL with those settings. Is it down?",
+        "addAccount": "Added that account.",
+        "resetLink": "A password reset link was sent to your email.",
+        "resolveReport": "Resolved that report.",
+        "unresolveReport": "Unresolved that report.",
+        "passwordReset": "Your password was reset.",
+        "loginRefresh": "Your login was refreshed.",
+        "invalidLogin": "Invalid credentials",
+        "saveSettings": "Saved your user settings. If you changed your email, a verification link was sent.",
+        "confirmDelete1": "Are you sure you want to delete your account?",
+        "confirmDelete2": "Are you really sure?",
+        "confirmDelete3": "Final warning. Are you really sure?",
+        "needPassword": "You must provide your password.",
+        "deleting": "Deleting your account...",
+        "deleted": "Your account was deleted.",
+        "resetSettings": "Do you want to reset your settings to the default?",
+        "failFetchInstances": "Failed to fetch available servers.",
+        "verifyEmail": "A verification link was sent to your email. Verify your email, then log in.",
+        "failSignup": "Failed to sign up.",
+        "successSignup": "Signed up.",
+        "waitApplication": "Wait for your registration application to be accepted before logging in.",
+        "blockUser": "Blocked that user.",
+        "unblockUser": "Unblocked that user.",
+        "purgeUser": "Purged that user.",
+        "settingsImport": "Successfully imported settings",
+        "settingsImportWarning": "The imported settings don't seem valid. Are you sure you want to import this?",
+        "userLoading": "Still loading your user data...",
+        "lemmyDonate": "Your account's server runs Lemmy, and the developers are requesting donations. They are able to develop Lemmy as an open source platform, free of tracking and ads, thanks to the generosity of its users.\n\nAnnually, they ask you to consider donating to support their work, and allow them to continue maintaining and improving Lemmy.\n\n[Donate](https://join-lemmy.org/donate)\n\n*Note: this is a donation to Lemmy, not Photon.*"
+    },
+    "settings": {
+        "title": "Settings",
+        "beta": "Beta",
+        "desktop": "Desktop",
+        "tablet": "Tablet",
+        "mobile": "Mobile",
+        "export": "Export",
+        "import": "Import",
+        "reset": "Reset",
+        "navigation": {
+            "title": "Navigation",
+            "autoHide": {
+                "title": "Auto hide dock",
+                "description": "Hides the dock on mobile when you scroll down, re-appears when you scroll up."
+            }
+        },
+        "app": {
+            "title": "App",
+            "theming": {
+                "title": "Theming",
+                "description": "Customize the UI colors.",
+                "link": "Go to themes"
+            },
+            "lang": {
+                "title": "Language",
+                "description": "The language used for text in the UI.",
+                "auto": "Auto",
+                "credits": "Credits",
+                "useRtl": {
+                    "title": "Use RTL layout",
+                    "description": "Use an RTL layout for RTL languages."
+                }
+            },
+            "view": {
+                "title": "Post style",
+                "cozy": "Show posts with large images, rich embeds, and longer post bodies.",
+                "compact": "Show posts in a list, without post bodies and with tighter spacing."
+            },
+            "sort": {
+                "title": "Default sort",
+                "description": "Changes the default sort type used in feeds."
+            },
+            "infiniteScroll": {
+                "title": "Infinite scroll",
+                "description": "Loads new posts as you scroll and appends them to the feed."
+            },
+            "postsInNewTab": {
+                "title": "Open posts in new tab",
+                "description": "Opens posts in a separate tab instead of the current."
+            },
+            "displayName": {
+                "title": "Use display name",
+                "description": "Show users' display names instead of their actual usernames."
+            },
+            "limitLayoutWidth": {
+                "title": "Limit layout width",
+                "description": "Improve readability by limiting the main content width."
+            },
+            "placeholders": {
+                "title": "Random placeholders",
+                "description": "Show random placeholders for certain text inputs."
+            },
+            "expandImages": {
+                "title": "Expandable thumbnails",
+                "description": "Clicking on a post's image brings you to an expanded view rather than the post page."
+            },
+            "duplicateTitles": {
+                "title": "Hide duplicate embed content",
+                "description": "Hides the post title and body if they are identical to the embed."
+            },
+            "thumbnailSide": {
+                "title": "Thumbnail alignment",
+                "description": "Changes where thumbnails for posts are displayed in compact mode.",
+                "left": "Left",
+                "right": "Right"
+            },
+            "font": {
+                "title": "Font",
+                "description": "The font used for text in the UI."
+            },
+            "titleTags": {
+                "title": "Parse tags in title",
+                "description": "Take text in [brackets] and turn it into tags that you can click to search for."
+            },
+            "reverseActions": {
+                "title": "Reverse action row",
+                "description": "Reverses the order of actions on posts and comments."
+            },
+            "absoluteDates": {
+                "title": "Absolute timestamps",
+                "description": "Replaces relative timestamps (3 hours ago) with absolute ones (15/6/25)."
+            },
+            "titleOpensUrl": {
+                "title": "Title opens URL",
+                "description": "Makes clicking the title open the post's attached URL, rather than the comments."
+            },
+            "voteRatioBar": {
+                "title": "Vote ratio bar",
+                "description": "When the controversiality of a post reaches greater than 15%, a bar will be displayed in the vote buttons to help visualize sentiment."
+            }
+        },
+        "embeds": {
+            "title": "Embeds",
+            "clickToView": {
+                "title": "Click to view",
+                "description": "Only load embeds once you click on them."
+            },
+            "youtube": {
+                "description": "The website to embed YouTube content in."
+            },
+            "instance": {
+                "invidious": "Invidious instance",
+                "piped": "Piped instance",
+                "description": "The instance to embed YouTube content in."
+            }
+        },
+        "lemmy": {
+            "title": "Lemmy",
+            "showHiddenPosts": {
+                "title": "Show hidden posts",
+                "description": "Shows the posts you've manually hidden."
+            },
+            "compactFeatured": {
+                "title": "Compact featured posts",
+                "description": "Makes featured posts more compact."
+            },
+            "markReadPosts": {
+                "title": "Mark posts as read automatically",
+                "description": "Marks posts as read when you visit them."
+            },
+            "fadeReadPosts": {
+                "title": "Fade read posts",
+                "description": "Fade the title of posts you've already read"
+            },
+            "crosspostMarker": {
+                "title": "Mark crossposts",
+                "description": "Insert 'crossposted from' and a link when crossposting."
+            },
+            "hideSubmissions": {
+                "title": "Hide submissions",
+                "description": "Hide certain types of submissions.",
+                "deleted": "Deleted by user",
+                "removed": "Removed by moderator"
+            },
+            "contentFilter": {
+                "title": "فلاتر المحتوى",
+                "description": "إخفاء أو تصغير المنشورات التي تطابق سلاسل نصية معينة. يدعم التعبيرات العادية.",
+                "hide": "إخفاء",
+                "minimize": "تصغير",
+                "minimized": "محتوى مخفي بواسطة فلاترك",
+                "disabled": "إيقاف"
+            },
+            "nsfwBlur": {
+                "title": "NSFW blur",
+                "description": "Blurs images and remove post bodies of NSFW posts."
+            },
+            "instances": {
+                "title": "إظهار معرفات الخادم",
+                "description": "يظهر الخوادم التي نشأ منها محتوى معين."
+            }
+        },
+        "moderation": {
+            "title": "Moderation",
+            "replyPresets": {
+                "title": "إعدادات الرد المسبقة للحذف",
+                "description": "إعدادات مسبقة لاستخدامها في 'سبب الرد' في مربع حوار حذف التقديم.",
+                "syntax": "بناء الجملة"
+            }
+        },
+        "other": {
+            "title": "Other",
+            "debug": {
+                "title": "معلومات التصحيح",
+                "description": "يعرض معلومات التصحيح."
+            },
+            "virtualizeFeeds": {
+                "title": "لا تقم بإضفاء الطابع الافتراضي على الخلاصات",
+                "description": "العرض الافتراضي يعرض فقط المنشورات المرئية، مما يزيد الأداء بشكل كبير. قم بتعطيل العرض الافتراضي إذا كنت تواجه مشاكل تقطع. سيؤدي هذا إلى تعطيل التمرير اللانهائي."
+            }
+        },
+        "account": {
+            "title": "حساب"
+        },
+        "donate": {
+            "description": "سيكون Photon دائمًا مجانيًا ومفتوح المصدر، ويتم تطويره وتصميمه باستمرار ليكون مفيدًا. إذا كنت تحب Photon وترغب في دعم تطويره ماليًا، يمكنك التبرع هنا."
+        }
+    },
+    "error": {
+        "incorrect_login": "Incorrect login credentials. Please try again.",
+        "incorrect_login_2": "Incorrect login credentials. Try again.",
+        "incorrect_login_3": "Incorrect, again. Try a few more times.",
+        "incorrect_login_4": "You got this. Just a few more tries.",
+        "incorrect_login_5": "Look at your keyboard while typing this time.",
+        "incorrect_login_6": "I believe in you.",
+        "incorrect_login_7": "Okay, you're messing with me now.",
+        "incorrect_login_8": "I give up.",
+        "incorrect_login_9": "Each of these requests you make are sending data through via an incredible technology. And you're using it to make failed logins.",
+        "incorrect_login_10": "Think about this. The poor server admins have to maintain their server just for you to make these useless requests.",
+        "incorrect_login_11": "Each press of the button uses thousands of CPU cycles to process your request, which ends up failing.",
+        "incorrect_login_12": "...",
+        "registration_application_is_pending": "The registration application for that account hasn't been accepted yet.",
+        "couldnt_find_post": "That post doesn't exist, is not on this server, or was removed.",
+        "cant_block_yourself": "You cannot block yourself. You shouldn't either, you're (probably) a great person!",
+        "email_not_verified": "Your account's email is not verified.",
+        "passwords_do_not_match": "Your input password and the verification password do not match.",
+        "honeypot_failed": "Are you a bot? Beep bop bap boop. If you're not, the Honeypot check failed.",
+        "downvotes_are_disabled": "Downvotes are disabled on this server.",
+        "email_already_exists": "An account already exists with that email.",
+        "slurs": "Your submission contains a term banned in this server.",
+        "captcha_incorrect": "إجابة CAPTCHA غير صحيحة.",
+        "cant_block_local_instance": "You cannot block the server you are actively using.",
+        "invalid_vote_value": "You cannot commit voter fraud on Lemmy posts, sorry.",
+        "language_not_allowed": "That language is not allowed in this community. Unset it to use the community's default.",
+        "couldnt_find_person": "That user doesn't exist.",
+        "couldnt_find_community": "That community doesn't exist.",
+        "not_an_admin": "You are not an admin of this server.",
+        "rate_limit_error": "You are performing that action too fast.",
+        "unimplemented": "That function of your account's server software is not yet supported by Photon.",
+        "unsupported": "That function is not supported by your account's server software.",
+        "not_live_supported": "هذا الخادم لا يقوم بتشغيل برنامج مدعوم، أو أنه غير متصل.",
+        "token_not_found": "رابط التحقق من البريد الإلكتروني منتهي الصلاحية، أو لم يكن موجوداً أبداً.",
+        "invalid_password": "كلمة المرور غير صالحة."
+    },
+    "aria": {
+        "pagination": {
+            "nav": "Pagination",
+            "current": "Current page"
+        },
+        "vote": {
+            "group": "Post voting controls",
+            "upvotes": "{{default}} upvotes",
+            "downvotes": "{{default}} downvotes",
+            "score": "Score: {{default}}"
+        },
+        "sidebar": {
+            "title": "Sidebar",
+            "accounts": "Accounts selector"
+        },
+        "loading": "Loading",
+        "element": {
+            "pageHeader": "Page header"
+        },
+        "postDecor": {
+            "openImage": "Open image: {{default}}",
+            "openLink": "Open link: {{default}}",
+            "openPost": "Open post: {{default}}"
+        },
+        "comments": {
+            "children": "{{childCount}} أطفال"
+        }
+    },
+    "stats": {
+        "joined": "Joined",
+        "created": "Created"
+    },
+    "placeholders": {
+        "title": "Add a post title",
+        "body": "What do you have to say?",
+        "comments": "Join the conversation"
+    },
+    "class": {
+        "moderator": "Moderator",
+        "admin": "Administrator"
     }
 }

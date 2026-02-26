@@ -1,32 +1,125 @@
 {
-    "form": {
-        "profile": {
-            "email": "E-mail",
-            "matrix": "Matrix gebruiker",
-            "showNSFW": "Toon NSFW-inhoud",
-            "scores": "Toon Scores",
-            "bot": "Botaccount",
-            "showBots": "Toon Bots",
-            "showRead": "Toon gelezen berichten",
-            "currentPassword": "Huidig wachtwoord",
-            "newPassword": "Nieuw wachtwoord",
-            "verifyNewPassword": "Bevestig nieuw wachtwoord",
-            "2fa": {
-                "totp": "TOTP",
-                "2fa": "2FA",
-                "paste": "Plak dit in je authenticator-app."
-            },
-            "displayName": "Weergavenaam",
-            "bio": "Biografie",
-            "avatar": "Avatar",
-            "banner": "Banner",
-            "deleteAccount": {
-                "label": "Verwijder account",
-                "deleteContent": "Verwijder inhoud",
-                "warning": "Dit verwijdert AL je inzendingen."
-            }
+    "profile": {
+        "profile": "Profiel",
+        "inbox": "Inbox",
+        "saved": "Opgeslagen",
+        "subscribed": "Abonnementen"
+    },
+    "nav": {
+        "home": "Home",
+        "admin": "Beheer",
+        "moderation": "Moderatie",
+        "communities": "Verkennen",
+        "search": "Zoeken",
+        "create": {
+            "label": "Aanmaken",
+            "post": "Bericht",
+            "community": "Gemeenschap",
+            "logingate": "Interactie vereist een account."
         },
-        "description": "Beschrijving",
+        "menu": {
+            "label": "Profiel",
+            "app": "App",
+            "settings": "Instellingen",
+            "colorscheme": {
+                "label": "Kleurenpalet",
+                "system": "Systeem",
+                "dark": "Donker",
+                "light": "Licht"
+            },
+            "theme": "Thema",
+            "about": "Over",
+            "source": "Bron",
+            "donate": "Doneer",
+            "instance": "Instantie"
+        },
+        "commands": {
+            "prompt": "Opdrachtpalet",
+            "recents": "Recent",
+            "content": "Inhoud",
+            "search": "Zoeken naar {{default}}",
+            "main": "Hoofd",
+            "setView": "Stel weergave in",
+            "setViewTo": "Stel weergave in op {{default}}",
+            "setColor": "Stel kleurenpalet in",
+            "setColorTo": "Stel kleurenpalet in op {{default}}",
+            "feeds": "Feeds",
+            "downloading": "Acties downloaden",
+            "setTheme": "Set theme",
+            "setThemeTo": "Set theme to **{{default}}**",
+            "contextual": "On this page",
+            "communities": "Communities met **{{default}}**",
+            "goto": "Ga naar **{{default}}**"
+        },
+        "notifications": "Notifications"
+    },
+    "account": {
+        "login": "Inloggen",
+        "logout": "Uitloggen",
+        "signup": "Aanmelden",
+        "accounts": "Accounts",
+        "resetColor": "Reset kleur",
+        "addGuest": "Voeg gast toe",
+        "moveUp": "Omhoog verplaatsen",
+        "moveDown": "Omlaag verplaatsen",
+        "guest": "Gast",
+        "piefedGate": "Piefed support is experimental. Some features are not supported."
+    },
+    "filter": {
+        "location": {
+            "label": "Locatie",
+            "all": "Alle",
+            "local": "Lokaal",
+            "subscribed": "Abonnementen",
+            "moderator": "Moderator",
+            "global": "Globaal",
+            "popular": "Popular"
+        },
+        "sort": {
+            "label": "Sorteer",
+            "active": "Actief",
+            "hot": "Populair",
+            "top": {
+                "label": "Top",
+                "time": {
+                    "label": "Tijd",
+                    "all": "Alle",
+                    "year": "Afgelopen jaar",
+                    "9months": "9 Maanden",
+                    "6months": "6 Maanden",
+                    "3months": "3 Maanden",
+                    "month": "Maand",
+                    "week": "Week",
+                    "day": "Dag",
+                    "12hours": "12 Uur",
+                    "6hours": "6 Uur",
+                    "hour": "Uur"
+                }
+            },
+            "new": "Nieuw",
+            "old": "Oud",
+            "controversial": "Controversieel",
+            "scaled": "Geschaald",
+            "mostcomments": "Reacties",
+            "newcomments": "Nieuwe antwoorden"
+        },
+        "view": {
+            "label": "Weergave",
+            "cozy": "Knus",
+            "list": "Lijst",
+            "compact": "Compact",
+            "legacy": "Oud"
+        },
+        "type": "Type",
+        "filter": "Filter",
+        "unread": "Ongelezen",
+        "inbox": {
+            "messages": "Berichten",
+            "replies": "Antwoorden",
+            "mentions": "Vermeldingen"
+        }
+    },
+    "form": {
         "username": "Gebruikersnaam",
         "name": "Naam",
         "instance": "Instantie URL",
@@ -47,8 +140,55 @@
             "nsfw": "NSFW",
             "generateTitle": "Genereer titel",
             "uploadImage": "Afbeelding uploaden",
+            "selectFile": "Bestand selecteren",
             "altText": "Alternatieve tekst",
-            "selectFile": "Bestand selecteren"
+            "addUrl": "Add link",
+            "setLanguage": "Set language",
+            "unset": "Unset",
+            "readMore": "Read more",
+            "flair": "Flair toevoegen",
+            "fetching": "Site-metadata ophalen",
+            "types": {
+                "normal": "Discussie",
+                "poll": "Peiling",
+                "event": "Evenement"
+            },
+            "autosubmit": "Automatisch indienen",
+            "customThumbnail": "Miniatuur instellen"
+        },
+        "profile": {
+            "displayName": "Weergavenaam",
+            "bio": "Biografie",
+            "avatar": "Avatar",
+            "banner": "Banner",
+            "email": "E-mail",
+            "matrix": "Matrix gebruiker",
+            "showNSFW": "Toon NSFW-inhoud",
+            "scores": "Toon Scores",
+            "bot": "Botaccount",
+            "showBots": "Toon Bots",
+            "showRead": "Toon gelezen berichten",
+            "currentPassword": "Huidig wachtwoord",
+            "newPassword": "Nieuw wachtwoord",
+            "verifyNewPassword": "Bevestig nieuw wachtwoord",
+            "2fa": {
+                "totp": "TOTP",
+                "2fa": "2FA",
+                "paste": "Plak dit in je authenticator-app.",
+                "disabled": "2FA is disabled"
+            },
+            "deleteAccount": {
+                "deleteContent": "Verwijder inhoud",
+                "warning": "Dit verwijdert AL je inzendingen."
+            },
+            "languages": {
+                "title": "Languages",
+                "description": "If any are set, you will only see content explicitly tagged as that language. Most content, untagged, falls under 'Undetermined'."
+            },
+            "credentials": {
+                "title": "Manage how you log in",
+                "description": "You can enable 2FA for greater security, change your password, view logged in devices, or delete your account here."
+            }
         },
         "email": "E-mail",
         "setup": "Instellen",
@@ -59,21 +199,47 @@
             "chooseInstance": "Kies een instantie",
             "application": {
                 "label": "Aanvraag",
-                "info": "Om je bij deze instantie aan te sluiten, moet je deze aanvraag invullen en wachten op acceptatie. Je ontvangt een e-mail als je aanvraag is geaccepteerd."
+                "info": "Om je bij deze instantie aan te sluiten, moet je deze aanvraag invullen en wachten op acceptatie. Je ontvangt een e-mail als je aanvraag is geaccepteerd.",
+                "notice": "Your signup is now pending. Once an administrator reviews it, you will receive an email if it was accepted. You then can log in."
             },
             "closed": {
                 "title": "Registraties gesloten",
                 "description": "Deze instantie heeft registraties gesloten. Zoek een andere instantie.",
                 "anotherInstance": "Zoek een andere instantie"
+            },
+            "verify": {
+                "title": "Verify email",
+                "description": "Check your inbox for a verification link. Once you've clicked it, press the button below.",
+                "submit": "I've verified my email",
+                "error": "Your email has not been verified."
             }
-        }
+        },
+        "description": "Beschrijving",
+        "time": {
+            "duration": "Duration",
+            "minutes": "Minutes",
+            "hours": "Hours",
+            "days": "Days",
+            "months": "Months",
+            "years": "Years",
+            "permanent": "Permanent"
+        },
+        "instanceType": "Serversoftwaretype"
     },
     "routes": {
         "frontpage": {
             "title": "Voorpagina",
-            "footer": "{{users:number}} actieve {{users; 1:user; default:users;}}"
+            "footer": "{{users:number}} actieve {{users; 1:user; default:users;}}",
+            "endFeed": "You have reached the end of {{community_name; undefined:the feed.; default:{{community_name}}.}}",
+            "empty": {
+                "title": "No posts",
+                "description": "There are no posts that match this filter."
+            }
         },
-        "modlog": "Modlog",
+        "modlog": {
+            "title": "Modlog",
+            "filters": "Filters"
+        },
         "instances": "Instanties",
         "legal": {
             "title": "Juridisch",
@@ -82,7 +248,23 @@
         "profile": {
             "user": "Gebruiker",
             "settings": "Instellingen",
-            "blocks": "Blokken",
+            "blocks": {
+                "title": "Blocked",
+                "empty": {
+                    "user": {
+                        "title": "Geen geblokkeerde gebruikers",
+                        "description": "Het blokkeren van een gebruiker verbergt hun berichten en reacties in feeds."
+                    },
+                    "community": {
+                        "title": "Geen geblokkeerde communities",
+                        "description": "Het blokkeren van een community verbergt hun berichten in feeds."
+                    },
+                    "instance": {
+                        "title": "Geen geblokkeerde servers",
+                        "description": "Het blokkeren van een server verbergt berichten van hun communities in feeds."
+                    }
+                }
+            },
             "credentials": "Account",
             "moderates": "Modereren",
             "favorites": "Favorieten",
@@ -93,15 +275,33 @@
                 "download": "Download"
             },
             "logins": "Logins",
-            "welcome": "Welkom, {{default}}!",
             "delete": {
                 "title": "Account verwijderen",
                 "warning": "Dit kan niet ongedaan gemaakt worden, weet je het zeker?"
-            }
+            },
+            "overview": "Overview",
+            "submissions": "Submissions",
+            "edit": "Edit"
         },
         "translators": "Vertalers",
         "accounts": "Accounts",
-        "communities": "Gemeenschappen",
+        "accounts.placeholder": {
+            "title": "Niet ingelogd",
+            "description": "Je bent niet ingelogd. Je kunt hier registreren of inloggen.",
+            "descriptionWithGuest": "Je bent niet ingelogd. Je kunt hier inloggen, registreren of een gastaccount toevoegen."
+        },
+        "explore": {
+            "title": "Verkennen",
+            "feeds": "Feeds",
+            "topics": "Onderwerpen"
+        },
+        "communities": {
+            "title": "Communities",
+            "trending": "Trending",
+            "search": {
+                "placeholder": "Search for a new community"
+            }
+        },
         "search": {
             "title": "Zoeken",
             "federating": "Federeren",
@@ -110,19 +310,16 @@
                 "title": "Geen Resultaten",
                 "description": "Er zijn geen resultaten die aan die filter voldoen. Probeer je zoekopdracht te verfijnen.",
                 "alt": "Zoeken in het fediverse"
-            }
+            },
+            "top": "Top results",
+            "other": "Other results"
         },
         "saved": "Opgeslagen",
-        "createPost": "Bericht Aanmaken",
-        "createCommunity": "Gemeenschap Aanmaken",
         "post": {
             "crosspostCount": "crossposts",
             "commentCount": "reacties",
             "addComment": "Voeg een reactie toe",
             "scrollToTop": "Scroll naar boven",
-            "instanceWarning": "Dit bericht is aangevraagd vanaf een andere server dan die van je account. Veel acties zullen niet werken.",
-            "remoteView": "Externe weergave",
-            "localView": "Lokale weergave",
             "thread": {
                 "single": "Je bekijkt een enkele thread.",
                 "allComments": "Alle reacties",
@@ -130,7 +327,23 @@
                 "context": "Toon context"
             },
             "emptyComments": {
-                "title": "Geen reacties"
+                "title": "Geen reacties",
+                "description": "Start the conversation!"
+            },
+            "commented": "Your comment was posted.",
+            "loadComments": "Load comments"
+        },
+        "postRedirect": {
+            "title": "Cross-server content",
+            "description": "That content does not originate from {{homeInstance}}.",
+            "actions": {
+                "back": "Go back",
+                "fetch": "Continue on {{homeInstance}}",
+                "switch": "Switch to an account on {{destInstance}}"
+            },
+            "automatic": {
+                "title": "Bericht lokaliseren",
+                "description": "Die inhoud is niet afkomstig van de server van je account."
             }
         },
         "inbox": {
@@ -139,6 +352,19 @@
             "empty": {
                 "title": "Geen nieuwe meldingen",
                 "description": "Berichten, antwoorden en vermeldingen verschijnen hier."
+            },
+            "item": {
+                "reply": "{{user}} replied to you in {{post}}",
+                "mention": "{{user}} mentioned you in {{post}}",
+                "message": "{{user}} messaged {{recipient}}"
+            },
+            "messages": {
+                "conversation": "This is the beginning of your conversation with {{user}}",
+                "indicator": "Messaging {{user}}",
+                "start": "Start chat",
+                "empty": {
+                    "title": "No messages"
+                }
             }
         },
         "moderation": {
@@ -149,8 +375,18 @@
             },
             "reason": "Reden",
             "resolve": "Oplossen",
+            "resolved": "Resolved",
             "unresolve": "Oplossen ongedaan maken",
-            "resolvedBy": "Opgelost door"
+            "resolvedBy": "Opgelost door",
+            "markAll": "Mark page resolved",
+            "markAllComplete": "Batch action completed.",
+            "feed": "Reports",
+            "manage": {
+                "title": "Manage",
+                "modlogs": "Recent moderation logs",
+                "ban": "Ban",
+                "unban": "Unban"
+            }
         },
         "admin": {
             "title": "Administratie",
@@ -233,6 +469,9 @@
                     "title": "Geen toegestane instanties",
                     "description": "Het toestaan van een instantie blokkeert elke andere instantie."
                 }
+            },
+            "media": {
+                "title": "Media"
             }
         },
         "verifyEmail": {
@@ -250,9 +489,6 @@
         },
         "theme": {
             "title": "Thema",
-            "import": "Importeren",
-            "export": "Exporteren",
-            "reset": "Resetten",
             "accent": "Accent",
             "resetWarning": {
                 "title": "Thema resetten",
@@ -268,18 +504,205 @@
                 "default": "Standaard",
                 "classic": "Klassiek",
                 "imported": "Jouw thema",
-                "new": "Nieuw thema"
+                "new": "Nieuw thema",
+                "presets": "Presets"
             }
         },
         "community": {
             "settings": {
                 "team": "Team",
-                "settings": "Instellingen"
-            }
+                "settings": "Instellingen",
+                "manage": "Manage"
+            },
+            "languageWarning": "Content in this community is in languages you do not have selected. Some or all posts may be missing."
+        },
+        "user": {
+            "note": "Notitie instellen"
         }
     },
+    "cards": {
+        "site": {
+            "about": "Over",
+            "stats": "Statistieken",
+            "admins": "Beheerders"
+        },
+        "community": {
+            "members": "Leden",
+            "moderators": "Moderators",
+            "subscribe": "Abonneren",
+            "subscribed": "Geabonneerd",
+            "modlog": "Modlog",
+            "block": "Blokkeer",
+            "unblock": "Deblokkeer",
+            "blockInstance": "Blokkeer instantie",
+            "activeDay": "Actief vandaag",
+            "flair": "Mijn flair instellen"
+        }
+    },
+    "admin": {
+        "purge": "Verwijderen",
+        "instance": "Instantie",
+        "label": "Administratie",
+        "purgeCommunity": {
+            "title": "Gemeenschap verwijderen",
+            "warning": "Dit zal alle berichten verwijderen. Weet je zeker dat je dit wilt doen? (De knop wordt ingeschakeld in 3 seconden.)"
+        }
+    },
+    "content": {
+        "all": "Alle",
+        "users": "Gebruikers",
+        "posts": "Berichten",
+        "comments": "Reacties",
+        "communities": "Gemeenschappen",
+        "instances": "Instanties",
+        "message": "Bericht",
+        "url": "URL"
+    },
+    "post": {
+        "actions": {
+            "comments": "Reacties",
+            "save": "Opslaan",
+            "unsave": "Verwijder opslaan",
+            "more": {
+                "label": "Meer acties",
+                "edit": "Bewerken",
+                "creator": "Maker",
+                "actions": "Acties",
+                "markRead": "Markeer als gelezen",
+                "markUnread": "Markeer als ongelezen",
+                "hide": "Verbergen",
+                "unhide": "Toon",
+                "share": "Delen",
+                "share.from": "Delen vanaf",
+                "share.global": "Oorspronkelijke server",
+                "share.local": "Jouw server",
+                "share.photon": "Photon-link",
+                "crosspost": "Crosspost",
+                "delete": "Verwijderen",
+                "restore": "Herstellen"
+            },
+            "vote": {
+                "upvote": "Upvote",
+                "downvote": "Downvote",
+                "score": "Score"
+            }
+        },
+        "badges": {
+            "nsfw": "NSFW",
+            "locked": "Vergrendeld",
+            "featured": "Uitgelicht",
+            "removed": "Verwijderd",
+            "deleted": "Verwijderd",
+            "saved": "Opgeslagen"
+        },
+        "image": {
+            "zoomIn": "Zoom in",
+            "zoomOut": "Zoom out"
+        },
+        "meta": {
+            "lastEdited": "Last edited {{default}}",
+            "created": "Created {{default}}"
+        },
+        "poll": {
+            "votes": "{{votes:number}} stemmen",
+            "results": {
+                "show": "Resultaten tonen",
+                "hide": "Resultaten verbergen",
+                "ends": "Eindigt {{time}}",
+                "ended": "Beëindigd {{time}}"
+            },
+            "choices": "Keuzes",
+            "single": "Enkele keuze",
+            "multiple": "Meerdere keuzes",
+            "mode": "Modus"
+        }
+    },
+    "comment": {
+        "reply": "Antwoord",
+        "actions": {
+            "label": "Acties",
+            "link": "Kopieer Link"
+        },
+        "locked": "Dit bericht is vergrendeld.",
+        "banned": "Je bent verbannen uit deze gemeenschap.",
+        "more": "{{comments:number}} meer",
+        "collapse": "Inklappen",
+        "expand": "Uitklappen"
+    },
+    "moderation": {
+        "report": "Rapporteer",
+        "ban": {
+            "banning": "Gebruiker verbannen",
+            "unbanning": "Gebruiker deblokkeren",
+            "deleteData": "Verwijder gegevens",
+            "warning": "Dit verwijdert ALLE inzendingen van deze gebruiker hier.",
+            "expires": "Verloopt (UTC)",
+            "banFromCommunity": "Verbannen uit gemeenschap",
+            "unbanFromCommunity": "Deblokkeren uit gemeenschap"
+        },
+        "removeSubmission": {
+            "title": "Inzending verwijderen",
+            "titleRestore": "Inzending herstellen",
+            "titlePurge": "Inzending verwijderen",
+            "withReason": "Antwoord met reden",
+            "comment": "Opmerking",
+            "message": "Bericht",
+            "failReply": "Het is niet gelukt om een antwoord te plaatsen. Verwijderen toch...",
+            "failMessage": "Het is niet gelukt om de gebruiker te berichten. Verwijderen toch...",
+            "failEmptyReply": "Je antwoord kan niet leeg zijn als 'Antwoord met reden' is ingeschakeld.",
+            "successPurge": "Inzending succesvol verwijderd."
+        },
+        "reportModal": {
+            "title": "Rapporteer",
+            "success": "Inzending gerapporteerd.",
+            "presets": {
+                "spam": "Spam/misbruik",
+                "rules": "Overtreedt communityregels",
+                "rules.content": "Deze inzending overtreedt de regels omdat __"
+            }
+        },
+        "reason": "Reden",
+        "lock": "Vergrendelen",
+        "unlock": "Deblokkeren",
+        "remove": "Verwijderen",
+        "restore": "Herstellen",
+        "label": "Moderatie",
+        "labelInstanceOnly": "Moderatie (Alleen Instantie)",
+        "feature": "Uitlichten",
+        "unfeature": "Niet meer uitlichten",
+        "votes": "Votes",
+        "modlog": {
+            "user": "User moderation log",
+            "post": "Post moderation log",
+            "comment": "Comment moderation log"
+        }
+    },
+    "common": {
+        "back": "Terug",
+        "next": "Volgende",
+        "debug": "Debug",
+        "refresh": "Vernieuwen",
+        "jump": "Springen",
+        "save": "Opslaan",
+        "enabled": "Ingeschakeld",
+        "disabled": "Uitgeschakeld",
+        "enable": "Inschakelen",
+        "disable": "Uitschakelen",
+        "add": "Toevoegen",
+        "cancel": "Annuleren",
+        "send": "Verzenden",
+        "general": "General",
+        "remove": "Remove",
+        "download": "Download",
+        "attach": "Attach file",
+        "info": "Info"
+    },
+    "message": {
+        "success": "Succes",
+        "error": "Fout",
+        "retry": "Opnieuw proberen"
+    },
     "toast": {
-        "logIn": "Succesvol ingelogd.",
         "noComments": "De API heeft geen reacties geretourneerd.",
         "loginVoteGate": "Je moet ingelogd zijn om te stemmen.",
         "blockedCommunity": "Die gemeenschap geblokkeerd.",
@@ -307,13 +730,13 @@
         "failFindUser": "Die gebruiker kon niet worden gevonden.",
         "addMod": "Die moderator toegevoegd.",
         "updateMods": "Gemeenschapsmoderators bijgewerkt.",
+        "logIn": "Succesvol ingelogd.",
         "failInstanceURL": "Het is niet gelukt om contact op te nemen met die instantie-URL. Is het down?",
         "addAccount": "Die account toegevoegd.",
         "resetLink": "Een link om je wachtwoord te resetten is naar je e-mail verzonden.",
         "resolveReport": "Die rapportage opgelost.",
         "unresolveReport": "Die rapportage onopgelost gemaakt.",
         "passwordReset": "Je wachtwoord is gereset.",
-        "fetchPostOnHome": "Proberen dit bericht op je thuisinstantie op te halen...",
         "loginRefresh": "Je inloggegevens zijn vernieuwd.",
         "invalidLogin": "Ongeldige inloggegevens",
         "saveSettings": "Je gebruikersinstellingen zijn opgeslagen. Als je je e-mailadres hebt gewijzigd, is er een verificatielink verzonden.",
@@ -334,82 +757,10 @@
         "purgeUser": "Die gebruiker verwijderd.",
         "settingsImport": "Instellingen succesvol geïmporteerd.",
         "settingsImportWarning": "De geïmporteerde instellingen lijken niet geldig te zijn. Weet je zeker dat je dit wilt importeren?",
-        "userLoading": "Bezig met het laden van je gebruikersgegevens..."
+        "userLoading": "Bezig met het laden van je gebruikersgegevens...",
+        "lemmyDonate": "Your account's server runs Lemmy, and the developers are requesting donations. They are able to develop Lemmy as an open source platform, free of tracking and ads, thanks to the generosity of its users.\n\nAnnually, they ask you to consider donating to support their work, and allow them to continue maintaining and improving Lemmy.\n\n[Donate](https://join-lemmy.org/donate)\n\n*Note: this is a donation to Lemmy, not Photon.*"
     },
     "settings": {
-        "lemmy": {
-            "hideSubmissions": {
-                "deleted": "Verwijderd door gebruiker",
-                "removed": "Verwijderd door moderator",
-                "title": "Verberg inzendingen",
-                "description": "Verberg bepaalde soorten inzendingen."
-            },
-            "nsfwBlur": {
-                "title": "NSFW vervaging",
-                "description": "Vervag afbeeldingen en verwijder berichtinhoud van NSFW-berichten."
-            },
-            "title": "Lemmy",
-            "showHiddenPosts": {
-                "title": "Toon verborgen berichten",
-                "description": "Toon de berichten die je handmatig hebt verborgen."
-            },
-            "compactFeatured": {
-                "title": "Compacte uitgelichte berichten",
-                "description": "Maak uitgelichte berichten compacter"
-            },
-            "markReadPosts": {
-                "title": "Markeer gelezen berichten",
-                "description": "Markeer een bericht als gelezen wanneer je erop klikt"
-            },
-            "fadeReadPosts": {
-                "title": "Vervagende gelezen berichten",
-                "description": "Vervag de titel van berichten die je al hebt gelezen"
-            },
-            "crosspostMarker": {
-                "title": "Markeer crossposts",
-                "description": "Toon 'gecrosspost vanuit' bij het crossposten."
-            },
-            "instances": {
-                "title": "Toon instanties",
-                "description": "Toon de instanties waar bepaalde inhoud vandaan komt."
-            }
-        },
-        "moderation": {
-            "replyPresets": {
-                "title": "Verwijderingsantwoord presets",
-                "description": "Presets om te gebruiken voor 'antwoordreden' in de verwijderingsdialoog van de inzending.",
-                "syntax": "Syntax"
-            },
-            "title": "Moderatie"
-        },
-        "other": {
-            "title": "Overig",
-            "debug": {
-                "title": "Debug-informatie",
-                "description": "Toon debug-informatie"
-            }
-        },
-        "navigation": {
-            "panel": {
-                "description": "Strek de dock naar de randen van het scherm, vergelijkbaar met een paneel.",
-                "title": "Paneelmodus",
-                "on": "Aan",
-                "off": "Uit",
-                "adaptive": "Adaptief"
-            },
-            "title": "Navigatie",
-            "dockPos": {
-                "title": "Dock positie",
-                "description": "Waar de dock op het scherm moet worden gepositioneerd.",
-                "top": "Boven",
-                "bottom": "Onder",
-                "adaptive": "Adaptief"
-            },
-            "pins": {
-                "title": "Pins",
-                "description": "Klik op een pin om deze naar de bovenkant van de zijbalk te verzenden. Klik met de rechtermuisknop op een vastgezet item om het te verwijderen."
-            }
-        },
         "title": "Instellingen",
         "beta": "Bèta",
         "desktop": "Desktop",
@@ -418,6 +769,13 @@
         "export": "Exporteren",
         "import": "Importeren",
         "reset": "Resetten",
+        "navigation": {
+            "title": "Navigatie",
+            "autoHide": {
+                "title": "Auto hide dock",
+                "description": "Hides the dock on mobile when you scroll down, re-appears when you scroll up."
+            }
+        },
         "app": {
             "title": "Photon",
             "theming": {
@@ -425,25 +783,9 @@
                 "description": "Pas de kleuren van Photon aan.",
                 "link": "Ga naar thema's"
             },
-            "colorscheme": {
-                "title": "Kleurenpalet",
-                "description": "Het kleurenpalet dat gebruikt moet worden."
-            },
             "lang": {
                 "title": "Taal",
                 "description": "De taal die wordt gebruikt voor de gebruikersinterface van Photon.",
-                "note": "Talen anders dan Engels en Hebreeuws zijn door de gemeenschap vertaald en kunnen incompleet zijn.",
-                "en": "Engels",
-                "en-US": "Engels",
-                "he": "Hebreeuws",
-                "et": "Estisch",
-                "fr": "Frans",
-                "de": "Duits",
-                "fi": "Fins",
-                "pt": "Portugees",
-                "zh": "Chinees",
-                "zh-Hans": "Chinees (Vereenvoudigd)",
-                "zh-Hant": "Chinees (Traditioneel)",
                 "auto": "Automatisch",
                 "credits": "Credits",
                 "useRtl": {
@@ -453,10 +795,8 @@
             },
             "view": {
                 "title": "Berichtstijl",
-                "list": "Toon berichten in een lijst, met berichtinhoud en compacte media.",
                 "cozy": "Toon berichten met grote afbeeldingen, rijke embeds en langere berichtinhoud.",
-                "compact": "Toon berichten in een lijst, zonder berichtinhoud en met strakkere spacing.",
-                "legacy": "De oude look van Photon."
+                "compact": "Toon berichten in een lijst, zonder berichtinhoud en met strakkere spacing."
             },
             "sort": {
                 "title": "Standaard sortering",
@@ -500,20 +840,25 @@
                 "title": "Lettertype",
                 "description": "Welk lettertype Photon gebruikt in de gebruikersinterface."
             },
-            "translation": {
-                "title": "Vertaling",
-                "description": "De LibreTranslate-instantie die moet worden gebruikt voor vertaling.",
-                "instance": "Domein"
-            },
             "titleTags": {
                 "title": "Parse tags in titel",
-                "description": "Neem tekst in [haakjes] en maak er tags van waarop je kunt klikken om naar te zoeken.",
-                "rules": {
-                    "title": "Regels",
-                    "blur-sm": "Vervagen",
-                    "hide": "Verbergen",
-                    "show": "Toon"
-                }
+                "description": "Neem tekst in [haakjes] en maak er tags van waarop je kunt klikken om naar te zoeken."
+            },
+            "reverseActions": {
+                "title": "Reverse action row",
+                "description": "Reverses the order of actions on posts and comments."
+            },
+            "absoluteDates": {
+                "title": "Absolute timestamps",
+                "description": "Replaces relative timestamps (3 hours ago) with absolute ones (15/6/25)."
+            },
+            "titleOpensUrl": {
+                "title": "Title opens URL",
+                "description": "Makes clicking the title open the post's attached URL, rather than the comments."
+            },
+            "voteRatioBar": {
+                "title": "Vote ratio bar",
+                "description": "When the controversiality of a post reaches greater than 15%, a bar will be displayed in the vote buttons to help visualize sentiment."
             }
         },
         "embeds": {
@@ -530,6 +875,76 @@
                 "piped": "Piped instantie",
                 "description": "De instantie om YouTube-inhoud in te embedden."
             }
+        },
+        "lemmy": {
+            "title": "Lemmy",
+            "showHiddenPosts": {
+                "title": "Toon verborgen berichten",
+                "description": "Toon de berichten die je handmatig hebt verborgen."
+            },
+            "compactFeatured": {
+                "title": "Compacte uitgelichte berichten",
+                "description": "Maak uitgelichte berichten compacter"
+            },
+            "markReadPosts": {
+                "title": "Markeer gelezen berichten",
+                "description": "Markeer een bericht als gelezen wanneer je erop klikt"
+            },
+            "fadeReadPosts": {
+                "title": "Vervagende gelezen berichten",
+                "description": "Vervag de titel van berichten die je al hebt gelezen"
+            },
+            "crosspostMarker": {
+                "title": "Markeer crossposts",
+                "description": "Toon 'gecrosspost vanuit' bij het crossposten."
+            },
+            "hideSubmissions": {
+                "title": "Verberg inzendingen",
+                "description": "Verberg bepaalde soorten inzendingen.",
+                "deleted": "Verwijderd door gebruiker",
+                "removed": "Verwijderd door moderator"
+            },
+            "contentFilter": {
+                "title": "Inhoudsfilters",
+                "description": "Verberg of minimaliseer berichten die overeenkomen met gegeven strings. Ondersteunt reguliere expressies.",
+                "hide": "Verbergen",
+                "minimize": "Minimaliseren",
+                "minimized": "Inhoud verborgen door je filters",
+                "disabled": "Uit"
+            },
+            "nsfwBlur": {
+                "title": "NSFW vervaging",
+                "description": "Vervag afbeeldingen en verwijder berichtinhoud van NSFW-berichten."
+            },
+            "instances": {
+                "title": "Toon instanties",
+                "description": "Toon de instanties waar bepaalde inhoud vandaan komt."
+            }
+        },
+        "moderation": {
+            "title": "Moderatie",
+            "replyPresets": {
+                "title": "Verwijderingsantwoord presets",
+                "description": "Presets om te gebruiken voor 'antwoordreden' in de verwijderingsdialoog van de inzending.",
+                "syntax": "Syntax"
+            }
+        },
+        "other": {
+            "title": "Overig",
+            "debug": {
+                "title": "Debug-informatie",
+                "description": "Toon debug-informatie"
+            },
+            "virtualizeFeeds": {
+                "title": "Don't virtualize feeds",
+                "description": "Virtualization only renders visible posts, increasing performance drastically. Disable virtualization if you are having stutter problems. This will disable infinite scroll."
+            }
+        },
+        "account": {
+            "title": "Account"
+        },
+        "donate": {
+            "description": "Photon will always be free and open-source, and is continously developed and designed to be helpful. If you like Photon and want to financially support its development, you can donate here."
         }
     },
     "error": {
@@ -544,266 +959,69 @@
         "incorrect_login_9": "Elke van deze verzoeken die je doet, verzendt gegevens via een ongelooflijke technologie. En je gebruikt het om mislukte inlogpogingen te maken.",
         "incorrect_login_10": "Denk hier eens over na. De arme instantiebeheerders moeten hun server onderhouden, gewoon zodat jij deze nutteloze verzoeken kunt doen.",
         "incorrect_login_11": "Ik geef het op, echt deze keer.",
-        "incorrect_login_12": "..."
+        "incorrect_login_12": "...",
+        "registration_application_is_pending": "The registration application for that account hasn't been accepted yet.",
+        "couldnt_find_post": "That post doesn't exist, is not on this server, or was removed.",
+        "cant_block_yourself": "You cannot block yourself. You shouldn't either, you're (probably) a great person!",
+        "email_not_verified": "Your account's email is not verified.",
+        "passwords_do_not_match": "Your input password and the verification password do not match.",
+        "honeypot_failed": "Are you a bot? Beep bop bap boop. If you're not, the Honeypot check failed.",
+        "downvotes_are_disabled": "Downvotes are disabled on this server.",
+        "email_already_exists": "An account already exists with that email.",
+        "slurs": "Your submission contains a term banned in this server.",
+        "captcha_incorrect": "Onjuist CAPTCHA-antwoord.",
+        "cant_block_local_instance": "You cannot block the server you are actively using.",
+        "invalid_vote_value": "You cannot commit voter fraud on Lemmy posts, sorry.",
+        "language_not_allowed": "That language is not allowed in this community. Unset it to use the community's default.",
+        "couldnt_find_person": "That user doesn't exist.",
+        "couldnt_find_community": "That community doesn't exist.",
+        "not_an_admin": "You are not an admin of this server.",
+        "rate_limit_error": "You are performing that action too fast.",
+        "unimplemented": "That function of your account's server software is not yet supported by Photon.",
+        "unsupported": "That function is not supported by your account's server software.",
+        "not_live_supported": "Die server draait geen ondersteunde software of is offline.",
+        "token_not_found": "Die e-mailverificatielink is verlopen of heeft nooit bestaan.",
+        "invalid_password": "Ongeldig wachtwoord."
     },
-    "profile": {
-        "profile": "Profiel",
-        "inbox": "Inbox",
-        "saved": "Opgeslagen",
-        "subscribed": "Abonnementen"
-    },
-    "nav": {
-        "home": "Home",
-        "admin": "Beheer",
-        "moderation": "Moderatie",
-        "communities": "Verkennen",
-        "search": "Zoeken",
-        "create": {
-            "label": "Aanmaken",
-            "post": "Bericht",
-            "community": "Gemeenschap",
-            "logingate": "Interactie vereist een account."
+    "aria": {
+        "pagination": {
+            "nav": "Pagination",
+            "current": "Current page"
         },
-        "menu": {
-            "label": "Profiel",
-            "app": "App",
-            "settings": "Instellingen",
-            "colorscheme": {
-                "label": "Kleurenpalet",
-                "system": "Systeem",
-                "dark": "Donker",
-                "light": "Licht"
-            },
-            "theme": "Thema",
-            "about": "Over",
-            "source": "Bron",
-            "donate": "Doneer",
-            "instance": "Instantie"
+        "vote": {
+            "group": "Post voting controls",
+            "upvotes": "{{default}} upvotes",
+            "downvotes": "{{default}} downvotes",
+            "score": "Score: {{default}}"
         },
-        "commands": {
-            "prompt": "Opdrachtpalet",
-            "recents": "Recent",
-            "content": "Inhoud",
-            "search": "Zoeken naar {{default}}",
-            "main": "Hoofd",
-            "setView": "Stel weergave in",
-            "setViewTo": "Stel weergave in op {{default}}",
-            "setColor": "Stel kleurenpalet in",
-            "setColorTo": "Stel kleurenpalet in op {{default}}",
-            "feeds": "Feeds",
-            "downloading": "Acties downloaden"
+        "sidebar": {
+            "title": "Sidebar",
+            "accounts": "Accounts selector"
+        },
+        "loading": "Loading",
+        "element": {
+            "pageHeader": "Page header"
+        },
+        "postDecor": {
+            "openImage": "Open image: {{default}}",
+            "openLink": "Open link: {{default}}",
+            "openPost": "Open post: {{default}}"
+        },
+        "comments": {
+            "children": "{{childCount}} kinderen"
         }
     },
-    "account": {
-        "login": "Inloggen",
-        "logout": "Uitloggen",
-        "signup": "Aanmelden",
-        "accounts": "Accounts",
-        "changeinstance": "Wijzig instantie",
-        "resetColor": "Reset kleur",
-        "addGuest": "Voeg gast toe",
-        "moveUp": "Omhoog verplaatsen",
-        "moveDown": "Omlaag verplaatsen",
-        "guest": "Gast",
-        "versionGate": "Deze versie van Photon ondersteunt instanties die draaien op {{version}} of hoger."
+    "stats": {
+        "joined": "Joined",
+        "created": "Created"
     },
-    "filter": {
-        "location": {
-            "label": "Locatie",
-            "all": "Alle",
-            "local": "Lokaal",
-            "subscribed": "Abonnementen",
-            "moderator": "Moderator",
-            "global": "Globaal"
-        },
-        "sort": {
-            "label": "Sorteer",
-            "active": "Actief",
-            "hot": "Populair",
-            "top": {
-                "label": "Top",
-                "time": {
-                    "label": "Tijd",
-                    "all": "Alle",
-                    "9months": "9 Maanden",
-                    "6months": "6 Maanden",
-                    "3months": "3 Maanden",
-                    "month": "Maand",
-                    "week": "Week",
-                    "day": "Dag",
-                    "12hours": "12 Uur",
-                    "6hours": "6 Uur",
-                    "hour": "Uur"
-                }
-            },
-            "new": "Nieuw",
-            "old": "Oud",
-            "controversial": "Controversieel",
-            "scaled": "Geschaald",
-            "mostcomments": "Reacties",
-            "newcomments": "Nieuwe antwoorden"
-        },
-        "view": {
-            "label": "Weergave",
-            "cozy": "Knus",
-            "list": "Lijst",
-            "compact": "Compact",
-            "legacy": "Oud"
-        },
-        "type": "Type",
-        "filter": "Filter",
-        "unread": "Ongelezen",
-        "inbox": {
-            "messages": "Berichten",
-            "replies": "Antwoorden",
-            "mentions": "Vermeldingen"
-        }
+    "placeholders": {
+        "title": "Add a post title",
+        "body": "What do you have to say?",
+        "comments": "Join the conversation"
     },
-    "cards": {
-        "site": {
-            "about": "Over",
-            "stats": "Statistieken",
-            "admins": "Beheerders"
-        },
-        "community": {
-            "members": "Leden",
-            "moderators": "Moderators",
-            "subscribe": "Abonneren",
-            "subscribed": "Geabonneerd",
-            "modlog": "Modlog",
-            "block": "Blokkeer",
-            "unblock": "Deblokkeer",
-            "blockInstance": "Blokkeer instantie",
-            "favorite": "Favoriet",
-            "unfavorite": "Verwijder favoriet",
-            "activeDay": "Actief vandaag"
-        }
-    },
-    "admin": {
-        "purge": "Verwijderen",
-        "instance": "Instantie",
-        "label": "Administratie",
-        "purgeCommunity": {
-            "title": "Gemeenschap verwijderen",
-            "warning": "Dit zal alle berichten verwijderen. Weet je zeker dat je dit wilt doen? (De knop wordt ingeschakeld in 3 seconden.)"
-        }
-    },
-    "content": {
-        "all": "Alle",
-        "users": "Gebruikers",
-        "posts": "Berichten",
-        "comments": "Reacties",
-        "communities": "Gemeenschappen",
-        "instances": "Instanties",
-        "message": "Bericht"
-    },
-    "post": {
-        "actions": {
-            "comments": "Reacties",
-            "save": "Opslaan",
-            "unsave": "Verwijder opslaan",
-            "more": {
-                "label": "Meer acties",
-                "edit": "Bewerken",
-                "creator": "Maker",
-                "actions": "Acties",
-                "markRead": "Markeer als gelezen",
-                "markUnread": "Markeer als ongelezen",
-                "hide": "Verbergen",
-                "unhide": "Toon",
-                "translate": "Vertalen",
-                "mediaBias": "Media Bias",
-                "share": "Delen",
-                "crosspost": "Crosspost",
-                "delete": "Verwijderen",
-                "restore": "Herstellen"
-            },
-            "mediaBias": {
-                "description": "Beschrijving",
-                "credibility": "Betrouwbaarheid",
-                "reporting": "Feitelijke rapportage",
-                "noData": {
-                    "title": "Geen gegevens",
-                    "description": "Er zijn geen bias-gegevens voor deze website."
-                },
-                "downloading": "Dataset downloaden",
-                "loading": "Bron laden"
-            }
-        },
-        "badges": {
-            "nsfw": "NSFW",
-            "locked": "Vergrendeld",
-            "featured": "Uitgelicht",
-            "removed": "Verwijderd",
-            "deleted": "Verwijderd",
-            "saved": "Opgeslagen"
-        }
-    },
-    "comment": {
-        "reply": "Antwoord",
-        "actions": {
-            "label": "Acties",
-            "link": "Kopieer Link"
-        },
-        "locked": "Dit bericht is vergrendeld.",
-        "banned": "Je bent verbannen uit deze gemeenschap.",
-        "more": "{{comments:number}} meer"
-    },
-    "moderation": {
-        "report": "Rapporteer",
-        "ban": {
-            "banning": "Gebruiker verbannen",
-            "unbanning": "Gebruiker deblokkeren",
-            "deleteData": "Verwijder gegevens",
-            "warning": "Dit verwijdert ALLE inzendingen van deze gebruiker hier.",
-            "expires": "Verloopt (UTC)",
-            "banFromCommunity": "Verbannen uit gemeenschap",
-            "unbanFromCommunity": "Deblokkeren uit gemeenschap"
-        },
-        "removeSubmission": {
-            "title": "Inzending verwijderen",
-            "titleRestore": "Inzending herstellen",
-            "titlePurge": "Inzending verwijderen",
-            "withReason": "Antwoord met reden",
-            "comment": "Opmerking",
-            "message": "Bericht",
-            "failReply": "Het is niet gelukt om een antwoord te plaatsen. Verwijderen toch...",
-            "failMessage": "Het is niet gelukt om de gebruiker te berichten. Verwijderen toch...",
-            "failEmptyReply": "Je antwoord kan niet leeg zijn als 'Antwoord met reden' is ingeschakeld.",
-            "successPurge": "Inzending succesvol verwijderd."
-        },
-        "reportModal": {
-            "title": "Rapporteer",
-            "success": "Inzending gerapporteerd."
-        },
-        "reason": "Reden",
-        "lock": "Vergrendelen",
-        "unlock": "Deblokkeren",
-        "remove": "Verwijderen",
-        "restore": "Herstellen",
-        "label": "Moderatie",
-        "labelInstanceOnly": "Moderatie (Alleen Instantie)",
-        "feature": "Uitlichten",
-        "unfeature": "Niet meer uitlichten"
-    },
-    "common": {
-        "back": "Terug",
-        "next": "Volgende",
-        "debug": "Debug",
-        "refresh": "Vernieuwen",
-        "jump": "Springen",
-        "save": "Opslaan",
-        "enabled": "Ingeschakeld",
-        "disabled": "Uitgeschakeld",
-        "enable": "Inschakelen",
-        "disable": "Uitschakelen",
-        "add": "Toevoegen",
-        "cancel": "Annuleren",
-        "send": "Verzenden"
-    },
-    "message": {
-        "success": "Succes",
-        "error": "Fout",
-        "retry": "Opnieuw proberen"
+    "class": {
+        "moderator": "Moderator",
+        "admin": "Administrator"
     }
 }
