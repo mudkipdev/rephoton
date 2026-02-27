@@ -25,6 +25,7 @@
     BugAnt,
     ChatBubbleOvalLeft,
     ChatBubbleOvalLeftEllipsis,
+    Check,
     EllipsisHorizontal,
     GlobeAlt,
     Icon,
@@ -38,6 +39,7 @@
 
   let saving = $state(false)
   let editing = $state(false)
+  let copied = $state(false)
 
   interface Props {
     post: PostView
@@ -73,6 +75,8 @@
     else {
       navigator.clipboard.writeText(link)
       toast({ content: $t('toast.copied') })
+      copied = true
+      setTimeout(() => (copied = false), 2000)
     }
   }
 </script>
@@ -202,7 +206,7 @@
         onclick={() => {
           if (post.post.local) share()
         }}
-        icon={Share}
+        icon={copied ? Check : Share}
         title={$t('post.actions.more.share')}
       />
     {/snippet}

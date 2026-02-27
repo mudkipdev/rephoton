@@ -1,0 +1,101 @@
+▲ [WARNING] Cannot find base config file "./.svelte-kit/tsconfig.json" [tsconfig.json]
+
+    tsconfig.json:2:13:
+      2 │   "extends": "./.svelte-kit/tsconfig.json",
+        ╵              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+7:18:11 AM [vite-plugin-svelte] The following packages have a svelte field in their package.json but no exports condition for svelte.
+
+svelte-infinite-scroll@2.0.1
+
+Please see https://github.com/sveltejs/vite-plugin-svelte/blob/main/docs/faq.md#missing-exports-condition for details.
+7:18:11 AM [vite] (client) Forced re-optimization of dependencies
+
+  VITE v6.4.1  ready in 4117 ms
+
+  ➜  Local:   http://localhost:3000/
+  ➜  Network: http://192.168.0.2:3000/
+7:19:21 AM [vite-plugin-svelte] src/lib/app/settings.svelte.ts:103:9 This reference only captures the initial value of `settings2`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/ui/shared/popover/Popover.svelte:62:14 This reference only captures the initial value of `strategy`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/ui/shared/popover/Popover.svelte:63:15 This reference only captures the initial value of `placement`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/ui/shared/popover/Popover.svelte:64:16 This reference only captures the initial value of `middleware`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/app/markdown/Markdown.svelte:146:7 This reference only captures the initial value of `rendererOptions`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/app/markdown/Markdown.svelte:147:12 This reference only captures the initial value of `inline`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/app/markdown/Markdown.svelte:148:13 This reference only captures the initial value of `noStyle`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/app/markdown/MdTree.svelte:26:6 This reference only captures the initial value of `header`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:23:4 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:24:8 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:25:8 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:30:7 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:31:24 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:33:7 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:23 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:36:53 This reference only captures the initial value of `canVote`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:24 AM [vite-plugin-svelte] src/lib/ui/layout/pages/PostListShell.svelte:54:14 This reference only captures the initial value of `params`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:24 AM [vite-plugin-svelte] src/lib/ui/layout/pages/PostListShell.svelte:55:10 This reference only captures the initial value of `params`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:24 AM [vite-plugin-svelte] src/lib/app/render/VirtualList.svelte:65:38 This reference only captures the initial value of `items`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:24 AM [vite-plugin-svelte] src/lib/app/render/VirtualList.svelte:170:5 This reference only captures the initial value of `debounceResize`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:25 AM [vite-plugin-svelte] src/lib/app/settings.svelte.ts:103:9 This reference only captures the initial value of `settings2`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:26 AM [vite-plugin-svelte] src/lib/app/markdown/Markdown.svelte:146:7 This reference only captures the initial value of `rendererOptions`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:26 AM [vite-plugin-svelte] src/lib/app/markdown/Markdown.svelte:147:12 This reference only captures the initial value of `inline`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:26 AM [vite-plugin-svelte] src/lib/app/markdown/Markdown.svelte:148:13 This reference only captures the initial value of `noStyle`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:26 AM [vite-plugin-svelte] src/lib/ui/layout/pages/PostListShell.svelte:54:14 This reference only captures the initial value of `params`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:26 AM [vite-plugin-svelte] src/lib/ui/layout/pages/PostListShell.svelte:55:10 This reference only captures the initial value of `params`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:26 AM [vite-plugin-svelte] src/lib/ui/shared/popover/Popover.svelte:62:14 This reference only captures the initial value of `strategy`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:26 AM [vite-plugin-svelte] src/lib/ui/shared/popover/Popover.svelte:63:15 This reference only captures the initial value of `placement`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:26 AM [vite-plugin-svelte] src/lib/ui/shared/popover/Popover.svelte:64:16 This reference only captures the initial value of `middleware`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:27 AM [vite-plugin-svelte] src/lib/app/markdown/MdTree.svelte:26:6 This reference only captures the initial value of `header`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:27 AM [vite-plugin-svelte] src/lib/app/render/VirtualList.svelte:65:38 This reference only captures the initial value of `items`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:27 AM [vite-plugin-svelte] src/lib/app/render/VirtualList.svelte:170:5 This reference only captures the initial value of `debounceResize`. Did you mean to reference it inside a closure instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:28 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:23:4 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:28 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:24:8 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:28 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:25:8 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:28 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:30:7 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:28 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:31:24 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:28 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:33:7 This reference only captures the initial value of `post`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:19:28 AM [vite-plugin-svelte] src/lib/feature/post/media/PostPoll.svelte:36:53 This reference only captures the initial value of `canVote`. Did you mean to reference it inside a derived instead?
+https://svelte.dev/e/state_referenced_locally
+7:20:45 AM [vite] (client) page reload verify_ux.spec.ts
+7:20:45 AM [vite] (client) page reload vite_output.txt
+7:22:47 AM [vite] (client) page reload verify_ux.spec.ts
+7:22:47 AM [vite] (client) page reload vite_output.txt
+7:25:17 AM [vite] (client) page reload verify_ux.spec.ts
+7:25:17 AM [vite] (client) page reload vite_output.txt
+7:26:09 AM [vite] (client) page reload package.json
+7:26:09 AM [vite] (client) page reload vite_output.txt

@@ -695,7 +695,8 @@
         "remove": "Eliminar",
         "download": "Descarregar",
         "attach": "Adjuntar fitxer",
-        "info": "Informació"
+        "info": "Informació",
+        "backToTop": "Torna a dalt"
     },
     "message": {
         "success": "Èxit",

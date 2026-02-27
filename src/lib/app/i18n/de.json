@@ -695,7 +695,8 @@
         "remove": "Entfernen",
         "download": "Herunterladen",
         "attach": "Datei anhängen",
-        "info": "Info"
+        "info": "Info",
+        "backToTop": "Nach oben"
     },
     "message": {
         "success": "Erfolg",

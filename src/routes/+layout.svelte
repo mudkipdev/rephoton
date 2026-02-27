@@ -15,6 +15,7 @@
   import Moderation from '$lib/feature/moderation/Moderation.svelte'
   import ExpandableImage from '$lib/ui/generic/ExpandableImage.svelte'
   import { Shell } from '$lib/ui/layout'
+  import BackToTop from '$lib/ui/layout/BackToTop.svelte'
   import Navbar from '$lib/ui/navbar/Navbar.svelte'
   import Sidebar from '$lib/ui/sidebar/Sidebar.svelte'
   import { Button, ModalContainer, Spinner, ToastContainer } from 'mono-svelte'
@@ -135,6 +136,7 @@
   <ToastContainer />
   <ExpandableImage />
   <ModalContainer />
+  <BackToTop />
 
   {#snippet sidebar({ style: s, class: c })}
     <Sidebar class={[c, 'p-3 sm:p-6 w-full']} style={s} />

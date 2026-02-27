@@ -510,7 +510,8 @@
         "remove": "o weka",
         "cancel": "ala",
         "save": "o olin",
-        "send": "o toki"
+        "send": "o toki",
+        "backToTop": "o tawa sewi"
     },
     "error": {
         "incorrect_login_7": "sina musi?",
