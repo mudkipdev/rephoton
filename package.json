@@ -1,6 +1,7 @@
 {
   "name": "photon-lemmy",
   "version": "2.2.2",
+  "license": "AGPL-3.0-only",
   "devDependencies": {
     "@eslint/compat": "^1.4.1",
     "@eslint/js": "^9.39.2",
@@ -41,7 +42,6 @@
     "ua-parser-js": "^1.0.41",
     "vite": "^6.4.1"
   },
-  "license": "AGPL-3.0-only",
   "private": true,
   "scripts": {
     "dev": "vite dev",
