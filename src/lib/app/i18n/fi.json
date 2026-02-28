@@ -695,7 +695,8 @@
         "remove": "Poista",
         "download": "Lataa",
         "attach": "Liitä tiedosto",
-        "info": "Tietoja"
+        "info": "Tietoja",
+        "backToTop": "Takaisin ylös"
     },
     "message": {
         "success": "Onnistui",

@@ -695,7 +695,8 @@
         "remove": "הסר",
         "download": "הורד",
         "attach": "צרף קובץ",
-        "info": "מידע"
+        "info": "מידע",
+        "backToTop": "חזרה למעלה"
     },
     "message": {
         "success": "הצלחה",

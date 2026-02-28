@@ -695,7 +695,8 @@
         "remove": "削除",
         "download": "ダウンロード",
         "attach": "ファイルを添付",
-        "info": "情報"
+        "info": "情報",
+        "backToTop": "トップへ戻る"
     },
     "message": {
         "success": "成功",

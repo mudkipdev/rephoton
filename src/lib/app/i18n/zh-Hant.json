@@ -695,7 +695,8 @@
         "remove": "移除",
         "download": "下載",
         "attach": "附加檔案",
-        "info": "資訊"
+        "info": "資訊",
+        "backToTop": "回到頂部"
     },
     "message": {
         "success": "成功",

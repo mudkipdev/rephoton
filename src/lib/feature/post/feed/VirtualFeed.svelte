@@ -285,7 +285,11 @@
               'Lemmy. There are no more posts. You saw them all.',
           })}
           {#snippet action()}
-            <Button color="tertiary" icon={ChevronDoubleUp}>
+            <Button
+              color="tertiary"
+              icon={ChevronDoubleUp}
+              onclick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+            >
               {$t('routes.post.scrollToTop')}
             </Button>
           {/snippet}
