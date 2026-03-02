@@ -16,7 +16,14 @@ export async function load({ params, url, fetch }) {
     sort: sort,
   })
 
-  const items = [...user.posts, ...user.comments]
+  let items: any[] = []
+  if (type === 'posts') {
+    items = [...user.posts]
+  } else if (type === 'comments') {
+    items = [...user.comments]
+  } else {
+    items = [...user.posts, ...user.comments]
+  }
 
   if (sort == 'TopAll') {
     items.sort(
