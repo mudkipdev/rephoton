@@ -10,8 +10,10 @@
     InformationCircle,
     XMark,
   } from 'svelte-hero-icons/dist'
+  import { onDestroy, onMount } from 'svelte'
   import { expoOut } from 'svelte/easing'
   import { fly, scale } from 'svelte/transition'
+  import { createWebHaptics } from 'web-haptics/svelte'
   import { type Toast, toastColors, toasts } from './toasts'
 
   interface Props {
@@ -19,6 +21,36 @@
   }
 
   let { toast }: Props = $props()
+
+  const { trigger, destroy } = createWebHaptics()
+  onDestroy(destroy)
+
+  onMount(() => {
+    switch (toast.type) {
+      case 'error':
+        trigger([
+          { duration: 40 },
+          { delay: 40, duration: 40 },
+          { delay: 40, duration: 40 },
+        ], { intensity: 0.9 })
+        break
+      case 'success':
+        trigger([
+          { duration: 15 },
+        ], { intensity: 0.4 })
+        break
+      case 'warning':
+        trigger([
+          { duration: 35 },
+        ], { intensity: 1 })
+        break
+      case 'info':
+        trigger([
+          { duration: 25 },
+        ], { intensity: 0.7 })
+        break
+    }
+  })
 </script>
 
 <div
