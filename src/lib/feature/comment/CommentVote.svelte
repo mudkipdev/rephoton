@@ -8,8 +8,10 @@
   import FormattedNumber from '$lib/ui/util/FormattedNumber.svelte'
   import { toast } from 'mono-svelte'
   import { ChevronDown, ChevronUp, Icon } from 'svelte-hero-icons/dist'
+  import { onDestroy } from 'svelte'
   import { backOut } from 'svelte/easing'
   import { fly } from 'svelte/transition'
+  import { createWebHaptics } from 'web-haptics/svelte'
   import { vote as voteItem } from '../legacy/contentview'
   import { shouldShowVoteColor } from '../post/PostVote.svelte'
 
@@ -27,8 +29,11 @@
     comment,
   }: Props = $props()
 
+  const { trigger, destroy } = createWebHaptics()
+  onDestroy(destroy)
+
   const castVote = async (newVote: number) => {
-    if (navigator.vibrate) navigator.vibrate(1)
+    trigger([{ duration: 15 }], { intensity: 0.4 })
     if (!profile.current?.jwt) {
       toast({ content: $t('toast.loginVoteGate'), type: 'warning' })
       return
