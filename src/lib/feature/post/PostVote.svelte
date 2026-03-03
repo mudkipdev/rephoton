@@ -23,6 +23,7 @@
   import { t } from '$lib/app/i18n'
   import { settings } from '$lib/app/settings.svelte'
   import FormattedNumber from '$lib/ui/util/FormattedNumber.svelte'
+  import { haptic } from 'ios-haptics'
   import { buttonColor, toast } from 'mono-svelte'
   import { ChevronDown, ChevronUp, Icon } from 'svelte-hero-icons/dist'
   import { backOut } from 'svelte/easing'
@@ -50,7 +51,7 @@
   }: Props = $props()
 
   const castVote = async (newVote: number) => {
-    if (navigator.vibrate) navigator.vibrate(1)
+    haptic()
     if (!profile.current?.jwt) {
       toast({ content: $t('toast.loginVoteGate'), type: 'warning' })
       return
