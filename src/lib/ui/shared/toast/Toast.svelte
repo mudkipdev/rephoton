@@ -41,8 +41,9 @@
         break
       case 'warning':
         trigger([
-          { duration: 35 },
-        ], { intensity: 1 })
+          { duration: 40, intensity: 0.8 },
+          { delay: 100, duration: 40, intensity: 0.6 },
+        ])
         break
       case 'info':
         trigger([
