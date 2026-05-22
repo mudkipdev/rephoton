@@ -1,6 +1,6 @@
 <script lang="ts">
   import { client } from '$lib/api/client.svelte'
-  import { profile } from '$lib/app/auth.svelte'
+  import { profile } from '$lib/app/auth'
   import { errorMessage } from '$lib/app/error'
   import { t } from '$lib/app/i18n'
   import UserAutocomplete from '$lib/feature/user/UserAutocomplete.svelte'
@@ -101,7 +101,7 @@
     <div class="w-full">
       <UserAutocomplete
         listing_type="All"
-        onselect={(p) => (newAdmin = p.id)}
+        onselect={(p) => (newAdmin = p?.id)}
       />
     </div>
     <Button

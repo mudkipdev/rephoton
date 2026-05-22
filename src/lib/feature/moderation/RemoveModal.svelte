@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getClient } from '$lib/api/client.svelte'
   import type { CommentView, PostView } from '$lib/api/types'
-  import { profile } from '$lib/app/auth.svelte'
+  import { profile } from '$lib/app/auth'
   import { errorMessage } from '$lib/app/error'
   import { t } from '$lib/app/i18n'
   import MarkdownEditor from '$lib/app/markdown/MarkdownEditor.svelte'
@@ -199,7 +199,6 @@
             comment_view: item,
             depth: 1,
           }}
-          postId={item.post.id}
           actions={false}
         />
       {:else if isPostView(item)}

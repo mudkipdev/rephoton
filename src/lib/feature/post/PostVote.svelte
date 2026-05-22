@@ -1,7 +1,7 @@
 <script lang="ts" module>
   export const voteColor = (vote: number) =>
     vote == 1
-      ? `btn-primary border-0!`
+      ? `btn-primary border-0! border border-transparent`
       : vote == -1
         ? `bg-red-500 text-slate-50 dark:bg-red-400 dark:text-zinc-900`
         : ''
@@ -18,12 +18,12 @@
 <script lang="ts">
   import { site } from '$lib/api/client.svelte'
   import type { Post } from '$lib/api/types'
-  import { profile } from '$lib/app/auth.svelte'
+  import { profile } from '$lib/app/auth'
   import { errorMessage } from '$lib/app/error'
   import { t } from '$lib/app/i18n'
   import { settings } from '$lib/app/settings.svelte'
   import FormattedNumber from '$lib/ui/util/FormattedNumber.svelte'
-  import { buttonColor, toast } from 'mono-svelte'
+  import { toast } from 'mono-svelte'
   import { ChevronDown, ChevronUp, Icon } from 'svelte-hero-icons/dist'
   import { onDestroy } from 'svelte'
   import { backOut } from 'svelte/easing'
@@ -98,15 +98,14 @@
   <button
     onclick={() => castVote(vote == targetNum ? 0 : targetNum)}
     class={[
-      'flex items-center gap-0.5 transition-colors relative cursor-pointer h-full p-2',
-      'first:rounded-l-[inherit] last:rounded-r-[inherit]',
+      'flex items-center gap-0.5 transition-colors relative cursor-pointer h-full p-2 first:border-r-0! first:rounded-l-[inherit] last:rounded-r-[inherit]',
       'last:flex-row-reverse',
       vote == targetNum
         ? shouldShowVoteColor(
             vote,
             target == 'upvote' ? 'upvotes' : 'downvotes',
           )
-        : 'btn-tertiary',
+        : 'btn-secondary',
     ]}
     aria-pressed={vote == targetNum}
     aria-label={$t(
@@ -142,17 +141,13 @@
   )}
   <div
     class={[
-      buttonColor.secondary,
-      'rounded-xl h-full font-medium flex relative hover:bg-transparent! shadow-xs',
+      'rounded-xl h-full font-medium flex relative overflow-hidden',
       voteRatio < 85 && settings.voteRatioBar && 'vote-ratio',
     ]}
     aria-label={$t('aria.vote.group')}
     style="--vote-ratio: {voteRatio}%;"
   >
     {@render voteButton(upvotes, 'upvote', vote)}
-    <div
-      class="h-full p-0! border-l border-slate-200 dark:border-zinc-800"
-    ></div>
     {#if site.data?.site_view.local_site.enable_downvotes ?? true}
       {@render voteButton(downvotes, 'downvote', vote)}
     {/if}
@@ -165,7 +160,7 @@
   }
 
   .vote-ratio::before {
-    border-radius: var(--radius-3xl);
+    border-radius: inherit;
     content: '';
     position: absolute;
     height: 100%;
@@ -176,8 +171,8 @@
     z-index: -10;
     background: linear-gradient(
       to right,
-      var(--color-indigo-500) calc(var(--vote-ratio) - 4%),
-      var(--color-red-500) calc(var(--vote-ratio) + 4%)
+      var(--color-indigo-400) calc(var(--vote-ratio) - 2%),
+      var(--color-red-400) calc(var(--vote-ratio) + 2%)
     );
   }
 </style>

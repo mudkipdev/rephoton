@@ -1,7 +1,7 @@
 import { env } from '$env/dynamic/public'
 import { client } from '$lib/api/client.svelte'
 import type { CommentView, PersonView, Post } from '$lib/api/types'
-import { profile } from '$lib/app/auth.svelte'
+import { profile } from '$lib/app/auth'
 import {
   canParseUrl,
   findClosestNumber,
@@ -42,7 +42,8 @@ export const optimizeImageURL = (
     const newUrl = new URL(
       env.PUBLIC_IMAGE_PROXY ? `${env.PUBLIC_IMAGE_PROXY}/thumbnail` : url,
     )
-    newUrl.searchParams.set('url', encodeURIComponent(url.toString()))
+    if (env.PUBLIC_IMAGE_PROXY)
+      newUrl.searchParams.set('url', encodeURIComponent(url.toString()))
 
     if (format) newUrl.searchParams.set('format', format)
 

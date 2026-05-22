@@ -1,7 +1,7 @@
 <script lang="ts">
   import { getClient } from '$lib/api/client.svelte'
   import type { ListingType, Person } from '$lib/api/types'
-  import { profile } from '$lib/app/auth.svelte'
+  import { profile } from '$lib/app/auth'
   import Avatar from '$lib/ui/generic/Avatar.svelte'
   import { MenuButton, Search } from 'mono-svelte'
   import { createEventDispatcher } from 'svelte'
@@ -15,7 +15,8 @@
     showWhenEmpty?: boolean
     hideOwnUser?: boolean
     placeholder?: string
-    onselect?: (e: Person) => void
+    label?: string
+    onselect?: (e?: Person) => void
   }
 
   let {
@@ -24,6 +25,7 @@
     listing_type = 'Subscribed',
     showWhenEmpty = false,
     hideOwnUser = false,
+    label,
     ...rest
   }: Props = $props()
 
@@ -50,6 +52,7 @@
   }}
   extractName={(c) => `${c.name}@${new URL(c.actor_id).hostname}`}
   bind:query={q}
+  {label}
   {...rest}
 >
   {#snippet noresults()}

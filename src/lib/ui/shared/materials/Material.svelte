@@ -115,13 +115,18 @@
         border-top-color: var(--color-zinc-700);
 
         @variant hover {
-          @variant dark {
-            background-color: var(--color-zinc-925);
-          }
+          background-color: var(--color-zinc-925);
+        }
+        @variant active {
+          background-color: var(--color-zinc-950);
         }
       }
 
       @variant hover {
+        background-color: var(--color-slate-50);
+      }
+
+      @variant active {
         background-color: var(--color-slate-100);
       }
     }
@@ -215,8 +220,8 @@
     .material-info {
       background: linear-gradient(
         to bottom,
-        --alpha(var(--color-slate-300) / 10%),
-        --alpha(var(--color-slate-500) / 15%)
+        --alpha(var(--color-slate-200) / 10%),
+        --alpha(var(--color-slate-300) / 15%)
       );
 
       color: var(--color-slate-900);
@@ -224,6 +229,12 @@
 
       @variant dark {
         color: var(--color-slate-300);
+
+        background: linear-gradient(
+          to bottom,
+          --alpha(var(--color-slate-300) / 10%),
+          --alpha(var(--color-slate-500) / 15%)
+        );
       }
     }
   }

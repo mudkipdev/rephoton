@@ -18,26 +18,17 @@
 
   let { nodes = $bindable(), post }: Props = $props()
 
-  let childrenPage = 0
-
   async function fetchChildren(parent: CommentNodeI) {
-    if (
-      !(
-        parent.comment_view.counts.child_count > 0 &&
-        parent.children.length == 0
-      )
-    ) {
-      return
-    }
-
     try {
       parent.loading = true
+      parent.page ??= 1
 
       const newComments = await client().getComments({
-        max_depth: 5,
+        max_depth: 3,
         parent_id: parent.comment_view.comment.id,
         type_: 'All',
-        page: childrenPage,
+        limit: 1000000,
+        page: parent.page++,
       })
 
       if (newComments.comments.length == 0) {
@@ -48,11 +39,16 @@
         return
       }
 
+      if (
+        newComments.comments.length >= parent.comment_view.counts.child_count
+      ) {
+        parent.hasMore = false
+      }
+
       parent.children = buildCommentsTree(
         newComments.comments,
         parent.depth,
       )[0].children
-      childrenPage++
     } catch (err) {
       console.error(err)
       toast({
@@ -101,7 +97,7 @@
           shadow="none"
           loaderWidth={16}
           onclick={() => {
-            if (nodes[index].depth > 4) {
+            if (nodes[index].depth > 6) {
               goto(`/comment/${nodes[index].comment_view.comment.id}#comments`)
             } else {
               nodes[index].loading = true

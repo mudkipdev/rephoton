@@ -1,7 +1,8 @@
 <script lang="ts">
   import { t } from '$lib/app/i18n'
   import { type Theme, theme as themeData } from '$lib/app/theme/theme.svelte'
-  import { action, Button, Material, modal, TextInput } from 'mono-svelte'
+  import FreeTextInput from '$lib/ui/form/FreeTextInput.svelte'
+  import { action, Button, Material, modal } from 'mono-svelte'
   import { CheckCircle, Icon, Trash } from 'svelte-hero-icons/dist'
 
   interface Props {
@@ -9,22 +10,19 @@
   }
 
   let { theme = $bindable() }: Props = $props()
-
-  let editingName = $state(false)
 </script>
 
 <button class="h-full" onclick={() => (themeData.data.currentTheme = theme.id)}>
   <Material
     padding="none"
     rounding="none"
-    class="{theme.id == themeData.data.currentTheme
-      ? 'ring-2 ring-primary-900 dark:ring-primary-100'
-      : ''} rounded-2xl flex relative cursor-pointer h-full flex-col text-left p-0.5"
+    color="default"
+    class={[
+      'rounded-2xl flex relative cursor-pointer h-full flex-col text-left p-0.5',
+    ]}
   >
     <div
-      class={[
-        'h-20 w-full rounded-2xl rounded-b-none flex flex-row flex-wrap p-3 gap-2',
-      ]}
+      class={['h-20 w-full rounded-xl flex flex-row flex-wrap p-3 gap-2']}
       style="background-color: rgb({theme.colors[
         'zinc'
       ][900]}); color: rgb({theme.colors['zinc'][50]});"
@@ -46,25 +44,15 @@
       />
     {/if}
     <div class="px-4 py-2 flex items-center gap-1 justify-between">
-      {#if editingName}
-        <form
-          onsubmit={(e) => {
-            e.preventDefault()
-            editingName = false
-          }}
-        >
-          <TextInput bind:value={theme.name}></TextInput>
-        </form>
-      {:else}
-        <button
-          onclick={() => {
-            if (theme.id > 0) editingName = true
-          }}
-          class="text-left font-medium text-lg font-display"
-        >
-          {theme.name}
-        </button>
-      {/if}
+      <FreeTextInput
+        bind:value={theme.name}
+        disabled={theme.id <= 0}
+        class={[
+          'text-left font-medium text-lg font-display disabled:pointer-events-none',
+        ]}
+      >
+        {theme.name}
+      </FreeTextInput>
       {#if theme.id > 0}
         <Button
           color="ghost"

@@ -2,11 +2,7 @@
   import { Spinner } from 'mono-svelte'
   import type { Snippet } from 'svelte'
   import { type IconSource, Icon } from 'svelte-hero-icons/dist'
-  import type {
-    ClassValue,
-    HTMLAnchorAttributes,
-    HTMLButtonAttributes,
-  } from 'svelte/elements'
+  import type { ClassValue } from 'svelte/elements'
 
   export type ButtonColor = keyof typeof buttonColor
   export type ButtonAlignment = keyof typeof buttonAlignment
@@ -24,10 +20,13 @@
     tertiary: 'btn-tertiary',
     danger: 'btn-danger',
     ghost: 'btn-ghost',
-    'danger-subtle': 'text-red-500 hover:bg-red-500 hover:text-inherit!',
-    'success-subtle': 'text-green-500 hover:bg-green-500 hover:text-inherit!',
-    'warning-subtle': 'text-yellow-500 hover:bg-yellow-500 hover:text-inherit!',
-    'blue-subtle': `text-blue-500 hover:bg-blue-500 hover:text-inherit!`,
+    'danger-subtle':
+      'text-red-500 dark:text-red-400 hover:bg-red-500 hover:dark:bg-red-400 hover:text-inherit!',
+    'success-subtle':
+      'text-green-500 dark:text-green-400 hover:bg-green-500 hover:dark:bg-green-400 hover:text-inherit!',
+    'warning-subtle':
+      'text-yellow-500 dark:text-yellow-400 hover:bg-yellow-500 hover:dark:bg-yellow-400 hover:text-inherit!',
+    'blue-subtle': `text-blue-500 dark:text-yellow-400 hover:bg-blue-500 hover:dark:bg-blue-400 hover:text-inherit!`,
 
     none: '',
   }
@@ -96,7 +95,7 @@
     prefix?: Snippet
     children?: Snippet
     suffix?: Snippet
-    onclick?: HTMLButtonAttributes['onclick']
+    onclick?: any
     icon?: IconSource
     weight?: ButtonWeight
   }
@@ -113,7 +112,7 @@
     size = 'md',
     rounding = size == 'lg' || size == 'square-lg' ? '2xl' : 'xl',
     alignment = 'center',
-    shadow = color == 'primary' || color == 'secondary' ? 'sm' : 'none',
+    shadow = 'none',
     gap = 'md',
     disabled,
     loaderWidth = undefined,
@@ -185,6 +184,8 @@
       flex-direction: row;
       align-items: center;
       font-size: var(--text-sm);
+      user-select: none;
+      -webkit-user-select: none;
 
       transition: 75ms cubic-bezier(0.075, 0.82, 0.165, 1);
 
@@ -237,18 +238,36 @@
       background-color: var(--color-white);
 
       @variant dark {
-        border: 1px solid var(--color-zinc-800);
-        background-color: var(--color-zinc-900);
+        border: 1px solid
+          color-mix(
+            in oklab,
+            var(--color-zinc-800) 80%,
+            var(--color-zinc-900) 20%
+          );
+        background: linear-gradient(
+          to bottom,
+          color-mix(
+            in oklab,
+            var(--color-zinc-800) 50%,
+            var(--color-zinc-900) 50%
+          ),
+          var(--color-zinc-900)
+        );
+        border-top-color: color-mix(
+          in oklab,
+          var(--color-zinc-700) 50%,
+          var(--color-zinc-800) 50%
+        );
       }
 
       @variant hover {
-        background-color: color-mix(
+        background: color-mix(
           in oklab,
           var(--color-white),
           var(--color-slate-50)
         );
         @variant dark {
-          background-color: color-mix(
+          background: color-mix(
             in oklab,
             var(--color-zinc-925),
             var(--color-zinc-900)

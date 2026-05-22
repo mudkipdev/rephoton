@@ -194,9 +194,10 @@
         "setup": "Setup",
         "signup": {
             "title": "Sign Up",
-            "description": "Choose a server that interests you, or type the URL manually.",
-            "info": "The server you choose is where your account will live. However, every server is connected, and you can still access almost all linked content.",
+            "description": "Choose the server your account's information will be hosted on.",
+            "info": "You can access all content across the Fediverse regardless of your account's server, it is generally okay to pick any of the following.",
             "chooseInstance": "Choose a server",
+            "recommended": "Recommended",
             "application": {
                 "label": "Application",
                 "info": "To join this server, you must fill out this application, and wait to be accepted. You will receive an email if your application is accepted.",
@@ -342,8 +343,9 @@
                 "switch": "Switch to an account on {{destInstance}}"
             },
             "automatic": {
-                "title": "Locating post",
-                "description": "That content does not originate on your account's server."
+                "title": "Locating content",
+                "description": "Locating that content on your home server...",
+                "found": "Redirecting"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Download",
         "attach": "Attach file",
         "info": "Info",
-        "backToTop": "Back to top"
+        "backToTop": "Back to top",
+        "continue": "Continue"
     },
     "message": {
         "success": "Success",
@@ -982,7 +985,8 @@
         "unsupported": "That function is not supported by your account's server software.",
         "not_live_supported": "That server is not running supported software, or is offline.",
         "token_not_found": "That email verification link expired, or never existed.",
-        "invalid_password": "Invalid password."
+        "invalid_password": "Invalid password.",
+        "cant_find_object": "That content couldn't be found on your home server."
     },
     "aria": {
         "pagination": {

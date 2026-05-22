@@ -2,7 +2,7 @@
   import { client } from '$lib/api/client.svelte'
   import { PiefedClient } from '$lib/api/piefed/adapter'
   import type { Post, PostPoll } from '$lib/api/types'
-  import { profile } from '$lib/app/auth.svelte'
+  import { profile } from '$lib/app/auth'
   import { errorMessage } from '$lib/app/error'
   import { t } from '$lib/app/i18n'
   import { CommonList } from '$lib/ui/layout'
@@ -60,16 +60,18 @@
 
       canVote = false
 
-      if (typeof id !== 'number') {
-        await api.voteOnPoll({
-          post_id: post.id,
-          choice_id: id,
-        })
-      } else {
-        await api.voteOnPoll({
-          post_id: post.id,
-          choice_id: [id],
-        })
+      if (api.voteOnPoll) {
+        if (typeof id !== 'number') {
+          await api.voteOnPoll({
+            post_id: post.id,
+            choice_id: id,
+          })
+        } else {
+          await api.voteOnPoll({
+            post_id: post.id,
+            choice_id: [id],
+          })
+        }
       }
     } catch (err) {
       console.error(err)

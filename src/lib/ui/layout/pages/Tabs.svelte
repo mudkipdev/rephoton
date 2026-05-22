@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { invalidateAll } from '$app/navigation'
   import { page } from '$app/state'
   import TabButton from '$lib/ui/form/TabButton.svelte'
   import { SvelteURL } from 'svelte/reactivity'
@@ -14,6 +13,7 @@
     children?: import('svelte').Snippet
     style?: 'header' | 'subpage'
     margin?: boolean
+    class?: string
   }
 
   let {
@@ -23,6 +23,7 @@
     children,
     style = 'header',
     margin = true,
+    class: clazz = '',
   }: Props = $props()
 
   let matchType = $derived<('search' | 'pathname')[]>(
@@ -60,6 +61,7 @@
     style == 'header' ? 'bar-header' : 'gap-2',
     margin && 'my-2',
     margin && style == 'subpage' && 'mb-3',
+    clazz,
   ]}
 >
   {#each routes as route, index (route.href)}
@@ -70,7 +72,6 @@
     )}
     {#if style == 'header'}
       <a
-        onclick={() => invalidateAll()}
         href={buildUrl(currentRoute, route.href)}
         class={['tab-item ', selected && 'tab-selected']}
       >

@@ -1,6 +1,8 @@
-import { resolveRoute } from '$app/paths'
+import { goto } from '$app/navigation'
+import { resolve } from '$app/paths'
 import { client } from '$lib/api/client.svelte'
-import { profile } from '$lib/app/auth.svelte'
+import { PiefedClient } from '$lib/api/piefed/adapter.js'
+import { profile } from '$lib/app/auth'
 import { settings } from '$lib/app/settings.svelte'
 import { ReactiveState } from '$lib/app/util.svelte'
 import CommunityCard from '$lib/feature/community/CommunityCard.svelte'
@@ -10,7 +12,6 @@ import {
   feeds,
   type FeedTypes,
 } from '$lib/feature/feeds/feed.svelte'
-import { redirect } from '@sveltejs/kit'
 
 function buildContext(thread?: string) {
   let parentId: number | undefined
@@ -50,8 +51,11 @@ async function findInFeed(id: '/' | '/c/[name]' | '/f/[id]', postId: string) {
 }
 
 export async function load({ params, url, route }) {
-  if (profile.current.instance != params.instance)
-    redirect(302, resolveRoute('/post/[instance]/[id]/confirm', params))
+  if (profile.current.instance != params.instance) {
+    goto(resolve('/post/[instance]/[id=integer]/confirm', params), {
+      replaceState: true,
+    })
+  }
 
   // TODO use Lemmy profile default settings
   const sort = settings?.defaultSort?.comments ?? 'Hot'
@@ -94,10 +98,12 @@ export async function load({ params, url, route }) {
       comments: {
         post_id: Number(params.id),
         type_: 'All',
-        max_depth: max_depth,
+        max_depth:
+          profile.client instanceof PiefedClient ? max_depth - 1 : max_depth,
         saved_only: false,
         sort: sort,
         parent_id: parentId,
+        limit: 10000000000,
       },
       posts: { id: Number(params.id) },
       preload: cachedPost,

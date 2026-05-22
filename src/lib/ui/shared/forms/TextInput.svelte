@@ -1,5 +1,6 @@
 <script module lang="ts">
   import { Label } from 'mono-svelte'
+  import { Icon, type IconSource } from 'svelte-hero-icons/dist'
   import type { HTMLInputAttributes } from 'svelte/elements'
   import { generateID } from './helper'
 
@@ -28,6 +29,7 @@
     shadow?: Shadow
     element?: HTMLInputElement | undefined
     class?: string
+    icon?: IconSource
     customLabel?: import('svelte').Snippet
     prefix?: import('svelte').Snippet
     suffix?: import('svelte').Snippet
@@ -38,18 +40,17 @@
 </script>
 
 <script lang="ts">
-  const borderClass = `border border-slate-200 border-b-slate-300 dark:border-zinc-800`
-
   let {
-    label = undefined,
+    label,
     value = $bindable(),
     placeholder = '',
     disabled = false,
     required = false,
     size = 'md',
     id = generateID(),
-    inlineAffixes = false,
-    shadow = 'sm',
+    icon,
+    inlineAffixes = !!icon,
+    shadow = 'none',
     element = $bindable(),
     class: clazz = '',
     customLabel: passedCustomLabel,
@@ -60,7 +61,7 @@
   }: Props = $props()
 </script>
 
-<div class="flex flex-col gap-1 {clazz}">
+<div class={['text-input-container', clazz]}>
   {#if passedCustomLabel || label}
     <Label
       for={id}
@@ -76,23 +77,21 @@
   <div
     class={[
       shadowClass[shadow],
-      borderClass,
-      `border focus-within:border-primary-900 dark:focus-within:border-primary-100 focus-within:ring-2
-  ring-slate-300 dark:ring-zinc-700
-  transition-colors
-  rounded-xl flex flex-row items-center text-sm`,
+      'text-input-sections focus-within:ring-2 ring-slate-300 dark:ring-zinc-700 transition-colors',
       clazz,
     ]}
   >
-    {#if prefix}
+    {#if prefix || icon}
       <div
         class={[
-          'rounded-xl rounded-r-none text-slate-600 dark:text-zinc-400',
-          inlineAffixes && 'bg-white dark:bg-zinc-900 pr-0 w-8',
-          sizeClass[size],
+          'rounded-xl rounded-r-none text-slate-600 dark:text-zinc-400 pl-3',
         ]}
       >
-        {@render prefix?.()}
+        {#if prefix}
+          {@render prefix?.()}
+        {:else if icon}
+          <Icon src={icon} size="20" mini />
+        {/if}
       </div>
     {/if}
     <input
@@ -106,12 +105,9 @@
       {...rest}
       class={[
         sizeClass[size],
-        `bg-white dark:bg-zinc-900
-		 focus:outline-hidden rounded-xl text-sm w-full disabled:bg-slate-100
-		disabled:cursor-not-allowed dark:disabled:bg-zinc-800 invalid:border-red-500!
-		peer invalid:text-red-500 z-10`,
-        prefix && 'rounded-l-none',
-        prefix && inlineAffixes && 'border-l-0',
+        'text-input flex-1',
+        (prefix || icon) && 'rounded-l-none',
+        (prefix || icon) && inlineAffixes && 'border-l-0',
         suffix && 'rounded-r-none',
         suffix && inlineAffixes && 'border-r-0',
         clazz,
@@ -121,7 +117,6 @@
       <div
         class={[
           'rounded-xl rounded-l-none text-slate-600 dark:text-zinc-400 h-full',
-          inlineAffixes && 'bg-white dark:bg-zinc-900 pl-0',
         ]}
       >
         {@render suffix?.()}
@@ -130,3 +125,80 @@
   </div>
   {@render children?.()}
 </div>
+
+<style>
+  @reference '../../../../app.css';
+
+  .text-input-container {
+    display: flex;
+    flex-direction: column;
+    gap: calc(var(--spacing) * 1);
+
+    *:focus {
+      outline: none;
+    }
+  }
+
+  .text-input-sections {
+    border: 1px solid var(--color-slate-200);
+    border-top-color: color-mix(
+      in oklab,
+      var(--color-slate-200),
+      var(--color-slate-300)
+    );
+    background: linear-gradient(
+      to top,
+      var(--color-white),
+      var(--color-slate-100)
+    );
+    border-radius: var(--radius-xl);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-weight: var(--text-sm);
+
+    @variant dark {
+      border-color: var(--color-zinc-800);
+      border-bottom-color: var(--color-zinc-700);
+      background: linear-gradient(
+        to bottom,
+        var(--color-zinc-900),
+        color-mix(
+          in oklab,
+          var(--color-zinc-800) 50%,
+          var(--color-zinc-900) 50%
+        )
+      );
+    }
+
+    @variant focus-within {
+      border-color: var(--color-primary-900);
+
+      @variant dark {
+        border-color: var(--color-primary-100);
+      }
+
+      @variant has-invalid {
+        border-color: var(--color-red-500);
+      }
+    }
+  }
+
+  .text-input {
+    border-radius: var(--radius-xl);
+    font-size: var(--text-sm);
+    z-index: 10;
+
+    @variant disabled {
+      background: var(--color-slate-100);
+
+      @variant dark {
+        background: var(--color-zinc-800);
+      }
+    }
+
+    @variant invalid {
+      color: var(--color-red-500);
+    }
+  }
+</style>

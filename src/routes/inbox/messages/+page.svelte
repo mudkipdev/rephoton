@@ -1,8 +1,8 @@
 <script lang="ts">
   import { goto } from '$app/navigation'
-  import { resolveRoute } from '$app/paths'
+  import { resolve } from '$app/paths'
   import type { Person, PrivateMessageView } from '$lib/api/types'
-  import { profile } from '$lib/app/auth.svelte'
+  import { profile } from '$lib/app/auth'
   import { t } from '$lib/app/i18n'
   import UserAutocomplete from '$lib/feature/user/UserAutocomplete.svelte'
   import Avatar from '$lib/ui/generic/Avatar.svelte'
@@ -84,10 +84,14 @@
   <UserAutocomplete
     listing_type="All"
     hideOwnUser={true}
-    onselect={(u) =>
+    onselect={(u) => {
+      if (!u) return
       goto(
-        resolveRoute('/inbox/messages/[user_id]', { user_id: u.id.toString() }),
-      )}
+        resolve('/inbox/messages/[user_id=integer]', {
+          user_id: u.id.toString(),
+        }),
+      )
+    }}
   />
 </Modal>
 

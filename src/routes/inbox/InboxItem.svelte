@@ -1,6 +1,6 @@
 <script lang="ts">
   import { getClient } from '$lib/api/client.svelte'
-  import { profile } from '$lib/app/auth.svelte'
+  import { profile } from '$lib/app/auth'
   import { t } from '$lib/app/i18n'
   import Markdown from '$lib/app/markdown/Markdown.svelte'
   import { escapeHtml } from '$lib/app/util.svelte'
@@ -70,7 +70,7 @@
     {loading}
     disabled={loading ||
       item.creator.id == profile.current.user?.local_user_view.person.id}
-    onclick={(e) => {
+    onclick={(e: MouseEvent) => {
       e.stopPropagation()
       markAsRead(!item.read)
     }}

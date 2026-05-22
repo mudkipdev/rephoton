@@ -1,0 +1,110 @@
+{
+    "profile": {
+        "profile": "Profil",
+        "inbox": "Příchozí",
+        "saved": "Uloženo",
+        "subscribed": "Odběry"
+    },
+    "nav": {
+        "home": "Domů",
+        "admin": "Administrátor",
+        "moderation": "Moderace",
+        "communities": "Komunity",
+        "search": "Hledat",
+        "create": {
+            "label": "Vytvořit",
+            "post": "Příspěvek",
+            "community": "Komunita",
+            "logingate": "Pro vytváření obsahu musíte být přihlášen/a."
+        },
+        "menu": {
+            "label": "Profil",
+            "app": "Aplikace",
+            "settings": "Nastavení",
+            "colorscheme": {
+                "label": "Barevné schéma",
+                "system": "Systém",
+                "dark": "Tmavý",
+                "light": "Světlý"
+            },
+            "theme": "Téma",
+            "about": "O aplikaci",
+            "source": "Zdroj",
+            "donate": "Přispět na vývoj",
+            "instance": "Informace o serveru"
+        },
+        "commands": {
+            "prompt": "Paleta příkazů",
+            "recents": "Nedávné",
+            "content": "Obsah",
+            "search": "Vyhledat **{{default}}**",
+            "main": "Hlavní",
+            "setView": "Nastavit pohled",
+            "setViewTo": "Nastavit pohled na **{{default}}**",
+            "setColor": "Nastavit barevné schéma",
+            "setColorTo": "Nastavit barevné schéma na **{{default}}**",
+            "setTheme": "Nastavit téma",
+            "setThemeTo": "Nastavit téma na **{{default}}**",
+            "contextual": "Na této stránce",
+            "communities": "Komunity s **{{default}}**",
+            "goto": "Jít na **{{default}}**"
+        },
+        "notifications": "Oznámení"
+    },
+    "account": {
+        "login": "Přihlásit se",
+        "logout": "Odhlásit se",
+        "signup": "Registrovat se",
+        "accounts": "Účty"
+    },
+    "filter": {
+        "location": {
+            "all": "Vše"
+        },
+        "sort": {
+            "top": {
+                "time": {
+                    "year": "Poslední rok"
+                }
+            }
+        }
+    },
+    "form": {
+        "forgotpassword": "Zapomenuté heslo",
+        "submit": "Odeslat",
+        "edit": "Upravit",
+        "preview": "Náhled"
+    },
+    "placeholders": {
+        "body": "Co chcete říct?",
+        "comments": "Připojit ke konverzaci"
+    },
+    "class": {
+        "moderator": "Moderátor",
+        "admin": "Administrátor"
+    },
+    "settings": {
+        "app": {
+            "thumbnailSide": {
+                "left": "Vlevo",
+                "right": "Vpravo"
+            },
+            "font": {
+                "title": "Písmo",
+                "description": "Písmo použité pro text v tomto uživatelském rozhraní."
+            }
+        }
+    },
+    "post": {
+        "actions": {
+            "more": {
+                "actions": "Akce",
+                "markRead": "Označit jako přečteno",
+                "markUnread": "Označit jako nepřečteno",
+                "hide": "Skrýt",
+                "unhide": "Zobrazit",
+                "share": "Sdílet"
+            }
+        }
+    }
+}

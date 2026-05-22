@@ -5,7 +5,7 @@ import { settings } from '$lib/app/settings.svelte'
 
 export const ssr = env.PUBLIC_SSR_ENABLED?.toLowerCase() == 'true'
 
-export const load = async () => {
+export async function load() {
   if (browser) {
     const initLocale = settings.language ?? navigator?.language ?? 'en'
 
