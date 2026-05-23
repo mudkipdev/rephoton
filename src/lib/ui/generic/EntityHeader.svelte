@@ -1,6 +1,5 @@
 <script lang="ts">
   import { PostBody } from '$lib/feature/post'
-  import { Material } from 'mono-svelte'
   import type { ClassValue } from 'svelte/elements'
   import LabelStat from '../info/LabelStat.svelte'
   import TextProps from '../text/TextProps.svelte'
@@ -43,10 +42,10 @@
 </script>
 
 <div {...rest} class={['z-10 text-sm w-full space-y-4 @container', clazz]}>
-  <Material padding="xl" rounding="3xl" class="flex flex-col gap-2 @lg:gap-4">
+  <div class="flex flex-col gap-2 @lg:gap-4">
     {#if banner}
       <div
-        class="relative overflow-hidden rounded-t-[inherit] -m-6 mask-b-from-0 h-32 @lg:h-48"
+        class="relative overflow-hidden rounded-2xl mask-b-from-0 h-32 @lg:h-48"
       >
         <img
           src={banner}
@@ -101,7 +100,7 @@
         </p>
       {/if}
     </div>
-  </Material>
+  </div>
   {#if actions || stats.length > 0}
     <div class="space-y-4">
       <div class="flex flex-col flex-1">
