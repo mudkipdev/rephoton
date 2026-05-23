@@ -5,7 +5,6 @@
   import LabelStat from '../info/LabelStat.svelte'
   import TextProps from '../text/TextProps.svelte'
   import Avatar from './Avatar.svelte'
-  import Blobs from './Blobs.svelte'
 
   interface Props {
     avatar?: string
@@ -45,22 +44,16 @@
 
 <div {...rest} class={['z-10 text-sm w-full space-y-4 @container', clazz]}>
   <Material padding="xl" rounding="3xl" class="flex flex-col gap-2 @lg:gap-4">
-    {#if banner !== null}
+    {#if banner}
       <div
         class="relative overflow-hidden rounded-t-[inherit] -m-6 mask-b-from-0 h-32 @lg:h-48"
       >
-        {#if banner}
-          <img
-            src={banner}
-            class="w-full object-cover h-full bg-white dark:bg-zinc-900"
-            height="192"
-            alt="User banner"
-          />
-        {:else}
-          <div class="scale-150 h-full">
-            <Blobs seed={name} />
-          </div>
-        {/if}
+        <img
+          src={banner}
+          class="w-full object-cover h-full bg-white dark:bg-zinc-900"
+          height="192"
+          alt="User banner"
+        />
       </div>
     {/if}
 
@@ -72,7 +65,7 @@
         circle={avatarCircle}
         class={[
           'relative',
-          banner !== null && '-mt-4 @md:-mt-8',
+          banner && '-mt-4 @md:-mt-8',
           !avatarCircle && 'rounded-xl @md:rounded-3xl!',
         ]}
       />
