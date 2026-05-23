@@ -133,35 +133,33 @@ function dateOrEmpty(s?: string): string {
 }
 
 // Lemmy v4 exposes tag colors as an opaque "colorNN" enum and leaves the
-// concrete palette to the client. The values here were picked to look readable
-// against both light and dark mode given the post-meta badge color mixing.
-const TAG_COLOR_PALETTE: Record<string, string> = {
-  color01: '#ef4444',
-  color02: '#f97316',
-  color03: '#f59e0b',
-  color04: '#84cc16',
-  color05: '#10b981',
-  color06: '#06b6d4',
-  color07: '#3b82f6',
-  color08: '#8b5cf6',
-  color09: '#d946ef',
-  color10: '#ec4899',
-}
-
-function tagBackground(color?: string): string {
-  if (!color) return '#888888'
-  return TAG_COLOR_PALETTE[color] ?? color
+// palette to the client. We map each slot to one of Photon's existing named
+// badge color schemes so the tags render in the same style as built-in badges
+// like "Featured" rather than as heavy solid blocks.
+const TAG_BADGE_COLOR: Record<string, string> = {
+  color01: 'red-subtle',
+  color02: 'orange-subtle',
+  color03: 'yellow-subtle',
+  color04: 'green-subtle',
+  color05: 'cyan-subtle',
+  color06: 'blue-subtle',
+  color07: 'indigo-subtle',
+  color08: 'purple-subtle',
+  color09: 'pink-subtle',
+  color10: 'gray-subtle',
 }
 
 export function toV3CommunityFlair(tag: any): v3.CommunityFlair {
+  const badge = TAG_BADGE_COLOR[tag.color] ?? 'gray-subtle'
   return {
     id: tag.id,
     community_id: tag.community_id,
     flair_title: tag.display_name ?? tag.name,
-    text_color: '#ffffff',
-    background_color: tagBackground(tag.color),
+    text_color: '',
+    background_color: '',
     blur_images: false,
     ap_id: tag.ap_id ?? null,
+    badge_color: badge,
   }
 }
 

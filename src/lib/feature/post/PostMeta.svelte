@@ -42,6 +42,7 @@
     icon?: IconSource | null
     textColor?: string
     type: 'flair' | 'custom'
+    badgeColor?: string
   }
 
   export const textToTag: Map<string, Tag> = new Map<string, Tag>([
@@ -324,11 +325,16 @@
           this={href ? 'a' : 'div'}
           {href}
           class="hover:brightness-110"
-          style="{tag.color ? `--tag-color: ${tag.color};` : ''} {tag.textColor
+          style="{tag.color && !tag.badgeColor
+            ? `--tag-color: ${tag.color};`
+            : ''} {tag.textColor && !tag.badgeColor
             ? `--tag-text-color: ${tag.textColor}`
             : ''}"
         >
-          <Badge class={tag.color ? 'badge-tag-color' : ''}>
+          <Badge
+            color={tag.badgeColor as any}
+            class={!tag.badgeColor && tag.color ? 'badge-tag-color' : ''}
+          >
             {#snippet icon()}
               {#if tag.icon}
                 <Icon src={tag.icon} micro size="14" />

@@ -2375,6 +2375,10 @@ export interface CommunityFlair {
   background_color: string
   blur_images: boolean
   ap_id: string | null
+  // Lemmy v4 tags map their TagColor enum to a named badge color rather than
+  // a free hex; when this is set, renderers should prefer it over the hex
+  // background/text fields.
+  badge_color?: string
 }
 
 export interface GetFeeds {
