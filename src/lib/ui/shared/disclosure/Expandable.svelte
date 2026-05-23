@@ -28,7 +28,7 @@
   {#snippet summary()}
     <div
       class={[
-        'font-medium w-full text-left flex flex-row items-center gap-2 hover:text-primary-900',
+        'font-medium w-full text-left flex flex-row items-center hover:text-primary-900',
         'dark:hover:text-primary-100 transition-colors z-0 group relative cursor-pointer',
       ]}
     >
@@ -36,18 +36,18 @@
         <div
           class={[
             !open && '-rotate-90',
-            'transition-transform duration-300 ease-out shrink-0',
+            'transition-transform duration-300 ease-out shrink-0 inline-flex items-center justify-center h-6 w-[18px] text-slate-600 dark:text-zinc-400',
           ]}
         >
-          <Icon src={ChevronDown} size="15" micro />
+          <Icon src={ChevronDown} size="18" mini />
         </div>
       {/if}
       <div class="flex flex-row gap-1 items-center w-full select-none">
         {@render title?.(open)}
       </div>
       <div
-        class="inset-0 -z-10 opacity-0 absolute bg-slate-200/50 dark:bg-zinc-900/50 rounded-full
-      group-hover:opacity-100 group-hover:-inset-1 group-hover:-inset-x-2 transition-all"
+        class="inset-0 -z-10 opacity-0 absolute bg-slate-200/50 dark:bg-zinc-900/50 rounded-xl
+      group-hover:opacity-100 group-hover:-inset-1 transition-all"
       ></div>
     </div>
   {/snippet}
