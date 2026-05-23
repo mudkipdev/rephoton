@@ -163,7 +163,7 @@
 <style>
   .list-type {
     display: grid;
-    grid-template-areas: 'meta media' 'title media' 'body media' 'embed embed' 'actions actions';
+    grid-template-areas: 'meta media' 'badges media' 'title media' 'body media' 'embed embed' 'actions actions';
     grid-template-columns: minmax(0, 1fr) auto;
     width: 100%;
     height: 100%;
@@ -171,21 +171,21 @@
 
   /* Swap media/item positions */
   .list-type.left-align {
-    grid-template-areas: 'media meta' 'media title' 'media body' 'embed embed' 'actions actions';
+    grid-template-areas: 'media meta' 'media badges' 'media title' 'media body' 'embed embed' 'actions actions';
     grid-template-columns: auto minmax(0, 1fr);
   }
 
   /* Has media on the right for all of them */
   @media (min-width: 480px) {
     .list-type.compact {
-      grid-template-areas: 'meta media' 'title media' 'body media' 'embed media' 'actions media';
+      grid-template-areas: 'meta media' 'badges media' 'title media' 'body media' 'embed media' 'actions media';
     }
   }
 
   /* Swap above again */
   @media (min-width: 480px) {
     .list-type.compact.left-align {
-      grid-template-areas: 'media meta' 'media title' 'media body' 'media embed' 'media actions';
+      grid-template-areas: 'media meta' 'media badges' 'media title' 'media body' 'media embed' 'media actions';
     }
   }
 

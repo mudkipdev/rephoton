@@ -132,6 +132,13 @@
     extraBadges,
   }: Props = $props()
 
+  const activeBadges = $derived(
+    Object.keys(badges)
+      .filter((i) => badges[i as BadgeType] == true)
+      .map((i) => badgeToData.get(i as BadgeType))
+      .filter((i) => i != undefined),
+  )
+
   const badgeToData: Map<
     BadgeType,
     {
@@ -311,8 +318,10 @@
       </button>
     {/if}
   </div>
+</header>
+{#if (tags && tags.length > 0) || activeBadges.length > 0 || extraBadges}
   <div
-    class="flex flex-row min-sm:justify-end items-center self-center flex-wrap gap-2 *:shrink-0 badges min-sm:ml-2"
+    class="flex flex-row items-center flex-wrap gap-2 *:shrink-0 badges"
     style="grid-area: badges;"
   >
     {#if tags}
@@ -347,13 +356,7 @@
         </svelte:element>
       {/each}
     {/if}
-    {#each Object.keys(badges)
-      // filter by ones that are true
-      .filter((i) => badges[i as BadgeType] == true)
-      // get from predetermined map
-      .map((i) => badgeToData.get(i as BadgeType))
-      // remove null
-      .filter((i) => i != undefined) as badge}
+    {#each activeBadges as badge}
       <Badge label={badge.label} color={badge.color} allowIconOnly>
         {#snippet icon()}
           <Icon src={badge.icon} micro size="14" />{/snippet}{badge.label}
@@ -361,7 +364,7 @@
     {/each}
     {@render extraBadges?.()}
   </div>
-</header>
+{/if}
 {#if title && id}
   {@const useAttachedUrl = settings.posts.titleOpensUrl && postUrl}
   <h3
@@ -398,10 +401,10 @@
   .meta {
     display: grid;
     grid-template-areas:
-      'avatar community badges'
-      'avatar stats badges';
+      'avatar community'
+      'avatar stats';
     gap: 0;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto auto;
     grid-template-columns: 40px minmax(0, auto);
   }
 
@@ -413,8 +416,7 @@
     .meta.compact {
       grid-template-areas:
         'avatar community'
-        'avatar stats'
-        'badges badges';
+        'avatar stats';
       gap: 0;
       grid-template-columns: 32px minmax(0, auto);
     }
