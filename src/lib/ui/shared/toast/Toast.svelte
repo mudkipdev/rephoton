@@ -57,7 +57,7 @@
 <div
   class={[
     toastColors[toast.type],
-    'relative rounded-2xl overflow-hidden flex flex-row items-center gap-1 px-2 py-2 backdrop-blur-3xl',
+    'relative rounded-2xl overflow-hidden flex flex-row items-center gap-1 px-2 py-2',
     'bg-white dark:bg-zinc-925 shadow-lg',
     toast.long ? 'w-full max-w-lg' : 'w-80',
   ]}
