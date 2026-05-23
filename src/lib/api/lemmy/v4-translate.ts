@@ -150,6 +150,7 @@ export function toV3Person(p: any): v3.Person {
     bot_account: p.bot_account ?? false,
     ban_expires: p.ban_expires_at,
     instance_id: p.instance_id,
+    note: p.note,
   }
 }
 
@@ -351,7 +352,11 @@ export function toV3CommunityView(v: any): v3.CommunityView {
 
 export function toV3PersonView(v: any): v3.PersonView {
   return {
-    person: toV3Person({ ...v.person, banned: v.banned }),
+    person: toV3Person({
+      ...v.person,
+      banned: v.banned,
+      note: v.person_actions?.note,
+    }),
     counts: personCounts(v.person),
     is_admin: v.is_admin ?? false,
   }

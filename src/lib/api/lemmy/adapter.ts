@@ -1065,6 +1065,21 @@ export function createLemmyClient(
       )
       return true
     },
+
+    async setNote(form) {
+      await call(
+        client.notePerson({
+          person_id: form.person_id,
+          note: form.note ?? '',
+        }),
+      )
+      // The existing v3 UI just wants a PersonView back; refetch to surface the
+      // updated note on `person_actions`.
+      const res: any = await call(
+        client.getPersonDetails({ person_id: form.person_id }),
+      )
+      return t.toV3PersonView(res.person_view)
+    },
   }
 
   return new Proxy(overrides as BaseClient, {
