@@ -49,7 +49,7 @@
     </h1>
   {/if}
   {#if extended}
-    <div class="flex flex-col gap-3 mt-3">
+    <div class="flex flex-col gap-2 mt-2">
       {@render extended?.()}
     </div>
   {/if}

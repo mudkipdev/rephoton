@@ -41,8 +41,8 @@
   }: Props = $props()
 </script>
 
-<div {...rest} class={['z-10 text-sm w-full space-y-4 @container', clazz]}>
-  <div class="flex flex-col gap-2 @lg:gap-4">
+<div {...rest} class={['z-10 text-sm w-full space-y-2 @container', clazz]}>
+  <div class="flex flex-col gap-1 @lg:gap-2">
     {#if banner}
       <div
         class="relative overflow-hidden rounded-2xl mask-b-from-0 h-32 @lg:h-48"
@@ -102,12 +102,12 @@
     </div>
   </div>
   {#if actions || stats.length > 0}
-    <div class="space-y-4">
-      <div class="flex flex-col flex-1">
-        {#if actions}
+    <div class="space-y-2">
+      {#if actions}
+        <div class="flex flex-col flex-1">
           {@render actions?.()}
-        {/if}
-      </div>
+        </div>
+      {/if}
       {#if stats.length > 0}
         <div
           class={[
@@ -140,7 +140,7 @@
     />
   {/if}
   {#if children}
-    <div class="space-y-3 py-4 pt-0 mt-4">
+    <div class="space-y-3">
       {@render children?.()}
     </div>
   {/if}
