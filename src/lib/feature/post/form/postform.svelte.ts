@@ -84,6 +84,13 @@ export class PostFormState {
       throw new Error('failed validation')
 
     const api = client()
+    const isPiefed = api instanceof PiefedClient
+    // On PieFed flairs are attached with a separate assignFlair call; on Lemmy
+    // v4 tags are passed inline with create/edit.
+    const inlineTags =
+      !isPiefed && this.flairList.length > 0
+        ? this.flairList.map((i) => i.id)
+        : undefined
 
     let res: PostView
     if (postId) {
@@ -99,6 +106,7 @@ export class PostFormState {
           language_id: Number(this.language) || undefined,
           poll: this.type == 'poll' ? this.poll : undefined,
           event: this.type == 'event' ? this.event : undefined,
+          tags: inlineTags,
         })
       ).post_view
     } else {
@@ -114,17 +122,21 @@ export class PostFormState {
           language_id: Number(this.language) || undefined,
           poll: this.type == 'poll' ? this.poll : undefined,
           event: this.type == 'event' ? this.event : undefined,
+          tags: inlineTags,
         })
       ).post_view
     }
 
-    if (api instanceof PiefedClient && api.assignFlair) {
+    if (isPiefed && api.assignFlair) {
       const flairRes = await api.assignFlair({
         flair_id_list: this.flairList.map((i) => i.id),
         post_id: res.post.id,
       })
 
       res.flair_list = flairRes.flair_list
+    } else if (inlineTags && !res.flair_list) {
+      // The server returned the post without re-echoing tags; reflect locally.
+      res.flair_list = this.flairList
     }
 
     return res

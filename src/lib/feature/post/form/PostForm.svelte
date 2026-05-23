@@ -147,9 +147,15 @@
     {:then communityView}
       {#each communityView?.community_view.flair_list ?? [] as flair}
         {@const selected = form.flairList?.some((i) => i.id == flair.id)}
+        {@const useHex = !flair.badge_color && !!flair.background_color}
         <button
-          class="rounded-full cursor-pointer hover:brightness-100 badge-tag-color"
-          style="--tag-color: {flair.background_color}; --tag-text-color: {flair.text_color};"
+          class={[
+            'rounded-full cursor-pointer hover:brightness-100',
+            useHex && 'badge-tag-color',
+          ]}
+          style={useHex
+            ? `--tag-color: ${flair.background_color}; --tag-text-color: ${flair.text_color};`
+            : undefined}
           onclick={() => {
             if (selected) {
               const index = form.flairList.findIndex((i) => i.id == flair.id)
@@ -158,8 +164,10 @@
           }}
         >
           <Badge
-            color={selected ? 'gray-subtle' : 'custom'}
-            class="ring-white/20"
+            color={(selected
+              ? 'gray-subtle'
+              : (flair.badge_color ?? 'custom')) as any}
+            class={useHex ? 'ring-white/20' : ''}
           >
             {#snippet icon()}
               <Icon src={selected ? Check : Plus} size="16" micro />

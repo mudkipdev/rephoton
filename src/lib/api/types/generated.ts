@@ -658,6 +658,7 @@ export interface CreatePost {
   custom_thumbnail?: string
   poll?: PostPoll
   event?: PostEvent
+  tags?: Array<number>
 }
 
 export interface CreatePostLike {
@@ -817,6 +818,7 @@ export interface EditPost {
   custom_thumbnail?: string
   poll?: PostPoll
   event?: PostEvent
+  tags?: Array<number>
 }
 
 export interface EditPrivateMessage {

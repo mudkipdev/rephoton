@@ -281,6 +281,7 @@ export function createLemmyClient(
           nsfw: form.nsfw,
           language_id: form.language_id,
           custom_thumbnail: form.custom_thumbnail,
+          tags: form.tags,
         } as any),
       )
       return { post_view: t.toV3PostView(res.post_view) }
@@ -309,6 +310,7 @@ export function createLemmyClient(
           nsfw: form.nsfw,
           language_id: form.language_id,
           custom_thumbnail: form.custom_thumbnail,
+          tags: form.tags,
         } as any),
       )
       return { post_view: t.toV3PostView(res.post_view) }
