@@ -156,9 +156,8 @@ export class Profile {
             long: true,
           })
 
-          // lemmy js client donation dialog is broken
           fetch(
-            `${instanceToURL(this.current.instance)}/api/v3/user/donation_dialog_shown`,
+            `${instanceToURL(this.current.instance)}/api/v4/account/donation_dialog_shown`,
             {
               method: 'POST',
               headers: {

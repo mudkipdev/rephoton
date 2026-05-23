@@ -2,7 +2,7 @@ import { env } from '$env/dynamic/public'
 import * as types from './types'
 
 export type ClientType =
-  | { name: 'lemmy'; baseUrl: '/api/v3' }
+  | { name: 'lemmy'; baseUrl: '/api/v4' }
   | { name: 'piefed'; baseUrl: '/api/alpha' }
 
 export const DEFAULT_CLIENT_TYPE: ClientType =
@@ -13,7 +13,7 @@ export const DEFAULT_CLIENT_TYPE: ClientType =
       }
     : {
         name: 'lemmy',
-        baseUrl: '/api/v3',
+        baseUrl: '/api/v4',
       }
 
 export abstract class BaseClient {
@@ -41,7 +41,7 @@ export abstract class BaseClient {
       switch (software.name) {
         case 'lemmy': {
           return {
-            type: { baseUrl: '/api/v3', name: 'lemmy' },
+            type: { baseUrl: '/api/v4', name: 'lemmy' },
             version: software.version,
           }
         }

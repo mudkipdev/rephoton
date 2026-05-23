@@ -61,7 +61,7 @@
     nsfw = $state(false),
     verifying = $state(false)
 
-  const instanceType: ClientType = $state({ name: 'lemmy', baseUrl: '/api/v3' })
+  const instanceType: ClientType = $state({ name: 'lemmy', baseUrl: '/api/v4' })
 
   const getCaptcha = async () =>
     (captcha = await getClient(instance, fetch).getCaptcha())
