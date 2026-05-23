@@ -132,6 +132,39 @@ function dateOrEmpty(s?: string): string {
   return s ?? new Date(0).toISOString()
 }
 
+// Lemmy v4 exposes tag colors as an opaque "colorNN" enum and leaves the
+// concrete palette to the client. The values here were picked to look readable
+// against both light and dark mode given the post-meta badge color mixing.
+const TAG_COLOR_PALETTE: Record<string, string> = {
+  color01: '#ef4444',
+  color02: '#f97316',
+  color03: '#f59e0b',
+  color04: '#84cc16',
+  color05: '#10b981',
+  color06: '#06b6d4',
+  color07: '#3b82f6',
+  color08: '#8b5cf6',
+  color09: '#d946ef',
+  color10: '#ec4899',
+}
+
+function tagBackground(color?: string): string {
+  if (!color) return '#888888'
+  return TAG_COLOR_PALETTE[color] ?? color
+}
+
+export function toV3CommunityFlair(tag: any): v3.CommunityFlair {
+  return {
+    id: tag.id,
+    community_id: tag.community_id,
+    flair_title: tag.display_name ?? tag.name,
+    text_color: '#ffffff',
+    background_color: tagBackground(tag.color),
+    blur_images: false,
+    ap_id: tag.ap_id ?? null,
+  }
+}
+
 export function toV3Person(p: any): v3.Person {
   return {
     id: p.id,
@@ -319,6 +352,8 @@ export function toV3PostView(v: any): v3.PostView {
       0,
       (v.post.comments ?? 0) - (v.post_actions?.read_comments_amount ?? 0),
     ),
+    flair_list:
+      v.tags && v.tags.length > 0 ? v.tags.map(toV3CommunityFlair) : undefined,
   }
 }
 
@@ -347,6 +382,8 @@ export function toV3CommunityView(v: any): v3.CommunityView {
     blocked: v.community_actions?.blocked_at != null,
     counts: communityCounts(v.community),
     banned_from_community: v.community_actions?.received_ban_at != null,
+    flair_list:
+      v.tags && v.tags.length > 0 ? v.tags.map(toV3CommunityFlair) : undefined,
   }
 }
 
