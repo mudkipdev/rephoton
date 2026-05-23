@@ -105,7 +105,7 @@ const settingsSchema = {
     default: 'inter' as 'inter' | 'system' | 'browser' | 'serifs',
     env: 'PUBLIC_FONT',
   },
-  leftAlign: { default: false, env: 'PUBLIC_LEFT_ALIGN' },
+  leftAlign: { default: true, env: 'PUBLIC_LEFT_ALIGN' },
   newWidth: { default: true, env: 'PUBLIC_LIMIT_LAYOUT_WIDTH' },
   markPostsAsRead: { default: true, env: 'PUBLIC_MARK_POSTS_AS_READ' },
   openLinksInNewTab: { default: false },
