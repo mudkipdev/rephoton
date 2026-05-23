@@ -4,6 +4,7 @@
     Community,
     CommunityAggregates,
     CommunityModeratorView,
+    CommunityNotificationsMode,
     SubscribedType,
   } from '$lib/api/types'
   import { profile } from '$lib/app/auth'
@@ -25,7 +26,11 @@
   } from 'mono-svelte'
   import { formatRelativeDate } from 'mono-svelte/util/RelativeDate.svelte'
   import {
+    Bell,
+    BellAlert,
+    BellSlash,
     BuildingOffice2,
+    ChatBubbleLeftRight,
     Check,
     Cog6Tooth,
     EllipsisHorizontal,
@@ -51,6 +56,7 @@
     class?: string
     compact?: 'always' | 'lg'
     avatarCircle?: boolean
+    notificationsMode?: CommunityNotificationsMode | null
   }
 
   let {
@@ -62,10 +68,37 @@
     banner = !(settings.nsfwBlur && community.nsfw),
     class: clazz = '',
     compact,
+    notificationsMode = $bindable(null),
     ...rest
   }: Props = $props()
 
   let setFlair = $state(false)
+
+  const notificationsModes: {
+    mode: CommunityNotificationsMode
+    label: string
+    icon: typeof Bell
+  }[] = [
+    { mode: 'all_posts_and_comments', label: 'All posts & comments', icon: BellAlert },
+    { mode: 'all_posts', label: 'All posts', icon: Bell },
+    { mode: 'replies_and_mentions', label: 'Replies & mentions only', icon: ChatBubbleLeftRight },
+    { mode: 'mute', label: 'Mute', icon: BellSlash },
+  ]
+
+  async function setNotificationsMode(mode: CommunityNotificationsMode) {
+    const c = client()
+    if (!c.editCommunityNotifications) return
+    try {
+      await c.editCommunityNotifications({
+        community_id: community.id,
+        mode,
+      })
+      notificationsMode = mode
+      toast({ content: $t('message.success'), type: 'success' })
+    } catch (err) {
+      toast({ content: err as string, type: 'error' })
+    }
+  }
 </script>
 
 <Modal title={$t('cards.community.flair')} bind:open={setFlair}>
@@ -219,6 +252,19 @@
         </MenuButton>
       {/if}
       {#if profile.current?.jwt}
+        {#if client().editCommunityNotifications && subscribed != 'NotSubscribed'}
+          <hr class="-mx-1 my-1 border-slate-200 dark:border-zinc-800" />
+          {#each notificationsModes as item}
+            <MenuButton
+              onclick={() => setNotificationsMode(item.mode)}
+              icon={item.icon}
+              color={notificationsMode == item.mode ? 'primary' : undefined}
+            >
+              {item.label}
+            </MenuButton>
+          {/each}
+          <hr class="-mx-1 my-1 border-slate-200 dark:border-zinc-800" />
+        {/if}
         <MenuButton
           color="danger-subtle"
           size="lg"

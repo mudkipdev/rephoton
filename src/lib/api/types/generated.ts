@@ -595,6 +595,18 @@ export interface CommunityView {
   counts: CommunityAggregates
   banned_from_community: boolean
   flair_list?: CommunityFlair[]
+  notifications_mode?: CommunityNotificationsMode | null
+}
+
+export type CommunityNotificationsMode =
+  | 'all_posts_and_comments'
+  | 'all_posts'
+  | 'replies_and_mentions'
+  | 'mute'
+
+export interface EditCommunityNotifications {
+  community_id: CommunityId
+  mode: CommunityNotificationsMode
 }
 export type CommunityVisibility = 'Public' | 'LocalOnly'
 

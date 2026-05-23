@@ -63,6 +63,7 @@
     <CommunityHeader
       bind:community={data.community.community_view.community}
       bind:subscribed={data.community.community_view.subscribed}
+      bind:notificationsMode={data.community.community_view.notifications_mode}
       blocked={data.community.community_view.blocked}
       moderators={data.community.moderators}
       counts={data.community.community_view.counts}

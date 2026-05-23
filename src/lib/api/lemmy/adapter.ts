@@ -1080,6 +1080,15 @@ export function createLemmyClient(
       )
       return t.toV3PersonView(res.person_view)
     },
+
+    async editCommunityNotifications(form) {
+      return await call(
+        client.editCommunityNotifications({
+          community_id: form.community_id,
+          mode: form.mode as any,
+        }),
+      )
+    },
   }
 
   return new Proxy(overrides as BaseClient, {

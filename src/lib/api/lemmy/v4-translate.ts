@@ -384,6 +384,7 @@ export function toV3CommunityView(v: any): v3.CommunityView {
     banned_from_community: v.community_actions?.received_ban_at != null,
     flair_list:
       v.tags && v.tags.length > 0 ? v.tags.map(toV3CommunityFlair) : undefined,
+    notifications_mode: v.community_actions?.notifications ?? null,
   }
 }
 

@@ -271,6 +271,9 @@ export abstract class BaseClient {
   abstract listMedia(form: types.ListMedia): Promise<types.ListMediaResponse>
   abstract voteOnPoll?(form: types.PollVote): Promise<types.PostView>
   abstract setNote?(form: types.SetNote): Promise<types.PersonView>
+  abstract editCommunityNotifications?(
+    form: types.EditCommunityNotifications,
+  ): Promise<types.SuccessResponse>
   abstract getPostReplies(form: types.GetPostReplies)
 }
 
