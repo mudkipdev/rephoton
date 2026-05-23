@@ -212,7 +212,8 @@
                 "description": "Sprawdź skrzynkę odbiorczą, czy jest tam link weryfikacyjny. Gdy go klikniesz, wciśnij przycisk poniżej.",
                 "submit": "Mój mail został zweryfikowany",
                 "error": "Twój mail nie został zweryfikowany."
-            }
+            },
+            "recommended": "Polecane"
         },
         "description": "Opis",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "Lokalizowanie wpisu",
-                "description": "Ta treść nie pochodzi z serwera Twojego konta."
+                "description": "Ta treść nie pochodzi z serwera Twojego konta.",
+                "found": "Przekierowywanie"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Pobierz",
         "attach": "Attach file",
         "info": "Info",
-        "backToTop": "Powrót na górę"
+        "backToTop": "Powrót na górę",
+        "continue": "Kontynuuj"
     },
     "message": {
         "success": "Sukces",
@@ -982,7 +985,8 @@
         "unsupported": "That function is not supported by your account's server software.",
         "not_live_supported": "Ten serwer nie uruchamia obsługiwanego oprogramowania lub jest offline.",
         "token_not_found": "Ten link weryfikacyjny e-mail wygasł lub nigdy nie istniał.",
-        "invalid_password": "Nieprawidłowe hasło."
+        "invalid_password": "Nieprawidłowe hasło.",
+        "cant_find_object": "Nie znaleziono tej treści na twoim serwerze."
     },
     "aria": {
         "pagination": {

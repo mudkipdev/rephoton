@@ -212,7 +212,8 @@
                 "description": "Check your inbox for a verification link. Once you've clicked it, press the button below.",
                 "submit": "I've verified my email",
                 "error": "Your email has not been verified."
-            }
+            },
+            "recommended": "Aanbevolen"
         },
         "description": "Beschrijving",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "Bericht lokaliseren",
-                "description": "Die inhoud is niet afkomstig van de server van je account."
+                "description": "Die inhoud is niet afkomstig van de server van je account.",
+                "found": "Doorverwijzen"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Download",
         "attach": "Attach file",
         "info": "Info",
-        "backToTop": "Terug naar boven"
+        "backToTop": "Terug naar boven",
+        "continue": "Doorgaan"
     },
     "message": {
         "success": "Succes",
@@ -982,7 +985,8 @@
         "unsupported": "That function is not supported by your account's server software.",
         "not_live_supported": "Die server draait geen ondersteunde software of is offline.",
         "token_not_found": "Die e-mailverificatielink is verlopen of heeft nooit bestaan.",
-        "invalid_password": "Ongeldig wachtwoord."
+        "invalid_password": "Ongeldig wachtwoord.",
+        "cant_find_object": "Die inhoud kon niet worden gevonden op je thuisserver."
     },
     "aria": {
         "pagination": {

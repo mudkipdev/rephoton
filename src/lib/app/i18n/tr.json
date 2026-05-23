@@ -212,7 +212,8 @@
                 "description": "Check your inbox for a verification link. Once you've clicked it, press the button below.",
                 "submit": "I've verified my email",
                 "error": "Your email has not been verified."
-            }
+            },
+            "recommended": "Önerilen"
         },
         "description": "Tanım",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "Gönderi bulunuyor",
-                "description": "Bu içerik hesabınızın sunucusundan kaynaklanmıyor."
+                "description": "Bu içerik hesabınızın sunucusundan kaynaklanmıyor.",
+                "found": "Yönlendiriliyor"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Download",
         "attach": "Attach file",
         "info": "Info",
-        "backToTop": "Başa dön"
+        "backToTop": "Başa dön",
+        "continue": "Devam et"
     },
     "message": {
         "success": "Başarı",
@@ -982,7 +985,8 @@
         "unsupported": "That function is not supported by your account's server software.",
         "not_live_supported": "Bu sunucu desteklenen yazılımı çalıştırmıyor veya çevrimdışı.",
         "token_not_found": "Bu e-posta doğrulama bağlantısının süresi dolmuş veya hiç var olmamış.",
-        "invalid_password": "Geçersiz şifre."
+        "invalid_password": "Geçersiz şifre.",
+        "cant_find_object": "Bu içerik ana sunucunuzda bulunamadı."
     },
     "aria": {
         "pagination": {

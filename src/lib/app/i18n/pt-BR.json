@@ -212,7 +212,8 @@
                 "description": "Verifique sua caixa de entrada para um link de verificação. Depois de clicar, pressione o botão abaixo.",
                 "submit": "Eu verifiquei meu e-mail",
                 "error": "Seu e-mail não foi verificado."
-            }
+            },
+            "recommended": "Recomendado"
         },
         "description": "Descrição",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "Localizando postagem",
-                "description": "Esse conteúdo não se origina no servidor da sua conta."
+                "description": "Esse conteúdo não se origina no servidor da sua conta.",
+                "found": "Redirecionando"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Baixar",
         "attach": "Anexar arquivo",
         "info": "Info",
-        "backToTop": "Voltar ao topo"
+        "backToTop": "Voltar ao topo",
+        "continue": "Continuar"
     },
     "message": {
         "success": "Sucesso",
@@ -982,7 +985,8 @@
         "unsupported": "Essa função não é suportada pelo software do servidor da sua conta.",
         "not_live_supported": "Esse servidor não está executando software suportado ou está offline.",
         "token_not_found": "Esse link de verificação de e-mail expirou ou nunca existiu.",
-        "invalid_password": "Senha inválida."
+        "invalid_password": "Senha inválida.",
+        "cant_find_object": "Esse conteúdo não pôde ser encontrado em seu servidor."
     },
     "aria": {
         "pagination": {

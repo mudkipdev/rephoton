@@ -212,7 +212,8 @@
                 "description": "檢查您的收件箱中的驗證連結。點擊後，按下方的按鈕。",
                 "submit": "我已驗證我的電子郵件",
                 "error": "您的電子郵件尚未驗證。"
-            }
+            },
+            "recommended": "推薦"
         },
         "description": "描述",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "正在定位帖子",
-                "description": "該內容並非源自您帳戶的伺服器。"
+                "description": "該內容並非源自您帳戶的伺服器。",
+                "found": "重新導向中"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "下載",
         "attach": "附加檔案",
         "info": "資訊",
-        "backToTop": "回到頂部"
+        "backToTop": "回到頂部",
+        "continue": "繼續"
     },
     "message": {
         "success": "成功",
@@ -982,7 +985,8 @@
         "unsupported": "您帳戶的伺服器軟體不支援該功能。",
         "not_live_supported": "該伺服器未執行受支援的軟體，或已離線。",
         "token_not_found": "該電子郵件驗證連結已過期，或從未存在過。",
-        "invalid_password": "密碼無效。"
+        "invalid_password": "密碼無效。",
+        "cant_find_object": "在你的主伺服器上找不到該內容。"
     },
     "aria": {
         "pagination": {

@@ -212,7 +212,8 @@
                 "description": "Check your inbox for a verification link. Once you've clicked it, press the button below.",
                 "submit": "I've verified my email",
                 "error": "Your email has not been verified."
-            }
+            },
+            "recommended": "موصى به"
         },
         "description": "وصف",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "تحديد موقع المنشور",
-                "description": "هذا المحتوى لا ينشأ من خادم حسابك."
+                "description": "هذا المحتوى لا ينشأ من خادم حسابك.",
+                "found": "جارٍ إعادة التوجيه"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Download",
         "attach": "Attach file",
         "info": "Info",
-        "backToTop": "العودة إلى الأعلى"
+        "backToTop": "العودة إلى الأعلى",
+        "continue": "متابعة"
     },
     "message": {
         "success": "Success",
@@ -982,7 +985,8 @@
         "unsupported": "That function is not supported by your account's server software.",
         "not_live_supported": "هذا الخادم لا يقوم بتشغيل برنامج مدعوم، أو أنه غير متصل.",
         "token_not_found": "رابط التحقق من البريد الإلكتروني منتهي الصلاحية، أو لم يكن موجوداً أبداً.",
-        "invalid_password": "كلمة المرور غير صالحة."
+        "invalid_password": "كلمة المرور غير صالحة.",
+        "cant_find_object": "تعذر العثور على هذا المحتوى على خادمك."
     },
     "aria": {
         "pagination": {

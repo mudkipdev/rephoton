@@ -212,7 +212,8 @@
                 "description": "Vérifiez votre boîte de réception pour un lien de vérification. Une fois cliqué, appuyez sur le bouton ci-dessous.",
                 "submit": "J'ai vérifié mon email",
                 "error": "Votre email n'a pas été vérifié."
-            }
+            },
+            "recommended": "Recommandé"
         },
         "description": "Description",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "Localisation du message",
-                "description": "Ce contenu ne provient pas du serveur de votre compte."
+                "description": "Ce contenu ne provient pas du serveur de votre compte.",
+                "found": "Redirection"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Télécharger",
         "attach": "Joindre un fichier",
         "info": "Info",
-        "backToTop": "Haut de page"
+        "backToTop": "Haut de page",
+        "continue": "Continuer"
     },
     "message": {
         "success": "Succès",
@@ -982,7 +985,8 @@
         "unsupported": "Cette fonction n'est pas supportée par le logiciel serveur de votre compte.",
         "not_live_supported": "Ce serveur ne fonctionne pas avec un logiciel supporté, ou est hors ligne.",
         "token_not_found": "Ce lien de vérification d'email a expiré ou n'a jamais existé.",
-        "invalid_password": "Mot de passe invalide."
+        "invalid_password": "Mot de passe invalide.",
+        "cant_find_object": "Ce contenu est introuvable sur votre serveur."
     },
     "aria": {
         "pagination": {

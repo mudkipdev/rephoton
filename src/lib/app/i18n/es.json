@@ -212,7 +212,8 @@
                 "description": "Revise su bandeja de entrada en busca de un enlace de verificación. Una vez que haya hecho clic en él, presione el botón a continuación.",
                 "submit": "He verificado mi correo electrónico",
                 "error": "Su correo electrónico no ha sido verificado."
-            }
+            },
+            "recommended": "Recomendado"
         },
         "description": "Descripción",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "Localizando publicación",
-                "description": "Ese contenido no se origina en el servidor de su cuenta."
+                "description": "Ese contenido no se origina en el servidor de su cuenta.",
+                "found": "Redirigiendo"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Descargar",
         "attach": "Adjuntar archivo",
         "info": "Info",
-        "backToTop": "Volver arriba"
+        "backToTop": "Volver arriba",
+        "continue": "Continuar"
     },
     "message": {
         "success": "Éxito",
@@ -982,7 +985,8 @@
         "unsupported": "Esa función no es compatible con el software del servidor de su cuenta.",
         "not_live_supported": "Ese servidor no está ejecutando software compatible o está fuera de línea.",
         "token_not_found": "Ese enlace de verificación de correo electrónico expiró o nunca existió.",
-        "invalid_password": "Contraseña no válida."
+        "invalid_password": "Contraseña no válida.",
+        "cant_find_object": "No se ha podido encontrar ese contenido en tu servidor."
     },
     "aria": {
         "pagination": {

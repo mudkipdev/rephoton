@@ -212,7 +212,8 @@
                 "description": "Check your inbox for a verification link. Once you've clicked it, press the button below.",
                 "submit": "I've verified my email",
                 "error": "Your email has not been verified."
-            }
+            },
+            "recommended": "Recomendado"
         },
         "description": "Descrição",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "A localizar publicação",
-                "description": "Esse conteúdo não tem origem no servidor da sua conta."
+                "description": "Esse conteúdo não tem origem no servidor da sua conta.",
+                "found": "A redirecionar"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Download",
         "attach": "Attach file",
         "info": "Info",
-        "backToTop": "Voltar ao topo"
+        "backToTop": "Voltar ao topo",
+        "continue": "Continuar"
     },
     "message": {
         "success": "Sucesso",
@@ -982,7 +985,8 @@
         "unsupported": "That function is not supported by your account's server software.",
         "not_live_supported": "Esse servidor não está a executar software suportado ou está offline.",
         "token_not_found": "Essa ligação de verificação de e-mail expirou ou nunca existiu.",
-        "invalid_password": "Palavra-passe inválida."
+        "invalid_password": "Palavra-passe inválida.",
+        "cant_find_object": "Esse conteúdo não pôde ser encontrado no teu servidor."
     },
     "aria": {
         "pagination": {

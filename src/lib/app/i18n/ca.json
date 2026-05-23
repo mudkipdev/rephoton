@@ -212,7 +212,8 @@
                 "description": "Revisa la teva safata d’entrada per trobar l’enllaç de verificació. Un cop l’hagis clicat, prem el botó de sota.",
                 "submit": "He verificat el meu correu electrònic",
                 "error": "El teu correu electrònic no ha estat verificat."
-            }
+            },
+            "recommended": "Recomanat"
         },
         "description": "Descripció",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "Localitzant publicació",
-                "description": "Aquest contingut no s'origina al servidor del vostre compte."
+                "description": "Aquest contingut no s'origina al servidor del vostre compte.",
+                "found": "S'està redirigint"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Descarregar",
         "attach": "Adjuntar fitxer",
         "info": "Informació",
-        "backToTop": "Torna a dalt"
+        "backToTop": "Torna a dalt",
+        "continue": "Continua"
     },
     "message": {
         "success": "Èxit",
@@ -982,7 +985,8 @@
         "unsupported": "Aquesta funció no és compatible amb el programari del servidor del vostre compte.",
         "not_live_supported": "Aquest servidor no executa programari compatible o està fora de línia.",
         "token_not_found": "Aquest enllaç de verificació de correu electrònic ha caducat o no ha existit mai.",
-        "invalid_password": "Contrasenya no vàlida."
+        "invalid_password": "Contrasenya no vàlida.",
+        "cant_find_object": "No s'ha pogut trobar aquest contingut al teu servidor."
     },
     "aria": {
         "pagination": {

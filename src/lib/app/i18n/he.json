@@ -212,7 +212,8 @@
                 "description": "Check your inbox for a verification link. Once you've clicked it, press the button below.",
                 "submit": "I've verified my email",
                 "error": "Your email has not been verified."
-            }
+            },
+            "recommended": "מומלץ"
         },
         "description": "תיאור",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "מאתר פוסט",
-                "description": "תוכן זה אינו מקורו בשרת החשבון שלך."
+                "description": "תוכן זה אינו מקורו בשרת החשבון שלך.",
+                "found": "מפנה"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "הורד",
         "attach": "צרף קובץ",
         "info": "מידע",
-        "backToTop": "חזרה למעלה"
+        "backToTop": "חזרה למעלה",
+        "continue": "המשך"
     },
     "message": {
         "success": "הצלחה",
@@ -982,7 +985,8 @@
         "unsupported": "פונקציה זו אינה נתמכת על ידי תוכנת השרת של החשבון שלך.",
         "not_live_supported": "שרת זה אינו מריץ תוכנה נתמכת, או שהוא לא מקוון.",
         "token_not_found": "קישור אימות אימייל זה פג תוקף, או מעולם לא היה קיים.",
-        "invalid_password": "סיסמה לא חוקית."
+        "invalid_password": "סיסמה לא חוקית.",
+        "cant_find_object": "התוכן הזה לא נמצא בשרת הבית שלך."
     },
     "aria": {
         "pagination": {

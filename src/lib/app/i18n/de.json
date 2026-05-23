@@ -212,7 +212,8 @@
                 "description": "Überprüfe deinen Posteingang auf einen Verifizierungslink. Sobald du darauf geklickt hast, drücke den Button unten.",
                 "submit": "Ich habe meine E-Mail verifiziert",
                 "error": "Deine E-Mail wurde nicht verifiziert."
-            }
+            },
+            "recommended": "Empfohlen"
         },
         "description": "Beschreibung",
         "time": {
@@ -343,7 +344,8 @@
             },
             "automatic": {
                 "title": "Suche Beitrag",
-                "description": "Dieser Inhalt stammt nicht vom Server deines Kontos."
+                "description": "Dieser Inhalt stammt nicht vom Server deines Kontos.",
+                "found": "Weiterleiten"
             }
         },
         "inbox": {
@@ -696,7 +698,8 @@
         "download": "Herunterladen",
         "attach": "Datei anhängen",
         "info": "Info",
-        "backToTop": "Nach oben"
+        "backToTop": "Nach oben",
+        "continue": "Fortfahren"
     },
     "message": {
         "success": "Erfolg",
@@ -982,7 +985,8 @@
         "unsupported": "Diese Funktion wird von der Server-Software deines Kontos nicht unterstützt.",
         "not_live_supported": "Dieser Server läuft nicht mit unterstützter Software oder ist offline.",
         "token_not_found": "Dieser E-Mail-Verifizierungslink ist abgelaufen oder existierte nie.",
-        "invalid_password": "Ungültiges Passwort."
+        "invalid_password": "Ungültiges Passwort.",
+        "cant_find_object": "Dieser Inhalt konnte auf deinem Heimserver nicht gefunden werden."
     },
     "aria": {
         "pagination": {
