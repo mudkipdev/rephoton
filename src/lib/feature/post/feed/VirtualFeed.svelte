@@ -5,7 +5,7 @@
   import { errorMessage } from '$lib/app/error'
   import { t } from '$lib/app/i18n'
   import VirtualList from '$lib/app/render/VirtualList.svelte'
-  import { settings } from '$lib/app/settings.svelte'
+  import { resolveView, settings } from '$lib/app/settings.svelte'
   import Placeholder from '$lib/ui/info/Placeholder.svelte'
   import EndPlaceholder from '$lib/ui/layout/EndPlaceholder.svelte'
   import { Button, Material, Spinner } from 'mono-svelte'
@@ -198,7 +198,11 @@
         items={posts}
         {initialOffset}
         overscan={3}
-        estimatedHeight={settings.view == 'cozy' ? 500 : 150}
+        estimatedHeight={settings.experimentalUI
+          ? 80
+          : resolveView() == 'cozy'
+            ? 500
+            : 150}
         bind:restore={virtualList}
         bind:this={listComp}
       >

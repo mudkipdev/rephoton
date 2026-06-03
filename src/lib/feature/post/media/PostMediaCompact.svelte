@@ -17,7 +17,11 @@
   import { bestImageURL, postLink, type MediaType } from '../helpers'
 
   const thumbnailSize = (view: View) =>
-    view == 'compact' ? 'w-22 h-22 sm:w-28' : 'w-24 h-24 sm:w-32'
+    settings.experimentalUI
+      ? 'w-14 h-14'
+      : view == 'compact'
+        ? 'w-22 h-22 sm:w-28'
+        : 'w-24 h-24 sm:w-32'
 
   interface Props {
     post: Post

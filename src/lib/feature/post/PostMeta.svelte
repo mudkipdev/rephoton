@@ -139,6 +139,11 @@
       .filter((i) => i != undefined),
   )
 
+  // Experimental UI packs everything tighter, so shrink the community avatar.
+  const avatarSize = $derived(
+    view == 'compact' ? (settings.experimentalUI ? 18 : 24) : 32,
+  )
+
   const badgeToData: Map<
     BadgeType,
     {
@@ -223,16 +228,13 @@
         >
           {#if community.nsfw && settings.nsfwBlur}
             <div
-              style="width: {view == 'compact' ? 24 : 32}; height: {view ==
-              'compact'
-                ? 24
-                : 32}"
+              style="width: {avatarSize}; height: {avatarSize}"
               class="bg-red-400 rounded-xl"
             ></div>
           {:else}
             <Avatar
               url={community?.icon}
-              width={view == 'compact' ? 24 : 32}
+              width={avatarSize}
               alt={community?.name}
               circle={false}
               class="group-hover/btn:scale-90 group-active/btn:scale-[.85] transition-transform"
@@ -372,7 +374,11 @@
       'font-medium max-sm:mt-0! font-display',
       titleClass,
       settings.markReadPosts && read && 'text-slate-600 dark:text-zinc-400',
-      view == 'compact' ? 'text-base' : 'text-lg',
+      view == 'compact'
+        ? settings.experimentalUI
+          ? 'text-sm'
+          : 'text-base'
+        : 'text-lg',
     ]}
     style="grid-area: title;"
   >

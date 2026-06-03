@@ -71,6 +71,11 @@ const settingsSchema = {
     removed: { default: false, env: 'PUBLIC_HIDE_REMOVED' },
   },
   expandSidebar: { default: true, env: 'PUBLIC_EXPAND_SIDEBAR' },
+  sidebars: {
+    // Whether each docked sidebar is expanded (true) or collapsed to a rail.
+    left: { default: true },
+    right: { default: true },
+  },
   expand: {
     communities: { default: true, env: 'PUBLIC_EXPAND_COMMUNITIES' },
     favorites: { default: true, env: 'PUBLIC_EXPAND_FAVORITES' },
@@ -101,6 +106,7 @@ const settingsSchema = {
   debugInfo: { default: false, env: 'PUBLIC_DEBUG_INFO' },
   expandImages: { default: true, env: 'PUBLIC_EXPAND_IMAGES' },
   view: { default: 'compact' as View, env: 'PUBLIC_VIEW' },
+  experimentalUI: { default: false, env: 'PUBLIC_EXPERIMENTAL_UI' },
   font: {
     default: 'inter' as 'inter' | 'system' | 'browser' | 'serifs',
     env: 'PUBLIC_FONT',
@@ -163,6 +169,15 @@ function createSettingsState(initial: Settings): Settings {
 }
 
 export const settings = createSettingsState(structuredClone(defaultSettings))
+
+/**
+ * Resolves the view to actually render posts with. The experimental UI curated
+ * by mudkip only supports the compact layout, so enabling it forces compact
+ * regardless of the user's cozy/compact preference.
+ */
+export function resolveView(view: View = settings.view): View {
+  return settings.experimentalUI ? 'compact' : view
+}
 
 $effect.root(() => {
   $effect(() => {

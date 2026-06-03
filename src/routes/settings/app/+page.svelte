@@ -140,6 +140,12 @@
       </p>
     {/snippet}
   </Setting>
+  <ToggleSetting
+    bind:checked={settings.experimentalUI}
+    icon={CubeTransparent}
+    title={$t('settings.app.experimentalUI.title')}
+    description={$t('settings.app.experimentalUI.description')}
+  ></ToggleSetting>
   <Setting optionClass="flex-2 max-w-full flex-wrap min-w-0 " icon={ChartBar}>
     {#snippet title()}
       <span>{$t('settings.app.sort.title')}</span>

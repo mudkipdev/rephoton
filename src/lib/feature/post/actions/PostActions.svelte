@@ -34,7 +34,7 @@
     ShieldCheck,
   } from 'svelte-hero-icons/dist'
   import { PostVote } from '..'
-  import { PostFormState } from '../form/postform.svelte'
+  import { PostFormState } from '../form/postFormState.svelte'
   import { postLink } from '../helpers'
 
   let saving = $state(false)
@@ -58,8 +58,16 @@
     onedit,
     onhide,
   }: Props = $props()
-  let buttonHeight = $derived(view == 'compact' ? 'h-7.5' : 'h-8')
-  let buttonSquare = $derived(view == 'compact' ? 'w-7.5 h-7.5' : 'w-8 h-8')
+  let buttonHeight = $derived(
+    view == 'compact' ? (settings.experimentalUI ? 'h-6.5' : 'h-7.5') : 'h-8',
+  )
+  let buttonSquare = $derived(
+    view == 'compact'
+      ? settings.experimentalUI
+        ? 'w-6.5 h-6.5'
+        : 'w-7.5 h-7.5'
+      : 'w-8 h-8',
+  )
 
   function share(global: boolean = true, url?: string) {
     const link =

@@ -1,7 +1,7 @@
 <script lang="ts">
   import type { PostView } from '$lib/api/types'
   import { profile } from '$lib/app/auth'
-  import { type View, settings } from '$lib/app/settings.svelte'
+  import { type View, resolveView, settings } from '$lib/app/settings.svelte'
   import { publishedToDate } from '$lib/ui/util/date'
   import type { ClassValue } from 'svelte/elements'
   import {
@@ -42,12 +42,15 @@
     post = $bindable(),
     actions = true,
     hideCommunity = false,
-    view = settings.view,
+    view: viewProp = settings.view,
     style = '',
     class: clazz = '',
     extraBadges,
     onhide,
   }: Props = $props()
+
+  // Experimental UI only supports the compact layout, so force it when enabled.
+  const view = $derived(resolveView(viewProp))
 
   let tags = $derived.by<{ title?: string; tags: Tag[] }>(() => {
     const parsed = parseTags(post.post.name)
@@ -97,7 +100,8 @@
   class={[
     'relative group/post',
     settings.leftAlign && 'left-align',
-    view == 'compact' && 'py-3 list-type compact',
+    view == 'compact' && 'list-type compact',
+    view == 'compact' && (settings.experimentalUI ? 'py-1.5 dense' : 'py-3'),
     view == 'cozy' && 'py-5 flex flex-col gap-2',
     clazz,
   ]}
@@ -191,6 +195,11 @@
 
   :global(.compact > *:not(.no-list-margin):not(:first-child)) {
     margin-top: 0.3rem;
+  }
+
+  /* Experimental UI: pack post rows as tightly as possible. */
+  :global(.compact.dense > *:not(.no-list-margin):not(:first-child)) {
+    margin-top: 0.1rem;
   }
 
   :global(.list-type:not(.compact) > *:not(.no-list-margin):not(:first-child)) {

@@ -17,6 +17,9 @@
             "community": "Community",
             "logingate": "You must log in to create content."
         },
+        "sidebar": {
+            "toggle": "Toggle sidebar"
+        },
         "menu": {
             "label": "Profile",
             "app": "App",
@@ -801,6 +804,10 @@
                 "title": "Post style",
                 "cozy": "Show posts with large images, rich embeds, and longer post bodies.",
                 "compact": "Show posts in a list, without post bodies and with tighter spacing."
+            },
+            "experimentalUI": {
+                "title": "Experimental UI",
+                "description": "Enable the bleeding-edge, breaking UI curated by mudkip. Expect things to change and break. This only supports the compact post style, so it forces compact mode while enabled."
             },
             "sort": {
                 "title": "Default sort",

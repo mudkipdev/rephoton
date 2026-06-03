@@ -8,7 +8,7 @@
   import {
     PostFormState,
     type PostFormInit,
-  } from '$lib/feature/post/form/postform.svelte.js'
+  } from '$lib/feature/post/form/postFormState.svelte.js'
   import { postLink } from '$lib/feature/post/helpers.js'
   import { onDestroy } from 'svelte'
 

@@ -1,5 +1,6 @@
 <script lang="ts">
   import { t } from '$lib/app/i18n'
+  import { settings } from '$lib/app/settings.svelte'
 
   const sizes = {
     sm: 'text-2xl',
@@ -31,8 +32,12 @@
   class={[
     pageHeader &&
       `w-[calc(100%+1.5rem)] sm:w-[calc(100%+3rem)]
-  bg-slate-50 dark:bg-zinc-950 -mx-3 sm:-mx-6 sm:px-6 sm:pb-6 px-4 pb-4 -mt-64 pt-64
-   border-b border-slate-100 dark:border-zinc-900 font-display margin z-0 mb-3 sm:mb-6`,
+  bg-slate-50 dark:bg-zinc-950 -mx-3 sm:-mx-6 sm:px-6 px-4 -mt-64 pt-64
+   border-b border-slate-100 dark:border-zinc-900 font-display margin z-0`,
+    pageHeader &&
+      (settings.experimentalUI
+        ? 'sm:pb-2 pb-2 mb-2 sm:mb-2'
+        : 'sm:pb-6 pb-4 mb-3 sm:mb-6'),
   ]}
   {style}
   aria-label={$t('aria.element.pageHeader')}
@@ -40,7 +45,7 @@
   {#if children}
     <h1
       class={[
-        sizes[size],
+        settings.experimentalUI ? sizes.sm : sizes[size],
         'flex gap-2 w-full tracking-tight font-medium',
         clazz,
       ]}
