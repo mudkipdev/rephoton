@@ -5,6 +5,7 @@
   import { locale } from '$lib/app/i18n'
   import { LINKED_INSTANCE_URL } from '$lib/app/instance.svelte'
   import { settings } from '$lib/app/settings.svelte'
+  import { loadWebFont } from '$lib/app/theme/font'
   import { getDefaultColors } from '$lib/app/theme/presets'
   import {
     inDarkColorScheme,
@@ -70,6 +71,9 @@
                 ? 'font--serifs'
                 : 'font--sans',
         )
+
+        // load the webfont for the selected font lazily, off the critical path
+        loadWebFont(settings.font)
       }
     })
 
