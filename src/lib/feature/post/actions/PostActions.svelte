@@ -151,6 +151,45 @@
     />
     <FormattedNumber number={post.counts.comments} />
   </Button>
+
+  <Menu placement="bottom-end">
+    {#snippet target(attachment)}
+      <Button
+        {@attach post.post.local ? () => {} : attachment}
+        rounding="xl"
+        size="custom"
+        class={buttonSquare}
+        onclick={() => {
+          if (post.post.local) share()
+        }}
+        icon={copied ? Check : Share}
+        title={$t('post.actions.more.share')}
+      />
+    {/snippet}
+    <MenuDivider showLabel>{$t('post.actions.more.share.from')}</MenuDivider>
+    <MenuButton onclick={() => share(true)} icon={GlobeAlt}>
+      {$t('post.actions.more.share.global')}
+    </MenuButton>
+    <MenuButton onclick={() => share(false)} icon={MapPin}>
+      {$t('post.actions.more.share.local')}
+    </MenuButton>
+    {#if !LINKED_INSTANCE_URL}
+      <MenuDivider>
+        <svelte:fragment></svelte:fragment>
+      </MenuDivider>
+      <MenuButton
+        onclick={() =>
+          share(
+            false,
+            new URL(`/go/${post.post.ap_id}`, page.url.origin).toString(),
+          )}
+        icon={Photon}
+      >
+        {$t('post.actions.more.share.photon')}
+      </MenuButton>
+    {/if}
+  </Menu>
+
   <div class="flex-1"></div>
 
   {#if settings.debugInfo}
@@ -203,44 +242,6 @@
       icon={post.saved ? BookmarkSlash : Bookmark}
     ></Button>
   {/if}
-
-  <Menu placement="bottom-end">
-    {#snippet target(attachment)}
-      <Button
-        {@attach post.post.local ? () => {} : attachment}
-        rounding="xl"
-        size="custom"
-        class={buttonSquare}
-        onclick={() => {
-          if (post.post.local) share()
-        }}
-        icon={copied ? Check : Share}
-        title={$t('post.actions.more.share')}
-      />
-    {/snippet}
-    <MenuDivider showLabel>{$t('post.actions.more.share.from')}</MenuDivider>
-    <MenuButton onclick={() => share(true)} icon={GlobeAlt}>
-      {$t('post.actions.more.share.global')}
-    </MenuButton>
-    <MenuButton onclick={() => share(false)} icon={MapPin}>
-      {$t('post.actions.more.share.local')}
-    </MenuButton>
-    {#if !LINKED_INSTANCE_URL}
-      <MenuDivider>
-        <svelte:fragment></svelte:fragment>
-      </MenuDivider>
-      <MenuButton
-        onclick={() =>
-          share(
-            false,
-            new URL(`/go/${post.post.ap_id}`, page.url.origin).toString(),
-          )}
-        icon={Photon}
-      >
-        {$t('post.actions.more.share.photon')}
-      </MenuButton>
-    {/if}
-  </Menu>
 
   {#if profile.current.jwt}
     <Menu placement="bottom-end">
