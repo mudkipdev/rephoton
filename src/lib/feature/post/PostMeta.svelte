@@ -132,13 +132,6 @@
     extraBadges,
   }: Props = $props()
 
-  const activeBadges = $derived(
-    Object.keys(badges)
-      .filter((i) => badges[i as BadgeType] == true)
-      .map((i) => badgeToData.get(i as BadgeType))
-      .filter((i) => i != undefined),
-  )
-
   // Experimental UI packs everything tighter, so shrink the community avatar.
   const avatarSize = $derived(
     view == 'compact' ? (settings.experimentalUI ? 18 : 24) : 32,
@@ -201,6 +194,16 @@
       },
     ],
   ])
+
+  // Declared after badgeToData: this derived reads it, and SSR evaluates
+  // derives eagerly during init, so badgeToData must already be initialized
+  // (the browser's lazy deriveds happened to tolerate the original order).
+  const activeBadges = $derived(
+    Object.keys(badges)
+      .filter((i) => badges[i as BadgeType] == true)
+      .map((i) => badgeToData.get(i as BadgeType))
+      .filter((i) => i != undefined),
+  )
 </script>
 
 <!--
