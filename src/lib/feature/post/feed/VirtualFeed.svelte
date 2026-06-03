@@ -1,3 +1,11 @@
+<script module lang="ts">
+  // The first feed mounted in a session is the SSR-hydrated one. Replaying the
+  // entrance animation over markup the server already painted looks broken
+  // (the posts visibly re-fly in), so we skip the intro for it and only animate
+  // feeds that mount via subsequent client-side navigation.
+  let hasMountedFeed = false
+</script>
+
 <script lang="ts">
   import { browser } from '$app/environment'
   import { client } from '$lib/api/client.svelte'
@@ -50,6 +58,10 @@
       action: filterPost(post),
     })),
   )
+
+  // Captured at init: false for the SSR-hydrated feed, true once any feed has
+  // already mounted this session (i.e. client-side navigations).
+  const playIntro = hasMountedFeed
 
   let listEl = $state<HTMLUListElement>()
   let listComp = $state<{
@@ -122,6 +134,8 @@
   }
 
   onMount(() => {
+    hasMountedFeed = true
+
     const observer = new IntersectionObserver(callback, {
       threshold: 0.5,
     })
@@ -210,7 +224,7 @@
           <!--god svelte is gonna make me lose it-->
           {@const filter = new ReactiveState(filteredPosts[row])}
           <li
-            in:fly={row < 7
+            in:fly={playIntro && row < 7
               ? { duration: 800, easing: expoOut, y: 24, delay: row * 50 }
               : { opacity: 1, duration: 0 }}
             data-index={row}
