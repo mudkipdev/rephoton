@@ -37,6 +37,15 @@
   }
 
   let dockVisible = $state(true)
+
+  // Collapsible sidebars are an experimental-UI feature; when it's off the
+  // sidebars always render normally regardless of the persisted toggle.
+  const leftCollapsed = $derived(
+    settings.experimentalUI && !settings.sidebars.left,
+  )
+  const rightCollapsed = $derived(
+    settings.experimentalUI && !settings.sidebars.right,
+  )
 </script>
 
 <svelte:window {onscroll} />
@@ -66,27 +75,26 @@
         ? 'experimental'
         : settings.newWidth && 'limit-width',
     ]}
-    style="{settings.sidebars.left ? '' : '--c-sidebar: 3rem;'}{settings.sidebars
-      .right
-      ? ''
-      : '--c-suffix: 3rem;'}"
+    style="{leftCollapsed ? '--c-sidebar: 3rem;' : ''}{rightCollapsed
+      ? '--c-suffix: 3rem;'
+      : ''}"
   >
-    <div
-      class={['shell-aside shell-sidebar', !settings.sidebars.left && 'collapsed']}
-    >
-      <button
-        type="button"
-        class="shell-collapse"
-        aria-label={$t('nav.sidebar.toggle')}
-        aria-expanded={settings.sidebars.left}
-        onclick={() => (settings.sidebars.left = !settings.sidebars.left)}
-      >
-        <Icon
-          src={settings.sidebars.left ? ChevronDoubleLeft : ChevronDoubleRight}
-          size="16"
-          micro
-        />
-      </button>
+    <div class={['shell-aside shell-sidebar', leftCollapsed && 'collapsed']}>
+      {#if settings.experimentalUI}
+        <button
+          type="button"
+          class="shell-collapse"
+          aria-label={$t('nav.sidebar.toggle')}
+          aria-expanded={settings.sidebars.left}
+          onclick={() => (settings.sidebars.left = !settings.sidebars.left)}
+        >
+          <Icon
+            src={settings.sidebars.left ? ChevronDoubleLeft : ChevronDoubleRight}
+            size="16"
+            micro
+          />
+        </button>
+      {/if}
       <div class="shell-aside-content">
         {@render sidebar?.({ class: 'w-full' })}
       </div>
@@ -94,22 +102,24 @@
     {@render main?.({
       class: `shell-main`,
     })}
-    <div
-      class={['shell-aside shell-suffix', !settings.sidebars.right && 'collapsed']}
-    >
-      <button
-        type="button"
-        class="shell-collapse"
-        aria-label={$t('nav.sidebar.toggle')}
-        aria-expanded={settings.sidebars.right}
-        onclick={() => (settings.sidebars.right = !settings.sidebars.right)}
-      >
-        <Icon
-          src={settings.sidebars.right ? ChevronDoubleRight : ChevronDoubleLeft}
-          size="16"
-          micro
-        />
-      </button>
+    <div class={['shell-aside shell-suffix', rightCollapsed && 'collapsed']}>
+      {#if settings.experimentalUI}
+        <button
+          type="button"
+          class="shell-collapse"
+          aria-label={$t('nav.sidebar.toggle')}
+          aria-expanded={settings.sidebars.right}
+          onclick={() => (settings.sidebars.right = !settings.sidebars.right)}
+        >
+          <Icon
+            src={settings.sidebars.right
+              ? ChevronDoubleRight
+              : ChevronDoubleLeft}
+            size="16"
+            micro
+          />
+        </button>
+      {/if}
       <div class="shell-aside-content">
         {@render suffix?.({ class: '' })}
       </div>

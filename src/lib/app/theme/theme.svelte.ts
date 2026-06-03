@@ -1,6 +1,10 @@
 import { browser } from '$app/environment'
 import { env } from '$env/dynamic/public'
+import { settings } from '../settings.svelte'
 import { getDefaultTheme, presets } from './presets'
+
+// The "Classic" preset that the experimental UI locks to.
+const CLASSIC_THEME_ID = -1
 
 type ColorScheme = 'system' | 'light' | 'dark'
 
@@ -118,8 +122,11 @@ class ThemeState {
     },
   )
   #current = $derived(
-    this.#data.themes.find((i) => i.id == this.#data.currentTheme) ??
-      getDefaultTheme(),
+    this.#data.themes.find(
+      (i) =>
+        i.id ==
+        (settings.experimentalUI ? CLASSIC_THEME_ID : this.#data.currentTheme),
+    ) ?? getDefaultTheme(),
   )
   #colorScheme = $state<ColorScheme>(configuredColorScheme as ColorScheme)
   #vars = $derived(calculateVars(this.#current))

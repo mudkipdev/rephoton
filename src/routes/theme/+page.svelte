@@ -1,5 +1,6 @@
 <script lang="ts">
   import { t } from '$lib/app/i18n'
+  import { settings } from '$lib/app/settings.svelte'
   import { getDefaultColors } from '$lib/app/theme/presets'
   import { theme as themeData } from '$lib/app/theme/theme.svelte'
   import { Header } from '$lib/ui/layout'
@@ -126,10 +127,18 @@
   >
     {$t('routes.theme.preset.presets')}
   </h3>
+  {#if settings.experimentalUI}
+    <Note>
+      {$t('routes.theme.experimentalLock')}
+    </Note>
+  {/if}
   <Material
     color="uniform"
     rounding="2xl"
-    class="overflow-auto max-h-96 relative @container"
+    class={[
+      'overflow-auto max-h-96 relative @container',
+      settings.experimentalUI && 'opacity-50 pointer-events-none',
+    ]}
   >
     <div
       class="grid grid-cols-1 @md:grid-cols-2 @xl:grid-cols-3 @3xl:grid-cols-4
