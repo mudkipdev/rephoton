@@ -49,7 +49,6 @@
           window.location.toString().replace('#main', ''),
         )
       }
-      document.body.querySelector('.loader')?.classList.add('hidden')
     }
   })
 
